@@ -2,7 +2,7 @@ import gym
 import six
 import numpy as np
 import pandas as pd
-from agents.QLearning import QLearning
+from agents.QLearning_tabular import QLearning
 from functools import reduce
 
 """
