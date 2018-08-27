@@ -1,10 +1,10 @@
 import gym
 import six
+import random
 import numpy as np
 from sklearn.linear_model import SGDRegressor
-
+from sklearn.preprocessing import StandardScaler
 from agents.QLearning_SGDRegressor import QLearningSGDRegressor
-from functools import reduce
 from agents.RLAgent import RLAgent
 
 """
@@ -19,6 +19,11 @@ class CartPoleApproxVFSGDRegressorAgent(RLAgent):
         # basic configuration
         self._environment_name = "CartPole-v0"
         self._environment_instance = None  # (note that the "None" variables have values yet to be assigned)
+        self._state_action_min_values = np.array([-2.4, np.finfo(np.float64).min, -41.8, np.finfo(np.float64).min, 0, 0])
+        self._state_action_max_values = np.array([2.4, np.finfo(np.float64).max, 41.8, np.finfo(np.float64).max, 1, 1])
+        boundaries = np.vstack((self._state_action_min_values, self._state_action_max_values))
+        self._scaler = StandardScaler()
+        self._scaler.fit(boundaries)
         self._random_state = None
         self._cutoff_time = None
         self._hyper_parameters = None
@@ -28,10 +33,11 @@ class CartPoleApproxVFSGDRegressorAgent(RLAgent):
 
         # list that contains the amount of time-steps the cart had the pole up during the episode. It is used as a way
         # to score the performance of the agent. It has a maximum value of 200 time-steps
-        self._last_time_steps = None
+        self.timesteps_of_episode = None
+        self.reward_of_episode = None
 
         # whether ot not to display a video of the agent execution at each episode
-        self.display_video = True
+        self.display_video = False
 
         # attribute initialization
         self._cart_position_bins = None
@@ -40,18 +46,23 @@ class CartPoleApproxVFSGDRegressorAgent(RLAgent):
         self._angle_rate_bins = None
 
         # the Q-learning algorithm
-        self._q_learning = None
+        self._learning_algorithm = None
         self._value_function = None
 
         # default hyper-parameters
-        self._alpha = 0.5
-        self._gamma = 0.9
-        self._epsilon = 0.1
+        self._alpha = 0.01
+        self.alpha_decay = 0.01
+        self._gamma = 1.0
+        self._epsilon = 1.0
+        self._epsilon_min = 0.01
+        self._epsilon_decay = 0.995  # epsilon_log_decay
+        self._batch_size = 64
+
         self.episodes_to_run = 3000  # amount of episodes to run for each run of the agent
 
         # matrix with 3 columns, where each row represents the action, reward and next state obtained from the agent
         # executing an action in the previous state
-        self.action_reward_state_trace = []
+        self._memory = []
 
     def set_random_state(self, random_state):
         """
@@ -106,20 +117,23 @@ class CartPoleApproxVFSGDRegressorAgent(RLAgent):
         previous learning experience.
         """
         # last run is cleared
-        self._last_time_steps = []
-        self.action_reward_state_trace = []
+        self.timesteps_of_episode = []
+        self.reward_of_episode = []
+        self._memory = []
 
         # a new q_learning agent is created
-        del self._q_learning
+        del self._learning_algorithm
 
         # a new Q-learning object is created to replace the previous object
-        self._q_learning = QLearningSGDRegressor(
+        self._learning_algorithm = QLearningSGDRegressor(
             init_state=self._environment_instance.reset(),
             actions_n=self._environment_instance.action_space.n,
-            alpha=self._alpha,
             gamma=self._gamma,
             epsilon=self._epsilon,
-            vf=SGDRegressor())
+            epsilon_min=self._epsilon_min,
+            epsilon_decay=self._epsilon_decay,
+            vf=SGDRegressor(tol=1e-3, eta0=self._alpha, learning_rate='invscaling'),
+            scaler=self._scaler)
 
         # the number of features is obtained
         self._number_of_features = self._environment_instance.observation_space.shape[0]
@@ -135,36 +149,38 @@ class CartPoleApproxVFSGDRegressorAgent(RLAgent):
 
             # resets the environment, obtaining the first state observation
             state = self._environment_instance.reset()
+            cum_reward = 0
 
             for t in range(self._cutoff_time):
 
                 # Pick an action based on the current state
-                action = self._q_learning.choose_action(state)
+                action = self._learning_algorithm.choose_action(state, i_episode)
                 # Execute the action and get feedback
                 observation, reward, done, info = self._environment_instance.step(action)
-
-                # current state transition is saved
-                self.action_reward_state_trace.append([action, reward, observation])
 
                 next_state = observation
 
                 if not done:
-                    self._q_learning.learn(state, action, reward, next_state)
+                    cum_reward += reward
+                    # current state transition is saved
+                    self._memory.append((state, action, reward, next_state, done))
                     state = next_state
                 else:
-                    # Q-learn stuff
-                    reward = -200  # a negative reward is computed so as to avoid failure
-                    self._q_learning.learn(state, action, reward, next_state)
-                    self._last_time_steps = np.append(self._last_time_steps, [int(t + 1)])
+                    # if t < self._cutoff_time - 1:  # tests whether the pole fell
+                    #     reward = -200  # the pole fell, so a negative reward is computed to avoid failure
+                    # current state transition is saved
+                    self._memory.append((state, action, reward, next_state, done))
+
+                    self.timesteps_of_episode = np.append(self.timesteps_of_episode, [int(t + 1)])
+                    cum_reward += reward
+                    self.reward_of_episode = np.append(self.reward_of_episode, cum_reward)
                     break
+            print("Episode {:0d} finish. Reward: {:0.2f}".format(i_episode, cum_reward))
 
-        last_time_steps_list = list(self._last_time_steps)
-        last_time_steps_list.sort()
-        print("Overall score: {:0.2f}".format(self._last_time_steps.mean()))
-        print("Best 100 score: {:0.2f}".format(reduce(lambda x, y: x + y,
-                                                      last_time_steps_list[-100:]) / len(last_time_steps_list[-100:])))
+            # train value function predictor with a minibach
+            self._learning_algorithm.learn(random.sample(self._memory, min(len(self._memory), self._batch_size)))
 
-        return self._last_time_steps.mean()
+        return self.reward_of_episode.mean()
 
     def destroy_agent(self):
         """

@@ -181,8 +181,8 @@ class CartPoleTabularAgent(object):
                     self._q_learning.learn(state, action, reward, next_state)
                     state = next_state
                 else:
-                    # Q-learn stuff
-                    reward = -200  # a negative reward is computed so as to avoid failure
+                    if t < self._cutoff_time - 1:  # tests whether the pole fell
+                        reward = -200  # the pole fell, so a negative reward is computed to avoid failure
                     self._q_learning.learn(state, action, reward, next_state)
                     self._last_time_steps = np.append(self._last_time_steps, [int(t + 1)])
                     break
