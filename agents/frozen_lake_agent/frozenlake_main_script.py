@@ -4,6 +4,15 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from agents.frozen_lake_agent import FrozenLakeAgent as fP
+import itertools
+
+# definimos sus híper-parámetros básicos
+
+alpha = 0.5
+gamma = 0.9
+epsilon = 0.1
+tau = 25
+is_slippery = False
 
 
 # se declara una semilla aleatoria
@@ -15,13 +24,6 @@ cutoff_time = 100
 # instanciamos nuestro agente
 agent = fP.FrozenLakeAgent()
 
-# definimos sus híper-parámetros básicos
-# (también podrían establecerse los bins que hacen la división, modificando el método set_hyper_parameters)
-
-alpha = 0.5
-gamma = 0.9
-epsilon = 0.1
-
 agent.set_hyper_parameters({"alpha": alpha, "gamma": gamma, "epsilon": epsilon})
 
 # declaramos como True la variable de mostrar video, para ver en tiempo real cómo aprende el agente. Borrar esta línea
@@ -32,7 +34,7 @@ agent.display_video = True
 agent.set_cutoff_time(cutoff_time)
 
 # inicializa el agente
-agent.init_agent()
+agent.init_agent(is_slippery=is_slippery)  # slippery es establecido en False por defecto
 
 # reinicializa el conocimiento del agente
 agent.restart_agent_learning()
@@ -76,6 +78,7 @@ plt.show()
 
 # ---
 
+# se procede con los cálculos previos a la graficación de la matriz de valor
 value_matrix = np.zeros((4, 4))
 for row in range(4):
     for column in range(4):
@@ -96,9 +99,35 @@ for row in range(4):
 # el valor del estado objetivo se asigna en 1 (reward recibido al llegar) para que se coloree de forma apropiada
 value_matrix[3, 3] = 1
 
+# se grafica la matriz de valor
 plt.imshow(value_matrix, cmap=plt.cm.RdYlGn)
 plt.tight_layout()
 plt.colorbar()
+
+fmt = '.2f'
+thresh = value_matrix.max() / 2.
+for row, column in itertools.product(range(value_matrix.shape[0]), range(value_matrix.shape[1])):
+
+    arrow_direction = '↓'
+
+    left_action = agent._learning_algorithm.get_q(row * 4 + column, 0)
+    down_action = agent._learning_algorithm.get_q(row * 4 + column, 1)
+    right_action = agent._learning_algorithm.get_q(row * 4 + column, 2)
+    up_action = agent._learning_algorithm.get_q(row * 4 + column, 3)
+
+    best_action = down_action
+
+    if best_action < right_action:
+        arrow_direction = '→'
+    if best_action < left_action:
+        arrow_direction = '←'
+    if best_action < up_action:
+        arrow_direction = '↑'
+
+    # notar que column, row están invertidos en orden en la línea de abajo porque representan a x,y del plot
+    plt.text(column, row, arrow_direction,
+             horizontalalignment="center")
+
 plt.xticks([])
 plt.yticks([])
 plt.show()
