@@ -4,6 +4,7 @@ import numpy as np
 from agents.QLearning_tabular import QLearning
 from agents.RLAgent import RLAgent
 from functools import reduce
+from gym.envs.registration import register
 
 
 class FrozenLakeAgent(RLAgent):
@@ -20,12 +21,15 @@ class FrozenLakeAgent(RLAgent):
         # whether ot not to display a video of the agent execution at each episode
         self.display_video = True
 
-        # list that contains the amount of time-steps the cart had the pole up during the episode. It is used as a way
-        # to score the performance of the agent. It has a maximum value of 200 time-steps
-        self._last_time_steps = None
+        # list that contains the amount of time-steps of the episode. It is used as a way to score the performance of
+        # the agent.
+        self.timesteps_of_episode = None
 
-        # the Q-learning algorithm
-        self._q_learning = None
+        # list that contains the amount of reward given to the agent in each episode
+        self.reward_of_episode = None
+
+        # the learning algorithm (e.g. Q-learning)
+        self._learning_algorithm = None
 
         # default hyper-parameters
         self._alpha = 0.5
@@ -74,21 +78,33 @@ class FrozenLakeAgent(RLAgent):
         previous learning experience.
         """
         # last run is cleared
-        self._last_time_steps = []
+        self.timesteps_of_episode = []
+        self.reward_of_episode = []
         self.action_reward_state_trace = []
 
         # a new q_learning agent is created
-        del self._q_learning
+        del self._learning_algorithm
 
-        # a new Q-learning object is created to replace the previous object
-        self._q_learning = QLearning(actions=range(self._environment_instance.action_space.n),
-                                     alpha=self._alpha, gamma=self._gamma, epsilon=self._epsilon)
+        # a new learning_algorithm object is created to replace the previous object
+        self._learning_algorithm = QLearning(actions=range(self._environment_instance.action_space.n),
+                                             alpha=self._alpha, gamma=self._gamma, epsilon=self._epsilon)
 
-    def init_agent(self):
+    def init_agent(self, is_slippery=False):
         """
         Initializes the reinforcement learning agent with a default configuration.
         """
-        self._environment_instance = gym.make(self._environment_name)
+
+        if is_slippery:
+            self._environment_instance = gym.make('FrozenLake-v0')
+        else:
+            # A Frozen Lake environment is registered with Slippery turned as False so it is deterministic
+            register(id='FrozenLakeNotSlippery-v0',
+                     entry_point='gym.envs.toy_text:FrozenLakeEnv',
+                     kwargs={'map_name': '4x4', 'is_slippery': False},
+                     max_episode_steps=100,
+                     reward_threshold=0.78)
+
+            self._environment_instance = gym.make('FrozenLakeNotSlippery-v0')
 
         # environment is seeded
         if self._random_state is not None:
@@ -116,7 +132,7 @@ class FrozenLakeAgent(RLAgent):
             for t in range(self._cutoff_time):
 
                 # Pick an action based on the current state
-                action = self._q_learning.choose_action(state)
+                action = self._learning_algorithm.choose_action(state)
                 # Execute the action and get feedback
                 observation, reward, done, info = self._environment_instance.step(action)
 
@@ -127,23 +143,18 @@ class FrozenLakeAgent(RLAgent):
                 next_state = observation
 
                 if not done:
-                    self._q_learning.learn(state, action, reward, next_state)
+                    self._learning_algorithm.learn(state, action, reward, next_state)
                     state = next_state
                 else:
                     if reward == 0:  # episode finished because the agent fell into a hole
-                        reward = -100
+                        reward = -1
 
-                    self._q_learning.learn(state, action, reward, next_state)
-                    self._last_time_steps = np.append(self._last_time_steps, [int(t + 1)])
+                    self._learning_algorithm.learn(state, action, reward, next_state)
+                    self.timesteps_of_episode = np.append(self.timesteps_of_episode, [int(t + 1)])
+                    self.reward_of_episode = np.append(self.reward_of_episode, reward)
                     break
 
-        last_time_steps_list = list(self._last_time_steps)
-        last_time_steps_list.sort()
-        print("Overall score: {:0.2f}".format(self._last_time_steps.mean()))
-        print("Best 100 score: {:0.2f}".format(reduce(lambda x, y: x + y,
-                                                      last_time_steps_list[-100:]) / len(last_time_steps_list[-100:])))
-
-        return self._last_time_steps.mean()
+        return self.reward_of_episode.mean()
 
     def destroy_agent(self):
         """
