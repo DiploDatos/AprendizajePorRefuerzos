@@ -147,6 +147,9 @@ class FrozenLakeAgent(RLAgent):
                     state = next_state
                 else:
                     if reward == 0:  # episode finished because the agent fell into a hole
+
+                        # the default reward is overrided by our hand-made reward of -1 so as to punish the agent for
+                        # falling into a hole
                         reward = -1
 
                     self._learning_algorithm.learn(state, action, reward, next_state)
