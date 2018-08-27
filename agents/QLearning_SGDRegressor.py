@@ -19,65 +19,75 @@ Inspired by https://gym.openai.com/evaluations/eval_kWknKOkPQ7izrixdhriurA
 
 class QLearningSGDRegressor():
 
-    def __init__(self, init_state, actions_n, epsilon, alpha, gamma, vf):
+    def __init__(self, init_state, actions_n, epsilon, epsilon_min, epsilon_decay, gamma, vf, scaler):
         self.tuples = {}
-        self.epsilon = epsilon  # exploration constant
-        self.alpha = alpha      # discount constant
-        self.gamma = gamma      # discount factor
-        self.actions = range(actions_n)
+        self._epsilon = epsilon  # exploration constant
+        self._epsilon_min = epsilon_min
+        self._epsilon_decay = epsilon_decay
+        self._gamma = gamma      # discount factor
+        self._actions = range(actions_n)
         # OneHotEncoder for actions
-        self.action_encoder = OneHotEncoder()
-        self.action_encoder.fit(np.expand_dims(np.arange(actions_n), axis=1))
-        self.value_function = vf
+        self._action_encoder = OneHotEncoder()
+        self._action_encoder.fit(np.expand_dims(np.arange(actions_n), axis=1))
+        self._value_function = vf
+        self._scaler = scaler
         # init value function predictor
-        for a in self.actions:
-            enc_a = self.action_encoder.transform(np.array([a]).reshape(1, -1)).toarray()[0, :]
-            sa = np.hstack((init_state, enc_a))
-            vf.partial_fit(sa.reshape(1, -1), np.zeros(1))
+        for a in self._actions:
+            # fit with initial state and reward 0S
+            vf.partial_fit(self.get_state_action_tuple(init_state, a), np.zeros(1))
 
     def get_q(self, state, action):
         """
         Gets the tabular Q-value for the specified state and action pair. Returns 0 if there is no value for such pair
         """
-        sa = np.hstack((state, self.action_encoder.transform(action)))
-        return self.value_function.predict(sa)
+        return self._value_function.predict(self.get_state_action_tuple(state, action))
 
-    def learn(self, state, action, reward, next_state):
-        """
-        Performs a Q-learning update for a given state transition
+    def get_epsilon(self, t):
+        return max(self._epsilon_min, min(self._epsilon, 1.0 - np.log10((t + 1) * self._epsilon_decay)))
 
-        Q-learning update:
-        Q(s, a) += alpha * (reward(s,a) + max(Q(s') - Q(s,a))
-        """
-        new_max_q = max([self.get_q(next_state, a) for a in self.actions])
-        old_value = self.get_q(state, action)
+    def learn(self, minibatch):
+        x_batch, y_batch = [], []
+        for state, action, reward, next_state, done in minibatch:
+            # get next max Qsa value
+            new_max_q = max([self.get_q(next_state, a) for a in self._actions])
+            # update new Qsa
+            # qsa = old_value + self._alpha * (reward + self._gamma * new_max_q - old_value)
+            qsa = np.float64(reward) if done else reward + self._gamma * new_max_q[0]
 
-        qsa = old_value + self.alpha * (reward + self.gamma * new_max_q - old_value)
-        sa = np.hstack((state, self.action_encoder.transform(action)))
-        self.value_function.partial_fit(sa, qsa)
+            x_batch.append(self.get_state_action_tuple(state, action).flatten())
+            y_batch.append(qsa)
 
-    def choose_action(self, state, return_q=False):
+        self._value_function.partial_fit(np.array(x_batch), np.array(y_batch))
+
+        if self._epsilon > self._epsilon_min:
+            self._epsilon *= self._epsilon_decay
+
+    def choose_action(self, state, episode):
         """
         Chooses an action according to the learning previously performed
         """
-        q = [self.get_q(state, a) for a in self.actions]
-        max_q = max(q)
+        # get Q values for each action choice
+        q = np.asarray([self.get_q(state, a) for a in self._actions]).flatten()
 
-        if random.random() < self.epsilon:
-            return random.choice(self.actions)  # a random action is returned
-
-        count = q.count(max_q)
-
-        # In case there're several state-action max values
-        # we select a random one among them
-        if count > 1:
-            best = [i for i in range(len(self.actions)) if q[i] == max_q]
-            i = random.choice(best)
+        if random.random() < self.get_epsilon(episode):
+            action = random.choice(self._actions)  # a random action is returned
         else:
-            i = q.index(max_q)
+            # get max q values indexes
+            max_q_i = np.argwhere(q == np.amax(q, 0)).flatten()
 
-        action = self.actions[i]
+            # In case there're several state-action max values
+            # we select a random one among them
+            i = random.choice(max_q_i)
 
-        if return_q:  # if they want it, give it!
-            return action, q
+            action = self._actions[i]
+
         return action
+
+    def get_state_action_tuple(self, state, action):
+        """
+        Gets State-Action tuple
+        """
+        # transform action representation to OneHotEncoder
+        enc_a = self._action_encoder.transform(np.array([action]).reshape(1, -1)).toarray()[0, :]
+        scaled_state_action = self._scaler.transform(np.hstack((state, enc_a)).reshape(1, -1))
+        return scaled_state_action
