@@ -18,7 +18,11 @@ agent = fP.FrozenLakeAgent()
 # definimos sus híper-parámetros básicos
 # (también podrían establecerse los bins que hacen la división, modificando el método set_hyper_parameters)
 
-agent.set_hyper_parameters({"alpha": 0.5, "gamma": 0.9, "epsilon": 0.01})
+alpha = 0.5
+gamma = 0.9
+epsilon = 0.1
+
+agent.set_hyper_parameters({"alpha": alpha, "gamma": gamma, "epsilon": epsilon})
 
 # declaramos como True la variable de mostrar video, para ver en tiempo real cómo aprende el agente. Borrar esta línea
 # para acelerar la velocidad del aprendizaje
@@ -70,7 +74,35 @@ plt.plot(steps_per_episode)
 plt.title('Pasos (timesteps) acumulados por episodio')
 plt.show()
 
-# Se muestra el agente con su política óptima
-print(agent._learning_algorithm.q)
+# ---
+
+value_matrix = np.zeros((4, 4))
+for row in range(4):
+    for column in range(4):
+
+        state_values = []
+
+        for action in range(4):
+            state_values.append(agent._learning_algorithm.get_q(row * 4 + column, action))
+
+        maximum_value = max(state_values)  # como usamos epsilon-greedy, determinamos la acción que arroja máximo valor
+        state_values.remove(maximum_value)  # removemos el ítem asociado con la acción de máximo valor
+
+        value_matrix[row, column] = maximum_value * (1 - epsilon)
+
+        for non_maximum_value in state_values:
+            value_matrix[row, column] += epsilon/4 * non_maximum_value
+
+# el valor del estado objetivo se asigna en 1 (reward recibido al llegar) para que se coloree de forma apropiada
+value_matrix[3, 3] = 1
+
+plt.imshow(value_matrix, cmap=plt.cm.RdYlGn)
+plt.tight_layout()
+plt.colorbar()
+plt.xticks([])
+plt.yticks([])
+plt.show()
+
+print(value_matrix)
 
 agent.destroy_agent()
