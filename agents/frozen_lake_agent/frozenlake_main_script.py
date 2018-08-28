@@ -91,7 +91,10 @@ for row in range(4):
         maximum_value = max(state_values)  # como usamos epsilon-greedy, determinamos la acción que arroja máximo valor
         state_values.remove(maximum_value)  # removemos el ítem asociado con la acción de máximo valor
 
-        value_matrix[row, column] = maximum_value * (1 - epsilon)
+        # el valor de la matriz para la mejor acción es el máximo valor por la probabilidad de que el mismo sea elegido
+        # (que es 1-epsilon por la probabilidad de explotación más 1/4 * epsilon por probabilidad de que sea elegido al
+        # azar cuando se opta por una acción exploratoria)
+        value_matrix[row, column] = maximum_value * (1 - epsilon + 1/4 * epsilon)
 
         for non_maximum_value in state_values:
             value_matrix[row, column] += epsilon/4 * non_maximum_value
@@ -132,6 +135,6 @@ plt.xticks([])
 plt.yticks([])
 plt.show()
 
-print(value_matrix)
+print('\n Matriz de valor (en números): \n\n', value_matrix)
 
 agent.destroy_agent()
