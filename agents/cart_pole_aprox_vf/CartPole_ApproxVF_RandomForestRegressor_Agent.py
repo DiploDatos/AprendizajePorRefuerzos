@@ -2,9 +2,9 @@ import gym
 import six
 import random
 import numpy as np
-from sklearn.linear_model import SGDRegressor
+from sklearn.ensemble import RandomForestRegressor
 from sklearn.preprocessing import StandardScaler
-from agents.QLearning_SGDRegressor import QLearningSGDRegressor
+from agents.QLearning_RandomForestRegressor import QLearningRandomForestRegressor
 from agents.RLAgent import RLAgent
 
 """
@@ -12,7 +12,7 @@ Module adapted from Victor Mayoral Vilches <victor@erlerobotics.com>
 """
 
 
-class CartPoleApproxVFSGDRegressorAgent(RLAgent):
+class CartPoleApproxRandomForestRegressorAgent(RLAgent):
 
     def __init__(self):
 
@@ -39,14 +39,9 @@ class CartPoleApproxVFSGDRegressorAgent(RLAgent):
         # whether ot not to display a video of the agent execution at each episode
         self.display_video = False
 
-        # attribute initialization
-        self._cart_position_bins = None
-        self._pole_angle_bins = None
-        self._cart_velocity_bins = None
-        self._angle_rate_bins = None
-
         # the Q-learning algorithm
         self._learning_algorithm = None
+        self._value_function = None
 
         # default hyper-parameters
         self._alpha = None
@@ -84,9 +79,9 @@ class CartPoleApproxVFSGDRegressorAgent(RLAgent):
         for key, value in six.iteritems(hyper_parameters):
             if key == 'alpha':  # Learning-rate
                 self._alpha = value
-            if key == 'gamma':
+            if key == 'gamma':  # Discount factor
                 self._gamma = value
-            if key == 'epsilon':
+            if key == 'epsilon':  # Exploration rate
                 self._epsilon = value
             if key == 'batch_size':
                 self._batch_size = value
@@ -121,12 +116,12 @@ class CartPoleApproxVFSGDRegressorAgent(RLAgent):
         del self._learning_algorithm
 
         # a new Q-learning object is created to replace the previous object
-        self._learning_algorithm = QLearningSGDRegressor(
+        self._learning_algorithm = QLearningRandomForestRegressor(
             init_state=self._environment_instance.reset(),
             actions_n=self._environment_instance.action_space.n,
             gamma=self._gamma,
             epsilon=self._epsilon,
-            vf=SGDRegressor(tol=1e-3, alpha=self._alpha, learning_rate='optimal'),
+            vf=RandomForestRegressor(n_estimators=1, warm_start=True),
             scaler=self._scaler)
 
     def run(self):
@@ -143,7 +138,7 @@ class CartPoleApproxVFSGDRegressorAgent(RLAgent):
             for t in range(self._cutoff_time):
 
                 # Pick an action based on the current state
-                action = self._learning_algorithm.choose_action(state, i_episode)
+                action = self._learning_algorithm.choose_action(state)
                 # Execute the action and get feedback
                 observation, reward, done, info = self._environment_instance.step(action)
 
@@ -155,8 +150,8 @@ class CartPoleApproxVFSGDRegressorAgent(RLAgent):
                     self._memory.append((state, action, reward, next_state, done))
                     state = next_state
                 else:
-                    # if t < self._cutoff_time - 1:  # tests whether the pole fell
-                    #     reward = -200  # the pole fell, so a negative reward is computed to avoid failure
+                    if t < self._cutoff_time - 1:  # tests whether the pole fell
+                        reward = -200  # the pole fell, so a negative reward is computed to avoid failure
                     # current state transition is saved
                     self._memory.append((state, action, reward, next_state, done))
 
@@ -176,3 +171,5 @@ class CartPoleApproxVFSGDRegressorAgent(RLAgent):
         Destroys the reinforcement learning agent, in order to instantly release the memory the agent was using.
         """
         self._environment_instance.close()
+
+

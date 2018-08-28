@@ -1,22 +1,19 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-import numpy as np
-from agents.cart_pole_aprox_vf.CartPole_ApproxVF_SGDRegressor_Agent import CartPoleApproxVFSGDRegressorAgent
-# se declara una semilla aleatoria
-random_state = np.random.RandomState(20)
+from agents.cart_pole_aprox_vf.CartPole_ApproxVF_RandomForestRegressor_Agent import CartPoleApproxRandomForestRegressorAgent
 
 # el tiempo de corte del agente son 200 time-steps (el cual es el máximo del entorno Cartpole; seguir iterando tras 200
 # no cambiará el entorno)
 cutoff_time = 200
 
 # instanciamos nuestro agente
-agent = CartPoleApproxVFSGDRegressorAgent()
+agent = CartPoleApproxRandomForestRegressorAgent()
 
 # definimos sus híper-parámetros básicos
 # (también podrían establecerse los bins que hacen la división, modificando el método set_hyper_parameters)
+agent.set_hyper_parameters({
+    "gamma": 0.9,
+    "epsilon": 0.8,
+    "batch_size": 64})
 
-agent.set_hyper_parameters({"alpha": 0.5, "gamma": 0.9, "epsilon": 0.3})
 
 # declaramos como True la variable de mostrar video, para ver en tiempo real cómo aprende el agente. Borrar esta línea
 # para acelerar la velocidad del aprendizaje
