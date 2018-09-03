@@ -4,7 +4,7 @@ import random
 import numpy as np
 from sklearn.linear_model import SGDRegressor
 from sklearn.preprocessing import StandardScaler
-from agents.QLearning_SGDRegressor import QLearningSGDRegressor
+from agents.SGDRegressor import SGDRegressor
 from agents.RLAgent import RLAgent
 
 """
@@ -35,6 +35,7 @@ class CartPoleApproxVFSGDRegressorAgent(RLAgent):
         # to score the performance of the agent. It has a maximum value of 200 time-steps
         self.timesteps_of_episode = None
         self.reward_of_episode = None
+        self.reward_average = None
 
         # whether ot not to display a video of the agent execution at each episode
         self.display_video = False
@@ -51,10 +52,12 @@ class CartPoleApproxVFSGDRegressorAgent(RLAgent):
         # default hyper-parameters
         self._alpha = None
         self._gamma = None
-        self._epsilon = None
+        self._epsilon_init = None
+        self._epsilon_decay = None
+        self._epsilon_min = None
         self._batch_size = None
 
-        self.episodes_to_run = 3000  # amount of episodes to run for each run of the agent
+        self.episodes_to_run = 1000  # amount of episodes to run for each run of the agent
 
         # matrix with 3 columns, where each row represents the action, reward and next state obtained from the agent
         # executing an action in the previous state
@@ -86,8 +89,12 @@ class CartPoleApproxVFSGDRegressorAgent(RLAgent):
                 self._alpha = value
             if key == 'gamma':
                 self._gamma = value
-            if key == 'epsilon':
-                self._epsilon = value
+            if key == 'epsilon_init':  # Exploration rate constant
+                self._epsilon_init = value
+            if key == 'epsilon_decay':  # Exploration rate decay
+                self._epsilon_decay = value
+            if key == 'epsilon_min':  # Exploration rate min value
+                self._epsilon_min = value
             if key == 'batch_size':
                 self._batch_size = value
 
@@ -115,18 +122,26 @@ class CartPoleApproxVFSGDRegressorAgent(RLAgent):
         # last run is cleared
         self.timesteps_of_episode = []
         self.reward_of_episode = []
+        self.reward_average = []
         self._memory = []
 
         # a new q_learning agent is created
         del self._learning_algorithm
 
         # a new Q-learning object is created to replace the previous object
-        self._learning_algorithm = QLearningSGDRegressor(
+        self._learning_algorithm = SGDRegressor(
             init_state=self._environment_instance.reset(),
             actions_n=self._environment_instance.action_space.n,
             gamma=self._gamma,
-            epsilon=self._epsilon,
-            vf=SGDRegressor(tol=1e-3, alpha=self._alpha, learning_rate='optimal'),
+            epsilon_init=self._epsilon_init,
+            epsilon_decay=self._epsilon_decay,
+            epsilon_min=self._epsilon_min,
+            vf=SGDRegressor(
+                loss='epsilon_insensitive',
+                alpha=self._alpha,
+                learning_rate='optimal',
+                shuffle=False,
+                warm_start=True),
             scaler=self._scaler)
 
     def run(self):
@@ -163,10 +178,12 @@ class CartPoleApproxVFSGDRegressorAgent(RLAgent):
                     self.timesteps_of_episode = np.append(self.timesteps_of_episode, [int(t + 1)])
                     cum_reward += reward
                     self.reward_of_episode = np.append(self.reward_of_episode, cum_reward)
+                    self.reward_average = np.append(self.reward_average, self.reward_of_episode.sum()/(i_episode+1))
+                    print("Episode {:0d} finish. Reward: {:0.2f}".format(i_episode, cum_reward))
                     break
-            print("Episode {:0d} finish. Reward: {:0.2f}".format(i_episode, cum_reward))
 
             # train value function predictor with a minibach
+            # self._learning_algorithm.learn(self._memory[-min(len(self._memory), self._batch_size):])
             self._learning_algorithm.learn(random.sample(self._memory, min(len(self._memory), self._batch_size)))
 
         return self.reward_of_episode.mean()

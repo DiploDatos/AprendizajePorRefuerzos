@@ -1,3 +1,4 @@
+import math
 import random
 import numpy as np
 from sklearn.preprocessing import OneHotEncoder
@@ -17,11 +18,13 @@ Inspired by https://gym.openai.com/evaluations/eval_kWknKOkPQ7izrixdhriurA
 """
 
 
-class QLearningSGDRegressor():
+class SGDRegressor():
 
-    def __init__(self, init_state, actions_n, epsilon, gamma, vf, scaler):
+    def __init__(self, init_state, actions_n, epsilon_init, epsilon_decay, epsilon_min, gamma, vf, scaler):
         self.tuples = {}
-        self._epsilon = epsilon  # exploration constant
+        self._epsilon = epsilon_init  # exploration constant
+        self._epsilon_decay = epsilon_decay  # exploration constant decay
+        self._epsilon_min = epsilon_min  # exploration constant min
         self._gamma = gamma      # discount factor
         self._actions = range(actions_n)
         # OneHotEncoder for actions
@@ -40,19 +43,23 @@ class QLearningSGDRegressor():
         """
         return self._value_function.predict(self.get_state_action_tuple(state, action))
 
+    def get_epsilon(self, t):
+        return max(self._epsilon_min, min(self._epsilon, 1.0 - math.log10((t + 1) * self._epsilon_decay)))
+
     def learn(self, minibatch):
         x_batch, y_batch = [], []
         for state, action, reward, next_state, done in minibatch:
             # get next max Qsa value
             new_max_q = max([self.get_q(next_state, a) for a in self._actions])
-            # update new Qsa
-            # qsa = old_value + self._alpha * (reward + self._gamma * new_max_q - old_value)
             qsa = np.float64(reward) if done else reward + self._gamma * new_max_q[0]
 
             x_batch.append(self.get_state_action_tuple(state, action).flatten())
             y_batch.append(qsa)
 
         self._value_function.partial_fit(np.array(x_batch), np.array(y_batch))
+
+        if self._epsilon > self._epsilon_min:
+            self._epsilon *= self._epsilon_decay
 
     def choose_action(self, state, episode):
         """
@@ -61,7 +68,7 @@ class QLearningSGDRegressor():
         # get Q values for each action choice
         q = np.asarray([self.get_q(state, a) for a in self._actions]).flatten()
 
-        if random.random() < self._epsilon:
+        if random.random() < self.get_epsilon(episode):
             action = random.choice(self._actions)  # a random action is returned
         else:
             # get max q values indexes

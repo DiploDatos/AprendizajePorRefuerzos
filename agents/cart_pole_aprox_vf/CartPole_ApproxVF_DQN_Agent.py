@@ -2,9 +2,9 @@ import gym
 import six
 import random
 import numpy as np
-from sklearn.ensemble import RandomForestRegressor
+
 from sklearn.preprocessing import StandardScaler
-from agents.QLearning_RandomForestRegressor import QLearningRandomForestRegressor
+from agents.DQNRegressor import DQNRegressor
 from agents.RLAgent import RLAgent
 
 """
@@ -12,15 +12,15 @@ Module adapted from Victor Mayoral Vilches <victor@erlerobotics.com>
 """
 
 
-class CartPoleApproxRandomForestRegressorAgent(RLAgent):
+class CartPoleApproxVFDQNAgent(RLAgent):
 
     def __init__(self):
 
         # basic configuration
         self._environment_name = "CartPole-v0"
         self._environment_instance = None  # (note that the "None" variables have values yet to be assigned)
-        self._state_action_min_values = np.array([-2.4, np.finfo(np.float64).min, -41.8, np.finfo(np.float64).min, 0, 0])
-        self._state_action_max_values = np.array([2.4, np.finfo(np.float64).max, 41.8, np.finfo(np.float64).max, 1, 1])
+        self._state_action_min_values = np.array([-2.4, np.finfo(np.float64).min, -41.8, np.finfo(np.float64).min])
+        self._state_action_max_values = np.array([2.4, np.finfo(np.float64).max, 41.8, np.finfo(np.float64).max])
         boundaries = np.vstack((self._state_action_min_values, self._state_action_max_values))
         self._scaler = StandardScaler()
         self._scaler.fit(boundaries)
@@ -35,21 +35,30 @@ class CartPoleApproxRandomForestRegressorAgent(RLAgent):
         # to score the performance of the agent. It has a maximum value of 200 time-steps
         self.timesteps_of_episode = None
         self.reward_of_episode = None
+        self.reward_average = None
 
         # whether ot not to display a video of the agent execution at each episode
         self.display_video = False
 
+        # attribute initialization
+        self._cart_position_bins = None
+        self._pole_angle_bins = None
+        self._cart_velocity_bins = None
+        self._angle_rate_bins = None
+
         # the Q-learning algorithm
         self._learning_algorithm = None
-        self._value_function = None
 
         # default hyper-parameters
         self._alpha = None
+        self._alpha_decay = None
         self._gamma = None
-        self._epsilon = None
+        self._epsilon_init = None
+        self._epsilon_decay = None
+        self._epsilon_min = None
         self._batch_size = None
 
-        self.episodes_to_run = 3000  # amount of episodes to run for each run of the agent
+        self.episodes_to_run = 1000  # amount of episodes to run for each run of the agent
 
         # matrix with 3 columns, where each row represents the action, reward and next state obtained from the agent
         # executing an action in the previous state
@@ -79,10 +88,16 @@ class CartPoleApproxRandomForestRegressorAgent(RLAgent):
         for key, value in six.iteritems(hyper_parameters):
             if key == 'alpha':  # Learning-rate
                 self._alpha = value
-            if key == 'gamma':  # Discount factor
+            if key == 'alpha_decay':  # Learning-rate
+                self._alpha_decay = value
+            if key == 'gamma':
                 self._gamma = value
-            if key == 'epsilon':  # Exploration rate
-                self._epsilon = value
+            if key == 'epsilon_init':  # Exploration rate constant
+                self._epsilon_init = value
+            if key == 'epsilon_decay':  # Exploration rate decay
+                self._epsilon_decay = value
+            if key == 'epsilon_min':  # Exploration rate min value
+                self._epsilon_min = value
             if key == 'batch_size':
                 self._batch_size = value
 
@@ -110,18 +125,21 @@ class CartPoleApproxRandomForestRegressorAgent(RLAgent):
         # last run is cleared
         self.timesteps_of_episode = []
         self.reward_of_episode = []
+        self.reward_average = []
         self._memory = []
 
         # a new q_learning agent is created
         del self._learning_algorithm
 
         # a new Q-learning object is created to replace the previous object
-        self._learning_algorithm = QLearningRandomForestRegressor(
-            init_state=self._environment_instance.reset(),
+        self._learning_algorithm = DQNRegressor(
             actions_n=self._environment_instance.action_space.n,
+            alpha=self._alpha,
+            alpha_decay=self._alpha_decay,
             gamma=self._gamma,
-            epsilon=self._epsilon,
-            vf=RandomForestRegressor(n_estimators=1, warm_start=True),
+            epsilon_init=self._epsilon_init,
+            epsilon_decay=self._epsilon_decay,
+            epsilon_min=self._epsilon_min,
             scaler=self._scaler)
 
     def run(self):
@@ -138,7 +156,7 @@ class CartPoleApproxRandomForestRegressorAgent(RLAgent):
             for t in range(self._cutoff_time):
 
                 # Pick an action based on the current state
-                action = self._learning_algorithm.choose_action(state)
+                action = self._learning_algorithm.choose_action(state, i_episode)
                 # Execute the action and get feedback
                 observation, reward, done, info = self._environment_instance.step(action)
 
@@ -150,16 +168,17 @@ class CartPoleApproxRandomForestRegressorAgent(RLAgent):
                     self._memory.append((state, action, reward, next_state, done))
                     state = next_state
                 else:
-                    if t < self._cutoff_time - 1:  # tests whether the pole fell
-                        reward = -200  # the pole fell, so a negative reward is computed to avoid failure
+                    # if t < self._cutoff_time - 1:  # tests whether the pole fell
+                    #     reward = -200  # the pole fell, so a negative reward is computed to avoid failure
                     # current state transition is saved
                     self._memory.append((state, action, reward, next_state, done))
 
                     self.timesteps_of_episode = np.append(self.timesteps_of_episode, [int(t + 1)])
                     cum_reward += reward
                     self.reward_of_episode = np.append(self.reward_of_episode, cum_reward)
+                    self.reward_average = np.append(self.reward_average, self.reward_of_episode.sum() / (i_episode + 1))
+                    print("Episode {:0d} finish. Reward: {:0.2f}".format(i_episode, cum_reward))
                     break
-            print("Episode {:0d} finish. Reward: {:0.2f}".format(i_episode, cum_reward))
 
             # train value function predictor with a minibach
             self._learning_algorithm.learn(random.sample(self._memory, min(len(self._memory), self._batch_size)))
@@ -171,5 +190,3 @@ class CartPoleApproxRandomForestRegressorAgent(RLAgent):
         Destroys the reinforcement learning agent, in order to instantly release the memory the agent was using.
         """
         self._environment_instance.close()
-
-
