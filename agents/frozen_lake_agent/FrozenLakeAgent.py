@@ -3,7 +3,6 @@ import six
 import numpy as np
 from agents.QLearning_tabular import QLearning
 from agents.RLAgent import RLAgent
-from functools import reduce
 from gym.envs.registration import register
 
 
@@ -114,6 +113,7 @@ class FrozenLakeAgent(RLAgent):
             # video_callable=lambda count: count % 10 == 0)
             self._environment_instance = gym.wrappers.Monitor(self._environment_instance,
                                                               '/tmp/frozenlake-experiment-1',
+                                                              mode='human',
                                                               force=True)
 
     def run(self):
@@ -148,9 +148,9 @@ class FrozenLakeAgent(RLAgent):
                 else:
                     if reward == 0:  # episode finished because the agent fell into a hole
 
-                        # the default reward is overrided by our hand-made reward of -1 so as to punish the agent for
-                        # falling into a hole
-                        reward = -1
+                        # the default reward can be overrided by a hand-made reward (below) for example to punish the
+                        # agent for falling into a hole
+                        reward = 0  # replace this number to override the reward
 
                     self._learning_algorithm.learn(state, action, reward, next_state)
                     self.timesteps_of_episode = np.append(self.timesteps_of_episode, [int(t + 1)])
