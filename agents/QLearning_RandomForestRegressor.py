@@ -17,10 +17,9 @@ Inspired by https://gym.openai.com/evaluations/eval_kWknKOkPQ7izrixdhriurA
 """
 
 
-class QLearningSGDRegressor():
+class QLearningRandomForestRegressor():
 
     def __init__(self, init_state, actions_n, epsilon, gamma, vf, scaler):
-        self.tuples = {}
         self._epsilon = epsilon  # exploration constant
         self._gamma = gamma      # discount factor
         self._actions = range(actions_n)
@@ -31,8 +30,8 @@ class QLearningSGDRegressor():
         self._scaler = scaler
         # init value function predictor
         for a in self._actions:
-            # fit with initial state and reward 0S
-            vf.partial_fit(self.get_state_action_tuple(init_state, a), np.zeros(1))
+            # fit with initial state and reward 0
+            self._value_function.fit(self.get_state_action_tuple(init_state, a), np.zeros(1))
 
     def get_q(self, state, action):
         """
@@ -49,12 +48,12 @@ class QLearningSGDRegressor():
             # qsa = old_value + self._alpha * (reward + self._gamma * new_max_q - old_value)
             qsa = np.float64(reward) if done else reward + self._gamma * new_max_q[0]
 
-            x_batch.append(self.get_state_action_tuple(state, action).flatten())
+            x_batch.append(self.get_state_action_tuple(state, action)[0])
             y_batch.append(qsa)
 
-        self._value_function.partial_fit(np.array(x_batch), np.array(y_batch))
+        self._value_function.fit(np.array(x_batch), np.array(y_batch))
 
-    def choose_action(self, state, episode):
+    def choose_action(self, state):
         """
         Chooses an action according to the learning previously performed
         """
@@ -65,7 +64,7 @@ class QLearningSGDRegressor():
             action = random.choice(self._actions)  # a random action is returned
         else:
             # get max q values indexes
-            max_q_i = np.argwhere(q == np.amax(q, 0)).flatten()
+            max_q_i = np.argwhere(q == np.amax(q, 0))[0]
 
             # In case there're several state-action max values
             # we select a random one among them
