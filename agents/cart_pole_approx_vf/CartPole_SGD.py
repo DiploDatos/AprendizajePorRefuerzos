@@ -10,7 +10,7 @@ from sklearn.linear_model import SGDRegressor
 
 class SGDCartPoleSolver():
     def __init__(self, n_episodes=1000, max_env_steps=None, gamma=0.9, epsilon=1.0, epsilon_min=0.01,
-                 epsilon_decay=0.005, alpha=0.0001, batch_size=128, monitor=False):
+                 epsilon_decay=0.005, alpha=0.0001, batch_size=32, monitor=False):
         self.memory = deque(maxlen=100000)
         self.env = gym.make('CartPole-v0')
         if monitor: self.env = gym.wrappers.Monitor(self.env, '../data/cartpole-1', force=True)
@@ -70,6 +70,9 @@ class SGDCartPoleSolver():
                 action = self.choose_action(state, self.get_epsilon(e))
                 next_state, reward, done, _ = self.env.step(action)
                 self.remember(state, action, reward, next_state, done)
+
+                self.replay(self.batch_size)
+
                 state = next_state
                 i += 1
 
@@ -79,8 +82,7 @@ class SGDCartPoleSolver():
             if e % 100 == 0:
                 print('[Episode {}] - Mean survival time over last 100 episodes was {} ticks.'.format(e, mean_score))
 
-            self.replay(self.batch_size)
-
+        print('[Episode {}] - Mean survival time over last 100 episodes was {} ticks.'.format(e, mean_score))
         return scores
 
 
