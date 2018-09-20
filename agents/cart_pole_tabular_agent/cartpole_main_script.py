@@ -14,6 +14,8 @@ cutoff_time = 200
 # instanciamos nuestro agente
 agent = cP.CartPoleTabularAgent()
 
+agent.random_state = random_state
+
 # definimos sus híper-parámetros básicos
 # (también podrían establecerse los bins que hacen la división, modificando el método set_hyper_parameters)
 
