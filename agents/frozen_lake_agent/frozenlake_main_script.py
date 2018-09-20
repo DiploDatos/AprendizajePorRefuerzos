@@ -26,6 +26,8 @@ agent = fP.FrozenLakeAgent()
 
 agent.set_hyper_parameters({"alpha": alpha, "gamma": gamma, "epsilon": epsilon})
 
+agent.random_state = random_state
+
 # declaramos como True la variable de mostrar video, para ver en tiempo real cómo aprende el agente. Borrar esta línea
 # para acelerar la velocidad del aprendizaje
 agent.display_video = True
@@ -86,7 +88,7 @@ for row in range(4):
         state_values = []
 
         for action in range(4):
-            state_values.append(agent._learning_algorithm.get_q(row * 4 + column, action))
+            state_values.append(agent.q.get((row * 4 + column, action), 0))
 
         maximum_value = max(state_values)  # como usamos epsilon-greedy, determinamos la acción que arroja máximo valor
         state_values.remove(maximum_value)  # removemos el ítem asociado con la acción de máximo valor
@@ -113,10 +115,10 @@ for row, column in itertools.product(range(value_matrix.shape[0]), range(value_m
 
     arrow_direction = '↓'
 
-    left_action = agent._learning_algorithm.get_q(row * 4 + column, 0)
-    down_action = agent._learning_algorithm.get_q(row * 4 + column, 1)
-    right_action = agent._learning_algorithm.get_q(row * 4 + column, 2)
-    up_action = agent._learning_algorithm.get_q(row * 4 + column, 3)
+    left_action = agent.q.get((row * 4 + column, 0), 0)
+    down_action = agent.q.get((row * 4 + column, 1), 0)
+    right_action = agent.q.get((row * 4 + column, 2), 0)
+    up_action = agent.q.get((row * 4 + column, 3), 0)
 
     best_action = down_action
 
