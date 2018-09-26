@@ -89,7 +89,6 @@ class DQNCartPoleSolver:
 
                 # update second model
                 if j % self.c == 0:
-                    self.model2 = clone_model(self.model)
                     self.model2.set_weights(self.model.get_weights())
 
             scores100.append(i)
