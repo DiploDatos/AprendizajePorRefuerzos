@@ -37,7 +37,9 @@ class SGDPolyCartPoleSolver:
                 shuffle=False,
                 warm_start=True)
 
-        # initialize model
+        # Initialize feature tunning
+        self.feature_tuning.fit(np.reshape(np.hstack((self.env.reset(), 0)), [1, 5]))
+        # Initialize model
         self.model.partial_fit(self.preprocess_state(self.env.reset(), 0), [0])
 
     def remember(self, state, action, reward, next_state, done):
@@ -64,7 +66,7 @@ class SGDPolyCartPoleSolver:
 
         # poly_state converts the horizontal stack into a combination of its parameters i.e.
         # [1, s_1, s_2, s_3, s_4, a_1, s_1 s_2, s_1 s_3, ...]
-        poly_state = self.feature_tuning.fit_transform(np.reshape(np.hstack((state, action)), [1, 5]))
+        poly_state = self.feature_tuning.transform(np.reshape(np.hstack((state, action)), [1, 5]))
         return poly_state
 
     def replay(self, batch_size):
