@@ -16,7 +16,7 @@ is_slippery = False
 
 
 # se declara una semilla aleatoria
-random_state = np.random.RandomState(20)
+random_state = np.random.RandomState(47)
 
 # el tiempo de corte del agente son 100 time-steps
 cutoff_time = 100
@@ -111,28 +111,32 @@ plt.colorbar()
 
 fmt = '.2f'
 thresh = value_matrix.max() / 2.
-for row, column in itertools.product(range(value_matrix.shape[0]), range(value_matrix.shape[1])):
 
-    arrow_direction = '↓'
+for row, column in itertools.product(range(value_matrix.shape[0]), range(value_matrix.shape[1])):
 
     left_action = agent.q.get((row * 4 + column, 0), 0)
     down_action = agent.q.get((row * 4 + column, 1), 0)
     right_action = agent.q.get((row * 4 + column, 2), 0)
     up_action = agent.q.get((row * 4 + column, 3), 0)
-
+    
+    arrow_direction = '↓'
     best_action = down_action
-
+    
     if best_action < right_action:
         arrow_direction = '→'
+        best_action = right_action
     if best_action < left_action:
         arrow_direction = '←'
+        best_action = left_action
     if best_action < up_action:
         arrow_direction = '↑'
-
-    # notar que column, row están invertidos en orden en la línea de abajo porque representan a x,y del plot
-    plt.text(column, row, arrow_direction,
-             horizontalalignment="center")
-
+        best_action = up_action
+    if best_action == 0:
+        arrow_direction = ''
+   
+    #notar que column, row están invertidos en orden en la línea de abajo porque representan a x,y del plot
+    plt.text(column, row, arrow_direction, horizontalalignment="center")
+    
 plt.xticks([])
 plt.yticks([])
 plt.show()
