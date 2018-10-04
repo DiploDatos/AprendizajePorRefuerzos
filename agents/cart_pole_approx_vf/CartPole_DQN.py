@@ -34,7 +34,7 @@ class DQNCartPoleSolver:
         if max_env_steps is not None:
             self.env._max_episode_steps = max_env_steps
 
-        # Init model
+        # Init model 1
         self.model = Sequential()
         self.model.add(Dense(24, input_dim=4, activation='relu'))
         self.model.add(Dense(48, activation='relu'))
@@ -53,7 +53,7 @@ class DQNCartPoleSolver:
 
         # exploits the current knowledge if the random number > epsilon, otherwise explores
         return self.env.action_space.sample() if (np.random.random() <= epsilon) else \
-            np.argmax(self.model.predict(state))
+            np.argmax(self.model.predict(state))  # notice that model 1 is making the prediction
 
     def get_epsilon(self, episode):
         """Returns an epsilon that decays over time until a minimum epsilon value is reached; in this case the minimum
@@ -76,7 +76,7 @@ class DQNCartPoleSolver:
             y_target = self.model.predict(state)
 
             target = reward if done \
-                else reward + self.gamma * np.max(self.model2.predict(next_state)[0])
+                else reward + self.gamma * np.max(self.model2.predict(next_state)[0])  # model 2 predicts the value
 
             y_target[0][action] = target
             x_batch.append(state[0])
