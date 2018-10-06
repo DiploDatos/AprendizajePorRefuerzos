@@ -27,3 +27,7 @@ debuguear los agentes desde un IDE.
 *python -m ipykernel install --name tensorflow*
 
 *source deactivate*
+
+6. Para incorporar el entorno tensorflow creado en Pycharm, seleccionarlo desde:
+
+* File -> Settings -> Project -> Project interpreter -> Show all (seleccionado en lista de entornos) -> Add -> Conda environment -> Existing environment -> tensorflow
