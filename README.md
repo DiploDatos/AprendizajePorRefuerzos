@@ -19,3 +19,8 @@ debuguear los agentes desde un IDE.
 
 4. Correr los agentes a partir de alguno de los scripts por ejemplo *frozenlake_main_script.py* o 
 *cartpole_main_script.py*.
+
+5. Para incorporar el nuevo kernel a Jupyter Notebook tiene que ejecutar los siguientes comandos:
+*source activate tensorflow*
+*python -m ipykernel install --name tensorflow*
+*source deactivate*
