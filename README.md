@@ -9,7 +9,8 @@ Para instalar el entorno virtual y poder ejecutar los laboratorios, se requiere:
 
 1. Descargar Anaconda para Python 3.6 desde [https://www.anaconda.com/download/]().
 
-2. Instalar el entorno virtual provisto, descargando el archivo tensorflow.yml y desde la consola ejecutar 
+2. Instalar el entorno virtual provisto, descargando el archivo tensorflow.yml y desde la consola ejecutar:
+
 *conda env create -f tensorflow_env.yml*
 
 3. (Opcional) Descargar un entorno (ej: [Pycharm](https://www.jetbrains.com/pycharm/download/)) para poder realizar un 
