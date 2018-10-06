@@ -11,7 +11,7 @@ Para instalar el entorno virtual y poder ejecutar los laboratorios, se requiere:
 
 2. Instalar el entorno virtual provisto, descargando el archivo tensorflow.yml y desde la consola ejecutar:
 
-*conda env create -f tensorflow_env.yml*
+*conda env create -f tensorflow.yml*
 
 3. (Opcional) Descargar un entorno (ej: [Pycharm](https://www.jetbrains.com/pycharm/download/)) para poder realizar un 
 debug paso a paso de los agentes. Si bien se puede trabajar desde jupyter notebook, suele resultar mucho más sencillo 
