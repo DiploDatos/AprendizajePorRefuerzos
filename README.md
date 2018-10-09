@@ -1,4 +1,4 @@
-# NOTA: Repositorio movido a https://github.com/DiploDatos/RLDiplodatos
+# NOTA: Repositorio movido a https://github.com/DiploDatos/AprendizajePorRefuerzos
 Se mantiene este repositorio a modo de archivo.
 
 # RLDiplodatos
