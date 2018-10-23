@@ -39,6 +39,8 @@ Algunos links útiles para aprender más:
 
 • [Blog de muy buen curso de Deep RL](https://simoninithomas.github.io/Deep_reinforcement_learning_Course/)
 
+• [Otro blog de Deep RL con tensorflow](https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0)
+
 • [Entrada de blog explicando el equilibrio entre sesgo y varianza en RL](https://medium.com/mlreview/making-sense-of-the-bias-variance-trade-off-in-deep-reinforcement-learning-79cf1e83d565)
 
 • [Paper sobre vista general de Deep RL](https://arxiv.org/abs/1701.07274)
