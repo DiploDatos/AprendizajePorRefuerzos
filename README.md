@@ -1,6 +1,3 @@
-# NOTA: Repositorio movido a https://github.com/DiploDatos/AprendizajePorRefuerzos
-Se mantiene este repositorio a modo de archivo.
-
 # RLDiplodatos
 
 Repositorio oficial de la materia Aprendizaje por Refuerzos de la Diplomatura en Ciencias de Datos, Aprendizaje 
