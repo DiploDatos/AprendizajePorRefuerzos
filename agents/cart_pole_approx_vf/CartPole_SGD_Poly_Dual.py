@@ -10,14 +10,11 @@ from sklearn.preprocessing import PolynomialFeatures
 
 
 class SGDPolyDualCartPoleSolver:
-    def __init__(self, n_episodes=1000, max_env_steps=None, gamma=0.9, epsilon=1.0, epsilon_min=0.01,
-                 epsilon_decay=0.005, alpha=0.0001, batch_size=32, c=10, monitor=False):
-
+    def __init__(self, env, n_episodes=1000, max_env_steps=None, gamma=0.5, epsilon=1.0, epsilon_min=0.01,
+                 epsilon_decay=0.005, alpha=0.001, batch_size=32, c=10, debug=False):
+        self.debug = debug
         self.memory = deque(maxlen=100000)
-        self.env = gym.make('CartPole-v0')
-
-        if monitor:  # whether or not to display video
-            self.env = gym.wrappers.Monitor(self.env, '../data/cartpole-1', force=True)
+        self.env = env
 
         # hyper-parameter setting
         self.gamma = gamma
@@ -110,7 +107,8 @@ class SGDPolyDualCartPoleSolver:
         for e in range(self.n_episodes):
             state = self.env.reset()
             done = False
-            i = 0
+            cum_reward = 0  # Maintains the cumulative reward during de episode
+
             while not done:
                 action = self.choose_action(state, self.get_epsilon(e))
                 next_state, reward, done, _ = self.env.step(action)
@@ -119,7 +117,7 @@ class SGDPolyDualCartPoleSolver:
                 self.replay(self.batch_size)
 
                 state = next_state
-                i += 1
+                cum_reward += reward
                 j += 1
 
                 # update second model
@@ -127,18 +125,16 @@ class SGDPolyDualCartPoleSolver:
                     self.model2.coef_ = self.model.coef_
                     self.model2.intercept_ = self.model.intercept_
 
-            scores100.append(i)
-            scores.append(i)
+            scores100.append(cum_reward)
+            scores.append(cum_reward)
             mean_score = np.mean(scores100)
-            if e % 100 == 0:
-                print('[Episode {}] - Mean survival time over last 100 episodes was {} ticks.'.format(e, mean_score))
+            if e % 100 == 0 and self.debug:
+                print('[Episode {}] - Mean reward over last 100 episodes was {}.'.format(e, mean_score))
 
-        # noinspection PyUnboundLocalVariable
-        print('[Episode {}] - Mean survival time over last 100 episodes was {} ticks.'.format(e, mean_score))
+        print('[Episode {}] - Mean Mean reward over last 100 episodes was {}.'.format(e, mean_score))
         return scores
 
 
 if __name__ == '__main__':
-    """Code added in order to enable executing this solver as a standalone script"""
-    agent = SGDPolyDualCartPoleSolver()
+    agent = SGDPolyDualCartPoleSolver(gym.make('CartPole-v0'), debug=True)
     agent.run()

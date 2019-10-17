@@ -1,0 +1,14 @@
+name: python37_rl
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7
+  - gym
+  - numpy
+  - scikit-learn
+  - matplotlib
+  - torch
+  - jupyter
+
+
