@@ -16,7 +16,7 @@ Para instalar el entorno virtual y poder ejecutar los agentes que vamos a ver, s
 
 Pasos para instalarlos como un nuevo entorno virtual:
 
-1. Descargar Anaconda para Python 3.7 desde [https://www.anaconda.com/download/]().
+1. Descargar Anaconda para Python 3.7 desde [https://www.anaconda.com/download/](https://www.anaconda.com/download/).
 
 2. Instalar el entorno virtual provisto, descargando el archivo python37_rl.yml y desde la consola ejecutar:
 
