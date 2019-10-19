@@ -1,6 +1,8 @@
 name: python37_rl
 channels:
   - conda-forge
+  - hcc
+  - pytorch
   - defaults
 dependencies:
   - python=3.7
