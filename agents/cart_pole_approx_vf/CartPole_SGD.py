@@ -9,14 +9,12 @@ from sklearn.linear_model import SGDRegressor
 
 
 class SGDCartPoleSolver:
-    def __init__(self, n_episodes=1000, max_env_steps=None, gamma=0.9, epsilon=1.0, epsilon_min=0.01,
-                 epsilon_decay=0.005, alpha=0.0001, batch_size=32, monitor=False):
+    def __init__(self, env, n_episodes=1000, max_env_steps=None, gamma=0.5, epsilon=1.0, epsilon_min=0.01,
+                 epsilon_decay=0.005, alpha=0.001, batch_size=32, debug=False):
 
+        self.debug = debug
         self.memory = deque(maxlen=100000)
-        self.env = gym.make('CartPole-v0')
-
-        if monitor:  # whether or not to display video
-            self.env = gym.wrappers.Monitor(self.env, '../data/cartpole-1', force=True)
+        self.env = env
 
         # hyper-parameter setting
         self.gamma = gamma
@@ -80,6 +78,7 @@ class SGDCartPoleSolver:
             y_batch.append(qsa_s)
 
         self.model.partial_fit(np.array(x_batch), np.array(y_batch))
+        return self.model.loss
 
     def run(self):
         """Main loop that controls the execution of the agent"""
@@ -89,7 +88,7 @@ class SGDCartPoleSolver:
         for e in range(self.n_episodes):
             state = self.env.reset()
             done = False
-            t = 0  # t counts the number of time-steps the pole has been kept up
+            cum_reward = 0  # Maintains the cumulative reward during de episode
 
             while not done:
                 action = self.choose_action(state, self.get_epsilon(e))
@@ -99,20 +98,18 @@ class SGDCartPoleSolver:
                 self.replay(self.batch_size)
 
                 state = next_state
-                t += 1
+                cum_reward += reward
 
-            scores100.append(t)
-            scores.append(t)
+            scores100.append(cum_reward)
+            scores.append(cum_reward)
             mean_score = np.mean(scores100)
-            if e % 100 == 0:
-                print('[Episode {}] - Mean survival time over last 100 episodes was {} ticks.'.format(e, mean_score))
+            if e % 100 == 0 and self.debug:
+                print('[Episode {}] - Mean reward over last 100 episodes was {}.'.format(e, mean_score))
 
-        # noinspection PyUnboundLocalVariable
-        print('[Episode {}] - Mean survival time over last 100 episodes was {} ticks.'.format(e, mean_score))
+        print('[Episode {}] - Mean Mean reward over last 100 episodes was {}.'.format(e, mean_score))
         return scores
 
 
 if __name__ == '__main__':
-    """Code added in order to enable executing this solver as a standalone script"""
-    agent = SGDCartPoleSolver()
+    agent = SGDCartPoleSolver(gym.make('CartPole-v0'), debug=True)
     agent.run()
