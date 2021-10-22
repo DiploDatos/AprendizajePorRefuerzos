@@ -9,7 +9,7 @@ Automático y sus Aplicaciones.
 
 Pasos para instalar los paquetes requeridos como un nuevo entorno de Conda:
 
-#### Local
+#### Desde local
 
 Descargar Anaconda desde [https://www.anaconda.com/download/](https://www.anaconda.com/download/), e instalarlo tras la descarga. Tras ello, ejecutamos los siguientes comandos desde consola:
 
@@ -35,7 +35,7 @@ Descargar Anaconda desde [https://www.anaconda.com/download/](https://www.anacon
         pip install -r requirements.txt
 
 
-#### Nabu
+#### Desde Nabu
 
 Para crear el entorno virtual desde Nabu, los primeros comandos son:
 
@@ -50,9 +50,9 @@ Para crear el entorno virtual desde Nabu, los primeros comandos son:
 
 ### Ejecución
 
-Los notebooks están preparados para ejecutarse tanto desde Google Colab como desde localhost así como desde Nabu.
-En general, las simulaciones de estos notebooks se pueden ejecutar desde localhost.
-Algunas características sólo están disponibles en localhost, como la renderización de los entornos.
+Los notebooks están preparados para ejecutarse tanto desde localhost, como desde Google Colab y Nabu.
+En general, las simulaciones de estos notebooks se pueden ejecutar sin problemas desde localhost, ya que no demandan demasiados recursos computacionales (excepto si se ejecutan entrenamientos completos en entornos muy complejos, como en los de Atari).
+Algunas características sólo están disponibles en localhost, como las animaciones de los agentes en los entornos.
 
 
 ## Algunos links útiles para aprender más:
