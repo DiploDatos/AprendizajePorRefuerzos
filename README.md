@@ -39,7 +39,7 @@ Descargar Anaconda desde [https://www.anaconda.com/download/](https://www.anacon
 
 Para crear el entorno virtual desde Nabu, los primeros comandos son:
 
-    wget https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh
+    wget https://repo.anaconda.com/archive/Anaconda3-2021.04-Linux-x86_64.sh
     chmod 755 Anaconda3-2020.11-Linux-x86_64.sh
     ./Anaconda3-2020.11-Linux-x86_64.sh
     conda create --name diplodatos_rl
