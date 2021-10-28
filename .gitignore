@@ -106,3 +106,9 @@ venv.bak/
 *.xml
 
 *.iml
+
+logs/
+
+rl-baselines3-zoo/
+
+tensorboard/
