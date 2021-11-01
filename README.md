@@ -27,11 +27,11 @@ Descargar Anaconda desde [https://www.anaconda.com/download/](https://www.anacon
 
 1. Instalamos librerías de aprendizaje por refuerzos profundo (excepto gym y ffmpeg, el resto son para los algoritmos de deep RL que veremos el segundo fin de semana)
 
-        pip install gym pyglet stable-baselines3[extra,tests,docs]
+        pip install gym pyglet stable-baselines3[extra,tests,docs]  (en Windows no es posible usar PyType, por lo que debe usarse el [subsistema de Linux para Windows](https://docs.microsoft.com/en-us/windows/wsl/faq), por ejemplo instalando [Ubuntu](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6))
         git clone --recursive https://github.com/DLR-RM/rl-baselines3-zoo
         cd rl-baselines3-zoo/
         conda install swig
-        apt-get install cmake ffmpeg
+        apt-get install cmake ffmpeg  (en Mac, reemplazar apt-get por brew)
         pip install -r requirements.txt
 
 
