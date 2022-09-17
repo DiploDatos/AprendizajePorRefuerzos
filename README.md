@@ -73,7 +73,7 @@ Algunas características sólo están disponibles en localhost, como las animaci
 
 * [Environments zoo](https://github.com/tshrjn/env-zoo).
 
-* [Libro principal de RL, por Sutton y Barto](https://drive.google.com/file/d/1opPSz5AZ_kVa1uWOdOiveNiBFiEOHjkG/view)
+* [Libro principal de RL, por Sutton y Barto](http://incompleteideas.net/book/RLbook2020.pdf)
 
 
 
