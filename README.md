@@ -33,7 +33,7 @@ Nota: en Windows no es posible usar PyType, por lo que debe usarse el [subsistem
 
 ##### **Opcional** sólo si se quiere instalarse rl-baselines-zoo
 
-        git clone --recursive https://github.com/DLR-RM/rl-baselines3-zoo
+        git clone --recursive --depth 1 https://github.com/DLR-RM/rl-baselines3-zoo
         cd rl-baselines3-zoo/
         conda install swig
         apt-get install cmake ffmpeg  (en Mac, reemplazar apt-get por brew)
