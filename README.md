@@ -29,7 +29,10 @@ Descargar Anaconda desde [https://www.anaconda.com/download/](https://www.anacon
 
 Nota: en Windows no es posible usar PyType, por lo que debe usarse el [subsistema de Linux para Windows](https://docs.microsoft.com/en-us/windows/wsl/faq), por ejemplo instalando [Ubuntu](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6))
 
-        pip install gym pyglet stable-baselines3[extra]  
+        pip install gym pyglet stable-baselines3[extra]
+
+##### **Opcional** sólo si se quiere instalarse rl-baselines-zoo
+
         git clone --recursive https://github.com/DLR-RM/rl-baselines3-zoo
         cd rl-baselines3-zoo/
         conda install swig
