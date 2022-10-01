@@ -27,8 +27,13 @@ Descargar Anaconda desde [https://www.anaconda.com/download/](https://www.anacon
 
 1. Instalamos librerías de aprendizaje por refuerzos profundo (excepto gym y ffmpeg, el resto son para los algoritmos de deep RL que veremos el segundo fin de semana)
 
-        pip install gym pyglet stable-baselines3[extra,tests,docs]  (en Windows no es posible usar PyType, por lo que debe usarse el [subsistema de Linux para Windows](https://docs.microsoft.com/en-us/windows/wsl/faq), por ejemplo instalando [Ubuntu](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6))
-        git clone --recursive https://github.com/DLR-RM/rl-baselines3-zoo
+Nota: en Windows no es posible usar PyType, por lo que debe usarse el [subsistema de Linux para Windows](https://docs.microsoft.com/en-us/windows/wsl/faq), por ejemplo instalando [Ubuntu](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6))
+
+        pip install gym pyglet stable-baselines3[extra]
+
+##### **Opcional** sólo si se quiere instalarse rl-baselines-zoo
+
+        git clone --recursive --depth 1 https://github.com/DLR-RM/rl-baselines3-zoo
         cd rl-baselines3-zoo/
         conda install swig
         apt-get install cmake ffmpeg  (en Mac, reemplazar apt-get por brew)
@@ -71,7 +76,7 @@ Algunas características sólo están disponibles en localhost, como las animaci
 
 * [Environments zoo](https://github.com/tshrjn/env-zoo).
 
-* [Libro principal de RL, por Sutton y Barto](https://drive.google.com/file/d/1opPSz5AZ_kVa1uWOdOiveNiBFiEOHjkG/view)
+* [Libro principal de RL, por Sutton y Barto](http://incompleteideas.net/book/RLbook2020.pdf)
 
 
 
