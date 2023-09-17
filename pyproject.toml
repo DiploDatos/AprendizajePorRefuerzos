@@ -9,6 +9,7 @@ license = "MIT"
 python = "^3.9"
 gymnasium = "^0.29.1"
 "stable-baselines3" = {extras = ["extra"], version = "^2.1.0"}
+rl-zoo3 = "^2.1.0"
 
 [tool.poetry.dev-dependencies]
 jupyterlab = "^4.0.6"
