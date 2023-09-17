@@ -15,16 +15,16 @@ def plot_reward_per_episode(reward_ep):
     plt.plot(reward_per_episode)
     plt.title('Recompensa acumulada por episodio')
     plt.show()
-    
-    
+
+
 def plot_steps_per_episode(timesteps_ep):
     # se muestra la curva de aprendizaje de los pasos por episodio
     episode_steps = np.array(timesteps_ep)
     plt.plot(np.array(range(0, len(episode_steps))), episode_steps)
     plt.title('Pasos (timesteps) por episodio')
     plt.show()
-    
-    
+
+
 def plot_steps_per_episode_smooth(timesteps_ep):
     episode_steps = np.array(timesteps_ep)
 
@@ -37,7 +37,7 @@ def plot_steps_per_episode_smooth(timesteps_ep):
     plt.plot(steps_per_episode)
     plt.title('Pasos (timesteps) acumulados por episodio')
     plt.show()
-    
+
 
 def draw_value_matrix(q):
 
