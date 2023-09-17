@@ -2,7 +2,7 @@
 name = "aprendizaje_por_refuerzos"
 version = "2023.0.1"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Juan Cruz Barsce <jbarsce@gmail.com>", "Jorge Palombarini <palombarini@gmail.com>", "Ezequiel Beccaria <ezequielbeccaria@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
