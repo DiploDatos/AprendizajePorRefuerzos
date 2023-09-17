@@ -10,15 +10,17 @@ authors = [
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "<3.11, >=3.9"
 gymnasium = "^0.29.1"
 "stable-baselines3" = { extras = ["extra"], version = "^2.1.0" }
 rl-zoo3 = { version = "^2.1.0", optional = true }
-jupyterlab = { version = "^4.0.6", optional = true }
-ipdb = { version = "*", optional = true }
+seaborn = { version = "^0.12.2", optional = true }  # required by rl-zoo3
+scipy = {version = "^1.11.2", optional = true}  # required by rl-zoo3
+ipdb = { version = "*", optional = true }  # required by rl-zoo3
+jupyterlab = { version = "*", optional = true }
 
 [tool.poetry.extras]
-zoo = ["rl-zoo3"]
+zoo = ["rl-zoo3", "seaborn", "scipy"]
 dev_tools = ["jupyterlab", "ipdb"]
 
 [build-system]
