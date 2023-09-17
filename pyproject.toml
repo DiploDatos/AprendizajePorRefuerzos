@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "aprendizajeporrefuerzos"
+name = "aprendizaje_por_refuerzos"
 version = "2023.0.1"
 description = ""
 authors = ["Your Name <you@example.com>"]
@@ -9,7 +9,7 @@ license = "MIT"
 python = "^3.9"
 gymnasium = "^0.29.1"
 "stable-baselines3" = {extras = ["extra"], version = "^2.1.0"}
-rl-zoo3 = "^2.1.0"
+rl-zoo3 = {version = "^2.1.0", optional = true}
 
 [tool.poetry.dev-dependencies]
 jupyterlab = "^4.0.6"

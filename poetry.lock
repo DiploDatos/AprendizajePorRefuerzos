@@ -28,7 +28,7 @@ name = "alembic"
 version = "1.12.0"
 description = "A database migration tool for SQLAlchemy."
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.7"
 
 [package.dependencies]
@@ -257,7 +257,7 @@ name = "chardet"
 version = "5.2.0"
 description = "Universal encoding detector for Python 3"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.7"
 
 [[package]]
@@ -292,7 +292,7 @@ name = "cmaes"
 version = "0.10.0"
 description = "Lightweight Covariance Matrix Adaptation Evolution Strategy (CMA-ES) implementation for Python 3."
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.7"
 
 [package.dependencies]
@@ -314,7 +314,7 @@ name = "colorlog"
 version = "6.7.0"
 description = "Add colours to the output of Python's logging module."
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -388,7 +388,7 @@ name = "dataproperty"
 version = "1.0.1"
 description = "Python library for extract property from data."
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.7"
 
 [package.dependencies]
@@ -512,7 +512,7 @@ name = "fsspec"
 version = "2023.9.1"
 description = "File-system specification"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.8"
 
 [package.extras]
@@ -580,7 +580,7 @@ name = "greenlet"
 version = "2.0.2"
 description = "Lightweight in-process concurrent programming"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*"
 
 [package.extras]
@@ -603,7 +603,7 @@ name = "gym"
 version = "0.26.2"
 description = "Gym: A universal API for reinforcement learning environments"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -629,7 +629,7 @@ name = "gym-notices"
 version = "0.0.8"
 description = "Notices for gym"
 category = "main"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -668,7 +668,7 @@ name = "huggingface-hub"
 version = "0.17.1"
 description = "Client library to download and publish models, datasets and other repos on the huggingface.co hub"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.8.0"
 
 [package.dependencies]
@@ -698,7 +698,7 @@ name = "huggingface-sb3"
 version = "3.0"
 description = "Additional code for Stable-baselines3 to load and upload models from the Hub."
 category = "main"
-optional = false
+optional = true
 python-versions = "*"
 
 [package.dependencies]
@@ -1107,7 +1107,7 @@ name = "mako"
 version = "1.2.4"
 description = "A super-fast templating language that borrows the best ideas from the existing templating languages."
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.7"
 
 [package.dependencies]
@@ -1199,7 +1199,7 @@ name = "mbstrdecoder"
 version = "1.1.3"
 description = "mbstrdecoder is a Python library for multi-byte character string decoder"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.7"
 
 [package.dependencies]
@@ -1392,7 +1392,7 @@ name = "optuna"
 version = "3.3.0"
 description = "A hyperparameter optimization framework"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.7"
 
 [package.dependencies]
@@ -1495,7 +1495,7 @@ name = "pathvalidate"
 version = "2.5.2"
 description = "pathvalidate is a Python library to sanitize/validate a string such as filenames/file-paths/etc."
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.extras]
@@ -1666,7 +1666,7 @@ name = "pytablewriter"
 version = "0.64.2"
 description = "pytablewriter is a Python library to write a table in various formats: AsciiDoc / CSV / Elasticsearch / HTML / JavaScript / JSON / LaTeX / LDJSON / LTSV / Markdown / MediaWiki / NumPy / Excel / Pandas / Python / reStructuredText / SQLite / TOML / TSV / YAML."
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -1687,7 +1687,7 @@ from = ["pytablereader (>=0.31.3,<2)"]
 html = ["dominate (>=2.1.5,<3)"]
 logging = ["loguru (>=0.4.1,<1)"]
 sqlite = ["SimpleSQLite (>=1.1.3,<2)"]
-test = ["pytest (>=6.0.1)", "pytablereader (>=0.31.3,<2)", "idna (<3)", "xlwt", "pytablewriter-altrow-theme (>=0.0.2,<1)", "loguru (>=0.4.1,<1)", "pytest-md-report (>=0.1)", "beautifulsoup4 (>=4.10)", "XlsxWriter (>=0.9.6,<4)", "tablib (>=3.2.0)", "elasticsearch (>=7.0.5,<8)", "dominate (>=2.1.5,<3)", "PyYAML (>=3.11,<7)", "simplejson (>=3.8.1,<4)", "sqliteschema (>=1.3.0)", "pytablereader[excel,sqlite] (>=0.31.3)", "toml (>=0.9.3,<1)", "SimpleSQLite (>=1.1.3,<2)"]
+test = ["pytest (>=6.0.1)", "pytablereader (>=0.31.3,<2)", "idna (<3)", "xlwt", "pytablewriter-altrow-theme (>=0.0.2,<1)", "loguru (>=0.4.1,<1)", "pytest-md-report (>=0.1)", "beautifulsoup4 (>=4.10)", "XlsxWriter (>=0.9.6,<4)", "tablib (>=3.2.0)", "elasticsearch (>=7.0.5,<8)", "dominate (>=2.1.5,<3)", "PyYAML (>=3.11,<7)", "simplejson (>=3.8.1,<4)", "sqliteschema (>=1.3.0)", "pytablereader[sqlite,excel] (>=0.31.3)", "toml (>=0.9.3,<1)", "SimpleSQLite (>=1.1.3,<2)"]
 theme = ["pytablewriter-altrow-theme (>=0.0.2,<1)"]
 toml = ["toml (>=0.9.3,<1)"]
 yaml = ["PyYAML (>=3.11,<7)"]
@@ -1838,7 +1838,7 @@ name = "rl-zoo3"
 version = "2.1.0"
 description = "A Training Framework for Stable Baselines3 Reinforcement Learning Agents"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.8"
 
 [package.dependencies]
@@ -1878,7 +1878,7 @@ name = "sb3-contrib"
 version = "2.1.0"
 description = "Contrib package of Stable Baselines3, experimental code."
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.8"
 
 [package.dependencies]
@@ -1969,7 +1969,7 @@ name = "sqlalchemy"
 version = "2.0.20"
 description = "Database Abstraction Library"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.7"
 
 [package.dependencies]
@@ -2063,7 +2063,7 @@ name = "tabledata"
 version = "1.3.3"
 description = "tabledata is a Python library to represent tabular data. Used for pytablewriter/pytablereader/SimpleSQLite/etc."
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.7"
 
 [package.dependencies]
@@ -2079,7 +2079,7 @@ name = "tcolorpy"
 version = "0.1.4"
 description = "tcolopy is a Python library to apply true color for terminal text."
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.7"
 
 [package.extras]
@@ -2213,7 +2213,7 @@ name = "typepy"
 version = "1.3.1"
 description = "typepy is a Python library for variable type checker/validator/converter at a run time."
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.7"
 
 [package.dependencies]
@@ -2272,7 +2272,7 @@ name = "wasabi"
 version = "1.1.2"
 description = "A lightweight console printing and formatting toolkit"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -2348,7 +2348,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-ena
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "ffbd9b439539fd064f6fb35f0fc1da53d912f50ffb4c653d65deaa92894721a0"
+content-hash = "fde6c9cfe20f9460c129234810dc75401f2bf9d969a4a62277616febea75c5b5"
 
 [metadata.files]
 absl-py = []
