@@ -16,7 +16,9 @@ gymnasium = "^0.29.1"
 rl-zoo3 = { version = "^2.1.0", optional = true }
 seaborn = { version = "^0.12.2", optional = true }  # required by rl-zoo3
 scipy = {version = "^1.11.2", optional = true}  # required by rl-zoo3
-ipdb = { version = "*", optional = true }  # required by rl-zoo3
+
+[tool.poetry.dev-dependencies]
+ipdb = { version = "*", optional = true }
 jupyterlab = { version = "*", optional = true }
 
 [tool.poetry.extras]
