@@ -112,3 +112,4 @@ logs/
 rl-baselines3-zoo/
 
 tensorboard/
+.DS_Store
