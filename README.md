@@ -13,7 +13,7 @@ Instalar [poetry](https://python-poetry.org/docs/#installation):
 
 * Desde Linux/Mac/WSL:
 
-        curl -sSL https://install.python-poetry.org | python3 -
+        pip install poetry==1.1.13
 
 * Desde Windows:
 
