@@ -1,10 +1,10 @@
 [[package]]
 name = "absl-py"
-version = "1.4.0"
+version = "2.0.0"
 description = "Abseil Python Common Libraries, see https://github.com/abseil/abseil-py."
 category = "main"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.7"
 
 [[package]]
 name = "ale-py"
@@ -243,11 +243,11 @@ python-versions = ">=3.6"
 
 [[package]]
 name = "cffi"
-version = "1.15.1"
+version = "1.16.0"
 description = "Foreign Function Interface for Python calling C code."
 category = "dev"
 optional = true
-python-versions = "*"
+python-versions = ">=3.8"
 
 [package.dependencies]
 pycparser = "*"
@@ -359,11 +359,15 @@ test-no-images = ["pytest", "pytest-cov", "wurlitzer"]
 
 [[package]]
 name = "cycler"
-version = "0.11.0"
+version = "0.12.0"
 description = "Composable style cycles"
 category = "main"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.8"
+
+[package.extras]
+docs = ["ipython", "matplotlib", "numpydoc", "sphinx"]
+tests = ["pytest", "pytest-cov", "pytest-xdist"]
 
 [[package]]
 name = "dataproperty"
@@ -461,7 +465,7 @@ typing = ["typing-extensions (>=4.7.1)"]
 
 [[package]]
 name = "fonttools"
-version = "4.42.1"
+version = "4.43.0"
 description = "Tools to manipulate font files"
 category = "main"
 optional = false
@@ -491,7 +495,7 @@ python-versions = ">=2.7, !=3.0, !=3.1, !=3.2, !=3.3, !=3.4, <4"
 
 [[package]]
 name = "fsspec"
-version = "2023.9.1"
+version = "2023.9.2"
 description = "File-system specification"
 category = "main"
 optional = true
@@ -523,24 +527,23 @@ tqdm = ["tqdm"]
 
 [[package]]
 name = "google-auth"
-version = "2.17.3"
+version = "2.23.2"
 description = "Google Authentication Library"
 category = "main"
 optional = false
-python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*"
+python-versions = ">=3.7"
 
 [package.dependencies]
 cachetools = ">=2.0.0,<6.0"
 pyasn1-modules = ">=0.2.1"
-rsa = {version = ">=3.1.4,<5", markers = "python_version >= \"3.6\""}
-six = ">=1.9.0"
+rsa = ">=3.1.4,<5"
 
 [package.extras]
-aiohttp = ["requests (>=2.20.0,<3.0.0dev)", "aiohttp (>=3.6.2,<4.0.0dev)"]
+aiohttp = ["aiohttp (>=3.6.2,<4.0.0.dev0)", "requests (>=2.20.0,<3.0.0.dev0)"]
 enterprise_cert = ["cryptography (==36.0.2)", "pyopenssl (==22.0.0)"]
 pyopenssl = ["pyopenssl (>=20.0.0)", "cryptography (>=38.0.3)"]
 reauth = ["pyu2f (>=0.1.5)"]
-requests = ["requests (>=2.20.0,<3.0.0dev)"]
+requests = ["requests (>=2.20.0,<3.0.0.dev0)"]
 
 [[package]]
 name = "google-auth-oauthlib"
@@ -571,14 +574,14 @@ test = ["objgraph", "psutil"]
 
 [[package]]
 name = "grpcio"
-version = "1.58.0"
+version = "1.59.0"
 description = "HTTP/2-based RPC framework"
 category = "main"
 optional = false
 python-versions = ">=3.7"
 
 [package.extras]
-protobuf = ["grpcio-tools (>=1.58.0)"]
+protobuf = ["grpcio-tools (>=1.59.0)"]
 
 [[package]]
 name = "gym"
@@ -647,7 +650,7 @@ toy_text = ["pygame (>=2.1.3)"]
 
 [[package]]
 name = "huggingface-hub"
-version = "0.17.1"
+version = "0.17.3"
 description = "Client library to download and publish models, datasets and other repos on the huggingface.co hub"
 category = "main"
 optional = true
@@ -719,7 +722,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-ena
 
 [[package]]
 name = "importlib-resources"
-version = "6.0.1"
+version = "6.1.0"
 description = "Read resources from Python packages"
 category = "main"
 optional = false
@@ -729,8 +732,8 @@ python-versions = ">=3.8"
 zipp = {version = ">=3.1.0", markers = "python_version < \"3.10\""}
 
 [package.extras]
-docs = ["sphinx (>=3.5)", "jaraco.packaging (>=9.3)", "rst.linker (>=1.9)", "furo", "sphinx-lint", "jaraco.tidelift (>=1.4)"]
-testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-ruff", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)"]
+docs = ["sphinx (>=3.5)", "sphinx (<7.2.5)", "jaraco.packaging (>=9.3)", "rst.linker (>=1.9)", "furo", "sphinx-lint", "jaraco.tidelift (>=1.4)"]
+testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-ruff", "zipp (>=3.17)", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)"]
 
 [[package]]
 name = "ipdb"
@@ -777,7 +780,7 @@ test = ["flaky", "ipyparallel", "pre-commit", "pytest-asyncio", "pytest-cov", "p
 
 [[package]]
 name = "ipython"
-version = "8.15.0"
+version = "8.16.0"
 description = "IPython: Productive Interactive Computing"
 category = "dev"
 optional = true
@@ -874,7 +877,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*, 
 
 [[package]]
 name = "jsonschema"
-version = "4.19.0"
+version = "4.19.1"
 description = "An implementation of JSON Schema validation for Python"
 category = "dev"
 optional = true
@@ -931,7 +934,7 @@ test = ["coverage", "ipykernel (>=6.14)", "mypy", "paramiko", "pre-commit", "pyt
 
 [[package]]
 name = "jupyter-core"
-version = "5.3.1"
+version = "5.3.2"
 description = "Jupyter core package. A base package on which Jupyter projects rely."
 category = "dev"
 optional = true
@@ -1365,7 +1368,7 @@ signedtoken = ["cryptography (>=3.0.0)", "pyjwt (>=2.0.0,<3)"]
 
 [[package]]
 name = "opencv-python"
-version = "4.8.0.76"
+version = "4.8.1.78"
 description = "Wrapper package for OpenCV python bindings."
 category = "main"
 optional = false
@@ -1425,7 +1428,7 @@ python-versions = ">=3.7"
 
 [[package]]
 name = "pandas"
-version = "2.1.0"
+version = "2.1.1"
 description = "Powerful data structures for data analysis, time series, and statistics"
 category = "main"
 optional = false
@@ -1877,7 +1880,7 @@ stable-baselines3 = ">=2.1.0"
 
 [[package]]
 name = "scipy"
-version = "1.11.2"
+version = "1.11.3"
 description = "Fundamental algorithms for scientific computing in Python"
 category = "main"
 optional = true
@@ -1924,20 +1927,21 @@ win32 = ["pywin32"]
 
 [[package]]
 name = "setuptools-scm"
-version = "7.1.0"
+version = "8.0.3"
 description = "the blessed package to manage your versions by scm tags"
 category = "main"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.8"
 
 [package.dependencies]
-packaging = ">=20.0"
-tomli = {version = ">=1.0.0", markers = "python_version < \"3.11\""}
-typing-extensions = "*"
+packaging = ">=20"
+tomli = {version = ">=1", markers = "python_version < \"3.11\""}
+typing-extensions = {version = "*", markers = "python_version < \"3.11\""}
 
 [package.extras]
-test = ["pytest (>=6.2)", "virtualenv (>20)"]
-toml = ["setuptools (>=42)"]
+docs = ["entangled-cli", "mkdocs", "mkdocs-entangled-plugin", "mkdocs-material", "mkdocstrings", "pygments"]
+rich = ["rich"]
+test = ["pytest", "rich", "virtualenv (>20)"]
 
 [[package]]
 name = "shimmy"
@@ -1991,7 +1995,7 @@ python-versions = ">=3.8"
 
 [[package]]
 name = "sqlalchemy"
-version = "2.0.20"
+version = "2.0.21"
 description = "Database Abstraction Library"
 category = "main"
 optional = true
@@ -2112,11 +2116,11 @@ test = ["pytest (>=6.0.1)", "pytest-md-report (>=0.4.1)"]
 
 [[package]]
 name = "tensorboard"
-version = "2.14.0"
+version = "2.14.1"
 description = "TensorBoard lets you watch Tensors Flow"
 category = "main"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 
 [package.dependencies]
 absl-py = ">=0.4"
@@ -2127,6 +2131,7 @@ markdown = ">=2.6.8"
 numpy = ">=1.12.0"
 protobuf = ">=3.19.6"
 requests = ">=2.21.0,<3"
+six = ">1.9"
 tensorboard-data-server = ">=0.7.0,<0.8.0"
 werkzeug = ">=1.0.1"
 
@@ -2223,7 +2228,7 @@ telegram = ["requests"]
 
 [[package]]
 name = "traitlets"
-version = "5.10.0"
+version = "5.10.1"
 description = "Traitlets Python configuration system"
 category = "dev"
 optional = true
@@ -2280,7 +2285,7 @@ dev = ["types-pyyaml", "mypy", "flake8", "flake8-annotations", "flake8-bandit", 
 
 [[package]]
 name = "urllib3"
-version = "2.0.4"
+version = "2.0.5"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
 category = "main"
 optional = false
@@ -2305,7 +2310,7 @@ colorama = {version = ">=0.4.6", markers = "sys_platform == \"win32\" and python
 
 [[package]]
 name = "wcwidth"
-version = "0.2.6"
+version = "0.2.7"
 description = "Measures the displayed width of unicode strings in a terminal"
 category = "dev"
 optional = true
@@ -2360,14 +2365,14 @@ watchdog = ["watchdog (>=2.3)"]
 
 [[package]]
 name = "zipp"
-version = "3.16.2"
+version = "3.17.0"
 description = "Backport of pathlib-compatible object wrapper for zip files"
 category = "main"
 optional = false
 python-versions = ">=3.8"
 
 [package.extras]
-docs = ["sphinx (>=3.5)", "jaraco.packaging (>=9.3)", "rst.linker (>=1.9)", "furo", "sphinx-lint", "jaraco.tidelift (>=1.4)"]
+docs = ["sphinx (>=3.5)", "sphinx (<7.2.5)", "jaraco.packaging (>=9.3)", "rst.linker (>=1.9)", "furo", "sphinx-lint", "jaraco.tidelift (>=1.4)"]
 testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-ruff", "jaraco.itertools", "jaraco.functools", "more-itertools", "big-o", "pytest-ignore-flaky", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)"]
 
 [extras]
