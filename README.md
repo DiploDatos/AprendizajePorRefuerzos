@@ -7,7 +7,17 @@ Automático y sus Aplicaciones.
 
 ### Instalación desde local
 
-Pasos para instalar los paquetes requeridos con poetry:
+#### Con pip
+
+Pasos para instalar los paquetes específicos de RL con pip (asumiendo entorno virtual de conda con instalaciones existentes de librerías comunes como numpy, matplotlib, etc):
+
+        pip install gymnasium
+        pip install stable-baselines3[extra]  # instala las dependencias necesarias para correr el lab 2
+        pip install rl_zoo3  # (Opcional) instala las dependencias para usar rl-baselines-zoo
+
+#### Con poetry
+
+Pasos para instalar todos los paquetes requeridos con poetry:
 
 Instalar [poetry](https://python-poetry.org/docs/#installation):
 
@@ -17,7 +27,7 @@ Instalar [poetry](https://python-poetry.org/docs/#installation):
 
 * Desde Windows:
 
-        (Invoke-WebRequest -Uri https://install.python-poetry.org/ -UseBasicParsing).Content | python -
+        (Invoke-WebRequest -Uri https://install.python-poetry.org/ -UseBasicParsing).Content | python - --version 1.1.13
 
 Comprobar que se instaló correctamente:
 
