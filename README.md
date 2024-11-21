@@ -21,13 +21,12 @@ Pasos para instalar todos los paquetes requeridos con poetry:
 
 Instalar [poetry](https://python-poetry.org/docs/#installation):
 
-* Desde Linux/Mac/WSL:
+* [Instalar pipx](https://github.com/pypa/pipx)
 
-        pip install poetry==1.1.13
+* Instalar poetry con pipx:
 
-* Desde Windows:
+        pipx install poetry
 
-        (Invoke-WebRequest -Uri https://install.python-poetry.org/ -UseBasicParsing).Content | python - --version 1.1.13
 
 Comprobar que se instaló correctamente:
 
