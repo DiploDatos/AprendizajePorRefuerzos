@@ -182,7 +182,7 @@ def create_dt_dataset(df_train):
     """
     Convierte DataFrame raw a formato Decision Transformer.
     
-    REFERENCIA: Ver código completo en TRABAJO_PRACTICO_DECISION_TRANSFORMER.md
+    REFERENCIA: Ver código completo en 03_REFERENCIA_COMPLETA.md
     
     Args:
         df_train: DataFrame con [user_id, user_group, items, ratings]
@@ -235,7 +235,7 @@ def validate_preprocessing(trajectories):
 
 El TP incluye **código completo** del Decision Transformer. Los grupos pueden:
 
-1. **Copiar** el código tal cual del documento `TRABAJO_PRACTICO_DECISION_TRANSFORMER.md`
+1. **Copiar** el código tal cual del documento `03_REFERENCIA_COMPLETA.md`
 2. **Pegar** en `src/models/decision_transformer.py`
 3. **Leer y entender** cada parte (revisar comentarios)
 4. **Ejecutar** para verificar que funciona
@@ -557,7 +557,7 @@ def evaluate_model(model, test_data, device, target_return=None, k_list=[5, 10, 
     """
     Evalúa el modelo en test set (cold-start users).
     
-    Ver código completo en TRABAJO_PRACTICO_DECISION_TRANSFORMER.md
+    Ver código completo en 03_REFERENCIA_COMPLETA.md
     """
     model.eval()
     

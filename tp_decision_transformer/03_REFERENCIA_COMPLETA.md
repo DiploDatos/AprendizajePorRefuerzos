@@ -31,7 +31,7 @@ Este documento contiene:
 - ✅ **Especificaciones de cada parte del TP**
 
 **📘 Para una guía paso a paso de QUÉ IMPLEMENTAR, leer:**
-### 👉 **[GUIA_IMPLEMENTACION_GRUPOS.md](./GUIA_IMPLEMENTACION_GRUPOS.md)** 👈
+### 👉 **[02_GUIA_IMPLEMENTACION_GRUPOS.md](./02_GUIA_IMPLEMENTACION_GRUPOS.md)** 👈
 
 Esa guía clarifica:
 - ✓ Qué código pueden copiar/adaptar
@@ -60,7 +60,7 @@ Al completar este trabajo práctico, los grupos serán capaces de:
 ### **Sistema de Recomendación como MDP**
 
 **Estado (s_t):**
-- Historia de items vistos: últimos K items que el usuario interactuó
+- Historia de items vistos: últimos K items con los que el usuario interactuó
 - Features del usuario: grupo (cluster) al que pertenece (0-7)
 - Contexto temporal: timestep en la sesión
 
@@ -300,10 +300,12 @@ Estos archivos contienen información sobre los 8 clusters de usuarios.
 # ...
 ```
 
-**Uso:** Puedes usar estos centroides para:
-- Inicializar representación de usuarios cold-start
-- Entender qué prefiere cada grupo
-- Baseline: recomendar items con rating alto en el centroid del grupo
+**Uso de los centroides:**
+- ✅ **Análisis exploratorio**: Entender qué prefiere cada grupo
+- ✅ **Baselines de comparación**: Recomendar items con rating alto en el centroid del grupo
+- ❌ **NO se usan en el Transformer**: El modelo aprende sus propios group embeddings
+
+**Aclaración importante:** Los centroides son estadísticas descriptivas del dataset, NO parte de la arquitectura del Decision Transformer.
 
 **`sigma_netflix8.csv`** (Desviaciones estándar):
 - Matriz de 8 × 752
@@ -323,9 +325,9 @@ Estos archivos contienen información sobre los 8 clusters de usuarios.
 |---------|---------------|-----------|
 | `netflix8_train.df` | Entrenar el Decision Transformer | ✅ Sí |
 | `netflix8_test.json` | Evaluar en cold-start users | ✅ Sí |
-| `mu_netflix8.csv` | Centroides (opcional para baselines) | ⚠️ Opcional |
-| `sigma_netflix8.csv` | Análisis avanzado | ❌ No |
-| `num_netflix8.csv` | Análisis avanzado | ❌ No |
+| `mu_netflix8.csv` | Baselines de comparación (NO para el transformer) | ⚠️ Opcional |
+| `sigma_netflix8.csv` | Análisis exploratorio avanzado | ❌ No |
+| `num_netflix8.csv` | Análisis exploratorio avanzado | ❌ No |
 
 ---
 
@@ -392,7 +394,7 @@ print(f"\nCentroides shape: {mu.shape}")  # (8, NUM_ITEMS)
 print(f"Rating promedio del grupo 0 para item 0: {mu.iloc[0, 0]:.2f}")
 ```
 
-**🔄 Para cambiar de dataset:** Solo modifica la variable `DATASET` al inicio del código.
+**🔄 Para cambiar de dataset:** Solo modificar la variable `DATASET` al inicio del código.
 
 ---
 
@@ -893,7 +895,65 @@ Implementar métricas estándar:
 ```python
 def hit_rate_at_k(predictions, targets, k=10):
     """
-    Calcula Hit Rate @K.
+    Calcula Hit Rate @K (HR@K).
+    
+    Mide: ¿Está el item correcto dentro de las top-K recomendaciones?
+    
+    Interpretación:
+    - HR@10 = 0.8 significa que en 80% de los casos, el item que el usuario 
+      realmente quería está dentro de las 10 mejores recomendaciones.
+    - Valores más altos = mejor
+    - Rango: [0, 1]
+    
+    Ejemplo:
+    - Predicciones para un usuario: [item_42: 0.9, item_15: 0.7, item_3: 0.6, ...]
+    - Target real: item_15
+    - Top-3: [item_42, item_15, item_3]
+    - ¿Está item_15 en top-3? → SÍ → Hit = 1
+    
+    Args:
+        predictions: (batch, num_items) - scores/probabilidades para cada item
+        targets: (batch,) - item verdadero que debería recomendarse
+        k: número de top items a considerar (ej: 5, 10, 20)
+    
+    Returns:
+        hit_rate: float entre 0 y 1 (proporción de hits en el batch)
+    """
+    # Obtener los índices de los top-K items con mayor score
+    # Ej: k=10 → obtiene los 10 items con mayor probabilidad
+    top_k = torch.topk(predictions, k, dim=1).indices  # (batch, k)
+    
+    # Verificar si el target está en alguna de las k posiciones
+    # unsqueeze(1) convierte targets de (batch,) a (batch, 1) para broadcasting
+    hits = (top_k == targets.unsqueeze(1)).any(dim=1).float()  # (batch,)
+    
+    # Promedio de hits en todo el batch
+    return hits.mean().item()
+
+
+def ndcg_at_k(predictions, targets, k=10):
+    """
+    Normalized Discounted Cumulative Gain @K (NDCG@K).
+    
+    Mide: ¿Qué tan alto está rankeado el item correcto?
+    
+    Interpretación:
+    - NDCG@10 = 1.0 → el item correcto está en posición #1 (perfecto!)
+    - NDCG@10 = 0.63 → el item correcto está en posición #2
+    - NDCG@10 = 0.5 → el item correcto está en posición #3
+    - Valores más altos = mejor
+    - Penaliza más si el item correcto está en posiciones bajas
+    
+    Diferencia con HR@K:
+    - HR@K: solo importa SI está en top-k (binario: sí/no)
+    - NDCG@K: importa DÓNDE está en top-k (posición exacta)
+    
+    Ejemplo:
+    - Target en posición 1 → NDCG = 1.0 / log2(2) = 1.0 / 1 = 1.0
+    - Target en posición 2 → NDCG = 1.0 / log2(3) = 1.0 / 1.585 ≈ 0.63
+    - Target en posición 5 → NDCG = 1.0 / log2(6) = 1.0 / 2.585 ≈ 0.39
+    
+    Nota: log2 = logaritmo en base 2 (log2(2)=1, log2(4)=2, log2(8)=3)
     
     Args:
         predictions: (batch, num_items) - scores para cada item
@@ -901,42 +961,87 @@ def hit_rate_at_k(predictions, targets, k=10):
         k: top-K items a considerar
     
     Returns:
-        hit_rate: proporción de veces que target está en top-K
+        ndcg: float entre 0 y 1 (promedio en el batch)
     """
-    top_k = torch.topk(predictions, k, dim=1).indices
-    hits = (top_k == targets.unsqueeze(1)).any(dim=1).float()
-    return hits.mean().item()
-
-def ndcg_at_k(predictions, targets, k=10):
-    """
-    Normalized Discounted Cumulative Gain @K.
-    """
-    top_k_indices = torch.topk(predictions, k, dim=1).indices
+    # Obtener top-k items predichos
+    top_k_indices = torch.topk(predictions, k, dim=1).indices  # (batch, k)
     
-    # relevance = 1 si item está en top-k y es el target, 0 sino
-    relevance = (top_k_indices == targets.unsqueeze(1)).float()
+    # Crear vector de relevancia (1 si es el target, 0 si no)
+    # Esto marca en qué posición (si alguna) está el target
+    relevance = (top_k_indices == targets.unsqueeze(1)).float()  # (batch, k)
     
-    # DCG = Σ (relevance / log2(rank+1))
-    ranks = torch.arange(1, k+1, device=predictions.device).float()
-    dcg = (relevance / torch.log2(ranks + 1)).sum(dim=1)
+    # Calcular DCG (Discounted Cumulative Gain)
+    # DCG penaliza items relevantes en posiciones bajas con log2(rank+1)
+    # ranks = [1, 2, 3, ..., k]
+    ranks = torch.arange(1, k+1, device=predictions.device).float()  # (k,)
     
-    # IDCG (ideal DCG) = 1 / log2(2) si target en posición 1
+    # DCG = Σ (relevancia_i / log2(posición_i + 1))
+    # Nota: log2 = logaritmo en base 2 (ej: log2(2)=1, log2(4)=2, log2(8)=3)
+    # El +1 en el denominador hace que:
+    #   - posición 1 → log2(2) = 1.0
+    #   - posición 2 → log2(3) ≈ 1.585
+    #   - posición 3 → log2(4) = 2.0
+    dcg = (relevance / torch.log2(ranks + 1)).sum(dim=1)  # (batch,)
+    
+    # Calcular IDCG (Ideal DCG)
+    # Es el DCG máximo posible = cuando el target está en posición 1
+    # IDCG = 1.0 / log2(1+1) = 1.0 / log2(2) = 1.0 / 1.0 = 1.0
+    # (porque log2(2) = 1, ya que 2^1 = 2)
     idcg = 1.0 / np.log2(2)
     
-    ndcg = dcg / idcg
+    # Normalizar: NDCG = DCG / IDCG
+    # Esto hace que NDCG esté siempre entre 0 y 1
+    ndcg = dcg / idcg  # (batch,)
+    
     return ndcg.mean().item()
+
 
 def mrr(predictions, targets):
     """
-    Mean Reciprocal Rank.
+    Mean Reciprocal Rank (MRR).
+    
+    Mide: ¿En qué posición está el item correcto en el ranking completo?
+    
+    Interpretación:
+    - MRR = 1.0 → target en posición #1 (perfecto!)
+    - MRR = 0.5 → target en posición #2
+    - MRR = 0.33 → target en posición #3
+    - MRR = 0.1 → target en posición #10
+    - Valores más altos = mejor
+    - Fórmula: MRR = 1 / rank_del_target
+    
+    Diferencia con NDCG:
+    - NDCG: usa log para penalizar (más suave)
+    - MRR: usa 1/rank directamente (penalización más fuerte)
+    
+    Ejemplo:
+    - 752 películas rankeadas por el modelo
+    - Target está en posición 5
+    - RR (Reciprocal Rank) = 1/5 = 0.2
+    - MRR = promedio de RR en todo el dataset
+    
+    Args:
+        predictions: (batch, num_items) - scores para cada item
+        targets: (batch,) - item verdadero
+    
+    Returns:
+        mrr: float entre 0 y 1 (promedio de reciprocal ranks)
     """
-    # Ordenar items por score
-    sorted_indices = torch.argsort(predictions, dim=1, descending=True)
+    # Ordenar todos los items por score (de mayor a menor)
+    # sorted_indices[i] contiene los items ordenados por probabilidad
+    sorted_indices = torch.argsort(predictions, dim=1, descending=True)  # (batch, num_items)
     
-    # Encontrar rank del target
-    ranks = (sorted_indices == targets.unsqueeze(1)).nonzero()[:, 1] + 1
+    # Encontrar en qué posición está el target para cada ejemplo
+    # nonzero() encuentra dónde está True
+    # [:,1] obtiene la columna (posición en el ranking)
+    # +1 porque las posiciones empiezan en 0 pero queremos ranks desde 1
+    ranks = (sorted_indices == targets.unsqueeze(1)).nonzero()[:, 1] + 1  # (batch,)
     
-    rr = 1.0 / ranks.float()
+    # Calcular Reciprocal Rank = 1 / posición
+    # Ej: si target está en posición 3 → RR = 1/3 = 0.333
+    rr = 1.0 / ranks.float()  # (batch,)
+    
+    # Mean Reciprocal Rank = promedio de todos los RR
     return rr.mean().item()
 ```
 
@@ -989,9 +1094,24 @@ def evaluate_model(model, test_data, device, target_return=None, k_list=[5, 10, 
             timesteps = torch.arange(context_len, dtype=torch.long).unsqueeze(0).to(device)
             groups = torch.tensor([group], dtype=torch.long).to(device)
             
-            # Predecir
+            # Predecir siguiente item
+            # El modelo devuelve logits de forma (batch, seq_len, num_items)
+            # batch=1, seq_len=t+1 (historia hasta ahora), num_items=752 (o 472)
             logits = model(states, actions, rtg_input, timesteps, groups)
-            predictions = logits[0, -1, :]  # última posición
+            
+            # Extraer predicción para el siguiente item
+            # logits[0, -1, :] toma:
+            #   - [0]: primer (y único) ejemplo del batch
+            #   - [-1]: última posición temporal (la más reciente)
+            #   - [:]: scores (logits) para todos los items posibles
+            # 
+            # IMPORTANTE: Son LOGITS (scores sin normalizar), NO probabilidades
+            # - Logits pueden ser cualquier valor real: -5, 0, 3.2, 100, etc.
+            # - Para las métricas (HR@K, NDCG@K, MRR) solo importa el RANKING
+            # - NO necesitamos aplicar softmax porque el orden no cambia
+            # 
+            # Resultado: vector (num_items,) con score para cada item
+            predictions = logits[0, -1, :]
             
             # Target
             target_item = items[t]
@@ -1081,13 +1201,14 @@ for group_id in range(8):
         print(f'Group {group_id}: HR@10={metrics["HR@10"]:.4f}')
 
 # Comparar con baseline que usa centroides de grupos
-# (información de mu_netflix8.csv)
+# Este baseline NO usa el transformer, solo recomienda items
+# con ratings altos en el centroide del grupo (mu_netflix8.csv)
 ```
 
 **Preguntas a responder:**
 - ¿El modelo funciona bien para cold-start users?
 - ¿Hay grupos donde funciona mejor/peor?
-- ¿Usar el centroid del grupo ayuda?
+- ¿Un baseline simple basado en centroides es competitivo vs el Transformer?
 
 **Entregable Parte 4:**
 - Notebook: `04_return_conditioning_experiments.ipynb`
@@ -1150,11 +1271,126 @@ for group_id in range(8):
 | **Parte 4: Experimentos** | - Return conditioning analizado<br>- Cold-start analysis completo |
 | **Parte 5: Reporte** | - Claridad y profundidad del análisis |
 
-### **Trabajo Adicional (Opcional):**
-- Implementar attention visualization
-- Análisis de embeddings de items con t-SNE
-- Implementar variante con multi-objective conditioning
-- Comparación con más baselines (ej: Matrix Factorization)
+### **Trabajo Adicional (Opcional - Para Grupos Avanzados):**
+
+#### **1. Attention Visualization**
+Visualizar qué items de la historia mira el modelo al predecir.
+
+**Qué implementar:**
+```python
+# Extraer attention weights del Transformer
+attention_weights = model.transformer.get_attention_weights()
+# Shape: (num_layers, num_heads, seq_len, seq_len)
+
+# Visualizar con heatmap:
+# - Eje X: items en la historia
+# - Eje Y: posición que estamos prediciendo
+# - Color: cuánta atención se pone en cada item previo
+```
+
+**Preguntas a responder:**
+- ¿El modelo mira más los items recientes o antiguos?
+- ¿Hay "heads" especializados (algunos miran patrones secuenciales, otros items específicos)?
+- ¿Cambia la atención según el return-to-go pedido?
+
+**Herramientas:** `matplotlib.pyplot.imshow()`, `seaborn.heatmap()`
+
+---
+
+#### **2. Análisis de Embeddings de Items con t-SNE**
+Reducir embeddings de alta dimensión a 2D para visualizar similitud entre películas.
+
+**Qué implementar:**
+```python
+from sklearn.manifold import TSNE
+
+# Extraer embeddings aprendidos
+item_embeddings = model.item_embedding.weight.detach().cpu().numpy()
+# Shape: (752, embedding_dim) → reducir a (752, 2)
+
+# Aplicar t-SNE
+embeddings_2d = TSNE(n_components=2).fit_transform(item_embeddings)
+
+# Plotear: películas similares deberían estar cerca
+plt.scatter(embeddings_2d[:, 0], embeddings_2d[:, 1])
+# Agregar labels para películas famosas
+```
+
+**Preguntas a responder:**
+- ¿Se agrupan películas del mismo género?
+- ¿Hay un "espacio" de acción vs drama vs comedia?
+- ¿Los embeddings aprendidos tienen sentido semántico?
+
+**Extensión:** Colorear puntos por género/rating promedio si tienen metadata.
+
+---
+
+#### **3. Multi-Objective Conditioning**
+En vez de condicionar solo en return-to-go, condicionar en **múltiples objetivos simultáneos**.
+
+**Idea:**
+```python
+# Original: solo return total
+rtg = [20.0]  # "quiero 20 puntos de rating acumulado"
+
+# Multi-objetivo: return + diversidad + novedad
+conditioning = [
+    20.0,   # return total deseado
+    0.8,    # diversidad (variedad de géneros)
+    0.5     # novedad (películas menos populares)
+]
+
+# Modificar forward del modelo:
+def forward(self, states, actions, rtg, diversity_target, novelty_target, ...):
+    # Concatenar o combinar embeddings
+    conditioning_emb = self.rtg_embedding(rtg) + \
+                       self.diversity_embedding(diversity_target) + \
+                       self.novelty_embedding(novelty_target)
+```
+
+**Preguntas a responder:**
+- ¿Puede el modelo balancear accuracy vs diversidad?
+- ¿Qué pasa si pedimos "alto rating + alta diversidad"? (trade-off)
+
+---
+
+#### **4. Comparación con Más Baselines**
+Implementar métodos clásicos de recomendación para comparar.
+
+**Opciones:**
+
+**A) Matrix Factorization (SVD):**
+```python
+from sklearn.decomposition import TruncatedSVD
+
+# Crear matriz user-item (ratings)
+# Factorizar: R ≈ U @ V^T
+# Predecir: score(user, item) = U[user] · V[item]
+```
+
+**B) Item-Based Collaborative Filtering:**
+```python
+# Calcular similitud entre items (cosine similarity)
+# Para predecir: promediar ratings de items similares a los que el user vio
+```
+
+**C) Neural Collaborative Filtering (NCF):**
+```python
+# Embeddings de user + item → MLP → score
+# Más simple que DT pero específico para recomendación
+```
+
+**Tabla de comparación esperada:**
+
+| Método | HR@10 | NDCG@10 | Complejidad |
+|--------|-------|---------|-------------|
+| Random | 0.013 | 0.006 | Muy baja |
+| Top Popular | 0.15 | 0.08 | Muy baja |
+| Matrix Factorization | 0.35 | 0.22 | Baja |
+| NCF | 0.42 | 0.28 | Media |
+| **Decision Transformer** | **0.48** | **0.32** | Alta |
+
+**Análisis:** ¿Vale la pena la complejidad del DT vs métodos más simples?
 
 ---
 
@@ -1179,7 +1415,7 @@ for group_id in range(8):
 
 ## 🚀 ENTREGABLES FINALES
 
-### **Estructura de Carpetas:**
+### **Guía (no obligatoria) para Estructura de Carpetas:**
 
 ```
 trabajo_practico_dt_recsys/
@@ -1239,51 +1475,38 @@ tqdm>=4.65.0
 jupyter>=1.0.0
 ```
 
----
-
-## ⏰ CRONOGRAMA SUGERIDO
-
-| Semana | Tareas | Hitos |
-|--------|--------|-------|
-| **1** | Parte 1: Exploración y preprocesamiento | Dataset listo, visualizaciones completas |
-| **2** | Parte 2: Implementación del modelo | Modelo entrenando, loss convergiendo |
-| **3** | Parte 3 y 4: Baselines y experimentos | Evaluaciones completas, gráficos finales |
-| **4** | Parte 5: Reporte y pulido final | Entrega completa |
-
----
-
 ## 💡 CONSEJOS Y TIPS
 
 ### **Para la Implementación:**
-1. Empieza con un modelo pequeño (hidden_dim=64, n_layers=2) para debugging
-2. Usa batch_size pequeño al principio para verificar que funciona
-3. Guarda checkpoints frecuentemente
-4. Loggea todo (loss, métricas, hiperparámetros)
+1. Empezar con un modelo pequeño (hidden_dim=64, n_layers=2) para debugging
+2. Usar batch_size pequeño al principio para verificar que funciona
+3. Guardar checkpoints frecuentemente
+4. Loggear todo (loss, métricas, hiperparámetros)
 
 ### **Para el Training:**
-5. Si el loss no baja, revisa:
+5. Si el loss no baja, revisar:
    - ¿Los embeddings están correctos?
    - ¿La causal mask está bien?
    - ¿El learning rate es apropiado? (prueba 1e-4)
-6. Usa gradient clipping (max_norm=1.0)
-7. Considera learning rate warmup
+6. Usar gradient clipping (max_norm=1.0)
+7. Considerar learning rate warmup
 
 ### **Para la Evaluación:**
-8. Evalúa en validation set durante training para detectar overfitting
-9. No uses los mismos items para training y test en una sesión
-10. Asegúrate de que las métricas están implementadas correctamente
+8. Evaluar en validation set durante training para detectar overfitting
+9. No usar los mismos items para training y test en una sesión
+10. Asegurar que las métricas están implementadas correctamente
 
 ### **Para el Reporte:**
-11. Incluye ejemplos cualitativos (ej: "para este usuario con R̂ alto, el modelo recomendó...")
-12. Discute casos de falla (¿cuándo el modelo falla?)
-13. Compara con trabajos relacionados (papers)
+11. Incluir ejemplos cualitativos (ej: "para este usuario con R̂ alto, el modelo recomendó...")
+12. Discutir casos de falla (¿cuándo el modelo falla?)
+13. Comparar con trabajos relacionados (papers)
 
 ---
 
 ## ❓ PREGUNTAS FRECUENTES
 
 **Q: ¿Puedo usar librerías de transformers pre-entrenados (ej: HuggingFace)?**
-A: No para el modelo principal. El objetivo es implementar desde cero. Pero puedes usarlas para comparación (bonus).
+A: No para el modelo principal. El objetivo es implementar desde cero. Pero pueden usarlas para comparación (bonus).
 
 **Q: ¿Qué tamaño de modelo es razonable?**
 A: hidden_dim=128, n_layers=3, n_heads=4 es un buen punto de partida. Con el dataset (1.8M ejemplos), esto debería entrenar en 1-2 horas en una GPU.
@@ -1292,26 +1515,18 @@ A: hidden_dim=128, n_layers=3, n_heads=4 es un buen punto de partida. Con el dat
 A: Sí, perfectamente. El dataset cabe en memoria y el modelo no es muy grande.
 
 **Q: ¿Cómo manejo el cold-start exactamente?**
-A: Los test users no tienen history de training. Usa solo su `group` y el centroid del cluster como información inicial, junto con el R̂ objetivo.
+A: Los test users no tienen historial previo. El modelo usa:
+- **Group embedding** (aprendido durante training, NO el centroide manual)
+- **Return-to-go** objetivo (R̂)
+- **NO** historia de items (porque es cold-start)
+
+El centroide (`mu_netflix8.csv`) NO se usa en el transformer, solo para baselines de comparación.
 
 **Q: ¿Debo discretizar los ratings?**
-A: No necesariamente. Puedes usar ratings continuos (1-5) directamente. O binarizarlos (≥4 = positivo) si prefieres.
+A: No necesariamente. Pueden usar ratings continuos (1-5) directamente. O binarizarlos (≥4 = positivo) si prefieren.
 
 **Q: ¿Qué hago si no me da tiempo para todos los experimentos?**
-A: Prioriza: Parte 1, 2, 3 son esenciales. Parte 4 y 5 se pueden reducir si falta tiempo.
+A: Priorizar: Parte 1, 2, 3 son esenciales. Parte 4 y 5 se pueden reducir si falta tiempo.
 
 ---
-
-## 📧 CONTACTO Y CONSULTAS
-
-**Docente:** [Nombre]  
-**Email:** [email]  
-**Horario de consultas:** [horario]  
-
-**Fecha de entrega:** [Fecha]  
-**Modalidad de entrega:** [Plataforma]
-
----
-
-**¡Buena suerte con el trabajo práctico!** 🚀
 

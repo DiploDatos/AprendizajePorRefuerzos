@@ -19,19 +19,19 @@ Este trabajo práctico permite a cada grupo elegir entre **dos dominios diferent
 
 ## 🗂️ Estructura de Documentos
 
-Este trabajo práctico cuenta con **3 documentos principales**:
+Este trabajo práctico cuenta con **2 documentos principales**:
 
 ---
 
-### 1️⃣ **TRABAJO_PRACTICO_DECISION_TRANSFORMER.md** (Principal)
-📄 **[Leer aquí](./TRABAJO_PRACTICO_DECISION_TRANSFORMER.md)**
+### 1️⃣ **03_REFERENCIA_COMPLETA.md** (Documento Principal)
+📄 **[Leer aquí](./03_REFERENCIA_COMPLETA.md)**
 
 **Contenido:**
 - ✅ Descripción completa del problema
 - ✅ Explicación detallada de los datasets disponibles (Netflix o Goodreads)
 - ✅ Código de REFERENCIA completo (Decision Transformer, training, evaluation)
 - ✅ Especificaciones técnicas de cada parte
-- ✅ Criterios de evaluación y rubrica
+- ✅ Criterios de evaluación
 
 **Cuándo usarlo:**
 - Para entender el problema a fondo
@@ -40,8 +40,8 @@ Este trabajo práctico cuenta con **3 documentos principales**:
 
 ---
 
-### 2️⃣ **GUIA_IMPLEMENTACION_GRUPOS.md** (Guía Práctica) ⭐
-📄 **[Leer aquí](./GUIA_IMPLEMENTACION_GRUPOS.md)**
+### 2️⃣ **02_GUIA_IMPLEMENTACION_GRUPOS.md** (Guía Práctica) ⭐
+📄 **[Leer aquí](./02_GUIA_IMPLEMENTACION_GRUPOS.md)**
 
 **Contenido:**
 - ✅ QUÉ implementar vs QUÉ es código de referencia
@@ -117,16 +117,106 @@ apellido_nombre_tp_dt/
 
 ---
 
-## 📊 Evaluación
+## 📊 Criterios de Evaluación
 
-| Parte | Descripción |
-|-------|-------------|
-| 1. Exploración | Análisis completo del dataset, visualizaciones, preprocesamiento |
-| 2. Modelo | Implementación DT funcional, training correcto |
-| 3. Baselines | Implementación de baselines, métricas, evaluación comparativa |
-| 4. Experimentos | Return conditioning, análisis cold-start |
-| 5. Reporte | Claridad, profundidad, presentación del análisis |
-| **Trabajo Adicional** | Implementación propia desde cero, análisis extra (opcional) |
+La evaluación del trabajo práctico se basa en los siguientes componentes:
+
+### **Parte 1: Exploración y Preparación del Dataset**
+
+**Se evalúa:**
+- Análisis exploratorio completo (distribuciones, estadísticas clave)
+- Visualizaciones claras e informativas (mínimo 3 gráficos relevantes)
+- Correcta implementación del preprocesamiento (returns-to-go, formato DT)
+- Validación de que los datos procesados son correctos
+
+**Entregables:**
+- Notebook `01_exploracion_dataset.ipynb` ejecutado
+- Script `data_preprocessing.py` funcional
+- Dataset procesado guardado
+
+---
+
+### **Parte 2: Implementación del Modelo**
+
+**Se evalúa:**
+- Arquitectura del Decision Transformer funcional
+- Training loop implementado correctamente
+- Dataset y DataLoader de PyTorch funcionando
+- El loss disminuye durante el entrenamiento
+- Modelo entrenado guardado (checkpoint)
+
+**Entregables:**
+- `src/models/decision_transformer.py`
+- `src/data/dataset.py`
+- `src/training/trainer.py`
+- Notebook `02_training.ipynb` con logs y gráficos de loss
+- Modelo entrenado (`.pth` o `.pt`)
+
+---
+
+### **Parte 3: Baselines y Evaluación**
+
+**Se evalúa:**
+- Implementación de al menos 1 baseline (ej: Popularity, Behavior Cloning)
+- Métricas correctamente implementadas (Hit Rate@K, NDCG@K, MRR)
+- Evaluación completa en test set (cold-start users)
+- Tabla comparativa de resultados (DT vs Baselines)
+
+**Entregables:**
+- `src/models/baselines.py`
+- `src/evaluation/metrics.py`
+- `src/evaluation/evaluate.py`
+- Notebook `03_evaluation.ipynb` con resultados
+
+---
+
+### **Parte 4: Experimentos con Return Conditioning**
+
+**Se evalúa:**
+- Análisis del efecto de diferentes valores de R̂ objetivo
+- Gráficos mostrando Return vs Performance
+- Análisis de performance por grupo de usuarios
+- Interpretación de resultados (¿el conditioning funciona?)
+
+**Entregables:**
+- Notebook `04_return_conditioning.ipynb` ejecutado
+- Gráficos claros del efecto del conditioning
+- Análisis cold-start por grupo
+
+---
+
+### **Parte 5: Reporte Final**
+
+**Se evalúa:**
+- Claridad en la presentación del problema y solución
+- Correcta explicación de la metodología
+- Análisis crítico de resultados
+- Conclusiones bien fundamentadas
+- Calidad de visualizaciones y presentación
+
+**Entregables:**
+- `REPORTE.pdf` (3-5 páginas)
+- Incluye: Introducción, Metodología, Resultados, Conclusiones
+
+---
+
+### **Trabajo Adicional (Opcional)**
+
+**Puede incluir:**
+- Implementación propia del transformer (en vez de copiar código de referencia)
+- Comparación con baselines adicionales (ej: Matrix Factorization, LSTM)
+- Análisis de attention weights y embeddings (t-SNE)
+- Experimentos creativos (ej: multi-objective conditioning)
+- Código particularmente bien documentado y organizado
+
+---
+
+### **Aspectos Generales Evaluados en Todo el TP:**
+
+✅ **Código:** Funcional, legible, bien organizado  
+✅ **Reproducibilidad:** Instrucciones claras, semilla fijada, requirements.txt  
+✅ **Documentación:** Comentarios útiles, README con instrucciones de uso  
+✅ **Presentación:** Notebooks ejecutables, gráficos profesionales
 
 ---
 
@@ -151,7 +241,7 @@ apellido_nombre_tp_dt/
 ## ❓ FAQ
 
 **Q: ¿Cómo se conforma un grupo?**
-A: El trabajo práctico es grupal.
+A: Máximo 3 personas.
 
 **Q: ¿Dónde conseguimos el dataset?**
 A: Está en la carpeta `data/` del repositorio. Pueden elegir entre Netflix (películas) o Goodreads (libros).
