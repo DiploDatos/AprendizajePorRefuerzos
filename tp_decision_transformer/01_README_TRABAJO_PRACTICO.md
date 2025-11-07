@@ -19,7 +19,7 @@ Este trabajo práctico permite a cada grupo elegir entre **dos dominios diferent
 
 ## 🗂️ Estructura de Documentos
 
-Este trabajo práctico cuenta con **2 documentos principales**:
+Este trabajo práctico cuenta con **3 documentos principales + 1 alternativa opcional**:
 
 ---
 
@@ -29,7 +29,7 @@ Este trabajo práctico cuenta con **2 documentos principales**:
 **Contenido:**
 - ✅ Descripción completa del problema
 - ✅ Explicación detallada de los datasets disponibles (Netflix o Goodreads)
-- ✅ Código de REFERENCIA completo (Decision Transformer, training, evaluation)
+- ✅ Código de REFERENCIA completo con **PyTorch puro** (Decision Transformer, training, evaluation)
 - ✅ Especificaciones técnicas de cada parte
 - ✅ Criterios de evaluación
 
@@ -55,6 +55,25 @@ Este trabajo práctico cuenta con **2 documentos principales**:
 - Cuando el grupo no sepa por dónde empezar
 - Para verificar que no falta nada
 - Durante la implementación (checklist)
+
+---
+
+### 3️⃣ **04_IMPLEMENTACION_HUGGINGFACE.md** (Alternativa Opcional) 🤗
+📄 **[Leer aquí](./04_IMPLEMENTACION_HUGGINGFACE.md)**
+
+**Contenido:**
+- ✅ Implementación usando **HuggingFace Transformers** (GPT-2)
+- ✅ Código más simple y corto (~200 líneas vs ~300)
+- ✅ Ideal para grupos con poca experiencia en PyTorch bajo nivel
+- ✅ Usa componentes pre-construidos y optimizados
+
+**Cuándo usarlo:**
+- Si el grupo NO tiene experiencia profunda con PyTorch
+- Si ya conocen HuggingFace de otros proyectos (NLP, etc.)
+- Si prefieren usar librerías de alto nivel
+- Si quieren prototipar más rápido
+
+**⚠️ Nota:** Esta es una **alternativa válida** a la implementación del documento `03_REFERENCIA_COMPLETA.md`. Los grupos pueden elegir PyTorch puro O HuggingFace, ambas son aceptadas.
 
 ---
 

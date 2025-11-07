@@ -47,17 +47,15 @@ model = DecisionTransformer(
 
 ---
 
-## 📋 RESUMEN EJECUTIVO
+## 📋 VISTA GENERAL DEL TRABAJO
 
-| Componente | ¿Qué hacer? | Dificultad | Tiempo est. |
-|------------|-------------|------------|-------------|
-| **Parte 1: Exploración** | Implementar análisis y preprocesamiento | ⭐⭐ Fácil | 4-6 horas |
-| **Parte 2: Modelo** | Copiar/adaptar código de referencia | ⭐⭐⭐ Media | 8-12 horas |
-| **Parte 3: Baselines** | Implementar 2-3 métodos simples | ⭐⭐ Fácil-Media | 6-8 horas |
-| **Parte 4: Experimentos** | Ejecutar y analizar experimentos | ⭐⭐ Media | 4-6 horas |
-| **Parte 5: Reporte** | Escribir documento final | ⭐⭐ Media | 4-6 horas |
-
-**Tiempo total estimado:** 26-38 horas (distribuir en 3-4 semanas)
+| Componente | ¿Qué hacer? |
+|------------|-------------|
+| **Parte 1: Exploración** | Implementar análisis y preprocesamiento |
+| **Parte 2: Modelo** | Copiar/adaptar código de referencia |
+| **Parte 3: Baselines** | Implementar 2-3 métodos simples |
+| **Parte 4: Experimentos** | Ejecutar y analizar experimentos |
+| **Parte 5: Reporte** | Escribir documento final |
 
 ---
 
