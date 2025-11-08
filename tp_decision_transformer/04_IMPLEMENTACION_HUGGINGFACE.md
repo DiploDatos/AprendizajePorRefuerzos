@@ -7,7 +7,6 @@
 ## 🎯 ¿Para quién es este documento?
 
 Este documento es una **alternativa** para grupos que:
-- ✅ No tienen experiencia profunda con PyTorch
 - ✅ Conocen o quieren usar HuggingFace Transformers
 - ✅ Prefieren usar componentes pre-construidos de alto nivel
 
@@ -682,18 +681,6 @@ if __name__ == '__main__':
 
 ---
 
-## 📊 COMPARACIÓN: PyTorch Puro vs HuggingFace
-
-| Aspecto | PyTorch Puro | HuggingFace |
-|---------|--------------|-------------|
-| **Líneas de código** | ~300 líneas | ~200 líneas |
-| **Dificultad** | Alta (implementar atención) | Media (usar GPT-2) |
-| **Flexibilidad** | Total control | Menos control interno |
-| **Performance** | Similar | Similar |
-| **Debugging** | Más difícil | Más fácil |
-| **Aprendizaje** | Entiende todo | Caja negra parcial |
-
----
 
 ## 🎯 VENTAJAS DE HUGGINGFACE
 
@@ -702,31 +689,6 @@ if __name__ == '__main__':
 ✅ **Optimizaciones automáticas** (flash attention, etc.)
 ✅ **Fácil de modificar** (cambiar GPT-2 por otros modelos)
 ✅ **Documentación extensa**
-
----
-
-## ⚠️ DESVENTAJAS
-
-❌ **Menos entendimiento interno** (no ves la implementación de atención)
-❌ **Dependencia externa** (HuggingFace puede cambiar API)
-❌ **Overhead** (biblioteca grande)
-❌ **Menos personalizable** (adaptado a NLP originalmente)
-
----
-
-## 🚀 ¿CUÁL USAR?
-
-### **Usa PyTorch Puro (`03_REFERENCIA_COMPLETA.md`) si:**
-- Quieres entender TODO el proceso
-- Necesitas máxima flexibilidad
-- Quieres aprender arquitecturas de transformers desde cero
-- Tienes experiencia con PyTorch
-
-### **Usa HuggingFace (este documento) si:**
-- Eres nuevo en PyTorch
-- Ya conoces HuggingFace de otros proyectos
-- Quieres prototipar rápido
-- Prefieres usar componentes battle-tested
 
 ---
 
@@ -802,13 +764,13 @@ self.transformer = BertModel(config)
 ## ❓ FAQ ESPECÍFICO DE HUGGINGFACE
 
 **Q: ¿Puedo combinar PyTorch puro y HuggingFace?**
-A: Sí, puedes usar HuggingFace solo para el transformer y PyTorch para embeddings/heads personalizados.
+A: Sí, pueden usar HuggingFace solo para el transformer y PyTorch para embeddings/heads personalizados.
 
 **Q: ¿El rendimiento es peor que PyTorch puro?**
 A: No, HuggingFace está optimizado y puede ser incluso más rápido.
 
 **Q: ¿Puedo usar GPT-2 pre-entrenado directamente?**
-A: No directamente (está entrenado para texto), pero puedes hacer transfer learning adaptando las capas.
+A: No directamente (está entrenado para texto), pero pueden hacer transfer learning adaptando las capas.
 
 **Q: ¿Es válido usar esto para el TP?**
 A: Sí, es una implementación completamente válida del Decision Transformer.
