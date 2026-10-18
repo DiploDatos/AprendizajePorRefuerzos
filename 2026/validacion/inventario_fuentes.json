@@ -1,0 +1,1305 @@
+{
+  "fecha": "2026-10-12",
+  "repo_commit": "22824ca",
+  "slides": [
+    {
+      "id": "1s6e6-wCMOJ1nit9EHYREiFJe38MGcOVisFDdUvCWHkk",
+      "title": "Aprendizaje por Refuerzos 2025 - Clase 1",
+      "revision": "4J5uOWHdOfSh-g",
+      "slides": [
+        {
+          "number": 1,
+          "id": "p",
+          "title": "Aprendizaje por Refuerzos"
+        },
+        {
+          "number": 2,
+          "id": "gb2e30c18f0_0_0",
+          "title": "Sobre nosotros"
+        },
+        {
+          "number": 3,
+          "id": "gb2e30c18f0_0_263",
+          "title": "Agenda"
+        },
+        {
+          "number": 4,
+          "id": "gb49cbc1f9c_0_216",
+          "title": "Introducción"
+        },
+        {
+          "number": 5,
+          "id": "gb2e30c18f0_0_5",
+          "title": "Introducción"
+        },
+        {
+          "number": 6,
+          "id": "gb2e30c18f0_0_268",
+          "title": "Introducción"
+        },
+        {
+          "number": 7,
+          "id": "gb2e30c18f0_0_273",
+          "title": "Introducción"
+        },
+        {
+          "number": 8,
+          "id": "g1e7f77bb88c_0_0",
+          "title": "Introducción"
+        },
+        {
+          "number": 9,
+          "id": "g1e7f77bb88c_0_8",
+          "title": "Introducción"
+        },
+        {
+          "number": 10,
+          "id": "gb2e30c18f0_0_10",
+          "title": "Introducción"
+        },
+        {
+          "number": 11,
+          "id": "gb2e30c18f0_0_220",
+          "title": "Introducción"
+        },
+        {
+          "number": 12,
+          "id": "gb2e30c18f0_0_225",
+          "title": "Introducción"
+        },
+        {
+          "number": 13,
+          "id": "gb2e30c18f0_0_232",
+          "title": "Introducción"
+        },
+        {
+          "number": 14,
+          "id": "gb2f99adadb_0_34",
+          "title": "Introducción"
+        },
+        {
+          "number": 15,
+          "id": "gb2e30c18f0_0_199",
+          "title": "Introducción"
+        },
+        {
+          "number": 16,
+          "id": "gbc696bf0ec_0_1",
+          "title": "Introducción"
+        },
+        {
+          "number": 17,
+          "id": "gbc2dfa48f5_0_0",
+          "title": "Introducción"
+        },
+        {
+          "number": 18,
+          "id": "gbc2dfa48f5_0_9",
+          "title": "Introducción"
+        },
+        {
+          "number": 19,
+          "id": "gb2e30c18f0_0_254",
+          "title": "Introducción"
+        },
+        {
+          "number": 20,
+          "id": "gb2e30c18f0_0_241",
+          "title": "Introducción"
+        },
+        {
+          "number": 21,
+          "id": "gb2e30c18f0_0_205",
+          "title": "Introducción"
+        },
+        {
+          "number": 22,
+          "id": "g25f39d90f12_0_0",
+          "title": "Introducción"
+        },
+        {
+          "number": 23,
+          "id": "gb2f99adadb_0_0",
+          "title": "Introducción"
+        },
+        {
+          "number": 24,
+          "id": "gb49cbc1f9c_0_221",
+          "title": "Nociones básicas"
+        },
+        {
+          "number": 25,
+          "id": "gb2f99adadb_0_20",
+          "title": "Nociones básicas"
+        },
+        {
+          "number": 26,
+          "id": "gb30f0b5226_0_0",
+          "title": "Nociones básicas"
+        },
+        {
+          "number": 27,
+          "id": "gb49cbc1f9c_0_119",
+          "title": "Nociones básicas"
+        },
+        {
+          "number": 28,
+          "id": "gb49cbc1f9c_0_134",
+          "title": "Nociones básicas"
+        },
+        {
+          "number": 29,
+          "id": "gb30f0b5226_0_20",
+          "title": "Nociones básicas"
+        },
+        {
+          "number": 30,
+          "id": "gb49cbc1f9c_0_0",
+          "title": "Nociones básicas"
+        },
+        {
+          "number": 31,
+          "id": "gb30f0b5226_0_41",
+          "title": "Nociones básicas"
+        },
+        {
+          "number": 32,
+          "id": "gb49cbc1f9c_0_7",
+          "title": "Nociones básicas"
+        },
+        {
+          "number": 33,
+          "id": "gb49cbc1f9c_0_12",
+          "title": "Nociones básicas"
+        },
+        {
+          "number": 34,
+          "id": "gb49cbc1f9c_0_110",
+          "title": "Nociones básicas"
+        },
+        {
+          "number": 35,
+          "id": "gb49cbc1f9c_0_17",
+          "title": "Nociones básicas"
+        },
+        {
+          "number": 36,
+          "id": "gb49cbc1f9c_0_173",
+          "title": "Nociones básicas"
+        },
+        {
+          "number": 37,
+          "id": "gb49cbc1f9c_0_180",
+          "title": "Nociones básicas"
+        },
+        {
+          "number": 38,
+          "id": "gb49cbc1f9c_0_196",
+          "title": "Nociones básicas"
+        },
+        {
+          "number": 39,
+          "id": "gb49cbc1f9c_0_141",
+          "title": "Nociones básicas (resumen)"
+        },
+        {
+          "number": 40,
+          "id": "gb49cbc1f9c_0_231",
+          "title": "Ejemplos de políticas y MDPs"
+        },
+        {
+          "number": 41,
+          "id": "gbcdfc8e7f8_0_6",
+          "title": "Robot en una grilla (NxN) intentando llegar a su meta"
+        },
+        {
+          "number": 42,
+          "id": "gb49cbc1f9c_0_211",
+          "title": "(0,0)\t\t\t(0,1)\t\t\t(0,2)\t\t       (0,3)"
+        },
+        {
+          "number": 43,
+          "id": "gb49cbc1f9c_0_22",
+          "title": "(0,0)\t\t\t(0,1)\t\t\t(0,2)\t\t       (0,3)"
+        },
+        {
+          "number": 44,
+          "id": "gb49cbc1f9c_0_239",
+          "title": "(0,0)\t\t\t(0,1)\t\t\t(0,2)\t\t(0,3)"
+        },
+        {
+          "number": 45,
+          "id": "gb49cbc1f9c_0_245",
+          "title": "(0,0)\t\t\t(0,1)\t\t\t(0,2)\t\t       (0,3)"
+        },
+        {
+          "number": 46,
+          "id": "gb49cbc1f9c_0_250",
+          "title": "(0,0)\t\t\t(0,1)\t\t\t(0,2)\t\t       (0,3)"
+        },
+        {
+          "number": 47,
+          "id": "gb49cbc1f9c_0_253",
+          "title": "(0,0)\t\t\t(0,1)\t\t\t(0,2)\t\t       (0,3)"
+        },
+        {
+          "number": 48,
+          "id": "gb49cbc1f9c_0_256",
+          "title": "¿Cómo llegamos a esta política? con entrenamiento (próximas slides!)"
+        },
+        {
+          "number": 49,
+          "id": "gb49cbc1f9c_0_263",
+          "title": "Actividad 0: ejercicios a mano"
+        },
+        {
+          "number": 50,
+          "id": "gb49cbc1f9c_0_267",
+          "title": "Formas de resolver RL"
+        },
+        {
+          "number": 51,
+          "id": "gb49cbc1f9c_0_158",
+          "title": "Algunas formas básicas de resolver RL"
+        },
+        {
+          "number": 52,
+          "id": "gb49cbc1f9c_0_226",
+          "title": "Bandidos"
+        },
+        {
+          "number": 53,
+          "id": "gb2f99adadb_0_5",
+          "title": "Bandidos"
+        },
+        {
+          "number": 54,
+          "id": "gb30f0b5226_0_14",
+          "title": "Bandidos"
+        },
+        {
+          "number": 55,
+          "id": "gb30f0b5226_0_25",
+          "title": "Bandidos"
+        },
+        {
+          "number": 56,
+          "id": "gb30f0b5226_0_32",
+          "title": "Bandidos"
+        },
+        {
+          "number": 57,
+          "id": "gb2f99adadb_0_10",
+          "title": "Bandidos"
+        },
+        {
+          "number": 58,
+          "id": "gfb93927b18_0_10",
+          "title": "Bandidos - bases del RL"
+        },
+        {
+          "number": 59,
+          "id": "gfb93927b18_0_20",
+          "title": "Bandidos - bases del RL"
+        },
+        {
+          "number": 60,
+          "id": "gfb93927b18_0_25",
+          "title": "Bandidos - bases del RL"
+        },
+        {
+          "number": 61,
+          "id": "g2d5371c45a6_0_0",
+          "title": "Buen material"
+        },
+        {
+          "number": 62,
+          "id": "gb52b5ce2f4_0_13",
+          "title": "Diferencia Temporal (TD)"
+        },
+        {
+          "number": 63,
+          "id": "gb49cbc1f9c_0_163",
+          "title": "Diferencia temporal (TD)"
+        },
+        {
+          "number": 64,
+          "id": "gb49cbc1f9c_0_291",
+          "title": "Diferencia temporal (TD)"
+        },
+        {
+          "number": 65,
+          "id": "gb49cbc1f9c_0_304",
+          "title": "Diferencia temporal (TD)"
+        },
+        {
+          "number": 66,
+          "id": "gb49cbc1f9c_0_318",
+          "title": "Diferencia temporal (TD)"
+        },
+        {
+          "number": 67,
+          "id": "gb49cbc1f9c_0_328",
+          "title": "Diferencia temporal (TD)"
+        },
+        {
+          "number": 68,
+          "id": "gb49cbc1f9c_0_323",
+          "title": "Diferencia temporal (TD)"
+        },
+        {
+          "number": 69,
+          "id": "gb49cbc1f9c_0_341",
+          "title": "Diferencia temporal (TD)"
+        },
+        {
+          "number": 70,
+          "id": "gb49cbc1f9c_0_346",
+          "title": "Diferencia temporal (TD)"
+        },
+        {
+          "number": 71,
+          "id": "g2d5371c45a6_0_7",
+          "title": "Ejemplo de agente TD online"
+        },
+        {
+          "number": 72,
+          "id": "gfcda220629_1_92",
+          "title": "Métodos basados en modelos"
+        },
+        {
+          "number": 73,
+          "id": "gfcda220629_1_0",
+          "title": "Métodos basados en modelos"
+        },
+        {
+          "number": 74,
+          "id": "gfcda220629_1_5",
+          "title": "Métodos basados en modelos"
+        },
+        {
+          "number": 75,
+          "id": "gfcda220629_1_12",
+          "title": "Métodos basados en modelos"
+        },
+        {
+          "number": 76,
+          "id": "gfcda220629_1_28",
+          "title": "Métodos basados en modelos"
+        },
+        {
+          "number": 77,
+          "id": "gfcda220629_1_17",
+          "title": "Métodos basados en modelos"
+        },
+        {
+          "number": 78,
+          "id": "gfcda220629_1_47",
+          "title": "Métodos basados en modelos"
+        },
+        {
+          "number": 79,
+          "id": "gfcda220629_1_36",
+          "title": "Métodos basados en modelos"
+        },
+        {
+          "number": 80,
+          "id": "gfcda220629_1_42",
+          "title": "Métodos basados en modelos - Dyna-Q"
+        },
+        {
+          "number": 81,
+          "id": "gfcda220629_1_56",
+          "title": "Métodos basados en modelos - Dyna-Q"
+        },
+        {
+          "number": 82,
+          "id": "gfcda220629_1_62",
+          "title": "Métodos basados en modelos"
+        },
+        {
+          "number": 83,
+          "id": "gfcda220629_1_68",
+          "title": "Métodos basados en modelos"
+        },
+        {
+          "number": 84,
+          "id": "gfcda220629_1_75",
+          "title": "Métodos basados en modelos - Dyna-Q+"
+        },
+        {
+          "number": 85,
+          "id": "gfcda220629_1_82",
+          "title": "Métodos basados en modelos - Dyna-Q+"
+        },
+        {
+          "number": 86,
+          "id": "gfcda220629_1_87",
+          "title": "Métodos basados en modelos"
+        },
+        {
+          "number": 87,
+          "id": "gb4eea7d43a_0_10",
+          "title": "Ética en RL"
+        },
+        {
+          "number": 88,
+          "id": "gb49cbc1f9c_0_149",
+          "title": "Ética en RL"
+        },
+        {
+          "number": 89,
+          "id": "gfcbea4abbc_0_0",
+          "title": "Ética en RL"
+        },
+        {
+          "number": 90,
+          "id": "gfca5e140ac_0_6",
+          "title": "Ética en RL"
+        },
+        {
+          "number": 91,
+          "id": "gb4eea7d43a_0_25",
+          "title": "Ética en RL"
+        },
+        {
+          "number": 92,
+          "id": "gb4eea7d43a_0_40",
+          "title": "Ética en RL"
+        },
+        {
+          "number": 93,
+          "id": "g39cfa96d3e5_0_0",
+          "title": "Ética en RL"
+        },
+        {
+          "number": 94,
+          "id": "gb4eea7d43a_0_5",
+          "title": "Actividad 1: Programar primeros agentes"
+        }
+      ]
+    },
+    {
+      "id": "1505Z4vPX_KDFcOiACzhdm8k5bVfGqN_RFfAbKvbrS8s",
+      "title": "Aprendizaje por Refuerzos 2025 - Clase 2",
+      "revision": "W1Ki5cBDKMKL4A",
+      "slides": [
+        {
+          "number": 1,
+          "id": "ge83ef4c23e_0_124",
+          "title": "Aprendizaje por Refuerzos"
+        },
+        {
+          "number": 2,
+          "id": "ge83ef4c23e_0_57",
+          "title": "Agenda"
+        },
+        {
+          "number": 3,
+          "id": "g100388fc5eb_1_29",
+          "title": "Problema de los enfoques tabulares"
+        },
+        {
+          "number": 4,
+          "id": "ge83ef4c23e_0_62",
+          "title": "Problema de los enfoques tabulares"
+        },
+        {
+          "number": 5,
+          "id": "gf890516059_0_43",
+          "title": "Ejemplo 1: Problema del taxi"
+        },
+        {
+          "number": 6,
+          "id": "gf890516059_0_49",
+          "title": "Ejemplo 2: Cartpole"
+        },
+        {
+          "number": 7,
+          "id": "geb87aff20e_0_1",
+          "title": "Posible mitigación: simplificar el problema"
+        },
+        {
+          "number": 8,
+          "id": "ge83ef4c23e_0_186",
+          "title": "Posible mitigación: simplificar el problema"
+        },
+        {
+          "number": 9,
+          "id": "geb89aa2ed5_0_61",
+          "title": "Problemas de simplificar"
+        },
+        {
+          "number": 10,
+          "id": "geb89aa2ed5_0_15",
+          "title": "Solución: aproximar"
+        },
+        {
+          "number": 11,
+          "id": "geb89aa2ed5_0_20",
+          "title": "Solución: aproximar"
+        },
+        {
+          "number": 12,
+          "id": "gfd48c4675b_0_0",
+          "title": "Recap: redes neuronales"
+        },
+        {
+          "number": 13,
+          "id": "gfd29060822_0_0",
+          "title": "Intro redes neuronales"
+        },
+        {
+          "number": 14,
+          "id": "gfd48c4675b_0_9",
+          "title": "Intro redes neuronales"
+        },
+        {
+          "number": 15,
+          "id": "gfd48c4675b_0_20",
+          "title": "Intro redes neuronales"
+        },
+        {
+          "number": 16,
+          "id": "gfd48c4675b_0_15",
+          "title": "Intro redes neuronales"
+        },
+        {
+          "number": 17,
+          "id": "gfd48c4675b_0_60",
+          "title": "Intro redes neuronales"
+        },
+        {
+          "number": 18,
+          "id": "gfd48c4675b_0_38",
+          "title": "Intro redes neuronales"
+        },
+        {
+          "number": 19,
+          "id": "gfd48c4675b_0_45",
+          "title": "Intro redes neuronales"
+        },
+        {
+          "number": 20,
+          "id": "gfd48c4675b_0_4",
+          "title": "Algoritmos de deep RL"
+        },
+        {
+          "number": 21,
+          "id": "ge90cb544c9_0_5",
+          "title": "Algoritmos de deep RL"
+        },
+        {
+          "number": 22,
+          "id": "g100388fc5eb_1_33",
+          "title": "Algoritmos basados en valor"
+        },
+        {
+          "number": 23,
+          "id": "gf174191e81_0_1",
+          "title": "Algoritmos basados en valor"
+        },
+        {
+          "number": 24,
+          "id": "ge88125d821_0_22",
+          "title": "Algoritmos basados en valor"
+        },
+        {
+          "number": 25,
+          "id": "gf6ffd234b1_0_5",
+          "title": "Algoritmo DQN"
+        },
+        {
+          "number": 26,
+          "id": "ge90cb544c9_0_15",
+          "title": "Algoritmo DQN"
+        },
+        {
+          "number": 27,
+          "id": "gf6ffd234b1_0_11",
+          "title": "Algoritmo DQN"
+        },
+        {
+          "number": 28,
+          "id": "ge88125d821_0_1",
+          "title": "Algoritmo DQN"
+        },
+        {
+          "number": 29,
+          "id": "gf6ffd234b1_0_0",
+          "title": "Algoritmo DQN"
+        },
+        {
+          "number": 30,
+          "id": "geb89aa2ed5_0_25",
+          "title": "Algoritmo DQN: red neuronal"
+        },
+        {
+          "number": 31,
+          "id": "ge88125d821_0_6",
+          "title": "Algoritmo DQN"
+        },
+        {
+          "number": 32,
+          "id": "gf890516059_0_87",
+          "title": "Algoritmo DQN"
+        },
+        {
+          "number": 33,
+          "id": "g13f65cb0c8f_0_0",
+          "title": "DQN"
+        },
+        {
+          "number": 34,
+          "id": "g311e865e483_0_0",
+          "title": "Ejemplo de agente DQN online"
+        },
+        {
+          "number": 35,
+          "id": "g100388fc5eb_1_39",
+          "title": "Algoritmos de gradiente de política"
+        },
+        {
+          "number": 36,
+          "id": "geb89aa2ed5_0_30",
+          "title": "Algoritmos de gradiente de política"
+        },
+        {
+          "number": 37,
+          "id": "g100388fc5eb_1_24",
+          "title": "Algoritmos de gradiente de política"
+        },
+        {
+          "number": 38,
+          "id": "geb86021b6b_0_0",
+          "title": "Gradiente de política"
+        },
+        {
+          "number": 39,
+          "id": "ge90cb544c9_0_26",
+          "title": "Gradiente de política"
+        },
+        {
+          "number": 40,
+          "id": "g100388fc5eb_1_16",
+          "title": "Gradiente de política"
+        },
+        {
+          "number": 41,
+          "id": "ge90cb544c9_0_31",
+          "title": "Algoritmos de gradiente de política"
+        },
+        {
+          "number": 42,
+          "id": "ge90cb544c9_0_36",
+          "title": "Algoritmos de gradiente de política"
+        },
+        {
+          "number": 43,
+          "id": "g100388fc5eb_1_45",
+          "title": "Algoritmos actor-crítico"
+        },
+        {
+          "number": 44,
+          "id": "geb89aa2ed5_0_35",
+          "title": "Algoritmos actor-crítico"
+        },
+        {
+          "number": 45,
+          "id": "g100388fc5eb_1_56",
+          "title": "Algoritmos actor-crítico"
+        },
+        {
+          "number": 46,
+          "id": "g100388fc5eb_1_62",
+          "title": "Algoritmos actor-crítico"
+        },
+        {
+          "number": 47,
+          "id": "g100388fc5eb_1_69",
+          "title": "Algoritmos actor-crítico"
+        },
+        {
+          "number": 48,
+          "id": "gf890516059_0_71",
+          "title": "Algoritmo DDPG"
+        },
+        {
+          "number": 49,
+          "id": "g13f62eac958_1_0",
+          "title": "Algoritmo DDPG"
+        },
+        {
+          "number": 50,
+          "id": "ge90cb544c9_0_20",
+          "title": "Algoritmo PPO"
+        },
+        {
+          "number": 51,
+          "id": "g38b2e10666a_0_0",
+          "title": "RL en Transformers"
+        },
+        {
+          "number": 52,
+          "id": "g38b2e10666a_0_4",
+          "title": "Recap: Transformers"
+        },
+        {
+          "number": 53,
+          "id": "g36fb9856750_1_83",
+          "title": "RLHF"
+        },
+        {
+          "number": 54,
+          "id": "g1e842fd07c2_2_0",
+          "title": "RLHF"
+        },
+        {
+          "number": 55,
+          "id": "g36fb9856750_1_76",
+          "title": "RLHF"
+        },
+        {
+          "number": 56,
+          "id": "g3a0d1898e12_0_10",
+          "title": "RLHF"
+        },
+        {
+          "number": 57,
+          "id": "g385e773c5af_0_0",
+          "title": "Direct Preference Optimization (DPO)"
+        },
+        {
+          "number": 58,
+          "id": "g36fb9856750_1_108",
+          "title": "DPO"
+        },
+        {
+          "number": 59,
+          "id": "g3a0d1898e12_0_17",
+          "title": "DPO"
+        },
+        {
+          "number": 60,
+          "id": "g36fb9856750_1_114",
+          "title": "DPO"
+        },
+        {
+          "number": 61,
+          "id": "g36fb9856750_1_70",
+          "title": "DPO"
+        },
+        {
+          "number": 62,
+          "id": "g36fb9856750_1_91",
+          "title": "DPO"
+        },
+        {
+          "number": 63,
+          "id": "g38b2e10666a_0_80",
+          "title": "Offline-RL: Transformers como modelo de política y valor"
+        },
+        {
+          "number": 64,
+          "id": "g39e4dae134e_0_2",
+          "title": "Offline RL: Formalización del Problema"
+        },
+        {
+          "number": 65,
+          "id": "g39e4dae134e_0_12",
+          "title": "Soluciones Tradicionales en Offline RL"
+        },
+        {
+          "number": 66,
+          "id": "g39e4dae134e_0_26",
+          "title": "Transformers en RL"
+        },
+        {
+          "number": 67,
+          "id": "g39e4dae134e_0_33",
+          "title": "RL como Sequence Modeling"
+        },
+        {
+          "number": 68,
+          "id": "g39e4dae134e_0_40",
+          "title": "Tokens = (estados, acciones, recompensas)"
+        },
+        {
+          "number": 69,
+          "id": "g38b2e10666a_0_91",
+          "title": "Decision transformer: RL como conditional sequence modeling"
+        },
+        {
+          "number": 70,
+          "id": "g39ef4f1d585_0_6",
+          "title": "Decision transformer"
+        },
+        {
+          "number": 71,
+          "id": "g39ef4f1d585_0_12",
+          "title": "Decision transformer"
+        },
+        {
+          "number": 72,
+          "id": "ge90cb544c9_0_46",
+          "title": "Ejemplos de aplicaciones de deepRL"
+        },
+        {
+          "number": 73,
+          "id": "gf9badb265c_0_277",
+          "title": "Deep RL en Juegos"
+        },
+        {
+          "number": 74,
+          "id": "gf9badb265c_0_0",
+          "title": "Juegos"
+        },
+        {
+          "number": 75,
+          "id": "gf9badb265c_0_6",
+          "title": "Juegos"
+        },
+        {
+          "number": 76,
+          "id": "gf9badb265c_0_11",
+          "title": "Juegos"
+        },
+        {
+          "number": 77,
+          "id": "gf890516059_0_16",
+          "title": "Juegos"
+        },
+        {
+          "number": 78,
+          "id": "gf9badb265c_0_56",
+          "title": "Más allá de los juegos"
+        },
+        {
+          "number": 79,
+          "id": "gf9badb265c_0_61",
+          "title": "Recomendadores"
+        },
+        {
+          "number": 80,
+          "id": "gf9badb265c_0_67",
+          "title": "Recomendadores"
+        },
+        {
+          "number": 81,
+          "id": "g284d6b8d335_0_0",
+          "title": "Recomendadores"
+        },
+        {
+          "number": 82,
+          "id": "gf9badb265c_0_126",
+          "title": "Calendarización y simulaciones de escenarios"
+        },
+        {
+          "number": 83,
+          "id": "g13eff26a376_0_18",
+          "title": "Investigación operativa"
+        },
+        {
+          "number": 84,
+          "id": "g13f65cb0c8f_0_7",
+          "title": "Real Time Bidding (MELI)"
+        },
+        {
+          "number": 85,
+          "id": "g13f65cb0c8f_0_13",
+          "title": "OneClick MP (MELI)"
+        },
+        {
+          "number": 86,
+          "id": "g13f65cb0c8f_0_18",
+          "title": "Product Review Ranking (MELI)"
+        },
+        {
+          "number": 87,
+          "id": "g2d5640c7ab2_0_11",
+          "title": "Seller Coach (MELI)"
+        },
+        {
+          "number": 88,
+          "id": "gf9badb265c_0_136",
+          "title": "Transferencia a entornos reales (sim2real)"
+        },
+        {
+          "number": 89,
+          "id": "gf9badb265c_0_141",
+          "title": "Transferencia a entornos reales"
+        },
+        {
+          "number": 90,
+          "id": "gf9badb265c_0_146",
+          "title": "Transferencia a entornos reales"
+        },
+        {
+          "number": 91,
+          "id": "gf890516059_0_76",
+          "title": "Transferencia a entornos reales"
+        },
+        {
+          "number": 92,
+          "id": "gf9badb265c_0_152",
+          "title": "Transferencia a entornos reales"
+        },
+        {
+          "number": 93,
+          "id": "gf9badb265c_0_158",
+          "title": "Transferencia a entornos reales"
+        },
+        {
+          "number": 94,
+          "id": "gf9badb265c_0_164",
+          "title": "Robótica"
+        },
+        {
+          "number": 95,
+          "id": "gf9badb265c_0_170",
+          "title": "Robótica"
+        },
+        {
+          "number": 96,
+          "id": "gf9badb265c_0_176",
+          "title": "Robótica"
+        },
+        {
+          "number": 97,
+          "id": "gf9badb265c_0_182",
+          "title": "Robótica"
+        },
+        {
+          "number": 98,
+          "id": "gf9badb265c_0_188",
+          "title": "Robótica"
+        },
+        {
+          "number": 99,
+          "id": "gf9badb265c_0_193",
+          "title": "Robótica"
+        },
+        {
+          "number": 100,
+          "id": "g3134f423d77_0_0",
+          "title": "Robótica"
+        },
+        {
+          "number": 101,
+          "id": "g3134f423d77_0_12",
+          "title": "Robótica"
+        },
+        {
+          "number": 102,
+          "id": "g3134f423d77_0_21",
+          "title": "Robótica"
+        },
+        {
+          "number": 103,
+          "id": "g3134f423d77_0_28",
+          "title": "Robótica"
+        },
+        {
+          "number": 104,
+          "id": "g3134f423d77_0_50",
+          "title": "Robótica"
+        },
+        {
+          "number": 105,
+          "id": "g3134f423d77_0_56",
+          "title": "Robótica"
+        },
+        {
+          "number": 106,
+          "id": "g3134f423d77_0_43",
+          "title": "Robótica"
+        },
+        {
+          "number": 107,
+          "id": "g100388fc5eb_1_6",
+          "title": "Conclusiones"
+        },
+        {
+          "number": 108,
+          "id": "gf9badb265c_0_463",
+          "title": "Conclusiones"
+        },
+        {
+          "number": 109,
+          "id": "gf9badb265c_0_468",
+          "title": "Conclusiones"
+        },
+        {
+          "number": 110,
+          "id": "g100388fc5eb_1_1",
+          "title": "Conclusiones"
+        },
+        {
+          "number": 111,
+          "id": "g311e865e483_0_7",
+          "title": "Material extra"
+        },
+        {
+          "number": 112,
+          "id": "gf9badb265c_0_401",
+          "title": "Actividad 2: Programa tu decision transformer!"
+        },
+        {
+          "number": 113,
+          "id": "g13eff26a376_0_0",
+          "title": "Apéndice: detalle de aplicaciones"
+        },
+        {
+          "number": 114,
+          "id": "g2d5640c7ab2_0_0",
+          "title": "Ajedrez"
+        },
+        {
+          "number": 115,
+          "id": "gfd48c4675b_0_55",
+          "title": "Juegos - detalle"
+        },
+        {
+          "number": 116,
+          "id": "gf890516059_0_32",
+          "title": "Juegos - detalle"
+        },
+        {
+          "number": 117,
+          "id": "gf890516059_0_100",
+          "title": "Juegos - detalle"
+        },
+        {
+          "number": 118,
+          "id": "gf9badb265c_0_22",
+          "title": "Juegos - detalle"
+        },
+        {
+          "number": 119,
+          "id": "gf9badb265c_0_28",
+          "title": "OpenAI Five"
+        },
+        {
+          "number": 120,
+          "id": "gf890516059_0_5",
+          "title": "OpenAI Five"
+        },
+        {
+          "number": 121,
+          "id": "gf9badb265c_0_33",
+          "title": "Juegos - detalle"
+        },
+        {
+          "number": 122,
+          "id": "gf9badb265c_0_39",
+          "title": "Juegos - detalle"
+        },
+        {
+          "number": 123,
+          "id": "gf890516059_0_95",
+          "title": "Juegos - detalle"
+        },
+        {
+          "number": 124,
+          "id": "gf9badb265c_0_45",
+          "title": "Juegos - detalle"
+        },
+        {
+          "number": 125,
+          "id": "gf9badb265c_0_51",
+          "title": "Juegos - detalle"
+        },
+        {
+          "number": 126,
+          "id": "gf890516059_0_66",
+          "title": "Juegos - detalle"
+        },
+        {
+          "number": 127,
+          "id": "gf890516059_0_61",
+          "title": "Juegos - detalle"
+        },
+        {
+          "number": 128,
+          "id": "gf890516059_0_105",
+          "title": "Juegos - detalle"
+        },
+        {
+          "number": 129,
+          "id": "gf9badb265c_0_214",
+          "title": "Conducción autónoma - arquitectura usada"
+        },
+        {
+          "number": 130,
+          "id": "g38b2e10666a_0_10",
+          "title": "Control"
+        },
+        {
+          "number": 131,
+          "id": "g38b2e10666a_0_16",
+          "title": "Control"
+        },
+        {
+          "number": 132,
+          "id": "g38b2e10666a_0_21",
+          "title": "Control"
+        },
+        {
+          "number": 133,
+          "id": "g38b2e10666a_0_26",
+          "title": "Salud"
+        },
+        {
+          "number": 134,
+          "id": "g38b2e10666a_0_31",
+          "title": "Salud"
+        },
+        {
+          "number": 135,
+          "id": "g38b2e10666a_0_37",
+          "title": "Salud"
+        },
+        {
+          "number": 136,
+          "id": "g38b2e10666a_0_42",
+          "title": "Salud"
+        },
+        {
+          "number": 137,
+          "id": "g38b2e10666a_0_47",
+          "title": "Salud"
+        },
+        {
+          "number": 138,
+          "id": "g38b2e10666a_0_52",
+          "title": "Control de tráfico"
+        },
+        {
+          "number": 139,
+          "id": "g38b2e10666a_0_58",
+          "title": "Control de tráfico"
+        },
+        {
+          "number": 140,
+          "id": "g38b2e10666a_0_63",
+          "title": "Conducción autónoma"
+        },
+        {
+          "number": 141,
+          "id": "g38b2e10666a_0_69",
+          "title": "Conducción autónoma"
+        },
+        {
+          "number": 142,
+          "id": "g38b2e10666a_0_74",
+          "title": "Conducción autónoma"
+        },
+        {
+          "number": 143,
+          "id": "g13f65cb0c8f_0_31",
+          "title": "RL in Stock Markets"
+        }
+      ]
+    }
+  ],
+  "drive": [
+    {
+      "id": "1NmWlabRgdbZUyWpmEL6iClS22tUarIcF5oWDTXEolYw",
+      "title": "Programa",
+      "mime_type": "application/vnd.google-apps.document",
+      "url": "https://docs.google.com/document/d/1NmWlabRgdbZUyWpmEL6iClS22tUarIcF5oWDTXEolYw/edit?usp=drivesdk",
+      "modified_time": "2026-06-11T18:31:54.878Z"
+    },
+    {
+      "id": "1vAlrwsBigRHKwFOBajP-6FiPNNP2AvyWs6hdHbKylf4",
+      "title": "[Interno] Correcciones Intro Aprendizaje por Refuerzos 2025",
+      "mime_type": "application/vnd.google-apps.spreadsheet",
+      "url": "https://docs.google.com/spreadsheets/d/1vAlrwsBigRHKwFOBajP-6FiPNNP2AvyWs6hdHbKylf4/edit?usp=drivesdk",
+      "modified_time": "2025-12-11T21:37:31.812Z"
+    },
+    {
+      "id": "16MyNrS2SQuBS87Vv8LP8uE3jNkskhuQyMzkM0xRsf7k",
+      "title": "Grupos RL Diplodatos 2025",
+      "mime_type": "application/vnd.google-apps.spreadsheet",
+      "url": "https://docs.google.com/spreadsheets/d/16MyNrS2SQuBS87Vv8LP8uE3jNkskhuQyMzkM0xRsf7k/edit?usp=drivesdk",
+      "modified_time": "2025-12-06T23:19:32.781Z"
+    },
+    {
+      "id": "1505Z4vPX_KDFcOiACzhdm8k5bVfGqN_RFfAbKvbrS8s",
+      "title": "Aprendizaje por Refuerzos 2025 - Clase 2",
+      "mime_type": "application/vnd.google-apps.presentation",
+      "url": "https://docs.google.com/presentation/d/1505Z4vPX_KDFcOiACzhdm8k5bVfGqN_RFfAbKvbrS8s/edit?usp=drivesdk",
+      "modified_time": "2025-11-08T16:30:14.459Z"
+    },
+    {
+      "id": "1e0Vx6fdyRi0wxkxlAyO3kwwb2pRhZGproqHZbkZGvwI",
+      "title": "Organización Clases diplodatos 2025",
+      "mime_type": "application/vnd.google-apps.document",
+      "url": "https://docs.google.com/document/d/1e0Vx6fdyRi0wxkxlAyO3kwwb2pRhZGproqHZbkZGvwI/edit?usp=drivesdk",
+      "modified_time": "2025-11-03T22:37:37.422Z"
+    },
+    {
+      "id": "1QZwuAitOdA1dPb9qpTG3f5AO3OZ8HarE",
+      "title": "Notebook de entrega estudiantil (título anonimizado)",
+      "mime_type": "application/json",
+      "url": "https://drive.google.com/file/d/1QZwuAitOdA1dPb9qpTG3f5AO3OZ8HarE/view?usp=drivesdk",
+      "modified_time": "2025-11-01T23:34:51.774Z"
+    },
+    {
+      "id": "1ul32BCYZeCeLveQ_NX6zP4GozqDuG_Ap",
+      "title": "lab_1_intro_rl.ipynb",
+      "mime_type": "application/vnd.google.colaboratory",
+      "url": "https://colab.research.google.com/drive/1ul32BCYZeCeLveQ_NX6zP4GozqDuG_Ap",
+      "modified_time": "2025-11-01T23:34:47.749Z"
+    },
+    {
+      "id": "1ujRM9TjZEZVUeq4akfNCjK_fXGbWDaw68HxEy1WPS88",
+      "title": "Q-Lab0",
+      "mime_type": "application/vnd.google-apps.spreadsheet",
+      "url": "https://docs.google.com/spreadsheets/d/1ujRM9TjZEZVUeq4akfNCjK_fXGbWDaw68HxEy1WPS88/edit?usp=drivesdk",
+      "modified_time": "2025-11-01T15:35:51.631Z"
+    },
+    {
+      "id": "1s6e6-wCMOJ1nit9EHYREiFJe38MGcOVisFDdUvCWHkk",
+      "title": "Aprendizaje por Refuerzos 2025 - Clase 1",
+      "mime_type": "application/vnd.google-apps.presentation",
+      "url": "https://docs.google.com/presentation/d/1s6e6-wCMOJ1nit9EHYREiFJe38MGcOVisFDdUvCWHkk/edit?usp=drivesdk",
+      "modified_time": "2025-11-01T14:13:32.553Z"
+    },
+    {
+      "id": "16JQ6Jb6K2aTeCrlXO9iLTG3To7bPpFFC",
+      "title": "Copia de Copia de Copia de Link a Aplicaciones RL Grandes Redes Sociales",
+      "mime_type": "application/vnd.google-apps.shortcut",
+      "url": "https://drive.google.com/file/d/16JQ6Jb6K2aTeCrlXO9iLTG3To7bPpFFC/view?usp=drivesdk",
+      "modified_time": "2025-06-22T13:36:42.578Z"
+    },
+    {
+      "id": "19GfoK3oWZqdZVt0S7GUfGHv1SjZwoboT",
+      "title": "Copia de Copia de Copia de Link a Seminario RL Fundamentos Teóricos y Aplicaciones",
+      "mime_type": "application/vnd.google-apps.shortcut",
+      "url": "https://drive.google.com/file/d/19GfoK3oWZqdZVt0S7GUfGHv1SjZwoboT/view?usp=drivesdk",
+      "modified_time": "2025-06-22T13:36:42.578Z"
+    },
+    {
+      "id": "1t6qqCdrPc0hcMzIOkHJMgP-w8NioWqyPhGYET5ySruc",
+      "title": "Copia de Copia de Lab-aprendizaje-por-refuerzos 2023",
+      "mime_type": "application/vnd.google-apps.spreadsheet",
+      "url": "https://docs.google.com/spreadsheets/d/1t6qqCdrPc0hcMzIOkHJMgP-w8NioWqyPhGYET5ySruc/edit?usp=drivesdk",
+      "modified_time": "2025-06-22T13:36:42.578Z"
+    }
+  ],
+  "clase2_rl_llms": {
+    "fecha_consulta": "2026-10-12",
+    "orientacion_usuario": "https://cameronrwolfe.substack.com/p/llm-rl",
+    "fuentes_primarias": [
+      "https://arxiv.org/abs/1707.06347",
+      "https://arxiv.org/abs/2402.14740",
+      "https://arxiv.org/abs/2402.03300",
+      "https://arxiv.org/abs/2503.14476",
+      "https://arxiv.org/abs/2503.20783",
+      "https://arxiv.org/abs/2507.18071",
+      "https://huggingface.co/docs/trl/main/grpo_trainer"
+    ],
+    "estado": "Notebook y storyboard local; Drive sin editar; prueba Orin aplazada a pedido de Juan"
+  }
+}

@@ -1,0 +1,6 @@
+outputs/
+**/outputs/
+*.pt
+*.npz
+.venv*/
+__pycache__/

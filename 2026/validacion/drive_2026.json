@@ -1,0 +1,794 @@
+{
+  "fecha": "2026-10-17",
+  "folder": {
+    "id": "1j2zYCL09yzOQonkeMxNoejNru1pGFljy",
+    "url": "https://drive.google.com/drive/folders/1j2zYCL09yzOQonkeMxNoejNru1pGFljy"
+  },
+  "subfolders": {
+    "legacy": {
+      "success": true,
+      "id": "1AJsqjbOJPt5otLEI8l2olWsi3rbIUydO",
+      "url": "https://drive.google.com/drive/folders/1AJsqjbOJPt5otLEI8l2olWsi3rbIUydO",
+      "title": "Referencia 2025",
+      "parent_id": "1j2zYCL09yzOQonkeMxNoejNru1pGFljy"
+    },
+    "local": {
+      "success": true,
+      "id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx",
+      "url": "https://drive.google.com/drive/folders/1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx",
+      "title": "Material 2026",
+      "parent_id": "1j2zYCL09yzOQonkeMxNoejNru1pGFljy"
+    }
+  },
+  "copies": [
+    {
+      "source_id": "1NmWlabRgdbZUyWpmEL6iClS22tUarIcF5oWDTXEolYw",
+      "source_url": "https://docs.google.com/document/d/1NmWlabRgdbZUyWpmEL6iClS22tUarIcF5oWDTXEolYw/edit?usp=drivesdk",
+      "parent_id": "1j2zYCL09yzOQonkeMxNoejNru1pGFljy",
+      "id": "1YFRXsyawXcQLKuTAK-xrjilClHpu45tNZspKkklfcog",
+      "title": "Programa 2026",
+      "mime_type": "application/vnd.google-apps.document",
+      "size": null,
+      "url": "https://docs.google.com/document/d/1YFRXsyawXcQLKuTAK-xrjilClHpu45tNZspKkklfcog/edit?usp=drivesdk",
+      "display_url": "https://docs.google.com/document/d/1YFRXsyawXcQLKuTAK-xrjilClHpu45tNZspKkklfcog/edit?usp=drivesdk",
+      "file_or_folder": "file",
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1j2zYCL09yzOQonkeMxNoejNru1pGFljy"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified"
+    },
+    {
+      "source_id": "1vAlrwsBigRHKwFOBajP-6FiPNNP2AvyWs6hdHbKylf4",
+      "source_url": "https://docs.google.com/spreadsheets/d/1vAlrwsBigRHKwFOBajP-6FiPNNP2AvyWs6hdHbKylf4/edit?usp=drivesdk",
+      "parent_id": "1AJsqjbOJPt5otLEI8l2olWsi3rbIUydO",
+      "id": "1DsgAX15EZmyH495j9WXIKGr5WT10O2rkZ0fgchz70hA",
+      "title": "[Interno] Correcciones Intro Aprendizaje por Refuerzos 2025",
+      "mime_type": "application/vnd.google-apps.spreadsheet",
+      "size": null,
+      "url": "https://docs.google.com/spreadsheets/d/1DsgAX15EZmyH495j9WXIKGr5WT10O2rkZ0fgchz70hA/edit?usp=drivesdk",
+      "display_url": "https://docs.google.com/spreadsheets/d/1DsgAX15EZmyH495j9WXIKGr5WT10O2rkZ0fgchz70hA/edit?usp=drivesdk",
+      "file_or_folder": "file",
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1AJsqjbOJPt5otLEI8l2olWsi3rbIUydO"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified"
+    },
+    {
+      "source_id": "16MyNrS2SQuBS87Vv8LP8uE3jNkskhuQyMzkM0xRsf7k",
+      "source_url": "https://docs.google.com/spreadsheets/d/16MyNrS2SQuBS87Vv8LP8uE3jNkskhuQyMzkM0xRsf7k/edit?usp=drivesdk",
+      "parent_id": "1AJsqjbOJPt5otLEI8l2olWsi3rbIUydO",
+      "id": "1jE7Xrt8OREfn4nh9q1twm49el7OBC3hlLgT6vttKBEM",
+      "title": "Grupos RL Diplodatos 2025",
+      "mime_type": "application/vnd.google-apps.spreadsheet",
+      "size": null,
+      "url": "https://docs.google.com/spreadsheets/d/1jE7Xrt8OREfn4nh9q1twm49el7OBC3hlLgT6vttKBEM/edit?usp=drivesdk",
+      "display_url": "https://docs.google.com/spreadsheets/d/1jE7Xrt8OREfn4nh9q1twm49el7OBC3hlLgT6vttKBEM/edit?usp=drivesdk",
+      "file_or_folder": "file",
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1AJsqjbOJPt5otLEI8l2olWsi3rbIUydO"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified"
+    },
+    {
+      "source_id": "1505Z4vPX_KDFcOiACzhdm8k5bVfGqN_RFfAbKvbrS8s",
+      "source_url": "https://docs.google.com/presentation/d/1505Z4vPX_KDFcOiACzhdm8k5bVfGqN_RFfAbKvbrS8s/edit?usp=drivesdk",
+      "parent_id": "1j2zYCL09yzOQonkeMxNoejNru1pGFljy",
+      "id": "19hKgrRzdaDW6sAlVUABjZJeOeElbK6Z1q1QkRfttv4w",
+      "title": "Aprendizaje por Refuerzos 2026 - Clase 2",
+      "mime_type": "application/vnd.google-apps.presentation",
+      "size": null,
+      "url": "https://docs.google.com/presentation/d/19hKgrRzdaDW6sAlVUABjZJeOeElbK6Z1q1QkRfttv4w/edit?usp=drivesdk",
+      "display_url": "https://docs.google.com/presentation/d/19hKgrRzdaDW6sAlVUABjZJeOeElbK6Z1q1QkRfttv4w/edit?usp=drivesdk",
+      "file_or_folder": "file",
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1j2zYCL09yzOQonkeMxNoejNru1pGFljy"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified"
+    },
+    {
+      "source_id": "1e0Vx6fdyRi0wxkxlAyO3kwwb2pRhZGproqHZbkZGvwI",
+      "source_url": "https://docs.google.com/document/d/1e0Vx6fdyRi0wxkxlAyO3kwwb2pRhZGproqHZbkZGvwI/edit?usp=drivesdk",
+      "parent_id": "1j2zYCL09yzOQonkeMxNoejNru1pGFljy",
+      "id": "1LL1DMW-Qgh8mG8aWzjsNOD5-_VDJR14q6VB_8wL-S70",
+      "title": "Organización Clases diplodatos 2026",
+      "mime_type": "application/vnd.google-apps.document",
+      "size": null,
+      "url": "https://docs.google.com/document/d/1LL1DMW-Qgh8mG8aWzjsNOD5-_VDJR14q6VB_8wL-S70/edit?usp=drivesdk",
+      "display_url": "https://docs.google.com/document/d/1LL1DMW-Qgh8mG8aWzjsNOD5-_VDJR14q6VB_8wL-S70/edit?usp=drivesdk",
+      "file_or_folder": "file",
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1j2zYCL09yzOQonkeMxNoejNru1pGFljy"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified"
+    },
+    {
+      "source_id": "1ujRM9TjZEZVUeq4akfNCjK_fXGbWDaw68HxEy1WPS88",
+      "source_url": "https://docs.google.com/spreadsheets/d/1ujRM9TjZEZVUeq4akfNCjK_fXGbWDaw68HxEy1WPS88/edit?usp=drivesdk",
+      "parent_id": "1j2zYCL09yzOQonkeMxNoejNru1pGFljy",
+      "id": "1qOLAwu_Dkb-lTbrjiqxZEgNOtezB-5sc_fpSo9BqjkY",
+      "title": "Q-Lab0 2026",
+      "mime_type": "application/vnd.google-apps.spreadsheet",
+      "size": null,
+      "url": "https://docs.google.com/spreadsheets/d/1qOLAwu_Dkb-lTbrjiqxZEgNOtezB-5sc_fpSo9BqjkY/edit?usp=drivesdk",
+      "display_url": "https://docs.google.com/spreadsheets/d/1qOLAwu_Dkb-lTbrjiqxZEgNOtezB-5sc_fpSo9BqjkY/edit?usp=drivesdk",
+      "file_or_folder": "file",
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1j2zYCL09yzOQonkeMxNoejNru1pGFljy"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified"
+    },
+    {
+      "source_id": "1s6e6-wCMOJ1nit9EHYREiFJe38MGcOVisFDdUvCWHkk",
+      "source_url": "https://docs.google.com/presentation/d/1s6e6-wCMOJ1nit9EHYREiFJe38MGcOVisFDdUvCWHkk/edit?usp=drivesdk",
+      "parent_id": "1j2zYCL09yzOQonkeMxNoejNru1pGFljy",
+      "id": "1cBZzjKvEYI1Cok3yE6IBRSureGgnzkK5SrfsgF7YsL8",
+      "title": "Aprendizaje por Refuerzos 2026 - Clase 1",
+      "mime_type": "application/vnd.google-apps.presentation",
+      "size": null,
+      "url": "https://docs.google.com/presentation/d/1cBZzjKvEYI1Cok3yE6IBRSureGgnzkK5SrfsgF7YsL8/edit?usp=drivesdk",
+      "display_url": "https://docs.google.com/presentation/d/1cBZzjKvEYI1Cok3yE6IBRSureGgnzkK5SrfsgF7YsL8/edit?usp=drivesdk",
+      "file_or_folder": "file",
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1j2zYCL09yzOQonkeMxNoejNru1pGFljy"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified"
+    },
+    {
+      "source_id": "1t6qqCdrPc0hcMzIOkHJMgP-w8NioWqyPhGYET5ySruc",
+      "source_url": "https://docs.google.com/spreadsheets/d/1t6qqCdrPc0hcMzIOkHJMgP-w8NioWqyPhGYET5ySruc/edit?usp=drivesdk",
+      "parent_id": "1AJsqjbOJPt5otLEI8l2olWsi3rbIUydO",
+      "id": "1LO0R7jH9Wox3pz1uy8CbY2VtXkDU-lQ3P88oEjoBgjY",
+      "title": "Copia de Copia de Lab-aprendizaje-por-refuerzos 2023",
+      "mime_type": "application/vnd.google-apps.spreadsheet",
+      "size": null,
+      "url": "https://docs.google.com/spreadsheets/d/1LO0R7jH9Wox3pz1uy8CbY2VtXkDU-lQ3P88oEjoBgjY/edit?usp=drivesdk",
+      "display_url": "https://docs.google.com/spreadsheets/d/1LO0R7jH9Wox3pz1uy8CbY2VtXkDU-lQ3P88oEjoBgjY/edit?usp=drivesdk",
+      "file_or_folder": "file",
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1AJsqjbOJPt5otLEI8l2olWsi3rbIUydO"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified"
+    },
+    {
+      "source_id": "1QZwuAitOdA1dPb9qpTG3f5AO3OZ8HarE",
+      "source_url": "https://drive.google.com/file/d/1QZwuAitOdA1dPb9qpTG3f5AO3OZ8HarE/view",
+      "parent_id": "1AJsqjbOJPt5otLEI8l2olWsi3rbIUydO",
+      "id": "1iIlPcpKPr3DVw7WDm4x1jv5PiFxdIeYB",
+      "title": "Entrega estudiantil — referencia 2025.ipynb",
+      "mime_type": "application/json",
+      "size": null,
+      "url": "https://drive.google.com/file/d/1iIlPcpKPr3DVw7WDm4x1jv5PiFxdIeYB/view?usp=drivesdk",
+      "display_url": "https://drive.google.com/file/d/1iIlPcpKPr3DVw7WDm4x1jv5PiFxdIeYB/view?usp=drivesdk",
+      "file_or_folder": "file",
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1AJsqjbOJPt5otLEI8l2olWsi3rbIUydO"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified"
+    },
+    {
+      "source_id": "1ul32BCYZeCeLveQ_NX6zP4GozqDuG_Ap",
+      "source_url": "https://drive.google.com/file/d/1ul32BCYZeCeLveQ_NX6zP4GozqDuG_Ap/view",
+      "parent_id": "1AJsqjbOJPt5otLEI8l2olWsi3rbIUydO",
+      "id": "1VRehzZ-qe_qxMdKWFyx75I-1npZr68iM",
+      "title": "lab_1_intro_rl — referencia 2025.ipynb",
+      "mime_type": "application/vnd.google.colaboratory",
+      "size": null,
+      "url": "https://colab.research.google.com/drive/1VRehzZ-qe_qxMdKWFyx75I-1npZr68iM",
+      "file_or_folder": "file",
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1AJsqjbOJPt5otLEI8l2olWsi3rbIUydO"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified"
+    },
+    {
+      "source_id": "16JQ6Jb6K2aTeCrlXO9iLTG3To7bPpFFC",
+      "source_url": "https://drive.google.com/file/d/16JQ6Jb6K2aTeCrlXO9iLTG3To7bPpFFC/view",
+      "parent_id": "1AJsqjbOJPt5otLEI8l2olWsi3rbIUydO",
+      "id": "14iAhdu_Gl7CG7PrB9XwWdPnFWAxxlImU",
+      "title": "Link a Aplicaciones RL Grandes Redes Sociales",
+      "mime_type": "application/vnd.google-apps.shortcut",
+      "size": null,
+      "url": "https://drive.google.com/file/d/14iAhdu_Gl7CG7PrB9XwWdPnFWAxxlImU/view?usp=drivesdk",
+      "display_url": "https://drive.google.com/file/d/14iAhdu_Gl7CG7PrB9XwWdPnFWAxxlImU/view?usp=drivesdk",
+      "file_or_folder": "file",
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1AJsqjbOJPt5otLEI8l2olWsi3rbIUydO"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified"
+    },
+    {
+      "source_id": "19GfoK3oWZqdZVt0S7GUfGHv1SjZwoboT",
+      "source_url": "https://drive.google.com/file/d/19GfoK3oWZqdZVt0S7GUfGHv1SjZwoboT/view",
+      "parent_id": "1AJsqjbOJPt5otLEI8l2olWsi3rbIUydO",
+      "id": "1sMKN-AUCxjuaTh160zNLOVZicpWkDdH6",
+      "title": "Link a Seminario RL Fundamentos Teóricos y Aplicaciones",
+      "mime_type": "application/vnd.google-apps.shortcut",
+      "size": null,
+      "url": "https://drive.google.com/file/d/1sMKN-AUCxjuaTh160zNLOVZicpWkDdH6/view?usp=drivesdk",
+      "display_url": "https://drive.google.com/file/d/1sMKN-AUCxjuaTh160zNLOVZicpWkDdH6/view?usp=drivesdk",
+      "file_or_folder": "file",
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1AJsqjbOJPt5otLEI8l2olWsi3rbIUydO"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified"
+    }
+  ],
+  "local_directories": {
+    "": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx",
+    "actividades": "1FnAWNbzMTZwnwI3DKKgSQnMdwqm-0vpt",
+    "actividades/q_learning": "1IdN9gETob8N4zLeHKndPW5Kmf_el6hGC",
+    "clase1": "1Z9ZG4FYNqVAFw4qKA0xbsx1u0dsrW8PL",
+    "clase2": "1bt9n1Qctd-StAFGZAOMW1fQdJK295D_w",
+    "docentes": "1NpY51jy-sQcFfzG3RytUQTSKCtmdsE0s",
+    "tp": "1bFOC583csVcXMu8NLIPJKH1KWD31N37A",
+    "validacion": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz"
+  },
+  "local_material": [
+    {
+      "path": "clase1/SLIDES_INTRO_LLM.md",
+      "id": "14_KEegCy7ukRHUkoukC8KAa6DeSMbtXs",
+      "url": "https://drive.google.com/file/d/14_KEegCy7ukRHUkoukC8KAa6DeSMbtXs/view?usp=drivesdk",
+      "parent_id": "1Z9ZG4FYNqVAFw4qKA0xbsx1u0dsrW8PL"
+    },
+    {
+      "path": "00_AUDITORIA.md",
+      "id": "1wylln_j4kqAYdUeIiCQRdmgQKdJI3W0s",
+      "url": "https://drive.google.com/file/d/1wylln_j4kqAYdUeIiCQRdmgQKdJI3W0s/view?usp=drivesdk",
+      "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx"
+    },
+    {
+      "path": "01_PLAN_CURSO.md",
+      "id": "1QsR3Ll_l2CqA08JRdZjnjaaPhafFbBJ4",
+      "url": "https://drive.google.com/file/d/1QsR3Ll_l2CqA08JRdZjnjaaPhafFbBJ4/view?usp=drivesdk",
+      "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx"
+    },
+    {
+      "path": "02_NEXT_STEPS.md",
+      "id": "1OISknC35C9UYmomKknZdL4SaPZ-IMEv_",
+      "url": "https://drive.google.com/file/d/1OISknC35C9UYmomKknZdL4SaPZ-IMEv_/view?usp=drivesdk",
+      "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx"
+    },
+    {
+      "path": "CAMBIOS_2026.md",
+      "id": "193RpxINlxNa0U_0IghMG-Yj7E0OLzIXG",
+      "url": "https://drive.google.com/file/d/193RpxINlxNa0U_0IghMG-Yj7E0OLzIXG/view?usp=drivesdk",
+      "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx"
+    },
+    {
+      "path": "DRIVE_2026.md",
+      "id": "1Qf7y3u1zB6lcFYQosE1G8debNIEr_Y_B",
+      "url": "https://drive.google.com/file/d/1Qf7y3u1zB6lcFYQosE1G8debNIEr_Y_B/view?usp=drivesdk",
+      "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx"
+    },
+    {
+      "path": "README.md",
+      "id": "1uLc8G61hHkWYuAjiPEqOPPIm123ZuvEa",
+      "url": "https://drive.google.com/file/d/1uLc8G61hHkWYuAjiPEqOPPIm123ZuvEa/view?usp=drivesdk",
+      "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx"
+    },
+    {
+      "path": "actividades/lab_0_warmup_rl.ipynb",
+      "id": "1TzwDLl5Qk30ssAn9hJj1krmEunaghIGQ",
+      "url": "https://drive.google.com/file/d/1TzwDLl5Qk30ssAn9hJj1krmEunaghIGQ/view?usp=drivesdk",
+      "parent_id": "1FnAWNbzMTZwnwI3DKKgSQnMdwqm-0vpt"
+    },
+    {
+      "path": "actividades/q_learning/CONSIGNA.md",
+      "id": "1fmJuI7pXmpfgDYxsWjXCDXuvmgvPmodx",
+      "url": "https://drive.google.com/file/d/1fmJuI7pXmpfgDYxsWjXCDXuvmgvPmodx/view?usp=drivesdk",
+      "parent_id": "1IdN9gETob8N4zLeHKndPW5Kmf_el6hGC"
+    },
+    {
+      "path": "actividades/q_learning/INFORME_TEMPLATE.md",
+      "id": "1oQXOCYMtCAQRqxoSCDThjmqtCLPw5t6V",
+      "url": "https://drive.google.com/file/d/1oQXOCYMtCAQRqxoSCDThjmqtCLPw5t6V/view?usp=drivesdk",
+      "parent_id": "1IdN9gETob8N4zLeHKndPW5Kmf_el6hGC"
+    },
+    {
+      "path": "actividades/q_learning/experimentos.py",
+      "id": "1-FIuSLHjg6x0EpF9GF6ymK5EZycprdpq",
+      "url": "https://drive.google.com/file/d/1-FIuSLHjg6x0EpF9GF6ymK5EZycprdpq/view?usp=drivesdk",
+      "parent_id": "1IdN9gETob8N4zLeHKndPW5Kmf_el6hGC"
+    },
+    {
+      "path": "actividades/q_learning/lab_1_q_learning_auditoria.ipynb",
+      "id": "1jyk4W9-DgLIwd5hySNuNoYPYzmH0vCer",
+      "url": "https://drive.google.com/file/d/1jyk4W9-DgLIwd5hySNuNoYPYzmH0vCer/view?usp=drivesdk",
+      "parent_id": "1IdN9gETob8N4zLeHKndPW5Kmf_el6hGC"
+    },
+    {
+      "path": "actividades/q_learning/requirements.txt",
+      "id": "1lfO8FWToUsib5S7gO0JpeCB8rJTxFLsT",
+      "url": "https://drive.google.com/file/d/1lfO8FWToUsib5S7gO0JpeCB8rJTxFLsT/view?usp=drivesdk",
+      "parent_id": "1IdN9gETob8N4zLeHKndPW5Kmf_el6hGC"
+    },
+    {
+      "path": "clase2/CAMINO_A_GRPO.md",
+      "id": "1NC-7BMGGBQZhC0jEMC9FxfMXDxfGj70R",
+      "url": "https://drive.google.com/file/d/1NC-7BMGGBQZhC0jEMC9FxfMXDxfGj70R/view?usp=drivesdk",
+      "parent_id": "1bt9n1Qctd-StAFGZAOMW1fQdJK295D_w"
+    },
+    {
+      "path": "clase2/GUIA_CLASE.md",
+      "id": "1J-SzSriZ3cAwhu4MOUtiSHet_CwqrLZR",
+      "url": "https://drive.google.com/file/d/1J-SzSriZ3cAwhu4MOUtiSHet_CwqrLZR/view?usp=drivesdk",
+      "parent_id": "1bt9n1Qctd-StAFGZAOMW1fQdJK295D_w"
+    },
+    {
+      "path": "clase2/JETSON.md",
+      "id": "13diYmfXwOgVVrscUq9vZgL9a_Lay8BQJ",
+      "url": "https://drive.google.com/file/d/13diYmfXwOgVVrscUq9vZgL9a_Lay8BQJ/view?usp=drivesdk",
+      "parent_id": "1bt9n1Qctd-StAFGZAOMW1fQdJK295D_w"
+    },
+    {
+      "path": "clase2/MINI_RLHF_GUIA.md",
+      "id": "1-BnJNyw9fB31m65bGZ7F1LyhMiadRhff",
+      "url": "https://drive.google.com/file/d/1-BnJNyw9fB31m65bGZ7F1LyhMiadRhff/view?usp=drivesdk",
+      "parent_id": "1bt9n1Qctd-StAFGZAOMW1fQdJK295D_w"
+    },
+    {
+      "path": "clase2/ORIN_LLM_PLAN.md",
+      "id": "1pyysOD0dWnI6wj53KNb8QZsxQ4gcLr9A",
+      "url": "https://drive.google.com/file/d/1pyysOD0dWnI6wj53KNb8QZsxQ4gcLr9A/view?usp=drivesdk",
+      "parent_id": "1bt9n1Qctd-StAFGZAOMW1fQdJK295D_w"
+    },
+    {
+      "path": "clase2/SLIDES_LLM_RL.md",
+      "id": "1fPMMtknkQwszIUwqWtSAXeR06v0SirAb",
+      "url": "https://drive.google.com/file/d/1fPMMtknkQwszIUwqWtSAXeR06v0SirAb/view?usp=drivesdk",
+      "parent_id": "1bt9n1Qctd-StAFGZAOMW1fQdJK295D_w"
+    },
+    {
+      "path": "clase2/diagnostico_jetson.py",
+      "id": "1WkgPRMQa_4hXBWYmXQ5a8hVG1wjeOhcd",
+      "url": "https://drive.google.com/file/d/1WkgPRMQa_4hXBWYmXQ5a8hVG1wjeOhcd/view?usp=drivesdk",
+      "parent_id": "1bt9n1Qctd-StAFGZAOMW1fQdJK295D_w"
+    },
+    {
+      "path": "clase2/llm_policy_gradients.ipynb",
+      "id": "1mDcF4XrwXj0jOBde3d2nWq-z_6kbAOnx",
+      "url": "https://drive.google.com/file/d/1mDcF4XrwXj0jOBde3d2nWq-z_6kbAOnx/view?usp=drivesdk",
+      "parent_id": "1bt9n1Qctd-StAFGZAOMW1fQdJK295D_w"
+    },
+    {
+      "path": "clase2/llm_policy_gradients.py",
+      "id": "1BW1IHQzZvy_BBz-JVhDutyRTCm2ZzJjK",
+      "url": "https://drive.google.com/file/d/1BW1IHQzZvy_BBz-JVhDutyRTCm2ZzJjK/view?usp=drivesdk",
+      "parent_id": "1bt9n1Qctd-StAFGZAOMW1fQdJK295D_w"
+    },
+    {
+      "path": "clase2/mini_rlhf.ipynb",
+      "id": "18PbhJW79Y2iUgNre8yLQEB38TnFYRgYW",
+      "url": "https://drive.google.com/file/d/18PbhJW79Y2iUgNre8yLQEB38TnFYRgYW/view?usp=drivesdk",
+      "parent_id": "1bt9n1Qctd-StAFGZAOMW1fQdJK295D_w"
+    },
+    {
+      "path": "clase2/mini_rlhf.py",
+      "id": "1CSY9nLOkGR8sLgvB7xfdv16MbbwhxJjG",
+      "url": "https://drive.google.com/file/d/1CSY9nLOkGR8sLgvB7xfdv16MbbwhxJjG/view?usp=drivesdk",
+      "parent_id": "1bt9n1Qctd-StAFGZAOMW1fQdJK295D_w"
+    },
+    {
+      "path": "docentes/Q_LEARNING_GUIA.md",
+      "id": "1bmD5EQNomAz9VYYd6G4IDoCrfQ0Xqaq5",
+      "url": "https://drive.google.com/file/d/1bmD5EQNomAz9VYYd6G4IDoCrfQ0Xqaq5/view?usp=drivesdk",
+      "parent_id": "1NpY51jy-sQcFfzG3RytUQTSKCtmdsE0s"
+    },
+    {
+      "path": "docentes/SLIDES_2026.md",
+      "id": "1kQy5EG-g3CKL2AM88DYCH1Cp6pl78cmX",
+      "url": "https://drive.google.com/file/d/1kQy5EG-g3CKL2AM88DYCH1Cp6pl78cmX/view?usp=drivesdk",
+      "parent_id": "1NpY51jy-sQcFfzG3RytUQTSKCtmdsE0s"
+    },
+    {
+      "path": "docentes/q_learning_referencia_ejecutada.ipynb",
+      "id": "1bBUPY6kEzXP5gYxZGUed1YcYg7oQmoGo",
+      "url": "https://drive.google.com/file/d/1bBUPY6kEzXP5gYxZGUed1YcYg7oQmoGo/view?usp=drivesdk",
+      "parent_id": "1NpY51jy-sQcFfzG3RytUQTSKCtmdsE0s"
+    },
+    {
+      "path": "docentes/referencia_q_learning.py",
+      "id": "1F4tXToPoqch8Pr2rVjcVhzz1T6-XE2yb",
+      "url": "https://drive.google.com/file/d/1F4tXToPoqch8Pr2rVjcVhzz1T6-XE2yb/view?usp=drivesdk",
+      "parent_id": "1NpY51jy-sQcFfzG3RytUQTSKCtmdsE0s"
+    },
+    {
+      "path": "tp/CONSIGNA.md",
+      "id": "1M0Mzhc3gmPx56_HG5I-jTIF3uDKUh14M",
+      "url": "https://drive.google.com/file/d/1M0Mzhc3gmPx56_HG5I-jTIF3uDKUh14M/view?usp=drivesdk",
+      "parent_id": "1bFOC583csVcXMu8NLIPJKH1KWD31N37A"
+    },
+    {
+      "path": "tp/README.md",
+      "id": "16HABDcKBrSxW9hlf1k0YYFYMWCqLa1Pe",
+      "url": "https://drive.google.com/file/d/16HABDcKBrSxW9hlf1k0YYFYMWCqLa1Pe/view?usp=drivesdk",
+      "parent_id": "1bFOC583csVcXMu8NLIPJKH1KWD31N37A"
+    },
+    {
+      "path": "tp/RUBRICA.md",
+      "id": "1IHFsXe4Vk84gUyA0ijCcM-cs2TsqbBvb",
+      "url": "https://drive.google.com/file/d/1IHFsXe4Vk84gUyA0ijCcM-cs2TsqbBvb/view?usp=drivesdk",
+      "parent_id": "1bFOC583csVcXMu8NLIPJKH1KWD31N37A"
+    },
+    {
+      "path": "tp/config_dataset.py",
+      "id": "1DwGKiuxJRRF6dHLrcI0h79_3chFkHPCg",
+      "url": "https://drive.google.com/file/d/1DwGKiuxJRRF6dHLrcI0h79_3chFkHPCg/view?usp=drivesdk",
+      "parent_id": "1bFOC583csVcXMu8NLIPJKH1KWD31N37A"
+    },
+    {
+      "path": "validacion/RESULTADOS.md",
+      "id": "1H_gEyBHCG3C8rnqOfytnYCrsTioeMfo2",
+      "url": "https://drive.google.com/file/d/1H_gEyBHCG3C8rnqOfytnYCrsTioeMfo2/view?usp=drivesdk",
+      "parent_id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz"
+    },
+    {
+      "path": "validacion/drive_2026.json",
+      "id": "1h9zim9PXdM7Rsm4zP8OssUkIyfnglZzt",
+      "url": "https://drive.google.com/file/d/1h9zim9PXdM7Rsm4zP8OssUkIyfnglZzt/view?usp=drivesdk",
+      "parent_id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz"
+    },
+    {
+      "path": "validacion/inventario_fuentes.json",
+      "id": "1YN2UHVIkvQflvkIQ3zYYpjMOvqL0KVTP",
+      "url": "https://drive.google.com/file/d/1YN2UHVIkvQflvkIQ3zYYpjMOvqL0KVTP/view?usp=drivesdk",
+      "parent_id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz"
+    },
+    {
+      "path": "validacion/policy_gradients_local_metrics.json",
+      "id": "1YzfJfArn9se94NHuMridFzpA3GkpGE62",
+      "url": "https://drive.google.com/file/d/1YzfJfArn9se94NHuMridFzpA3GkpGE62/view?usp=drivesdk",
+      "parent_id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz"
+    },
+    {
+      "path": "validacion/q_learning_local_summary.json",
+      "id": "1Cxo3Lf_l35fyzcLQ7PJNFkBQ2Gmkp6fo",
+      "url": "https://drive.google.com/file/d/1Cxo3Lf_l35fyzcLQ7PJNFkBQ2Gmkp6fo/view?usp=drivesdk",
+      "parent_id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz"
+    },
+    {
+      "path": "validacion/resultado_policy_gradients.png",
+      "id": "1m6OMo_UOkptDmLSvPhwf5ucOx9KTTGqu",
+      "url": "https://drive.google.com/file/d/1m6OMo_UOkptDmLSvPhwf5ucOx9KTTGqu/view?usp=drivesdk",
+      "parent_id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz"
+    },
+    {
+      "path": "validacion/resultado_q_learning.png",
+      "id": "1ni-mmfByuVrGeWPDamYjN7fEadjdiLeJ",
+      "url": "https://drive.google.com/file/d/1ni-mmfByuVrGeWPDamYjN7fEadjdiLeJ/view?usp=drivesdk",
+      "parent_id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz"
+    },
+    {
+      "path": "validacion/rlhf_local_metrics.json",
+      "id": "1RqlF9bc23ONDfVE3I9QWKCnq-QzwQlyY",
+      "url": "https://drive.google.com/file/d/1RqlF9bc23ONDfVE3I9QWKCnq-QzwQlyY/view?usp=drivesdk",
+      "parent_id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz"
+    },
+    {
+      "path": "validacion/verificar_material.py",
+      "id": "15vd2fv6mn9umfJMo6jMh6jRbXQHgRdIf",
+      "url": "https://drive.google.com/file/d/15vd2fv6mn9umfJMo6jMh6jRbXQHgRdIf/view?usp=drivesdk",
+      "parent_id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz"
+    },
+    {
+      "path": "validacion/verifier_local_metrics.json",
+      "id": "1brvBcMuRuICEHEqVfiWPht0dFftfvobu",
+      "url": "https://drive.google.com/file/d/1brvBcMuRuICEHEqVfiWPht0dFftfvobu/view?usp=drivesdk",
+      "parent_id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz"
+    },
+    {
+      "path": "clase1/Clase_1_2026.pdf",
+      "id": "1uROK_K6MgHyJgrXGASTRAXHtFMFaEUnP",
+      "url": "https://drive.google.com/file/d/1uROK_K6MgHyJgrXGASTRAXHtFMFaEUnP/view?usp=drivesdk",
+      "parent_id": "1Z9ZG4FYNqVAFw4qKA0xbsx1u0dsrW8PL"
+    },
+    {
+      "path": "clase1/GUIA_PRESENTACION.md",
+      "id": "14ebJdlJ56o-MQ-Flfi8fwvsd-_Kj0d5o",
+      "url": "https://drive.google.com/file/d/14ebJdlJ56o-MQ-Flfi8fwvsd-_Kj0d5o/view?usp=drivesdk",
+      "parent_id": "1Z9ZG4FYNqVAFw4qKA0xbsx1u0dsrW8PL"
+    },
+    {
+      "path": "validacion/clase1_revision.json",
+      "id": "167R0os0_yFPIIvxTsuBQpAf-zPxPRuJn",
+      "url": "https://drive.google.com/file/d/167R0os0_yFPIIvxTsuBQpAf-zPxPRuJn/view?usp=drivesdk",
+      "parent_id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz"
+    }
+  ],
+  "package": {
+    "id": "1HAMbSvxXowYMy3V_ClRfO4ugHe-aZIZ9",
+    "title": "AprendizajePorRefuerzos-2026.zip",
+    "mime_type": "application/zip",
+    "size": "77097938",
+    "url": "https://drive.google.com/file/d/1HAMbSvxXowYMy3V_ClRfO4ugHe-aZIZ9/view?usp=drivesdk",
+    "display_url": "https://drive.google.com/file/d/1HAMbSvxXowYMy3V_ClRfO4ugHe-aZIZ9/view?usp=drivesdk",
+    "file_or_folder": "file",
+    "created_time": null,
+    "modified_time": null,
+    "parent_ids": [
+      "1j2zYCL09yzOQonkeMxNoejNru1pGFljy"
+    ],
+    "drive_id": null,
+    "current_user_can_share": null,
+    "has_augmented_permissions": null,
+    "shared": null,
+    "permissions": null,
+    "source_visibility_status": "access_not_verified",
+    "local_sha256": "cef0ea4fd5d7466db69ff32a855ee27adf8bd8527323f755fdc4bdad5dcd5210",
+    "local_bytes": 77097938,
+    "files": 127,
+    "snapshot_note": "Incluye la revisión de Clase 1. Este registro de transferencia se actualiza después de construir el ZIP."
+  },
+  "verification": [
+    {
+      "folder": "2026",
+      "id": "1j2zYCL09yzOQonkeMxNoejNru1pGFljy",
+      "found": 8,
+      "expected_new_files": 0,
+      "ids": [
+        "1HAMbSvxXowYMy3V_ClRfO4ugHe-aZIZ9",
+        "1cBZzjKvEYI1Cok3yE6IBRSureGgnzkK5SrfsgF7YsL8",
+        "1qOLAwu_Dkb-lTbrjiqxZEgNOtezB-5sc_fpSo9BqjkY",
+        "1LL1DMW-Qgh8mG8aWzjsNOD5-_VDJR14q6VB_8wL-S70",
+        "19hKgrRzdaDW6sAlVUABjZJeOeElbK6Z1q1QkRfttv4w",
+        "1YFRXsyawXcQLKuTAK-xrjilClHpu45tNZspKkklfcog",
+        "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx",
+        "1AJsqjbOJPt5otLEI8l2olWsi3rbIUydO"
+      ]
+    },
+    {
+      "folder": "Referencia 2025",
+      "id": "1AJsqjbOJPt5otLEI8l2olWsi3rbIUydO",
+      "found": 7,
+      "expected_new_files": 0,
+      "ids": [
+        "1sMKN-AUCxjuaTh160zNLOVZicpWkDdH6",
+        "14iAhdu_Gl7CG7PrB9XwWdPnFWAxxlImU",
+        "1VRehzZ-qe_qxMdKWFyx75I-1npZr68iM",
+        "1iIlPcpKPr3DVw7WDm4x1jv5PiFxdIeYB",
+        "1LO0R7jH9Wox3pz1uy8CbY2VtXkDU-lQ3P88oEjoBgjY",
+        "1jE7Xrt8OREfn4nh9q1twm49el7OBC3hlLgT6vttKBEM",
+        "1DsgAX15EZmyH495j9WXIKGr5WT10O2rkZ0fgchz70hA"
+      ]
+    },
+    {
+      "folder": "Material 2026/",
+      "id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx",
+      "found": 12,
+      "expected_new_files": 6,
+      "ids": [
+        "1uLc8G61hHkWYuAjiPEqOPPIm123ZuvEa",
+        "1Qf7y3u1zB6lcFYQosE1G8debNIEr_Y_B",
+        "193RpxINlxNa0U_0IghMG-Yj7E0OLzIXG",
+        "1OISknC35C9UYmomKknZdL4SaPZ-IMEv_",
+        "1QsR3Ll_l2CqA08JRdZjnjaaPhafFbBJ4",
+        "1wylln_j4kqAYdUeIiCQRdmgQKdJI3W0s",
+        "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz",
+        "1bFOC583csVcXMu8NLIPJKH1KWD31N37A",
+        "1NpY51jy-sQcFfzG3RytUQTSKCtmdsE0s",
+        "1bt9n1Qctd-StAFGZAOMW1fQdJK295D_w",
+        "1Z9ZG4FYNqVAFw4qKA0xbsx1u0dsrW8PL",
+        "1FnAWNbzMTZwnwI3DKKgSQnMdwqm-0vpt"
+      ]
+    },
+    {
+      "folder": "Material 2026/actividades",
+      "id": "1FnAWNbzMTZwnwI3DKKgSQnMdwqm-0vpt",
+      "found": 2,
+      "expected_new_files": 1,
+      "ids": [
+        "1TzwDLl5Qk30ssAn9hJj1krmEunaghIGQ",
+        "1IdN9gETob8N4zLeHKndPW5Kmf_el6hGC"
+      ]
+    },
+    {
+      "folder": "Material 2026/actividades/q_learning",
+      "id": "1IdN9gETob8N4zLeHKndPW5Kmf_el6hGC",
+      "found": 5,
+      "expected_new_files": 5,
+      "ids": [
+        "1lfO8FWToUsib5S7gO0JpeCB8rJTxFLsT",
+        "1jyk4W9-DgLIwd5hySNuNoYPYzmH0vCer",
+        "1-FIuSLHjg6x0EpF9GF6ymK5EZycprdpq",
+        "1oQXOCYMtCAQRqxoSCDThjmqtCLPw5t6V",
+        "1fmJuI7pXmpfgDYxsWjXCDXuvmgvPmodx"
+      ]
+    },
+    {
+      "folder": "Material 2026/clase1",
+      "id": "1Z9ZG4FYNqVAFw4qKA0xbsx1u0dsrW8PL",
+      "found": 1,
+      "expected_new_files": 1,
+      "ids": [
+        "14_KEegCy7ukRHUkoukC8KAa6DeSMbtXs"
+      ]
+    },
+    {
+      "folder": "Material 2026/clase2",
+      "id": "1bt9n1Qctd-StAFGZAOMW1fQdJK295D_w",
+      "found": 11,
+      "expected_new_files": 11,
+      "ids": [
+        "1CSY9nLOkGR8sLgvB7xfdv16MbbwhxJjG",
+        "18PbhJW79Y2iUgNre8yLQEB38TnFYRgYW",
+        "1BW1IHQzZvy_BBz-JVhDutyRTCm2ZzJjK",
+        "1mDcF4XrwXj0jOBde3d2nWq-z_6kbAOnx",
+        "1WkgPRMQa_4hXBWYmXQ5a8hVG1wjeOhcd",
+        "1fPMMtknkQwszIUwqWtSAXeR06v0SirAb",
+        "1pyysOD0dWnI6wj53KNb8QZsxQ4gcLr9A",
+        "1-BnJNyw9fB31m65bGZ7F1LyhMiadRhff",
+        "13diYmfXwOgVVrscUq9vZgL9a_Lay8BQJ",
+        "1J-SzSriZ3cAwhu4MOUtiSHet_CwqrLZR",
+        "1NC-7BMGGBQZhC0jEMC9FxfMXDxfGj70R"
+      ]
+    },
+    {
+      "folder": "Material 2026/docentes",
+      "id": "1NpY51jy-sQcFfzG3RytUQTSKCtmdsE0s",
+      "found": 4,
+      "expected_new_files": 4,
+      "ids": [
+        "1F4tXToPoqch8Pr2rVjcVhzz1T6-XE2yb",
+        "1bBUPY6kEzXP5gYxZGUed1YcYg7oQmoGo",
+        "1kQy5EG-g3CKL2AM88DYCH1Cp6pl78cmX",
+        "1bmD5EQNomAz9VYYd6G4IDoCrfQ0Xqaq5"
+      ]
+    },
+    {
+      "folder": "Material 2026/tp",
+      "id": "1bFOC583csVcXMu8NLIPJKH1KWD31N37A",
+      "found": 4,
+      "expected_new_files": 4,
+      "ids": [
+        "1DwGKiuxJRRF6dHLrcI0h79_3chFkHPCg",
+        "1IHFsXe4Vk84gUyA0ijCcM-cs2TsqbBvb",
+        "16HABDcKBrSxW9hlf1k0YYFYMWCqLa1Pe",
+        "1M0Mzhc3gmPx56_HG5I-jTIF3uDKUh14M"
+      ]
+    },
+    {
+      "folder": "Material 2026/validacion",
+      "id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz",
+      "found": 10,
+      "expected_new_files": 10,
+      "ids": [
+        "1brvBcMuRuICEHEqVfiWPht0dFftfvobu",
+        "15vd2fv6mn9umfJMo6jMh6jRbXQHgRdIf",
+        "1RqlF9bc23ONDfVE3I9QWKCnq-QzwQlyY",
+        "1ni-mmfByuVrGeWPDamYjN7fEadjdiLeJ",
+        "1m6OMo_UOkptDmLSvPhwf5ucOx9KTTGqu",
+        "1Cxo3Lf_l35fyzcLQ7PJNFkBQ2Gmkp6fo",
+        "1YzfJfArn9se94NHuMridFzpA3GkpGE62",
+        "1YN2UHVIkvQflvkIQ3zYYpjMOvqL0KVTP",
+        "1h9zim9PXdM7Rsm4zP8OssUkIyfnglZzt",
+        "1H_gEyBHCG3C8rnqOfytnYCrsTioeMfo2"
+      ]
+    }
+  ],
+  "class1_revision": {
+    "fecha": "2026-10-17",
+    "presentation_id": "1cBZzjKvEYI1Cok3yE6IBRSureGgnzkK5SrfsgF7YsL8",
+    "presentation_url": "https://docs.google.com/presentation/d/1cBZzjKvEYI1Cok3yE6IBRSureGgnzkK5SrfsgF7YsL8",
+    "source_count": 94,
+    "final_count": 87,
+    "final_revision": "-IoipYEvrSgH4A",
+    "source_revision": "Tr7UGtR8Jajrtw",
+    "new_intro_slides": [
+      {
+        "number": 14,
+        "id": "gb2e30c18f0_0_199"
+      },
+      {
+        "number": 15,
+        "id": "gb2e30c18f0_0_205"
+      }
+    ],
+    "deleted_slides": [
+      "gb2f99adadb_0_34",
+      "gbc696bf0ec_0_1",
+      "gbc2dfa48f5_0_0",
+      "gbc2dfa48f5_0_9",
+      "gb2e30c18f0_0_254",
+      "gb2e30c18f0_0_241",
+      "g25f39d90f12_0_0"
+    ],
+    "retained_unchanged_render_count": 78,
+    "visual_review": "87 páginas inspeccionadas por hojas de contacto; páginas modificadas revisadas individualmente; corrección de contraste del enlace final comprobada en exportación final",
+    "issues_checker": {
+      "totalIssues": 0,
+      "reportedIssues": 0,
+      "truncated": false,
+      "bySeverity": {},
+      "byCode": {}
+    },
+    "pdf_sha256": "18525132542bfe4e1c0a05ce9570549a3a9c85a3a9efbb76b7efd2ba1f2f62b4",
+    "pdf_bytes": 2527513,
+    "timing_status": "Guion propuesto de 6–8 minutos; pendiente ensayo oral de Juan",
+    "scope": "Edición de Clase 1. Clase 2 conserva el contenido de origen; protocolo definitivo del único TP pendiente.",
+    "repair_passes": 2
+  }
+}

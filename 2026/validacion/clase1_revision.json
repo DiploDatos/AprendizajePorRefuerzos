@@ -1,0 +1,42 @@
+{
+  "fecha": "2026-10-17",
+  "presentation_id": "1cBZzjKvEYI1Cok3yE6IBRSureGgnzkK5SrfsgF7YsL8",
+  "presentation_url": "https://docs.google.com/presentation/d/1cBZzjKvEYI1Cok3yE6IBRSureGgnzkK5SrfsgF7YsL8",
+  "source_count": 94,
+  "final_count": 87,
+  "final_revision": "-IoipYEvrSgH4A",
+  "source_revision": "Tr7UGtR8Jajrtw",
+  "new_intro_slides": [
+    {
+      "number": 14,
+      "id": "gb2e30c18f0_0_199"
+    },
+    {
+      "number": 15,
+      "id": "gb2e30c18f0_0_205"
+    }
+  ],
+  "deleted_slides": [
+    "gb2f99adadb_0_34",
+    "gbc696bf0ec_0_1",
+    "gbc2dfa48f5_0_0",
+    "gbc2dfa48f5_0_9",
+    "gb2e30c18f0_0_254",
+    "gb2e30c18f0_0_241",
+    "g25f39d90f12_0_0"
+  ],
+  "retained_unchanged_render_count": 78,
+  "visual_review": "87 páginas inspeccionadas por hojas de contacto; páginas modificadas revisadas individualmente; corrección de contraste del enlace final comprobada en exportación final",
+  "issues_checker": {
+    "totalIssues": 0,
+    "reportedIssues": 0,
+    "truncated": false,
+    "bySeverity": {},
+    "byCode": {}
+  },
+  "pdf_sha256": "18525132542bfe4e1c0a05ce9570549a3a9c85a3a9efbb76b7efd2ba1f2f62b4",
+  "pdf_bytes": 2527513,
+  "timing_status": "Guion propuesto de 6–8 minutos; pendiente ensayo oral de Juan",
+  "scope": "Edición de Clase 1. Clase 2 conserva el contenido de origen; protocolo definitivo del único TP pendiente.",
+  "repair_passes": 2
+}

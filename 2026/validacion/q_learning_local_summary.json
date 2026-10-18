@@ -1,0 +1,197 @@
+{
+  "versions": {
+    "python": "3.13.3",
+    "numpy": "2.3.4",
+    "gymnasium": "1.2.1"
+  },
+  "config": {
+    "steps": 100000,
+    "seeds": [
+      11,
+      22,
+      33,
+      44,
+      55
+    ],
+    "eval_episodes": 100,
+    "split": "validation",
+    "alpha": 0.3,
+    "gamma": 0.95,
+    "epsilon": "0.1 + 0.9 * exp(-6*t/steps)"
+  },
+  "training_steps_total": 2000000,
+  "scenarios": {
+    "lake_determinista": {
+      "env": "FrozenLake-v1",
+      "slippery": false,
+      "training_bonus": 0.0,
+      "summary": {
+        "trained": {
+          "return": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "success": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "length": {
+            "mean": 6.0,
+            "seed_std": 0.0
+          },
+          "truncated": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          }
+        },
+        "random": {
+          "return": {
+            "mean": 0.01,
+            "seed_std": 0.007071067811865475
+          },
+          "success": {
+            "mean": 0.01,
+            "seed_std": 0.007071067811865475
+          },
+          "length": {
+            "mean": 7.8340000000000005,
+            "seed_std": 0.36390932936653286
+          },
+          "truncated": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          }
+        }
+      }
+    },
+    "lake_resbaladizo": {
+      "env": "FrozenLake-v1",
+      "slippery": true,
+      "training_bonus": 0.0,
+      "summary": {
+        "trained": {
+          "return": {
+            "mean": 0.6440000000000001,
+            "seed_std": 0.09914635646356351
+          },
+          "success": {
+            "mean": 0.6440000000000001,
+            "seed_std": 0.09914635646356351
+          },
+          "length": {
+            "mean": 36.936,
+            "seed_std": 5.782843591175539
+          },
+          "truncated": {
+            "mean": 0.034,
+            "seed_std": 0.01140175425099138
+          }
+        },
+        "random": {
+          "return": {
+            "mean": 0.012,
+            "seed_std": 0.008366600265340755
+          },
+          "success": {
+            "mean": 0.012,
+            "seed_std": 0.008366600265340755
+          },
+          "length": {
+            "mean": 7.768000000000001,
+            "seed_std": 0.648205214419014
+          },
+          "truncated": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          }
+        }
+      }
+    },
+    "taxi": {
+      "env": "Taxi-v3",
+      "slippery": false,
+      "training_bonus": 0.0,
+      "summary": {
+        "trained": {
+          "return": {
+            "mean": 7.984,
+            "seed_std": 0.016733200530681475
+          },
+          "success": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "length": {
+            "mean": 13.016,
+            "seed_std": 0.016733200530681155
+          },
+          "truncated": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          }
+        },
+        "random": {
+          "return": {
+            "mean": -775.4639999999999,
+            "seed_std": 2.6817028172412787
+          },
+          "success": {
+            "mean": 0.039999999999999994,
+            "seed_std": 0.012247448713915891
+          },
+          "length": {
+            "mean": 197.24399999999997,
+            "seed_std": 0.5926466063346753
+          },
+          "truncated": {
+            "mean": 0.9600000000000002,
+            "seed_std": 0.012247448713915901
+          }
+        }
+      }
+    },
+    "lake_bonus": {
+      "env": "FrozenLake-v1",
+      "slippery": true,
+      "training_bonus": 0.05,
+      "summary": {
+        "trained": {
+          "return": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          },
+          "success": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          },
+          "length": {
+            "mean": 100.0,
+            "seed_std": 0.0
+          },
+          "truncated": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          }
+        },
+        "random": {
+          "return": {
+            "mean": 0.012,
+            "seed_std": 0.008366600265340755
+          },
+          "success": {
+            "mean": 0.012,
+            "seed_std": 0.008366600265340755
+          },
+          "length": {
+            "mean": 7.768000000000001,
+            "seed_std": 0.648205214419014
+          },
+          "truncated": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          }
+        }
+      }
+    }
+  }
+}

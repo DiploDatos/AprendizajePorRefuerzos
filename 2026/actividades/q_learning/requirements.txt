@@ -1,0 +1,5 @@
+# Entorno tabular independiente (Python 3.11-3.13), no usar en Jetson Nano.
+gymnasium==1.2.1
+numpy==2.3.4
+matplotlib==3.10.7
+ipykernel==7.1.0

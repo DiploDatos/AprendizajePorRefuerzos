@@ -1,0 +1,353 @@
+{
+  "fecha": "2026-10-17",
+  "rama_origen": "2025",
+  "commit_origen": "22824ca115573cc407164bb51a16fdd77518c02f",
+  "archivos": [
+    {
+      "origen": "Aprendizaje por Refuerzos - Clase 1.pdf",
+      "destino": "archive/2025/Aprendizaje por Refuerzos - Clase 1.pdf",
+      "sha256": "4e7050c53bba83cfec8af4239cbacf9eae8cc8ece4402ce953ced556f305ba82",
+      "igual_a_blob_git_origen": false,
+      "git_lfs": true
+    },
+    {
+      "origen": "Aprendizaje por Refuerzos - Clase 2.pdf",
+      "destino": "archive/2025/Aprendizaje por Refuerzos - Clase 2.pdf",
+      "sha256": "36e64e3596222ee060edb6547b9ff19618d405d5d6852b3afae89f125a0caedf",
+      "igual_a_blob_git_origen": false,
+      "git_lfs": true
+    },
+    {
+      "origen": "lab_0_warmup_rl.ipynb",
+      "destino": "archive/2025/lab_0_warmup_rl.ipynb",
+      "sha256": "0f834746a9dc1d941051d76401cf55e7f42abed1553715ee87c4d0b7ebdbcbb6",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "lab_1_intro_rl.ipynb",
+      "destino": "archive/2025/lab_1_intro_rl.ipynb",
+      "sha256": "84179514ecdb9f5d34c3939041d02f79bd1022b2d865e9ed7a83b76d618b1202",
+      "igual_a_blob_git_origen": false
+    },
+    {
+      "origen": "lab_2_decision_transformer.md",
+      "destino": "archive/2025/lab_2_decision_transformer.md",
+      "sha256": "038e6b3f9c962d605f19415cab70f8d4e6c08a573e79a87cf322409fff121fb4",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "images/activation_functions.png",
+      "destino": "archive/2025/images/activation_functions.png",
+      "sha256": "a2e95ec655413b6579514bdff0bbed2b11dfb6a253658c6673efec8df77f508e",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "images/cliffwalking.png",
+      "destino": "archive/2025/images/cliffwalking.png",
+      "sha256": "6b61cec0ac2659764b635a5db977c4df6c50ff2cf1bb7282e935a74026fc79ed",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "images/nn_dense.png",
+      "destino": "archive/2025/images/nn_dense.png",
+      "sha256": "a2f277a3ffcf2a4cc62fcd0fb8903435673358f7023ad4abc82f8408962b3c2e",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "images/q_learning.png",
+      "destino": "archive/2025/images/q_learning.png",
+      "sha256": "d22aa66b9e83df7a8b3fb258cf0f654ca4a9cd934d6fc210c332372fd263e167",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "images/sarsa.png",
+      "destino": "archive/2025/images/sarsa.png",
+      "sha256": "529b5a3178f54cee189ccf5f0d1515cc834ed8bc25ba733b81471a29d2cdbe39",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "images/warmup_environment.png",
+      "destino": "archive/2025/images/warmup_environment.png",
+      "sha256": "2de4f1e74e52462e8a06ddb4d3f1b40184e1165c1c0b1a48220ab6e94add0ce4",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/01_README_TRABAJO_PRACTICO.md",
+      "destino": "archive/2025/tp_decision_transformer/01_README_TRABAJO_PRACTICO.md",
+      "sha256": "4f8f095b4abb2a9a890a7c017d92ead5b7d25967221c7e61fdc8894565b4d3ff",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/02_GUIA_IMPLEMENTACION_GRUPOS.md",
+      "destino": "archive/2025/tp_decision_transformer/02_GUIA_IMPLEMENTACION_GRUPOS.md",
+      "sha256": "e6be21b18f604b947be63b99ac2f6c63de173caa786ff2e1cbbf1ad1674bef6d",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/03_REFERENCIA_COMPLETA.md",
+      "destino": "archive/2025/tp_decision_transformer/03_REFERENCIA_COMPLETA.md",
+      "sha256": "e31bc51b990fbd58e9aa6b39e7925357b52281fa25d3598783d23c63d9a3b526",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/04_IMPLEMENTACION_HUGGINGFACE.md",
+      "destino": "archive/2025/tp_decision_transformer/04_IMPLEMENTACION_HUGGINGFACE.md",
+      "sha256": "f0b83b2003a66d8e3ba165d51999d838ecaa1726c908b4b2479efae198c8a38c",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/config_dataset.py",
+      "destino": "archive/2025/tp_decision_transformer/config_dataset.py",
+      "sha256": "59a39530e99310449cf726e76d2b5dc46217debdebf05f67a33a965305905e2f",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/.DS_Store",
+      "destino": "archive/2025/tp_decision_transformer/data/.DS_Store",
+      "sha256": "b6f0ea2835e65c8fdaa6d58dbd289afaefdfed7baaae09139cde6ffb1617b09e"
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/mu_goodreads16.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/mu_goodreads16.csv",
+      "sha256": "a5dee36a27ebfca8497dcb90c12b6c53ee0379f3a915c4d9bd34db307187ffc3",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/mu_goodreads8.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/mu_goodreads8.csv",
+      "sha256": "4e4b66d61796aec5276dc106d55543c2b83fc7fbcbc418eff1295b2a2575c9e9",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/mu_ml10m16.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/mu_ml10m16.csv",
+      "sha256": "5b0cf8344de2a88655889a7abce44cc0ff7cc684689388fced0323b35d775026",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/mu_ml10m8.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/mu_ml10m8.csv",
+      "sha256": "00928f6bc06a7213e7cbf89029b96a0f417d56441d252950bb6c1b9168dfa446",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/mu_netflix16.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/mu_netflix16.csv",
+      "sha256": "b7c760fd80565bf2334eccdb9d2742200f07b1e6e759653cc099d9c4e0687b5a",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/mu_netflix8.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/mu_netflix8.csv",
+      "sha256": "d21d63f9bb6c296f2ea02a9b35ed828467d45f4ea9e58ad37d5f311d959d0813",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/mu_netflixM8.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/mu_netflixM8.csv",
+      "sha256": "4544735393bcd26a8cab9e9729bc875539b44914fec018f90c581e922d0332f1",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/num_goodreads16.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/num_goodreads16.csv",
+      "sha256": "bbc47d010123855e8cb14d46f24492f86a0b27e6d5f9d34b31fbf0058e81301d",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/num_goodreads8.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/num_goodreads8.csv",
+      "sha256": "858a7aad44b1d4db8ac6d9570bc1a3404124673652d98d9a9357a046e843fa39",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/num_ml10m16.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/num_ml10m16.csv",
+      "sha256": "4f0a3f43bdda702a97da3155de5242c69d6bc3d008282a7646e42a130894b51e",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/num_ml10m8.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/num_ml10m8.csv",
+      "sha256": "9c7b90b96f53b1194c3cdb0e8bb275afad081ce510afb826c009ca6d1fa70a32",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/num_netflix16.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/num_netflix16.csv",
+      "sha256": "ea72232c35da99ad220c2d0a49ed93349e13a28d630c5e05e9cd973f921665ea",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/num_netflix8.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/num_netflix8.csv",
+      "sha256": "9a627b3b3ae2a1a54a6f1ebc54ba98b965c1b094167507fc23ae0a46762c3db8",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/num_netflixM8.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/num_netflixM8.csv",
+      "sha256": "1bb8c1a63b7b94cba50592c7acdbb71168f58cf506d4aeac47165aa6f4cbf434",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/sigma_goodreads16.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/sigma_goodreads16.csv",
+      "sha256": "ff5e585bce21c78e561f52a6ecb52a02db165f7542430f5c8c0308be37c01f52",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/sigma_goodreads8.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/sigma_goodreads8.csv",
+      "sha256": "93881de28236aaca09e43271e27e0987642afa92984d902b3842836cd825324b",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/sigma_ml10m16.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/sigma_ml10m16.csv",
+      "sha256": "1c7388cb7fd74f6e68db355fa3dbdd3806f4204335a2711e25a08b76c2126ec2",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/sigma_ml10m8.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/sigma_ml10m8.csv",
+      "sha256": "5cd7060033a15d826b443b9be0cb529e5c06b4dee6e75541f8bed5da982cc17e",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/sigma_netflix16.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/sigma_netflix16.csv",
+      "sha256": "5aaf37e6f8923dc78da345a9e6ac9458c5802a5e0fe8263dd847fd12a57bfd21",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/sigma_netflix8.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/sigma_netflix8.csv",
+      "sha256": "0beece380586c3aa0db290ae9d95ead760dbba70ef8ece4ee595fa28185427de",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/sigma_netflixM8.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/sigma_netflixM8.csv",
+      "sha256": "9c2367698da8185e98a7c2230172e6bff4a74be9d7c43669e04b342e7b87c315",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/v_goodreads16.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/v_goodreads16.csv",
+      "sha256": "e890b147c3ef6629aa92e66897462c0e7ddedf09d1ce93cc43e56f310c75a40b",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/v_goodreads8.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/v_goodreads8.csv",
+      "sha256": "e72a4afb555f31c6eecbb3de78e3d8a63f707494e514443a56bc6f940add7aa0",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/v_ml10m16.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/v_ml10m16.csv",
+      "sha256": "3b3d981b97a51835c99c2a6dad87df39cdbf2abc0f5ba52e4c3df81ef8366b97",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/v_ml10m8.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/v_ml10m8.csv",
+      "sha256": "5603574bcedca4d518862992f165f3850b713138a3de92a80cede68c86123ab9",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/v_netflix16.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/v_netflix16.csv",
+      "sha256": "a5280f3a099b5173d15e28777e74cdf5aa5ac32f86b93307755f3430a29d765a",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/groups/v_netflix8.csv",
+      "destino": "archive/2025/tp_decision_transformer/data/groups/v_netflix8.csv",
+      "sha256": "99eec6c37ed3ba240f978def2111acb2850c038a0d320547a66f333a71d434b9",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/test_users/goodreads16_test.json",
+      "destino": "archive/2025/tp_decision_transformer/data/test_users/goodreads16_test.json",
+      "sha256": "50150af66170a99657c99c786950fa26a9c354de6f1f48225db9c2fd4e0b7c95",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/test_users/goodreads8_test.json",
+      "destino": "archive/2025/tp_decision_transformer/data/test_users/goodreads8_test.json",
+      "sha256": "180019291dac8aee3a6160d8bef0625cebe0d3760e743f704658c5856d5f942e",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/test_users/ml10m16_test.json",
+      "destino": "archive/2025/tp_decision_transformer/data/test_users/ml10m16_test.json",
+      "sha256": "4d6532e4b7fe47ff12f42a9881494f1b28eef1b77394a3f1e0c979fce8887fc6",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/test_users/ml10m8_test.json",
+      "destino": "archive/2025/tp_decision_transformer/data/test_users/ml10m8_test.json",
+      "sha256": "cd5688b180f0a09d86b3404c5645cc526d256b7ec87b6cd095c25248864f99b3",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/test_users/netflix16_test.json",
+      "destino": "archive/2025/tp_decision_transformer/data/test_users/netflix16_test.json",
+      "sha256": "e590e846f6b35861358b19633ba108aa003d431f25fb95269a38d7b4e3426f29",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/test_users/netflix8_test.json",
+      "destino": "archive/2025/tp_decision_transformer/data/test_users/netflix8_test.json",
+      "sha256": "9421fec5130629fa72598ae4de104b847413ae020fb7867d9e217dd35ab04822",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/test_users/netflixM8_test.json",
+      "destino": "archive/2025/tp_decision_transformer/data/test_users/netflixM8_test.json",
+      "sha256": "a2294e3720331a7de8da89fb8fd1c4d2bb184b7671882ab12aad33b753f34c7f",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/train/goodreads8_train.df",
+      "destino": "archive/2025/tp_decision_transformer/data/train/goodreads8_train.df",
+      "sha256": "4fd3a5abe377834d4568ee4c5c3fb3c9e84da6957d8931924691b01340537769",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/train/netflix8_train.df",
+      "destino": "archive/2025/tp_decision_transformer/data/train/netflix8_train.df",
+      "sha256": "1b10b1b4d0fa2f620ff848983de74d5f4ba96ffbda44e53531f4eeb2d6f05bb9",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "tp_decision_transformer/data/train/netflixM8_train.df",
+      "destino": "archive/2025/tp_decision_transformer/data/train/netflixM8_train.df",
+      "sha256": "29e3eea3aacf3667ee9fb800f38274c9be3714a4fb934bbe7baabdc41e530772",
+      "igual_a_blob_git_origen": true
+    },
+    {
+      "origen": "README.md",
+      "destino": "archive/2025/README.md",
+      "sha256": "25bb519f87f35186ec3620dfba66cf206938d98cce396aac4cbb14ebdd017687",
+      "igual_a_blob_git_origen": true,
+      "tipo": "copia_del_commit_origen"
+    },
+    {
+      "origen": "pyproject.toml",
+      "destino": "archive/2025/pyproject.toml",
+      "sha256": "9a629647f2451a772f487d6dc0575f9c237cd1a7b971aa85edfd94f9036fa822",
+      "igual_a_blob_git_origen": true,
+      "tipo": "copia_del_commit_origen"
+    },
+    {
+      "origen": "poetry.lock",
+      "destino": "archive/2025/poetry.lock",
+      "sha256": "6f105133f4338380fbf5a8bfebe8d7816cdf35ee5a1cdbc689591c4abdbc6d53",
+      "igual_a_blob_git_origen": true,
+      "tipo": "copia_del_commit_origen"
+    }
+  ]
+}

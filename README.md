@@ -1,67 +1,12 @@
-# Aprendizaje por Refuerzos
+# Aprendizaje por Refuerzos — DiploDatos 2026
 
-Repo oficial de la materia optativa Aprendizaje por Refuerzos de la Diplomatura en Ciencias de Datos, Aprendizaje
-Automático y sus Aplicaciones.
+Material de la materia optativa de la Diplomatura en Ciencias de Datos, Aprendizaje Automático y sus Aplicaciones. La edición en preparación está en la rama `2026`.
 
-## Instalación y ejecución
+- [Material y recorrido 2026](2026/README.md).
+- [Clase 1 actualizada en Drive](https://docs.google.com/presentation/d/1cBZzjKvEYI1Cok3yE6IBRSureGgnzkK5SrfsgF7YsL8/edit), [PDF](2026/clase1/Clase_1_2026.pdf) y [guion de ensayo](2026/clase1/GUIA_PRESENTACION.md).
+- [Actividad de Q-learning](2026/actividades/q_learning/CONSIGNA.md): práctica formativa de clase, sin entrega obligatoria.
+- [Encuentro 3: camino hacia GRPO](2026/clase2/CAMINO_A_GRPO.md) y [notebook](2026/clase2/llm_policy_gradients.ipynb).
+- [Único trabajo práctico: Decision Transformer para recomendaciones](2026/tp/README.md), continuación del anterior TP2.
+- [Archivo de la edición 2025](archive/2025/EDICION.md) y [agentes históricos](archive/agents/).
 
-### Instalación desde local
-
-#### Con pip
-
-Pasos para instalar los paquetes específicos de RL con pip (asumiendo entorno virtual de conda con instalaciones existentes de librerías comunes como numpy, matplotlib, etc):
-
-        pip install gymnasium
-        pip install stable-baselines3[extra]  # instala las dependencias necesarias para correr el lab 2
-        pip install rl_zoo3  # (Opcional) instala las dependencias para usar rl-baselines-zoo
-
-#### Con poetry
-
-Pasos para instalar todos los paquetes requeridos con poetry:
-
-Instalar [poetry](https://python-poetry.org/docs/#installation):
-
-* [Instalar pipx](https://github.com/pypa/pipx)
-
-* Instalar poetry con pipx:
-
-        pipx install poetry
-
-
-Comprobar que se instaló correctamente:
-
-        poetry --version
-
-Instalamos las dependencias (parados desde la carpeta raíz del repo):
-
-        poetry install  # instala las dependencias necesarias
-        poetry install -E zoo  # (Opcional) instala las dependencias para usar rl-baselines-zoo
-        poetry install -E dev_tools  # (Opcional) instala las dependencias para usar jupyter notebooks y otras las herramientas de desarrollo
-
-Activamos el entorno virtual:
-
-        poetry shell
-
-Listo! Ya podemos ejecutar los notebooks.
-
-### Ejecución
-
-Los notebooks están preparados para ejecutarse tanto desde localhost, como desde Google Colab.
-En general, las simulaciones de estos notebooks se pueden ejecutar sin problemas desde localhost, ya que no demandan demasiados recursos computacionales (excepto si se ejecutan entrenamientos completos en entornos muy complejos, como en los de Atari).
-Algunas características sólo están disponibles en localhost, como las animaciones de los agentes en los entornos.
-
-## Algunos links útiles para aprender más
-
-* [Discord de RL](https://discord.gg/dBVVY8Sz7v) (muy activo y recomendado!) y su [wiki de recursos](https://github.com/andyljones/reinforcement-learning-discord-wiki/wiki)!
-
-* [Discord de HuggingFace](http://hf.co/join/discord) (tiene canal dedicado a su curso de RL).
-
-* [Comunidad de RL en reddit](https://old.reddit.com/r/reinforcementlearning).
-
-* [Completa entrada de blog de métodos de RL](https://lilianweng.github.io/lil-log/2018/02/19/a-long-peek-into-reinforcement-learning.html).
-
-* [Awesome RL envs](https://github.com/clvrai/awesome-rl-envs).
-
-* [Awesome deep RL](https://github.com/kengz/awesome-deep-rl).
-
-* [Libro principal de RL, por Sutton y Barto](http://incompleteideas.net/book/RLbook2020.pdf).
+Los guiones de diapositivas 2026 son archivos Markdown para revisión docente. Los decks compartidos de 2025 y sus copias PDF archivadas conservan su contenido histórico. Las instrucciones de ejecución y la evidencia disponible están en el índice 2026; el ensayo en Orin Nano queda aplazado a pedido de Juan.

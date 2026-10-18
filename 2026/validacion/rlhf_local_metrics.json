@@ -1,0 +1,953 @@
+{
+  "feedback_source": "SIMULATED",
+  "human_quality_verified": false,
+  "versions": {
+    "python": "3.13.3",
+    "torch": "2.9.0"
+  },
+  "config": {
+    "device": "cpu",
+    "seed": 2026,
+    "beta": 0.1,
+    "sft_steps": 250,
+    "reward_steps": 200,
+    "rl_steps": 100,
+    "max_tokens": 10,
+    "vocab": [
+      "<pad>",
+      "<bos>",
+      "<eos>",
+      "<saludo>",
+      "<ayuda>",
+      "<gracias>",
+      "a",
+      "ahora",
+      "ayudarte",
+      "claro",
+      "cuando",
+      "de",
+      "hazlo",
+      "hola",
+      "importa",
+      "me",
+      "nada",
+      "necesitas",
+      "no",
+      "paso",
+      "puedo",
+      "que",
+      "quieras",
+      "seguimos",
+      "solo",
+      "vamos",
+      "vete"
+    ]
+  },
+  "parameters": 13923,
+  "reward_parameters": 1089,
+  "preference_validation_accuracy": 1.0,
+  "sft_history": [
+    {
+      "step": 0,
+      "loss": 3.289386749267578
+    },
+    {
+      "step": 25,
+      "loss": 0.6211240291595459
+    },
+    {
+      "step": 50,
+      "loss": 0.3869989514350891
+    },
+    {
+      "step": 75,
+      "loss": 0.3655034005641937
+    },
+    {
+      "step": 100,
+      "loss": 0.3624560832977295
+    },
+    {
+      "step": 125,
+      "loss": 0.36128509044647217
+    },
+    {
+      "step": 150,
+      "loss": 0.3606109321117401
+    },
+    {
+      "step": 175,
+      "loss": 0.36016350984573364
+    },
+    {
+      "step": 200,
+      "loss": 0.3598455786705017
+    },
+    {
+      "step": 225,
+      "loss": 0.35960960388183594
+    },
+    {
+      "step": 249,
+      "loss": 0.35943490266799927
+    }
+  ],
+  "reward_history": [
+    {
+      "step": 0,
+      "loss": 0.6954563856124878
+    },
+    {
+      "step": 25,
+      "loss": 0.06251224875450134
+    },
+    {
+      "step": 50,
+      "loss": 0.024625450372695923
+    },
+    {
+      "step": 75,
+      "loss": 0.022582637146115303
+    },
+    {
+      "step": 100,
+      "loss": 0.021818315610289574
+    },
+    {
+      "step": 125,
+      "loss": 0.021361548453569412
+    },
+    {
+      "step": 150,
+      "loss": 0.021038152277469635
+    },
+    {
+      "step": 175,
+      "loss": 0.02078506164252758
+    },
+    {
+      "step": 199,
+      "loss": 0.02057649753987789
+    }
+  ],
+  "rl_history": [
+    {
+      "step": 0,
+      "reward_proxy": -0.30992597341537476,
+      "sampled_sequence_kl": 1.9470017775802262e-07,
+      "sequence_entropy": 1.8580477237701416,
+      "loss": -0.5574539303779602
+    },
+    {
+      "step": 10,
+      "reward_proxy": 0.1428230255842209,
+      "sampled_sequence_kl": 0.26504552364349365,
+      "sequence_entropy": 1.3906993865966797,
+      "loss": -0.6446234583854675
+    },
+    {
+      "step": 20,
+      "reward_proxy": 0.8181385397911072,
+      "sampled_sequence_kl": 0.7914621829986572,
+      "sequence_entropy": 0.912932813167572,
+      "loss": -0.3139767646789551
+    },
+    {
+      "step": 30,
+      "reward_proxy": 1.0399755239486694,
+      "sampled_sequence_kl": 1.4073855876922607,
+      "sequence_entropy": 0.6073645353317261,
+      "loss": -0.3144233524799347
+    },
+    {
+      "step": 40,
+      "reward_proxy": 1.1491584777832031,
+      "sampled_sequence_kl": 1.5031981468200684,
+      "sequence_entropy": 0.34419095516204834,
+      "loss": 0.00536633376032114
+    },
+    {
+      "step": 50,
+      "reward_proxy": 1.1145051717758179,
+      "sampled_sequence_kl": 1.5115301609039307,
+      "sequence_entropy": 0.2329120635986328,
+      "loss": -0.2314719408750534
+    },
+    {
+      "step": 60,
+      "reward_proxy": 1.185128927230835,
+      "sampled_sequence_kl": 1.7655105590820312,
+      "sequence_entropy": 0.17650853097438812,
+      "loss": 0.0012713053729385138
+    },
+    {
+      "step": 70,
+      "reward_proxy": 1.185128927230835,
+      "sampled_sequence_kl": 1.7710729837417603,
+      "sequence_entropy": 0.15335196256637573,
+      "loss": 0.0007611289620399475
+    },
+    {
+      "step": 80,
+      "reward_proxy": 1.1096175909042358,
+      "sampled_sequence_kl": 1.4753559827804565,
+      "sequence_entropy": 0.14600856602191925,
+      "loss": -0.231767475605011
+    },
+    {
+      "step": 90,
+      "reward_proxy": 1.1074280738830566,
+      "sampled_sequence_kl": 2.418205976486206,
+      "sequence_entropy": 0.18571296334266663,
+      "loss": -1.0886549949645996
+    },
+    {
+      "step": 99,
+      "reward_proxy": 1.1198235750198364,
+      "sampled_sequence_kl": 1.579544186592102,
+      "sequence_entropy": 0.13435648381710052,
+      "loss": -0.3068796396255493
+    }
+  ],
+  "before": {
+    "reward_proxy": -0.1771976500749588,
+    "sampled_sequence_kl": 2.8902221060889133e-07,
+    "mean_words": 4.022222222222222,
+    "eos_rate": 1.0,
+    "repetition_rate": 0.35555555555555557,
+    "sample_count": 90,
+    "samples": [
+      {
+        "context": "saludo",
+        "text": "vete ahora"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro vamos paso a paso"
+      },
+      {
+        "context": "gracias",
+        "text": "nada nada nada nada"
+      },
+      {
+        "context": "saludo",
+        "text": "no me importa"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro vamos paso a paso cuando quieras ahora"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola puedo ayudarte"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro vamos paso a paso cuando quieras ahora"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro vamos paso a paso"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "vete ahora"
+      },
+      {
+        "context": "ayuda",
+        "text": "hazlo solo"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola hola hola hola"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "vete ahora"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "nada nada nada nada"
+      },
+      {
+        "context": "saludo",
+        "text": "vete ahora"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada puedo ayudarte paso a paso cuando quieras"
+      },
+      {
+        "context": "saludo",
+        "text": "vete ahora"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro vamos paso a paso"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada seguimos cuando quieras"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "no me importa"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada puedo ayudarte paso a paso cuando quieras"
+      },
+      {
+        "context": "saludo",
+        "text": "puedo ayudarte paso a paso cuando quieras"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro vamos paso a paso cuando quieras ahora"
+      },
+      {
+        "context": "gracias",
+        "text": "nada nada nada nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola hola hola hola"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro vamos paso a paso cuando quieras ahora"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada puedo ayudarte paso a paso cuando quieras"
+      },
+      {
+        "context": "saludo",
+        "text": "no me importa"
+      },
+      {
+        "context": "ayuda",
+        "text": "hazlo solo"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "hazlo solo"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada seguimos cuando quieras"
+      },
+      {
+        "context": "saludo",
+        "text": "vete ahora"
+      },
+      {
+        "context": "ayuda",
+        "text": "hazlo solo"
+      },
+      {
+        "context": "gracias",
+        "text": "no me importa"
+      },
+      {
+        "context": "saludo",
+        "text": "puedo ayudarte paso a paso cuando quieras"
+      },
+      {
+        "context": "ayuda",
+        "text": "paso paso paso paso"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "no me importa"
+      },
+      {
+        "context": "ayuda",
+        "text": "hazlo solo"
+      },
+      {
+        "context": "gracias",
+        "text": "no me importa"
+      },
+      {
+        "context": "saludo",
+        "text": "hola hola hola hola"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada seguimos cuando quieras"
+      },
+      {
+        "context": "saludo",
+        "text": "no me importa"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "no me importa"
+      },
+      {
+        "context": "saludo",
+        "text": "hola puedo ayudarte"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada seguimos cuando quieras"
+      },
+      {
+        "context": "saludo",
+        "text": "hola puedo ayudarte"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro vamos paso a paso"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada puedo ayudarte paso a paso cuando quieras"
+      },
+      {
+        "context": "saludo",
+        "text": "puedo ayudarte paso a paso cuando quieras"
+      },
+      {
+        "context": "ayuda",
+        "text": "no me importa"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada seguimos cuando quieras"
+      },
+      {
+        "context": "saludo",
+        "text": "puedo ayudarte paso a paso cuando quieras"
+      },
+      {
+        "context": "ayuda",
+        "text": "hazlo solo"
+      },
+      {
+        "context": "gracias",
+        "text": "nada nada nada nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro vamos paso a paso cuando quieras ahora"
+      },
+      {
+        "context": "gracias",
+        "text": "no me importa"
+      },
+      {
+        "context": "saludo",
+        "text": "puedo ayudarte paso a paso cuando quieras"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro vamos paso a paso"
+      },
+      {
+        "context": "gracias",
+        "text": "vete ahora"
+      },
+      {
+        "context": "saludo",
+        "text": "no me importa"
+      },
+      {
+        "context": "ayuda",
+        "text": "no me importa"
+      },
+      {
+        "context": "gracias",
+        "text": "no me importa"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo importa"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada puedo ayudarte paso a paso cuando quieras"
+      },
+      {
+        "context": "saludo",
+        "text": "no me importa"
+      },
+      {
+        "context": "ayuda",
+        "text": "no me importa"
+      },
+      {
+        "context": "gracias",
+        "text": "nada nada nada nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola hola hola hola"
+      },
+      {
+        "context": "ayuda",
+        "text": "paso paso paso paso"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada puedo ayudarte paso a paso cuando quieras"
+      }
+    ]
+  },
+  "after": {
+    "reward_proxy": 1.1518051624298096,
+    "sampled_sequence_kl": 1.6248114109039307,
+    "mean_words": 2.7444444444444445,
+    "eos_rate": 1.0,
+    "repetition_rate": 0.011111111111111112,
+    "sample_count": 90,
+    "samples": [
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada puedo ayudarte paso a paso cuando quieras"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola puedo ayudarte"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo importa"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      },
+      {
+        "context": "saludo",
+        "text": "hola que necesitas"
+      },
+      {
+        "context": "ayuda",
+        "text": "claro puedo ayudarte"
+      },
+      {
+        "context": "gracias",
+        "text": "de nada"
+      }
+    ]
+  },
+  "seconds": 1.971546207962092
+}

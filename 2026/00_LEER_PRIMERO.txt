@@ -1,0 +1,31 @@
+APRENDIZAJE POR REFUERZOS — EDICIÓN 2026
+
+Carpeta de trabajo: https://drive.google.com/drive/folders/1j2zYCL09yzOQonkeMxNoejNru1pGFljy
+
+PRESENTACIONES EDITABLES
+Aprendizaje por Refuerzos 2026 - Clase 2
+https://docs.google.com/presentation/d/19hKgrRzdaDW6sAlVUABjZJeOeElbK6Z1q1QkRfttv4w/edit?usp=drivesdk
+Aprendizaje por Refuerzos 2026 - Clase 1
+https://docs.google.com/presentation/d/1cBZzjKvEYI1Cok3yE6IBRSureGgnzkK5SrfsgF7YsL8/edit?usp=drivesdk
+
+MATERIAL NUEVO
+Notebooks, guías, consignas y resultados:
+https://drive.google.com/drive/folders/1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx
+Notebook principal: camino hacia GRPO
+https://drive.google.com/file/d/1mDcF4XrwXj0jOBde3d2nWq-z_6kbAOnx/view?usp=drivesdk
+Único TP: Decision Transformer
+https://drive.google.com/file/d/1M0Mzhc3gmPx56_HG5I-jTIF3uDKUh14M/view?usp=drivesdk
+
+PAQUETE PARA DESCARGAR
+Incluye material del repositorio, PDFs y datos del TP; conserva las rutas de carpetas.
+https://drive.google.com/file/d/1HAMbSvxXowYMy3V_ClRfO4ugHe-aZIZ9/view?usp=drivesdk
+
+REFERENCIA HISTÓRICA 2025
+https://drive.google.com/drive/folders/1AJsqjbOJPt5otLEI8l2olWsi3rbIUydO
+
+ESTADO
+Clase 1 ya está actualizada y revisada (87 slides). Clase 2, Programa y Organización son copias de trabajo cuyo contenido interior conserva la versión anterior; sus cambios siguen en los guiones nuevos.
+Hay un único TP: Decision Transformer. Q-learning y los notebooks de RL para generación son actividades formativas.
+Los originales de 2025 se conservaron. La prueba en Orin Nano está aplazada.
+
+Copiado y verificado el 17/10/2026.
