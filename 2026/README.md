@@ -1,20 +1,20 @@
 # Aprendizaje por Refuerzos — edición 2026
 
-Revisión: 17/10/2026. Material en preparación, rama `2026`, con [copias de trabajo en Drive](DRIVE_2026.md); aún sin publicación en Campus. Clase 1 ya fue editada y revisada en Drive; Clase 2 conserva el contenido de 2025 y su guion sigue pendiente de aplicación. La Orin Nano de 8 GB está desconectada; Juan aplazó su ensayo.
+Revisión: 18/10/2026. Material en preparación, rama `2026`, con [copias de trabajo en Drive](DRIVE_2026.md); aún sin publicación en Campus. Clase 1 ya fue editada y revisada en Drive; Clase 2 conserva el contenido de 2025 y su guion sigue pendiente de aplicación. La Orin Nano de 8 GB está desconectada; Juan aplazó su ensayo.
 
 ## Recorrido
 
-1. [Clase 1 actualizada en Drive](https://docs.google.com/presentation/d/1cBZzjKvEYI1Cok3yE6IBRSureGgnzkK5SrfsgF7YsL8/edit), [PDF](clase1/Clase_1_2026.pdf), [guion de ensayo](clase1/GUIA_PRESENTACION.md). [Plan de cuatro encuentros](01_PLAN_CURSO.md) y [dos slides introductorias de RL en LLMs](clase1/SLIDES_INTRO_LLM.md).
+1. [Clase 1 actualizada en Drive](https://docs.google.com/presentation/d/1cBZzjKvEYI1Cok3yE6IBRSureGgnzkK5SrfsgF7YsL8/edit), [PDF](clase1/Clase_1_2026.pdf), [guion de ensayo](clase1/GUIA_PRESENTACION.md) y [nuevo bloque de ética](clase1/ETICA_RL.md). [Plan de cuatro encuentros](01_PLAN_CURSO.md) y [dos slides introductorias de RL en LLMs](clase1/SLIDES_INTRO_LLM.md).
 2. [Warm-up](actividades/lab_0_warmup_rl.ipynb), [actividad Q-learning](actividades/q_learning/CONSIGNA.md), [notebook inicial](actividades/q_learning/lab_1_q_learning_auditoria.ipynb) y [hoja de trabajo opcional](actividades/q_learning/INFORME_TEMPLATE.md). Son actividades formativas, sin nota ni entrega obligatoria.
 3. Encuentro 3, bloque deep RL: [camino hacia GRPO](clase2/CAMINO_A_GRPO.md), [guion](clase2/GUIA_CLASE.md), [storyboard](clase2/SLIDES_LLM_RL.md) y [notebook REINFORCE/RLOO/GRPO](clase2/llm_policy_gradients.ipynb).
-4. [Único TP: Decision Transformer para recomendaciones](tp/README.md), continuidad del anterior TP2. [Consigna 2026 en revisión](tp/CONSIGNA.md).
+4. Encuentro 4, preparación docente: [único TP, Decision Transformer para recomendaciones](tp/README.md), continuidad del anterior TP2. [Consigna 2026 en revisión](tp/CONSIGNA.md).
 5. Docentes: [guía formativa de Q-learning](docentes/Q_LEARNING_GUIA.md), [plan de edición de slides](docentes/SLIDES_2026.md), [auditoría](00_AUDITORIA.md), [validación](validacion/RESULTADOS.md) y [próximos pasos](02_NEXT_STEPS.md).
 6. [Archivo 2025](../archive/2025/EDICION.md) y [registro de esta reorganización](CAMBIOS_2026.md).
 
 ## Decisiones vigentes
 
 - La introducción reemplaza el bloque de crisis de reproducibilidad de 2016/HARKing por dos slides: de preferencias a RLHF y de comparación de respuestas a GRPO. Anticipan el encuentro 3 sin derivar algoritmos.
-- Hay **un único TP obligatorio**, sobre Decision Transformer. Se abandona la numeración TP1/TP2 en el material vigente. Q-learning y RL para generación quedan como actividades de clase.
+- Hay **un único TP obligatorio**, sobre Decision Transformer. Se presenta recién en el encuentro 4; hasta entonces distribuir únicamente los materiales seleccionados para cada clase. Se abandona la numeración TP1/TP2 en el material vigente. Q-learning y RL para generación quedan como actividades de clase.
 - Q-learning parte del [hands-on de Hugging Face](https://huggingface.co/learn/deep-rl-course/unit2/hands-on); conserva contraejemplos, semillas y análisis de recompensa. Su versión extensa es optativa.
 - El notebook de deep RL ajusta un modelo de lenguaje GRU diminuto de 13.923 parámetros. Compara REINFORCE, RLOO y GRPO; ilustra PPO sin entrenarlo. No es un LLM preentrenado.
 - Las preferencias iniciales son **simuladas**. Para realizar RLHF con feedback humano hay que etiquetar pares y seleccionar ese archivo. El verificador de formato constituye otra fuente de recompensa.

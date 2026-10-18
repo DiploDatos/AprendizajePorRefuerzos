@@ -1,6 +1,6 @@
 # Clase 1 — recorrido y guion de ensayo
 
-Revisión 17/10/2026. [Presentación editable](https://docs.google.com/presentation/d/1cBZzjKvEYI1Cok3yE6IBRSureGgnzkK5SrfsgF7YsL8/edit), 87 slides; [copia PDF](Clase_1_2026.pdf). Este deck abarca fundamentos del primer fin de semana. El desarrollo de GRPO se reserva para el encuentro 3.
+Revisión 18/10/2026. [Presentación editable](https://docs.google.com/presentation/d/1cBZzjKvEYI1Cok3yE6IBRSureGgnzkK5SrfsgF7YsL8/edit), 87 slides; [copia PDF](Clase_1_2026.pdf). Este deck abarca fundamentos del primer fin de semana. El desarrollo de GRPO se reserva para el encuentro 3.
 
 ## Dos slides introductorias: 6–8 minutos
 
@@ -29,12 +29,18 @@ Los tiempos siguientes son una propuesta de ensayo. Se verificó el recorrido l�
 - La introducción anticipa el objetivo sin exigir conocer Transformers, PPO ni un critic.
 - El ejemplo verificado no se presenta como la receta completa de DeepSeekMath ni como prueba de fidelidad del razonamiento.
 - Los fundamentos continúan con agente, entorno, política, retorno y MDP; el vocabulario se retoma en el encuentro 3.
-- La agenda y la última slide indican **un único TP: Decision Transformer**.
+- La agenda, el cierre y sus notas no presentan el TP. Decision Transformer se introduce recién en el encuentro 4.
 - El warm-up y Q-learning son prácticas de clase. La última slide enlaza el notebook, declara IA opcional y no pide informe, defensa ni entrega obligatoria.
 - La práctica de Q-learning tiene su propia propuesta de 45 minutos; los 6–8 minutos corresponden solo al anticipo de RL en LLMs.
 
+## Ética: 28 minutos al cierre del encuentro 2
+
+Slides 80–86: apertura (1 min), Navier–Stokes (5), reward hacking (5), ciberseguridad (4), pluralismo en RLHF (4), actividad A/B (6) y cierre (3). Reservar dos minutos adicionales de margen. [Contenido, fuentes y guion completo](ETICA_RL.md).
+
+La actividad contrasta dos explicaciones correctas de una política; cada pareja justifica su preferencia según el público y propone registrar el desacuerdo. No agrega entrega ni requiere IA. En los casos reales se distinguen resultados de experimentos, relatos de empresas y asuntos no comprobados.
+
 ## Verificación realizada
 
-Se revisaron las 87 páginas exportadas y las modificadas en detalle. Las 78 slides sin cambios de contenido visible conservan exactamente sus píxeles frente a la copia de origen. Se corrigió el contraste del enlace final y se verificaron los destinos de los materiales 2026. Fuentes y notas docentes están dentro de la presentación. [Registro técnico](../validacion/clase1_revision.json).
+La revisión introductoria del 17/10 se conserva en el [registro anterior](../validacion/clase1_revision.json). La revisión del bloque de ética y del cierre se registra por separado en [clase1_etica_revision.json](../validacion/clase1_etica_revision.json). Fuentes y notas docentes están dentro de la presentación; el PDF corresponde a la versión actual.
 
 Siguiente revisión docente: ensayar en voz alta, confirmar afiliaciones de la slide 2 si cambiaron y ajustar tiempos sin sumar derivaciones a la introducción. La edición de Clase 2 y el cierre del protocolo de evaluación del único TP son trabajos posteriores.

@@ -1,45 +1,29 @@
 # Cambios propuestos para las diapositivas
 
-Revisión 17/10/2026. Clase 1 editada y revisada (87 slides); plan de Clase 2 pendiente. Las [copias editables 2026 en Drive](../DRIVE_2026.md) ya están creadas. IDs verificados por outline nativo el 12/10/2026. Editar las copias 2026; actualizar el año dentro de las slides y los enlaces. No suponer que deck “Clase 2” es encuentro 2.
+Revisión 18/10/2026. Clase 1 editada y revisada (87 slides); plan de Clase 2 pendiente. Las [copias editables 2026 en Drive](../DRIVE_2026.md) ya están creadas. IDs verificados por outline nativo el 12/10/2026. Editar las copias 2026; actualizar el año dentro de las slides y los enlaces. No suponer que deck “Clase 2” es encuentro 2.
 
-## Clase 1
+## Clase 1 — cambios aplicados
 
-Cambios de introducción, portada, agenda, transición, noción online/offline, preferencias y actividad final aplicados. Las nuevas slides son 14 y 15. Se actualizaron los enlaces de laboratorio y las notas de Q-learning/recompensa. La revisión amplia de la notación de Bellman y las afiliaciones no se da por cerrada. Ver [ensayo y registro](../clase1/GUIA_PRESENTACION.md). Los números siguientes se refieren a la versión 2025.
+Números actuales, deck 2026 de 87 slides. Se conservan las notas y fuentes; el [guion de ensayo](../clase1/GUIA_PRESENTACION.md) detalla el recorrido.
 
-| Slide / ID | Cambio | Motivo |
-|---|---|---|
-| 1 / `p` | Año 2026; verificar afiliaciones docentes de slide 2 con Juan/Jorge | Evitar copiar datos profesionales desactualizados |
-| 3 / `gb2e30c18f0_0_263` | Presentar recorrido, actividades formativas y único TP de Decision Transformer | Distinguir práctica de clase y entrega |
-| 14–22 / IDs detallados abajo | Reemplazar bloque de overhype/HARKing y actualidad por dos slides introductorias de RL en LLMs | Anticipar el encuentro 3 con preferencias, RLHF y GRPO |
-| 27 / `gb49cbc1f9c_0_119` | Cambiar “no hay dataset” por “en online RL el agente genera experiencia; en offline RL usa experiencia registrada” | Evitar contradicción con offline RL |
-| 35 / `gb49cbc1f9c_0_17` | Revisar notación de Bellman y retorno también en speaker notes | Fetch incluye una nota TODO sobre notación |
-| 70 / `gb49cbc1f9c_0_346` | Añadir ejemplo max frente a argmax y máscara terminal | Alineación con implementación nueva |
-| 88 / `gb49cbc1f9c_0_149` | Añadir FrozenLake: recompensa por vivir frente a llegar | Caso de ética y proxy ejecutable |
-| 93 / `g39cfa96d3e5_0_0` | Explicitar sesgos/desacuerdos en feedback humano | Preparar actividad RLHF |
-| 94 / `gb4eea7d43a_0_5` | Reemplazar por actividad formativa Q-learning y aclarar que el único TP es DT | Sin entrega obligatoria de tabular |
+| Slide / ID | Estado y propósito |
+|---|---|
+| 1 / `p` | Portada 2026. Afiliaciones de slide 2 pendientes de confirmación docente |
+| 3 / `gb2e30c18f0_0_263` | Agenda y notas de prácticas formativas; no se presenta el TP |
+| 14–15 / `gb2e30c18f0_0_199`, `gb2e30c18f0_0_205` | Dos slides de preferencias/RLHF y comparación de respuestas/GRPO; 6–8 min, anticipo del encuentro 3 |
+| 20 / `gb49cbc1f9c_0_119` | Distinción online/offline; experiencia generada o registrada |
+| 80 / `gb4eea7d43a_0_10` | Apertura de ética: objetivo, beneficiarios y riesgo |
+| 81 / `rl26_ethics_navier` | Crédito, confianza y verificación en Navier–Stokes |
+| 82 / `rl26_ethics_hacking` | Reward hacking y modificación del evaluador |
+| 83 / `rl26_ethics_cyber` | Uso dual, autonomía y límites del permiso |
+| 84 / `rl26_ethics_plural` | Diversidad de preferencias: ¿alineado con quién? |
+| 85 / `rl26_ethics_activity` | Actividad A/B de 6 min con dos respuestas correctas |
+| 86 / `rl26_ethics_closing` | Elegir controles y una condición de parada |
+| 87 / `gb4eea7d43a_0_5` | Notebook Q-learning, IA opcional, sin entrega obligatoria; sin anuncio del TP |
 
-### Dos slides introductorias en lugar del bloque histórico
+El bloque 80–86 reemplaza las seis slides anteriores de ética y conserva el diseño nativo. [Guía, preguntas, tiempos y fuentes](../clase1/ETICA_RL.md). La notación general de Bellman y la ampliación max/argmax siguen como revisión docente pendiente; esta edición no las da por corregidas.
 
-Usar [contenido y notas listos para revisión](../clase1/SLIDES_INTRO_LLM.md), 6–8 minutos en total:
-
-1. **RL también puede mejorar cómo responde un modelo:** preferencias como señal, InstructGPT y ejemplo de comparación de explicaciones.
-2. **De preferencias a respuestas verificables: el camino hacia GRPO:** DeepSeekMath, DeepSeek-R1 y comparación de respuestas al mismo problema; anticipo del encuentro 3.
-
-Retirar del recorrido principal estas slides originales y sustituir el conjunto por las dos nuevas. Los números son los del deck 2025; usar IDs al editar:
-
-| Número | ID original | Contenido que se sustituye |
-|---|---|---|
-| 14 | `gb2f99adadb_0_34` | Overhype |
-| 15 | `gb2e30c18f0_0_199` | Crisis alrededor de 2016 |
-| 16 | `gbc696bf0ec_0_1` | Ablaciones y HARKing |
-| 17 | `gbc2dfa48f5_0_0` | Definición de HARKing |
-| 18 | `gbc2dfa48f5_0_9` | Papers de reproducibilidad |
-| 19 | `gb2e30c18f0_0_254` | Meme de Irpan |
-| 20 | `gb2e30c18f0_0_241` | Anécdota de Atari |
-| 21 | `gb2e30c18f0_0_205` | Actualidad general |
-| 22 | `g25f39d90f12_0_0` | RLHF |
-
-Conservar la slide 23 como transición hacia desafíos y fundamentos. La evaluación experimental se enseña con el laboratorio: comparar entrenamiento/evaluación, inspeccionar un contraejemplo y distinguir recompensa de éxito. La versión de cinco semillas es ampliación optativa; no agregar una presentación de otro TP ni pedir informes de Q-learning.
+El TP se presenta recién en el encuentro 4. No se agrega su anuncio al primer fin de semana ni al encuentro 3. Los archivos se mantienen en el índice docente para preparación y se publican a estudiantes cuando corresponda.
 
 ## Clase 2
 
@@ -64,7 +48,7 @@ Juan pidió mejorar el camino hacia GRPO, usando la guía de RL para LLMs como r
 3. En slides 53–56, conservar preferencias/RM y separar fuente RLHF/RLVR de algoritmo.
 4. Añadir RLOO/GRPO antes del laboratorio; insertar enlace a `llm_policy_gradients.ipynb` en lugar de poner la demo REINFORCE como única práctica.
 5. Después del notebook, evaluar a ciegas y discutir diversidad, grupos sin señal y presupuestos.
-6. DPO y variantes quedan como comparación final/lecturas; DT mantiene su bloque aparte para el único TP.
+6. DPO y variantes quedan como comparación final/lecturas; DT mantiene su bloque aparte en el encuentro 4, donde recién se presenta el único TP.
 
 Modelo ejecutado: GRU de 13.923 parámetros; no LLM preentrenado. La extensión Orin queda pendiente para cuando Juan conecte el equipo. Material nuevo ejecutado localmente, deck Drive sin editar.
 

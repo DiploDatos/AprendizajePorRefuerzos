@@ -23,3 +23,9 @@ Se actualizaron los guiones locales y la correspondencia con IDs de las slides o
 ## Alcance de validación
 
 La reorganización no vuelve a entrenar agentes ni valida la implementación histórica de Decision Transformer. Se comprueban rutas, integridad del archivo y las invariantes de los laboratorios ejecutados. El cierre técnico de la evaluación del único TP sigue como próximo paso antes de publicarlo.
+
+## Ética y momento de presentación del TP — 18/10/2026
+
+Clase 1 conserva 87 slides y sustituye las seis páginas antiguas de ética por Navier–Stokes, reward hacking, ciberseguridad, pluralidad en RLHF, actividad A/B y cierre sobre controles. Incluye notas y fuentes primarias con límites de evidencia explícitos. La sección dura 28 minutos al final del encuentro 2, más dos de margen. [Guía](clase1/ETICA_RL.md).
+
+Se eliminan el anuncio del TP del cierre y las referencias de sus notas en Clase 1. Juan fijó su presentación recién en el encuentro 4; el plan ya no la ubica en el encuentro 1. Los archivos del TP siguen disponibles para preparación docente. Clase 2 y el protocolo de evaluación continúan pendientes. No se modifican originales de 2025 ni configuraciones locales del usuario.

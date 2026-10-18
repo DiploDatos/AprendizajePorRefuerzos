@@ -109,3 +109,9 @@ El único TP sigue siendo Decision Transformer; su evaluación histórica no se 
 Se editó la copia 2026 y se exportó a [PDF](../clase1/Clase_1_2026.pdf). El deck pasa de 94 a 87 slides: dos slides de RL en LLMs sustituyen el bloque histórico. Se revisaron portada, agenda, transición, fuentes, notas, noción online/offline, preferencias y cierre de actividades. Se compararon las 78 slides visualmente conservadas y sus píxeles coinciden con el origen. El checker de contenido no reportó incidencias. La revisión visual se completó con dos correcciones de contraste del enlace final, incluida la última letra. [Registro](clase1_revision.json).
 
 El [guion de ensayo](../clase1/GUIA_PRESENTACION.md) reserva 6–8 minutos al anticipo de RL en LLMs; no se afirma haber realizado un ensayo oral con Juan. Clase 2 y el protocolo definitivo del único TP siguen pendientes. Los originales 2025 se conservaron.
+
+## Bloque de ética y presentación del TP — 18/10/2026
+
+Clase 1 mantiene 87 páginas. Se revisaron todas las páginas exportadas y las ocho modificadas en detalle; 79 páginas conservan exactamente sus píxeles frente al deck leído al iniciar esta edición. El checker no reportó incidencias. Las slides 80–86 incluyen cuatro casos, una actividad de preferencias y un cierre; siete enlaces apuntan a fuentes primarias. No se requirieron correcciones tras la revisión visual.
+
+Se comprobó el orden, el uso de texto y bullets nativos y la ausencia de TP/Decision Transformer en el texto visible de Clase 1. La agenda y el cierre ya no lo anuncian en sus notas. El plan reserva su presentación al encuentro 4. El PDF se reemplazó por esta exportación. [Registro](clase1_etica_revision.json). La duración de 28 minutos es una propuesta pendiente de ensayo oral; no se reentrenaron modelos por cambios de contenido.

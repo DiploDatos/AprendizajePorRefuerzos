@@ -9,11 +9,13 @@ Aprendizaje por Refuerzos 2026 - Clase 1
 https://docs.google.com/presentation/d/1cBZzjKvEYI1Cok3yE6IBRSureGgnzkK5SrfsgF7YsL8/edit?usp=drivesdk
 
 MATERIAL NUEVO
+Guía de ética: cuatro casos y actividad de preferencias
+https://drive.google.com/file/d/14Wcis0iHV_Ph5Ta7WSvpGVxLcBks6Lwb/view?usp=drivesdk
 Notebooks, guías, consignas y resultados:
 https://drive.google.com/drive/folders/1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx
 Notebook principal: camino hacia GRPO
 https://drive.google.com/file/d/1mDcF4XrwXj0jOBde3d2nWq-z_6kbAOnx/view?usp=drivesdk
-Único TP: Decision Transformer
+Único TP: Decision Transformer (preparación docente; presentar recién en encuentro 4)
 https://drive.google.com/file/d/1M0Mzhc3gmPx56_HG5I-jTIF3uDKUh14M/view?usp=drivesdk
 
 PAQUETE PARA DESCARGAR
@@ -24,8 +26,8 @@ REFERENCIA HISTÓRICA 2025
 https://drive.google.com/drive/folders/1AJsqjbOJPt5otLEI8l2olWsi3rbIUydO
 
 ESTADO
-Clase 1 ya está actualizada y revisada (87 slides). Clase 2, Programa y Organización son copias de trabajo cuyo contenido interior conserva la versión anterior; sus cambios siguen en los guiones nuevos.
-Hay un único TP: Decision Transformer. Q-learning y los notebooks de RL para generación son actividades formativas.
+Clase 1 ya está actualizada y revisada (87 slides), con cuatro casos de ética y una actividad de preferencias. Clase 2, Programa y Organización son copias de trabajo cuyo contenido interior conserva la versión anterior; sus cambios siguen en los guiones nuevos.
+Hay un único TP: Decision Transformer, que se presenta recién en el encuentro 4. No distribuir su consigna antes. Q-learning y los notebooks de RL para generación son actividades formativas.
 Los originales de 2025 se conservaron. La prueba en Orin Nano está aplazada.
 
-Copiado y verificado el 17/10/2026.
+Copiado el 17/10/2026; revisión de materiales el 18/10/2026.

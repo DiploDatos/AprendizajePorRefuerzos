@@ -1,6 +1,6 @@
 # Plan de curso 2026
 
-Revisión 17/10/2026. Propuesta de cuatro encuentros de cuatro horas, basada en Organización 2025. Juan ubicó el desarrollo de RL para LLMs en el encuentro 3 (segundo fin de semana). Hay un único TP: Decision Transformer. Fechas, duración detallada y reparto docente pendientes de acordar; no reutilizar fechas de 2025.
+Revisión 18/10/2026. Propuesta de cuatro encuentros de cuatro horas, basada en Organización 2025. Juan ubicó el desarrollo de RL para LLMs en el encuentro 3 (segundo fin de semana). Hay un único TP: Decision Transformer, que se presenta recién en el encuentro 4. No anunciarlo ni mostrar la consigna en los encuentros 1–3. Fechas, duración detallada y reparto docente pendientes de acordar; no reutilizar fechas de 2025.
 
 | Encuentro | Minutos | Contenido y actividad | Resultado |
 |---|---:|---|---|
@@ -9,13 +9,13 @@ Revisión 17/10/2026. Propuesta de cuatro encuentros de cuatro horas, basada en 
 | 1 | 100–115 | Recreo | |
 | 1 | 115–165 | Juan: políticas y Lab 0 | Explicar política y objetivo |
 | 1 | 165–205 | Exploración, bandidos, panorama de métodos | Comparar explorar/explotar |
-| 1 | 205–240 | Preparación del laboratorio y presentación del único TP de Decision Transformer | Distinguir actividades de clase y entrega del curso |
+| 1 | 205–240 | Preparación del laboratorio, ejercicios y consultas | Llegar al encuentro 2 con el entorno y las nociones básicas |
 | 2 | 0–40 | Juan: bandidos, ε-greedy, softmax | Vincular distribución y decisiones |
 | 2 | 40–110 | Jorge: TD, SARSA y Q-learning | Comprender on/off-policy y bootstrap |
 | 2 | 110–125 | Recreo | |
 | 2 | 125–170 | Actividad formativa FrozenLake/Taxi: predicción, implementación y discusión | Una actualización y una limitación explicadas |
 | 2 | 170–210 | Puesta en común con resultados docentes: recompensa y solución defectuosa | Un contraejemplo reproducible, sin entrega |
-| 2 | 210–240 | Consultas y puente breve a feedback humano | Conectar recompensa diseñada y aprendida |
+| 2 | 210–240 | Ética en RL: cuatro casos, actividad de preferencias y cierre (28 min + 2 de margen) | Justificar un control y reconocer límites de la evidencia |
 | 3 | 0–20 | Puente Q-table/DQN → política neuronal | Distinguir valor y distribución de acciones |
 | 3 | 20–60 | Juan: generación como RL, retorno, ventaja y KL | Mapear prompt/prefijo/token/EOS |
 | 3 | 60–95 | REINFORCE, baseline y PPO | Explicar gradiente y clipping con números |
@@ -46,3 +46,9 @@ Actividad Q-learning: “¿El agente aprendió lo que digo que aprendió?”. En
 ## Introducción renovada
 
 El primer encuentro usa [dos slides introductorias](clase1/SLIDES_INTRO_LLM.md), de 6–8 minutos, en lugar del bloque histórico de overhype/HARKing. Presenta preferencias → RLHF y comparación de respuestas → GRPO. La pregunta por estado, acción y recompensa abre los fundamentos; el encuentro 3 retoma el mismo ejemplo para desarrollar el algoritmo.
+
+## Ética renovada y publicación del TP
+
+El cierre del encuentro 2 usa las slides 80–86 de Clase 1: Navier–Stokes (crédito, confianza y verificación), reward hacking, ciberseguridad y pluralidad de preferencias. La [guía docente](clase1/ETICA_RL.md) distingue fuentes, declaraciones e incertidumbre y propone una votación A/B de seis minutos. El bloque vuelve sobre el laboratorio de Q-learning y prepara la discusión de recompensas del encuentro 3.
+
+El índice y los archivos del TP se conservan para preparación docente. Seleccionar el material estudiantil de cada encuentro: la presentación y publicación de la consigna del único TP corresponden al encuentro 4. Esta decisión no modifica permisos de Drive ni elimina los archivos de trabajo.
