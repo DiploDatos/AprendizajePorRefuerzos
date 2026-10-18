@@ -115,3 +115,9 @@ El [guion de ensayo](../clase1/GUIA_PRESENTACION.md) reserva 6–8 minutos al an
 Clase 1 mantiene 87 páginas. Se revisaron todas las páginas exportadas y las ocho modificadas en detalle; 79 páginas conservan exactamente sus píxeles frente al deck leído al iniciar esta edición. El checker no reportó incidencias. Las slides 80–86 incluyen cuatro casos, una actividad de preferencias y un cierre; siete enlaces apuntan a fuentes primarias. No se requirieron correcciones tras la revisión visual.
 
 Se comprobó el orden, el uso de texto y bullets nativos y la ausencia de TP/Decision Transformer en el texto visible de Clase 1. La agenda y el cierre ya no lo anuncian en sus notas. El plan reserva su presentación al encuentro 4. El PDF se reemplazó por esta exportación. [Registro](clase1_etica_revision.json). La duración de 28 minutos es una propuesta pendiente de ensayo oral; no se reentrenaron modelos por cambios de contenido.
+
+### Revisión de los casos Navier–Stokes y ciberseguridad — 18/10/2026
+
+Se verificó la redacción aprobada en las slides 81 y 83, sus bullets nativos y seis enlaces a fuentes. Navier–Stokes incorpora prioridades de investigación; ciberseguridad usa OpenAI–Hugging Face 2026 y distingue entrenamiento previo y evaluación. El deck conserva 87 páginas, orden y ausencia del TP en el texto visible. Se revisaron todas las páginas de la exportación final; 85 conservan sus objetos y propiedades nativos. La imagen de la página 46 varió entre exportaciones sin cambios en sus objetos nativos; fue revisada visualmente.
+
+El checker previo no reportó incidencias. Una pasada de corrección resolvió la superposición del título de ciberseguridad (24 pt, cuerpo 18 pt) y el contraste de las fuentes nuevas. El PDF y el [registro](clase1_etica_revision.json) corresponden a esta revisión. Se verifican enlaces locales y consistencia documental; no se repiten entrenamientos por cambios de texto.

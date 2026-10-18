@@ -13,9 +13,9 @@ Números actuales, deck 2026 de 87 slides. Se conservan las notas y fuentes; el 
 | 14–15 / `gb2e30c18f0_0_199`, `gb2e30c18f0_0_205` | Dos slides de preferencias/RLHF y comparación de respuestas/GRPO; 6–8 min, anticipo del encuentro 3 |
 | 20 / `gb49cbc1f9c_0_119` | Distinción online/offline; experiencia generada o registrada |
 | 80 / `gb4eea7d43a_0_10` | Apertura de ética: objetivo, beneficiarios y riesgo |
-| 81 / `rl26_ethics_navier` | Crédito, confianza y verificación en Navier–Stokes |
+| 81 / `rl26_ethics_navier` | Crédito y confianza en Navier–Stokes; riesgo de orientar la ciencia según rankings de modelos |
 | 82 / `rl26_ethics_hacking` | Reward hacking y modificación del evaluador |
-| 83 / `rl26_ethics_cyber` | Uso dual, autonomía y límites del permiso |
+| 83 / `rl26_ethics_cyber` | Incidente OpenAI–Hugging Face 2026: incentivos, permisos y cuándo detenerse |
 | 84 / `rl26_ethics_plural` | Diversidad de preferencias: ¿alineado con quién? |
 | 85 / `rl26_ethics_activity` | Actividad A/B de 6 min con dos respuestas correctas |
 | 86 / `rl26_ethics_closing` | Elegir controles y una condición de parada |

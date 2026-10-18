@@ -595,7 +595,7 @@
     "id": "1HAMbSvxXowYMy3V_ClRfO4ugHe-aZIZ9",
     "title": "AprendizajePorRefuerzos-2026.zip",
     "mime_type": "application/zip",
-    "size": "74228347",
+    "size": "74233428",
     "url": "https://drive.google.com/file/d/1HAMbSvxXowYMy3V_ClRfO4ugHe-aZIZ9/view?usp=drivesdk",
     "display_url": "https://drive.google.com/file/d/1HAMbSvxXowYMy3V_ClRfO4ugHe-aZIZ9/view?usp=drivesdk",
     "file_or_folder": "file",
@@ -610,10 +610,10 @@
     "shared": null,
     "permissions": null,
     "source_visibility_status": "access_not_verified",
-    "local_sha256": "aa17ab401d7973121bf258c613ef3c129da06bfc937bca5d11af483c3142e0bd",
-    "local_bytes": 74228347,
+    "local_sha256": "d4c8a5bf3485a69c3b1a3f5840700867f5bf2083df76abe63392ffcf21d77654",
+    "local_bytes": 74233428,
     "files": 129,
-    "snapshot_note": "Incluye ética y TP reservado al encuentro 4. Este registro de transferencia se actualiza después de construir el ZIP; el manifiesto dentro del paquete es la instantánea previa a su subida."
+    "snapshot_note": "Incluye la redacción accesible de Navier–Stokes y el caso OpenAI–Hugging Face 2026. El manifiesto de transferencia se actualiza después de construir el ZIP; su copia interna es la instantánea previa a la subida."
   },
   "verification": [
     {
@@ -763,27 +763,15 @@
   ],
   "class1_revision": {
     "date": "2026-10-18",
+    "edition": "Ajuste de casos: lenguaje accesible y OpenAI–Hugging Face 2026",
     "presentation_id": "1cBZzjKvEYI1Cok3yE6IBRSureGgnzkK5SrfsgF7YsL8",
     "native_url": "https://docs.google.com/presentation/d/1cBZzjKvEYI1Cok3yE6IBRSureGgnzkK5SrfsgF7YsL8/edit",
-    "source_revision": "WSkSIBRTAaSqRw",
-    "revision": "uFUOAjX27K6HWQ",
+    "source_revision": "LlwGI7Bzp6jfTQ",
+    "revision": "yZZMggDpmoiFuQ",
     "slide_count": 87,
-    "ethics_slides": [
-      80,
+    "edited_slides": [
       81,
-      82,
-      83,
-      84,
-      85,
-      86
-    ],
-    "new_slide_ids": [
-      "rl26_ethics_navier",
-      "rl26_ethics_hacking",
-      "rl26_ethics_cyber",
-      "rl26_ethics_plural",
-      "rl26_ethics_activity",
-      "rl26_ethics_closing"
+      83
     ],
     "duration_minutes": 28,
     "margin_minutes": 2,
@@ -791,22 +779,16 @@
     "checks": {
       "expected_order": true,
       "no_TP_in_visible_text": true,
-      "agenda_and_closing_notes_no_TP_announcement": true,
+      "approved_copy_verified": true,
       "native_bullets": true,
-      "sources_link_count": 7,
-      "content_issue_checker": 0,
+      "six_source_links_in_edited_slides": true,
+      "issue_checker_before_render": 0,
       "all_87_pages_visually_reviewed": true,
-      "changed_pages_individually_reviewed": [
-        80,
+      "edited_pages_reviewed_individually": [
         81,
-        82,
-        83,
-        84,
-        85,
-        86,
-        87
+        83
       ],
-      "pixel_identical_pages": [
+      "native_unchanged_pages": [
         1,
         2,
         3,
@@ -885,78 +867,131 @@
         76,
         77,
         78,
-        79
-      ],
-      "visible_changed_pages": [
+        79,
         80,
-        81,
         82,
-        83,
         84,
         85,
         86,
         87
       ],
-      "repair_passes": 0
+      "comparison_note": "Se excluyen URLs temporales de imágenes (contentUrl) de la comparación de objetos.",
+      "pixel_identical_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        82,
+        84,
+        85,
+        86,
+        87
+      ],
+      "render_differences": [
+        46,
+        81,
+        83
+      ],
+      "render_variation_note": "La imagen de la slide 46 varió entre exportaciones; los objetos y propiedades nativos de esa página son idénticos. Se revisó su apariencia en la exportación final.",
+      "repair_passes": 1,
+      "repairs": [
+        "Título de ciberseguridad a 24 pt para evitar superposición; cuerpo conserva 18 pt.",
+        "Color de las dos fuentes nuevas igualado al resto, conservando sus enlaces."
+      ]
     },
     "sources": [
-      {
-        "key": "openai",
-        "label": "OpenAI · sep. 2026",
-        "url": "https://openai.com/index/navier-stokes-solution/"
-      },
-      {
-        "key": "buckmaster",
-        "label": "Buckmaster · declaración",
-        "url": "https://cims.nyu.edu/~tristanb/statement.pdf"
-      },
-      {
-        "key": "clay",
-        "label": "Clay · sep. 2026",
-        "url": "https://www.claymath.org/news/navier-stokes-announcement/"
-      },
-      {
-        "key": "hacking",
-        "label": "Anthropic · nov. 2025",
-        "url": "https://www.anthropic.com/research/emergent-misalignment-reward-hacking"
-      },
-      {
-        "key": "tampering",
-        "label": "Reward tampering · 2024",
-        "url": "https://www.anthropic.com/research/reward-tampering"
-      },
-      {
-        "key": "cyber",
-        "label": "Anthropic · informe, nov. 2025",
-        "url": "https://www.anthropic.com/news/disrupting-AI-espionage"
-      },
-      {
-        "key": "plural",
-        "label": "Poddar et al. · 2024",
-        "url": "https://arxiv.org/abs/2408.10075"
-      }
+      "https://openai.com/index/navier-stokes-solution/",
+      "https://cims.nyu.edu/~tristanb/statement.pdf",
+      "https://www.claymath.org/news/navier-stokes-announcement/",
+      "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
+      "https://huggingface.co/blog/agent-intrusion-technical-timeline",
+      "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/"
     ],
     "pdf": {
       "path": "clase1/Clase_1_2026.pdf",
-      "bytes": 2480001,
-      "sha256": "48ae3282c1edb2b8739004fe319ada4bb41951bd88991cc2ea7913446fa223b4"
+      "bytes": 2481056,
+      "sha256": "f3505a7588b6ee298d3510544dc8b64c1d93b2adf38a0b4f0d9d1302e14a0709"
     },
     "limits": [
-      "No ensayo oral con Juan; tiempos propuestos para ensayo.",
-      "No evaluación propia de la prueba matemática ni adjudicación de autoría.",
+      "Duración pendiente de ensayo oral.",
+      "RL no se presenta como causa única del incidente.",
       "Clase 2 y protocolo definitivo del TP siguen pendientes."
     ],
-    "build": {
-      "native_exemplar": "g39cfa96d3e5_0_0",
-      "method": "Duplicar seis veces el ejemplar de texto, reemplazar título/cuerpo, agregar preguntas y fuentes nativas, notas docentes, retirar seis páginas antiguas y ordenar.",
-      "page_size_pt": [
-        720,
-        405
-      ],
-      "theme": "Tropic",
-      "body_font": "Open Sans 18 pt",
-      "sources_font": "Open Sans 12 pt"
-    },
     "report_file_id": "1ecg4rtYlD8Wta6O4DYi2qwVHivAKdud-"
   },
   "class1_revision_history": [
@@ -1001,6 +1036,204 @@
       "timing_status": "Guion propuesto de 6–8 minutos; pendiente ensayo oral de Juan",
       "scope": "Edición de Clase 1. Clase 2 conserva el contenido de origen; protocolo definitivo del único TP pendiente.",
       "repair_passes": 2
+    },
+    {
+      "date": "2026-10-18",
+      "presentation_id": "1cBZzjKvEYI1Cok3yE6IBRSureGgnzkK5SrfsgF7YsL8",
+      "native_url": "https://docs.google.com/presentation/d/1cBZzjKvEYI1Cok3yE6IBRSureGgnzkK5SrfsgF7YsL8/edit",
+      "source_revision": "WSkSIBRTAaSqRw",
+      "revision": "uFUOAjX27K6HWQ",
+      "slide_count": 87,
+      "ethics_slides": [
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86
+      ],
+      "new_slide_ids": [
+        "rl26_ethics_navier",
+        "rl26_ethics_hacking",
+        "rl26_ethics_cyber",
+        "rl26_ethics_plural",
+        "rl26_ethics_activity",
+        "rl26_ethics_closing"
+      ],
+      "duration_minutes": 28,
+      "margin_minutes": 2,
+      "placement": "Encuentro 2; TP solo en encuentro 4",
+      "checks": {
+        "expected_order": true,
+        "no_TP_in_visible_text": true,
+        "agenda_and_closing_notes_no_TP_announcement": true,
+        "native_bullets": true,
+        "sources_link_count": 7,
+        "content_issue_checker": 0,
+        "all_87_pages_visually_reviewed": true,
+        "changed_pages_individually_reviewed": [
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87
+        ],
+        "pixel_identical_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79
+        ],
+        "visible_changed_pages": [
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87
+        ],
+        "repair_passes": 0
+      },
+      "sources": [
+        {
+          "key": "openai",
+          "label": "OpenAI · sep. 2026",
+          "url": "https://openai.com/index/navier-stokes-solution/"
+        },
+        {
+          "key": "buckmaster",
+          "label": "Buckmaster · declaración",
+          "url": "https://cims.nyu.edu/~tristanb/statement.pdf"
+        },
+        {
+          "key": "clay",
+          "label": "Clay · sep. 2026",
+          "url": "https://www.claymath.org/news/navier-stokes-announcement/"
+        },
+        {
+          "key": "hacking",
+          "label": "Anthropic · nov. 2025",
+          "url": "https://www.anthropic.com/research/emergent-misalignment-reward-hacking"
+        },
+        {
+          "key": "tampering",
+          "label": "Reward tampering · 2024",
+          "url": "https://www.anthropic.com/research/reward-tampering"
+        },
+        {
+          "key": "cyber",
+          "label": "Anthropic · informe, nov. 2025",
+          "url": "https://www.anthropic.com/news/disrupting-AI-espionage"
+        },
+        {
+          "key": "plural",
+          "label": "Poddar et al. · 2024",
+          "url": "https://arxiv.org/abs/2408.10075"
+        }
+      ],
+      "pdf": {
+        "path": "clase1/Clase_1_2026.pdf",
+        "bytes": 2480001,
+        "sha256": "48ae3282c1edb2b8739004fe319ada4bb41951bd88991cc2ea7913446fa223b4"
+      },
+      "limits": [
+        "No ensayo oral con Juan; tiempos propuestos para ensayo.",
+        "No evaluación propia de la prueba matemática ni adjudicación de autoría.",
+        "Clase 2 y protocolo definitivo del TP siguen pendientes."
+      ],
+      "build": {
+        "native_exemplar": "g39cfa96d3e5_0_0",
+        "method": "Duplicar seis veces el ejemplar de texto, reemplazar título/cuerpo, agregar preguntas y fuentes nativas, notas docentes, retirar seis páginas antiguas y ordenar.",
+        "page_size_pt": [
+          720,
+          405
+        ],
+        "theme": "Tropic",
+        "body_font": "Open Sans 18 pt",
+        "sources_font": "Open Sans 12 pt"
+      },
+      "report_file_id": "1ecg4rtYlD8Wta6O4DYi2qwVHivAKdud-"
     }
   ],
   "ethics_material_sync": {
@@ -1104,5 +1337,84 @@
       }
     ],
     "notes": "Edición en el mismo ID para archivos existentes; guía de ética y registro nuevos. Verificación de tamaños y carpetas por lectura de metadatos."
+  },
+  "case_revision_sync": {
+    "date": "2026-10-18",
+    "revision": "yZZMggDpmoiFuQ",
+    "files": [
+      {
+        "path": "01_PLAN_CURSO.md",
+        "id": "1QsR3Ll_l2CqA08JRdZjnjaaPhafFbBJ4",
+        "bytes": 5881,
+        "sha256": "c2ab1de2aa5f10af55fdeedf7804fad9492b121fc311dffd32adcbe3ab20bb4d",
+        "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx",
+        "metadata_readback": true
+      },
+      {
+        "path": "CAMBIOS_2026.md",
+        "id": "193RpxINlxNa0U_0IghMG-Yj7E0OLzIXG",
+        "bytes": 3754,
+        "sha256": "e30b3211b13ce6df5a2b1b5cdc63178e4fd66df6f7761fdfcb4ef8a8c771e524",
+        "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx",
+        "metadata_readback": true
+      },
+      {
+        "path": "DRIVE_2026.md",
+        "id": "1Qf7y3u1zB6lcFYQosE1G8debNIEr_Y_B",
+        "bytes": 4726,
+        "sha256": "564c8a17003b4d3b2c3375cb39c7f1fa9fb497a80241aeb27f1ed33bfc05485d",
+        "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx",
+        "metadata_readback": true
+      },
+      {
+        "path": "clase1/ETICA_RL.md",
+        "id": "14Wcis0iHV_Ph5Ta7WSvpGVxLcBks6Lwb",
+        "bytes": 12080,
+        "sha256": "84d0c618a976acc24085e7b7b0e51a31495164a148b726003695e36357cb89a0",
+        "parent_id": "1Z9ZG4FYNqVAFw4qKA0xbsx1u0dsrW8PL",
+        "metadata_readback": true
+      },
+      {
+        "path": "clase1/GUIA_PRESENTACION.md",
+        "id": "14ebJdlJ56o-MQ-Flfi8fwvsd-_Kj0d5o",
+        "bytes": 5376,
+        "sha256": "e41d49e39e34bac92642dcba62bcf26920219e5d03fc9e8aeb4b257e7362edca",
+        "parent_id": "1Z9ZG4FYNqVAFw4qKA0xbsx1u0dsrW8PL",
+        "metadata_readback": true
+      },
+      {
+        "path": "docentes/SLIDES_2026.md",
+        "id": "1kQy5EG-g3CKL2AM88DYCH1Cp6pl78cmX",
+        "bytes": 5494,
+        "sha256": "6a253026cda4722ea1776fab5d7eaf192a9adba7a9ea3887a7729d931f97a729",
+        "parent_id": "1NpY51jy-sQcFfzG3RytUQTSKCtmdsE0s",
+        "metadata_readback": true
+      },
+      {
+        "path": "clase1/Clase_1_2026.pdf",
+        "id": "1uROK_K6MgHyJgrXGASTRAXHtFMFaEUnP",
+        "bytes": 2481056,
+        "sha256": "f3505a7588b6ee298d3510544dc8b64c1d93b2adf38a0b4f0d9d1302e14a0709",
+        "parent_id": "1Z9ZG4FYNqVAFw4qKA0xbsx1u0dsrW8PL",
+        "metadata_readback": true
+      },
+      {
+        "path": "validacion/clase1_etica_revision.json",
+        "id": "1ecg4rtYlD8Wta6O4DYi2qwVHivAKdud-",
+        "bytes": 8231,
+        "sha256": "3cabf22b133b1c6c9e57e22e4c44c5293f2c0f61b75fd6b592bd6a2a933cbdb9",
+        "parent_id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz",
+        "metadata_readback": true
+      },
+      {
+        "path": "validacion/RESULTADOS.md",
+        "id": "1H_gEyBHCG3C8rnqOfytnYCrsTioeMfo2",
+        "bytes": 13404,
+        "sha256": "3d4a1f173d56708ae0da64491a939e45d83826aa62a76be9193de9b76fcec638",
+        "parent_id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz",
+        "metadata_readback": true
+      }
+    ],
+    "notes": "Archivos reemplazados en el mismo ID; tamaños y carpetas verificados por lectura de metadatos."
   }
 }

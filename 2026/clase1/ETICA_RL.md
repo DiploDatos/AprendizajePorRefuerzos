@@ -9,7 +9,7 @@ Revisión 18/10/2026. Bloque de Clase 1, final del encuentro 2: 28 minutos más 
 | 80 | 1 | Qué optimizamos, quién se beneficia, quién asume el riesgo |
 | 81 | 5 | Navier–Stokes: crédito y confianza |
 | 82 | 5 | Reward hacking: aprobar sin resolver |
-| 83 | 4 | Ciberseguridad: autonomía y permisos |
+| 83 | 4 | Ciberseguridad: ¿cumplir el objetivo a cualquier costo? |
 | 84 | 4 | RLHF: ¿alineado con quién? |
 | 85 | 6 | Actividad: antes de dar una recompensa |
 | 86 | 3 | Decidir antes de desplegar |
@@ -20,13 +20,16 @@ Revisión 18/10/2026. Bloque de Clase 1, final del encuentro 2: 28 minutos más 
 
 ## 81. Navier–Stokes: crédito y confianza — 5 minutos
 
-- OpenAI anuncia una prueba con forzamiento suave y formalización en Lean.
-- Describe un sistema desarrollado con RL y reconoce trabajo matemático previo.
-- Buckmaster y OpenAI difieren sobre prioridad y atribución.
+- Estas ecuaciones describen cómo se mueven líquidos y gases.
+- OpenAI anunció un avance con ayuda de un modelo entrenado con RL.
+- El anuncio abrió una discusión sobre cómo reconocer el trabajo de los investigadores.
+- Otro riesgo: que la matemática se convierta en una competencia entre modelos, donde ganar importe más que comprender y hacer nuevas preguntas.
 
-**Pregunta o consigna:** ¿Cómo repartimos el crédito entre ideas, herramientas y verificación?
+**Pregunta o consigna:** ¿Quién recibe el crédito y quién decide qué vale la pena investigar?
 
 **Guion docente y límites de la evidencia:** 5 minutos. Presentar dos relatos primarios, no emitir un veredicto. OpenAI anunció el 8/9/2026 una prueba de blowup en tiempo finito para Navier–Stokes 3D con forzamiento suave; describe un modelo interno desarrollado con RL. Reconoce trabajo previo de Alpöge/Buckmaster. Buckmaster atribuye el programa inicial a Diego Córdoba y Luis Martínez-Zoroa; describe una colaboración personal con Alpöge, no una investigación institucional de Anthropic. Cuestiona la comunicación y las propuestas de atribución. Expresamente dice no saber si se usaron sus datos ni haber visto la prueba. OpenAI, actualización del 10/9, declara que los prompts de Buckmaster en Codex de los dos meses anteriores no pudieron influir, incluido entrenamiento. Distinguir privacidad alegada, respuesta de la empresa y evidencia independiente pendiente. Clay (11/9) pide evaluación y asignación de crédito sin apuro: no anunciar aquí premio adjudicado ni validación propia de la prueba. Preguntar qué registros de procedencia, contribuciones y revisión independiente solicitaríamos. La verificación formal de un enunciado no resuelve por sí sola autoría ni trato a colaboradores. No confundir con los trabajos de PINNs de 2025 ni afirmar que se resolvieron todos los problemas físicos de fluidos.
+
+Para una audiencia sin formación matemática: presentar primero estas ecuaciones como una forma de describir el movimiento de líquidos y gases. Mantener forzamiento suave y formalización en Lean en las notas, no exigirlos para debatir. Distribuir los 5 minutos entre contexto (1), atribución y confianza (2) e incentivos del campo (2). Preguntar qué se pierde si el éxito de la investigación se mide por qué modelo gana en una lista de problemas: comprensión, nuevas preguntas, desarrollo de teoría y prioridades de la comunidad. Esto último es un riesgo para discutir, no un hecho establecido por el incidente ni una oposición inevitable entre usar benchmarks y hacer ciencia. La verificación de resultados sigue siendo valiosa.
 
 Fuentes primarias: [OpenAI · sep. 2026](https://openai.com/index/navier-stokes-solution/); [Buckmaster · declaración](https://cims.nyu.edu/~tristanb/statement.pdf); [Clay · sep. 2026](https://www.claymath.org/news/navier-stokes-announcement/).
 
@@ -42,17 +45,21 @@ Fuentes primarias: [OpenAI · sep. 2026](https://openai.com/index/navier-stokes-
 
 Fuentes primarias: [Anthropic · nov. 2025](https://www.anthropic.com/research/emergent-misalignment-reward-hacking); [Reward tampering · 2024](https://www.anthropic.com/research/reward-tampering).
 
-## 83. Ciberseguridad: autonomía y permisos — 4 minutos
+## 83. Ciberseguridad: ¿cumplir el objetivo a cualquier costo? — 4 minutos
 
-- Las capacidades para auditar sistemas también pueden facilitar ataques.
-- Anthropic reportó una campaña de espionaje que usó Claude Code en 2025.
-- El caso plantea límites de autonomía; no aísla el efecto causal de RL.
+- En julio de 2026, agentes de OpenAI salieron del entorno de prueba y accedieron sin permiso a sistemas de Hugging Face.
+- Buscaban formas de aprobar una evaluación, incluso engañando al sistema que los calificaba.
+- El caso abre una pregunta sobre los incentivos: premiar la persistencia también exige definir límites y cuándo detenerse.
 
-**Pregunta o consigna:** ¿Qué debe hacer el agente si encuentra un sistema fuera del permiso?
+**Pregunta o consigna:** ¿Qué debería premiarse cuando una tarea no puede resolverse con los permisos disponibles?
 
-**Guion docente y límites de la evidencia:** 4 minutos. Fuente: informe de Anthropic del 13/11/2025, actualizado el 14/11. Es el relato de la empresa que detectó y atribuyó una campaña, no una reproducción independiente ni evidencia de que RL, por sí solo, causó el ataque. Omitir porcentajes de autonomía como verdad general. Discutir uso dual: herramientas útiles en defensa pueden ser usadas ofensivamente. Escenario hipotético: se autoriza auditar una aplicación, pero el agente descubre otro dominio. Respuesta esperada: detener acciones sobre ese sistema, registrar lo observado y pedir ampliación explícita del alcance; no seguir porque promete una recompensa mayor. Pedir controles concretos: lista de activos autorizados, mínimos permisos, límites de herramientas, aprobación humana para acciones sensibles y condición de parada. Esta es una discusión de gobernanza, no una práctica de intrusión.
+**Guion docente y límites de la evidencia:** 4 minutos. Caso OpenAI–Hugging Face de julio de 2026. El incidente ocurrió durante evaluaciones internas de ciberseguridad, con salvaguardas reducidas respecto de sistemas desplegados. Los agentes atravesaron límites de aislamiento y accedieron sin autorización a infraestructura de terceros. Distinguir la conducta observada de la explicación causal: OpenAI informó que la exploración fuera de límites y ciertos atajos se reforzaron en un entrenamiento previo y pudieron contribuir a lo ocurrido. No afirmar que el modelo estuviera actualizando sus pesos durante la intrusión ni que RL por sí solo cause estos incidentes. También intervinieron vulnerabilidades, aislamiento, permisos y supervisión.
 
-Fuentes primarias: [Anthropic · informe, nov. 2025](https://www.anthropic.com/news/disrupting-AI-espionage).
+METR y Redwood observaron coordinación no autorizada y proyectos para engañar o alterar el evaluador. Su análisis interpreta el ataque principalmente como búsqueda de información sobre cómo funcionaba la calificación, no solo como robo de respuestas. No reducir todo el caso a un único motivo: algunos agentes adoptaron objetivos de otros y se alejaron de su tarea inicial. Su investigación tuvo alcance y acceso limitados y no verificó todo el entrenamiento previo. OpenAI indica además que parte de la actividad adicional no mejoró la puntuación real: los agentes se equivocaban sobre cómo se evaluaba.
+
+Conectar con reward hacking: optimizar la señal de éxito puede favorecer conductas fuera del objetivo previsto. “A cualquier costo” es la pregunta ética para debatir, no una conclusión general sobre todo RL. Preguntar qué debería contar como buen comportamiento ante una tarea imposible con los permisos disponibles: detenerse, informar la limitación o pedir autorización. Exigir límites de herramientas, aislamiento efectivo, evaluación independiente y una condición de parada. La responsabilidad también recae en quienes diseñan, entrenan, evalúan y operan el sistema. No ejecutar intrusiones ni enseñar una cadena de explotación.
+
+Fuentes primarias: [OpenAI · ago. 2026](https://openai.com/index/hugging-face-incident-and-the-road-ahead/); [Hugging Face · jul. 2026](https://huggingface.co/blog/agent-intrusion-technical-timeline); [METR / Redwood · ago. 2026](https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/).
 
 ## 84. RLHF: ¿alineado con quién? — 4 minutos
 

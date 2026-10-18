@@ -49,6 +49,6 @@ El primer encuentro usa [dos slides introductorias](clase1/SLIDES_INTRO_LLM.md),
 
 ## Ética renovada y publicación del TP
 
-El cierre del encuentro 2 usa las slides 80–86 de Clase 1: Navier–Stokes (crédito, confianza y verificación), reward hacking, ciberseguridad y pluralidad de preferencias. La [guía docente](clase1/ETICA_RL.md) distingue fuentes, declaraciones e incertidumbre y propone una votación A/B de seis minutos. El bloque vuelve sobre el laboratorio de Q-learning y prepara la discusión de recompensas del encuentro 3.
+El cierre del encuentro 2 usa las slides 80–86 de Clase 1: Navier–Stokes (crédito, confianza y prioridades de investigación), reward hacking, el incidente OpenAI–Hugging Face de 2026 y pluralidad de preferencias. La [guía docente](clase1/ETICA_RL.md) distingue fuentes, declaraciones e incertidumbre y propone una votación A/B de seis minutos. El bloque vuelve sobre el laboratorio de Q-learning y prepara la discusión de recompensas del encuentro 3.
 
 El índice y los archivos del TP se conservan para preparación docente. Seleccionar el material estudiantil de cada encuentro: la presentación y publicación de la consigna del único TP corresponden al encuentro 4. Esta decisión no modifica permisos de Drive ni elimina los archivos de trabajo.

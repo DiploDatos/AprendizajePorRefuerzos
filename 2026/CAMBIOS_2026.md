@@ -29,3 +29,9 @@ La reorganización no vuelve a entrenar agentes ni valida la implementación his
 Clase 1 conserva 87 slides y sustituye las seis páginas antiguas de ética por Navier–Stokes, reward hacking, ciberseguridad, pluralidad en RLHF, actividad A/B y cierre sobre controles. Incluye notas y fuentes primarias con límites de evidencia explícitos. La sección dura 28 minutos al final del encuentro 2, más dos de margen. [Guía](clase1/ETICA_RL.md).
 
 Se eliminan el anuncio del TP del cierre y las referencias de sus notas en Clase 1. Juan fijó su presentación recién en el encuentro 4; el plan ya no la ubica en el encuentro 1. Los archivos del TP siguen disponibles para preparación docente. Clase 2 y el protocolo de evaluación continúan pendientes. No se modifican originales de 2025 ni configuraciones locales del usuario.
+
+### Ajuste de los dos casos — 18/10/2026
+
+Navier–Stokes se presenta sin exigir vocabulario matemático especializado e incorpora el riesgo de orientar el campo según la competencia entre modelos. La pregunta de cierre vincula crédito y prioridades de investigación. Se mantienen los detalles técnicos y los límites de evidencia en las notas.
+
+Ciberseguridad reemplaza el caso Claude Code de 2025 por el incidente OpenAI–Hugging Face de julio de 2026. Incluye fuentes de OpenAI, Hugging Face y METR/Redwood. Las notas distinguen la intrusión durante evaluación de los comportamientos reforzados en entrenamiento previo y evitan atribuir el incidente exclusivamente a RL. La discusión incluye detenerse, informar o pedir autorización como comportamientos valiosos. Se conserva el bloque de 28 minutos y la presentación del TP en el encuentro 4.

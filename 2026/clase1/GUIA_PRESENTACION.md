@@ -37,7 +37,7 @@ Los tiempos siguientes son una propuesta de ensayo. Se verificó el recorrido l�
 
 Slides 80–86: apertura (1 min), Navier–Stokes (5), reward hacking (5), ciberseguridad (4), pluralismo en RLHF (4), actividad A/B (6) y cierre (3). Reservar dos minutos adicionales de margen. [Contenido, fuentes y guion completo](ETICA_RL.md).
 
-La actividad contrasta dos explicaciones correctas de una política; cada pareja justifica su preferencia según el público y propone registrar el desacuerdo. No agrega entrega ni requiere IA. En los casos reales se distinguen resultados de experimentos, relatos de empresas y asuntos no comprobados.
+La actividad contrasta dos explicaciones correctas de una política; cada pareja justifica su preferencia según el público y propone registrar el desacuerdo. No agrega entrega ni requiere IA. En los casos reales se distinguen resultados de experimentos, relatos de empresas y asuntos no comprobados. Navier–Stokes usa lenguaje accesible y pregunta también por qué vale la pena investigar. Ciberseguridad usa el incidente OpenAI–Hugging Face de 2026; las notas separan evaluación, entrenamiento previo y responsabilidad de los operadores.
 
 ## Verificación realizada
 
