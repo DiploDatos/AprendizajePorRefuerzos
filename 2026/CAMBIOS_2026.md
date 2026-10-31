@@ -18,7 +18,7 @@ Los datos de recomendaciones se mantienen en una sola ubicación, dentro del arc
 
 ## Estado de las presentaciones
 
-Se actualizaron los guiones locales y la correspondencia con IDs de las slides originales. Se crearon [copias editables 2026 en Drive](DRIVE_2026.md); Clase 1 ya fue editada; Clase 2 conserva el contenido anterior. Los originales y los PDFs históricos siguen sin editar. Las siguientes ediciones se harán sobre esas copias; los IDs y el detalle están en [SLIDES_2026.md](docentes/SLIDES_2026.md).
+Se actualizaron los guiones locales y la correspondencia con IDs de las slides originales. Se crearon [copias editables 2026 en Drive](DRIVE_2026.md); Clase 1 ya fue editada; Clase 2 se actualizó el 31/10 con el recorrido hacia GRPO. Los originales y los PDFs históricos siguen sin editar. Las siguientes ediciones se harán sobre esas copias; los IDs y el detalle están en [SLIDES_2026.md](docentes/SLIDES_2026.md).
 
 ## Alcance de validación
 
@@ -28,10 +28,16 @@ La reorganización no vuelve a entrenar agentes ni valida la implementación his
 
 Clase 1 conserva 87 slides y sustituye las seis páginas antiguas de ética por Navier–Stokes, reward hacking, ciberseguridad, pluralidad en RLHF, actividad A/B y cierre sobre controles. Incluye notas y fuentes primarias con límites de evidencia explícitos. La sección dura 28 minutos al final del encuentro 2, más dos de margen. [Guía](clase1/ETICA_RL.md).
 
-Se eliminan el anuncio del TP del cierre y las referencias de sus notas en Clase 1. Juan fijó su presentación recién en el encuentro 4; el plan ya no la ubica en el encuentro 1. Los archivos del TP siguen disponibles para preparación docente. Clase 2 y el protocolo de evaluación continúan pendientes. No se modifican originales de 2025 ni configuraciones locales del usuario.
+Se eliminan el anuncio del TP del cierre y las referencias de sus notas en Clase 1. Juan fijó su presentación recién en el encuentro 4; el plan ya no la ubica en el encuentro 1. Los archivos del TP siguen disponibles para preparación docente. El protocolo de evaluación sigue pendiente. Clase 2 se actualizó el 31/10, según el registro siguiente. No se modifican originales de 2025 ni configuraciones locales del usuario.
 
 ### Ajuste de los dos casos — 18/10/2026
 
 Navier–Stokes se presenta sin exigir vocabulario matemático especializado e incorpora el riesgo de orientar el campo según la competencia entre modelos. La pregunta de cierre vincula crédito y prioridades de investigación. Se mantienen los detalles técnicos y los límites de evidencia en las notas.
 
 Ciberseguridad reemplaza el caso Claude Code de 2025 por el incidente OpenAI–Hugging Face de julio de 2026. Incluye fuentes de OpenAI, Hugging Face y METR/Redwood. Las notas distinguen la intrusión durante evaluación de los comportamientos reforzados en entrenamiento previo y evitan atribuir el incidente exclusivamente a RL. La discusión incluye detenerse, informar o pedir autorización como comportamientos valiosos. Se conserva el bloque de 28 minutos y la presentación del TP en el encuentro 4.
+
+## Clase 2 — 31/10/2026
+
+Se aplica el camino hacia GRPO en el deck nativo 2026: 22 slides nuevas, tablas editables, ejemplos numéricos, notas y fuentes. El recorrido de encuentro 3 contiene 32 slides; 123 se omiten en presentación y se reservan a consulta/encuentro 4. Se reemplazan las diez slides antiguas de RLHF/DPO; el origen 2025 permanece archivado. Se corrigen las promesas de return deseado en DT y la descripción de replay de PPO. El TP queda sólo en el bloque final del encuentro 4. El PDF estudiantil incluye únicamente las 32 principales.
+
+La demo sigue siendo la GRU validada en CPU; no se atribuye ajuste de un LLM preentrenado ni rendimiento medido a la Orin. Juan informó que recuperó acceso a la placa; su ensayo es un siguiente paso. La duración de cuatro horas requiere ensayo oral.

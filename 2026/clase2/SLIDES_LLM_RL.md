@@ -1,139 +1,314 @@
-# Storyboard — Clase 2: camino hacia GRPO
+# Clase 2: contenido aplicado y notas docentes
 
-Contenido original listo para trasladar a una copia 2026 del deck. 22 diapositivas, con momentos de notebook y discusión. Es una propuesta en Markdown: las slides de Drive todavía no fueron editadas. [Lectura de orientación indicada por Juan](https://cameronrwolfe.substack.com/p/llm-rl); fundamentos contrastados con fuentes primarias enlazadas abajo.
+Revisión 31/10/2026. [Deck nativo actualizado](https://docs.google.com/presentation/d/19hKgrRzdaDW6sAlVUABjZJeOeElbK6Z1q1QkRfttv4w/edit). Las 22 páginas nuevas se integran en 32 principales para el encuentro 3. [Mapa y tiempos](GUIA_PRESENTACION.md). Fuente orientadora: [Wolfe](https://cameronrwolfe.substack.com/p/llm-rl); las referencias técnicas primarias están en las slides y sus notas.
 
-## Criterio de secuencia
+## 01 — ¿Cómo cambia una respuesta mediante RL? (slide 3)
 
-Seguir el [camino hacia GRPO](CAMINO_A_GRPO.md). Cada slide debe resolver una necesidad de la siguiente: actualizar probabilidades, bajar varianza, construir ventajas, reutilizar rollouts y comparar respuestas sin critic. PPO aporta el mecanismo de actualización; los grupos aportan las ventajas. GRPO es la llegada del bloque, y las variantes quedan después.
+Prompt: «¿Cómo empiezo con RL?»
 
-## 01 — ¿Cómo cambia una respuesta mediante RL?
+A: «Aprende todo primero.»
 
-En pantalla: un prompt, dos respuestas y tres preguntas: “¿Qué acciones tomó?”, “¿Quién decidió la recompensa?”, “¿Qué probabilidad cambia?”.
+B: «Probemos una acción y observemos el resultado.»
 
-Notas: volver al lago de la actividad Q-learning. La recompensa es una elección del diseñador; una curva creciente no responde por sí sola si el resultado es deseable. No abrir con una lista de modelos comerciales.
+¿Qué acciones tomó el modelo? ¿Quién decide la recompensa?
 
-## 02 — De valores tabulares a una política neuronal
+Notas: Apertura, 3 min. Recuperar FrozenLake: acción, recompensa y cambio de política. No hay una preferencia universal preasignada a A/B: pedir criterios antes de votar. La pregunta guía es cómo cambia la probabilidad de generar cada respuesta.
 
-En pantalla: Q-table → aproximación de Q (DQN); otra rama: red → distribución de acciones. Mostrar que ambas necesitan experiencia y evaluación.
+## 02 — De una tabla a una política neuronal (slide 12)
 
-Notas: dedicar a DQN solo el puente necesario. El resto del bloque seguirá la rama de gradientes de política. Preguntar cuál produce directamente una distribución.
+Una red puede aproximar valores o producir probabilidades.
 
-## 03 — Una respuesta es una trayectoria
+VALOR
 
-En pantalla: prompt $x$, prefijo $y_{<t}$, acción $y_t$, estado $(x,y_{<t})$, transición “anexar token”, finalización EOS/presupuesto.
+Estado → red → Q(s, a)
 
-Notas: pedir que identifiquen la transición “hola” → “hola puedo”. La transición de generación es determinista; la selección de token es estocástica. Con herramientas aparecen observaciones y transiciones externas.
+Elegir usando los valores
 
-## 04 — Dos abstracciones útiles
+POLÍTICA
 
-En pantalla: MDP de tokens frente a bandido contextual con respuesta completa como acción. La probabilidad de una respuesta es producto de probabilidades condicionales; su log-probabilidad es una suma.
+Estado → red → π(a | s)
 
-Notas: usar el bandido para explicar REINFORCE de secuencia y el MDP para máscaras, critic y crédito por token. No afirmar que todos los agentes son bandidos.
+Muestrear una acción
 
-## 05 — Señal de resultado y señal por paso
+Notas: Puente, 3 min. DQN aproxima Q; la política usa esos valores para elegir. En la otra rama la red parametriza directamente la distribución. Ambas requieren experiencia y evaluación. Continuamos por gradientes de política.
 
-En pantalla: recompensa al terminar frente a recompensa de proceso. Para resultado y gamma=1, todos los tokens reciben información del resultado final.
+## 03 — Una respuesta es una trayectoria (slide 13)
 
-Notas: un token aislado no “merece” necesariamente el score de la respuesta. Atribución de crédito es parte del problema. Preguntar dónde poner reward si se usa una herramienta que falla.
+Estado: prompt + tokens ya generados
 
-## 06 — Tres cantidades diferentes
+Acción: siguiente token
 
-En pantalla: reward model $r_\phi(x,y)$ puntúa; critic $V_\psi(s)$ predice retorno esperado; ventaja $A$ compara resultado con una expectativa/baseline.
+Transición: anexar ese token al prefijo
 
-Notas: el RM no es el critic. Un MLP puede ser RM en una tarea pequeña; no requiere otro LLM del mismo tamaño. [Preferencias humanas](https://arxiv.org/abs/1706.03741).
+Final: EOS o presupuesto de generación
 
-## 07 — Objetivo y referencia
+«¿Cómo empiezo?»  →  «hola»  →  «hola puedo»
 
-En pantalla: $J=\mathbb E[r]-\beta D_{KL}(\pi_\theta\Vert\pi_{ref})$. Referencia = checkpoint inicial; beta = presión por conservarlo.
+¿Qué observa la política antes de elegir el próximo token?
 
-Notas: beta no es una garantía de alineación. La demo mantiene referencia congelada. Mostrar un caso donde más recompensa produce menos diversidad.
+Notas: MDP, 7 min. x es el prompt, s_t=(x,y_<t), a_t=y_t. Transición determinista al concatenar; selección estocástica. EOS es una acción válida. Con herramientas hay observaciones externas: no son acciones del modelo.
 
-## 08 — REINFORCE: un gradiente legible
+## 04 — Dos formas de mirar la misma respuesta (slide 14)
 
-En pantalla: $\nabla J\approx\frac1N\sum_i(R_i-b_i)\nabla\log\pi_\theta(y_i|x_i)$. Aumentar probabilidad de respuestas con ventaja positiva; disminuir con negativa.
+MDP de tokens: una acción en cada paso.
 
-Notas: PyTorch minimiza, por eso loss negativa. Muestrear respuestas propias es parte del entrenamiento, no solo una evaluación. [REINFORCE para preferencias](https://arxiv.org/abs/2402.14740).
+Bandido contextual: la respuesta completa es una acción.
 
-## 09 — Baseline: bajar varianza sin mirar la propia acción
+La probabilidad de la respuesta se factoriza por token.
 
-En pantalla: comparar baseline de batches previos, critic del estado y leave-one-out. Señalar que media del grupo incluyendo la propia respuesta depende de esa muestra.
+log π(y | x) = Σₜ log π(yₜ | x, y₍<t₎)
 
-Notas: pedir baseline de [0,0,1,1] para la tercera respuesta. Distinguir independencia de acción de detener gradientes: `detach` por sí solo no resuelve la dependencia estadística.
+Notas: 7 min. pi(y|x)=producto_t pi(y_t|x,y_<t); log pi(y|x)=suma_t log pi(y_t|x,y_<t). El bandido ayuda con REINFORCE de secuencia; el MDP con critic, máscaras y asignación de crédito. No extender esta simplificación a cualquier agente con herramientas.
 
-## 10 — PPO: conservar datos mientras cambia la política
+## 05 — ¿Cuándo llega la recompensa? (slide 15)
 
-En pantalla: rollout con $\pi_{old}$ → guardar logprobs/ventajas → varias actualizaciones de $\pi_\theta$ → nuevo rollout. Ratio $\rho=\pi_\theta/\pi_{old}$.
+Resultado: un score al terminar la respuesta.
 
-Notas: critic y GAE sirven para estimar ventajas en el PPO actor-critic; aquí no implementamos ese entrenamiento. [PPO](https://arxiv.org/abs/1707.06347).
+Proceso: señales en pasos intermedios.
 
-## 11 — Clipping: cuatro casos, no una consigna
+Con reward final y γ = 1, todos los tokens reciben la señal del resultado.
 
-En pantalla: tabla ratio [1.5,0.5,1.5,0.5], ventaja [+1,+1,−1,−1], epsilon .2. Activación [sí,no,no,sí].
+Una respuesta falla al final: ¿qué parte debería cambiar?
 
-Notas: ejecutar la celda de gradientes. Objetivo mínimo entre versión libre y clipped. No todo ratio fuera del intervalo queda sin gradiente. Tampoco hay una cota estricta de KL.
+Notas: 5 min. El retorno final informa el gradiente de cada token, pero no prueba qué token fue responsable del resultado. Distinguir recompensa por paso de reward model aprendido. Preguntar dónde ubicar una señal cuando falla una herramienta.
 
-## 12 — Tres políticas con trabajos distintos
+## 06 — Reward model, critic y ventaja (slide 16)
 
-En pantalla: tabla actual = aprende; vieja = generó el rollout; referencia = checkpoint que ancla. Vieja cambia al siguiente rollout; referencia se conserva durante esta corrida.
+Son cantidades diferentes: puntuar no es predecir el retorno.
 
-Notas: en el primer rollout coinciden; después de actualizar divergen. Preguntar qué denominador corresponde al clipping y cuál a KL.
+| Cantidad | Qué hace |
+| --- | --- |
+| Reward model | Asigna un score a la respuesta |
+| Critic V(s) | Estima retorno esperado desde s |
+| Ventaja A | Compara resultado y baseline |
 
-## 13 — El origen de la recompensa es otro eje
+Notas: 5 min. RM r_phi(x,y) puntúa una respuesta. Critic V_psi(s) estima retorno esperado desde un estado y puede servir de baseline. Ventaja compara con baseline, aprendido o calculado. En nuestra demo RM es un MLP pequeño, no otro LLM. No entrenamos critic.
 
-En pantalla: personas → pares → RM (RLHF); verificador → score (RLVR); etiquetas simuladas → ensayo identificado. Debajo: REINFORCE / RLOO / PPO / GRPO pueden consumir distintas señales.
+## 07 — Optimizar sin alejarse demasiado (slide 17)
 
-Notas: “GRPO es RLHF sin reward model” no clasifica bien el experimento. Para DPO reservar slide 21: su objetivo se optimiza directamente sobre pares. [InstructGPT](https://arxiv.org/abs/2203.02155).
+La política aprende a obtener recompensa.
 
-## 14 — Etiquetar no es revelar una verdad universal
+La referencia conserva el checkpoint de partida.
 
-En pantalla: un par A/B sin preferencia preasignada; opciones A, B, empate, omitir. Criterio: útil, pertinente, respetuoso; registrar desacuerdos.
+β controla cuánto penalizamos alejarnos de ella.
 
-Notas: usar 24 pares sin nombres de estudiantes. Separar pares de entrenamiento del juicio de textos generados. Los seis pares de validación comparten frases/contextos: no son un test semántico fuerte.
+J(θ) = E[r(x, y)] − β KL(πθ || πref)
 
-## 15 — RLOO: comparar sin incluirme
+Notas: 4 min. Expectativa sobre prompts y respuestas de política actual. KL de distribuciones de respuestas condicionadas al prompt; en código usamos estimaciones por token/secuencia. Referencia congelada. Penalizar KL no garantiza corrección, seguridad o diversidad. En REINFORCE/RLOO la KL muestreada entra al retorno; GRPO usa un término diferenciable en la loss.
 
-En pantalla: $A_i=R_i-\frac{\sum_{j\ne i}R_j}{G-1}$, respuestas del mismo prompt. Ejemplo [0,0,1,1] → [−2/3,−2/3,+2/3,+2/3].
+## 08 — REINFORCE: cambiar probabilidades (slide 18)
 
-Notas: no mezcla recompensas de preguntas distintas. Hace falta G≥2. En el laboratorio una actualización on-policy; no entrenamos critic. [RLOO](https://arxiv.org/abs/2402.14740).
+Ventaja positiva → aumentar la probabilidad.
 
-## 16 — GRPO: una ventaja relativa al grupo
+Ventaja negativa → disminuir la probabilidad.
 
-En pantalla: $A_i=(r_i-\bar r)/(\mathrm{std}_{pop}(r)+\epsilon)$; grupo [0,0,1,1] → [−1,−1,+1,+1]. Sin critic aprendido.
+Muestrear respuestas propias forma parte del entrenamiento.
 
-Notas: eliminar critic intercambia memoria/complejidad por más muestras. No garantiza menor costo total. [DeepSeekMath](https://arxiv.org/abs/2402.03300).
+∇J ≈ (1/N) Σᵢ (Rᵢ − bᵢ) ∇ log πθ(yᵢ | xᵢ)
 
-## 17 — GRPO: qué objetivo ejecutamos
+REINFORCE / RLOO · Ahmadian et al.
 
-En pantalla: ventaja relativa + surrogate clipped por token + beta·k3; promedio por respuesta y luego por batch. Grupo de rewards idénticos → ventaja de tarea cero.
+Notas: 6 min. Estimador del término de retorno; la regularización se trata según la implementación. En PyTorch minimizamos la loss negativa. R_i es el retorno usado en esa ruta, b_i baseline. Explicar derivada de logprob sin derivar a través del muestreo discreto. Fuente: Ahmadian et al.; no generalizar superioridad empírica.
 
-Notas: formulation original simplificada con outcome reward, no DAPO/Dr. GRPO. KL puede seguir actuando cuando desaparece el término de tarea. Un default de biblioteca puede usar otra agregación; inspeccionarlo.
+Fuente/enlace: [REINFORCE / RLOO · Ahmadian et al.](https://arxiv.org/abs/2402.14740).
 
-## 18 — Los detalles del código cambian el experimento
+## 09 — Baseline: ¿mejor que qué? (slide 19)
 
-En pantalla: desplazar tokens causalmente; excluir prompt/PAD; incluir EOS; mantener viejas logprobs fijas; misma distribución para muestrear y puntuar.
+Un baseline reduce la varianza del gradiente.
 
-Notas: notebook demuestra coincidencia entre logprob de muestreo y teacher forcing. k1 y k3 son estimadores, no KL exacta medida sobre todas las trayectorias. No añadir temperatura/top-k al muestreo sin revisar cómo se evalúa la probabilidad usada en la loss.
+Puede usar batches previos o un critic del estado.
 
-## 19 — Laboratorio: misma base, distintos updates
+La media que incluye mi propia respuesta depende de esa muestra.
 
-En pantalla: SFT GRU (13.923 parámetros) → preferencias/RM → tres copias → REINFORCE/RLOO/GRPO. Tres contextos, vocabulario cerrado, CPU u Orin después de validar.
+¿Qué baseline usarías para la tercera respuesta de [0, 0, 1, 1]?
 
-Notas: abrir [notebook](llm_policy_gradients.ipynb). Cada método usa 1.440 respuestas de train; GRPO hace 180 updates y los otros 60. No presentar barras como ranking de superioridad. No es un LLM preentrenado.
+Notas: 15 min con actor-critic. Un baseline independiente de la acción no cambia el gradiente esperado de tarea bajo los supuestos usuales. detach evita gradientes, no dependencia estadística. Para [0,0,1,1], baseline leave-one-out de la tercera respuesta=1/3; ventaja=2/3. Desarrollar esta cuenta antes de GRPO.
 
-## 20 — Cambiar reward; mirar algo más que reward
+## 10 — PPO: reutilizar un rollout (slide 20)
 
-En pantalla: contrato de prefijo/longitud/EOS frente a recompensa aprendida. Medir ambos, KL, diversidad y preferencias ciegas.
+Generar respuestas con πold y guardar logprobabilidades.
 
-Notas: “claro vete” satisface contrato sin ser buena asistencia. El verificador enseña RLVR de formato, no razonamiento matemático. Preparar otra evaluación humana y revelar clave después; proxy creciente no la reemplaza.
+Mantener πold y las ventajas fijas durante los updates.
 
-## 21 — DPO y los detalles que investigamos después
+Actualizar πθ varias veces y luego generar otro rollout.
 
-En pantalla: DPO = objetivo directo sobre pares y referencia. GRPO original / DAPO / Dr. GRPO / GSPO = decisiones diferentes de agrupamiento, ratio y agregación.
+ρₜ = πθ(aₜ | sₜ) / πold(aₜ | sₜ)
 
-Notas: elegir solo una diferencia para discutir, por ejemplo media por respuesta versus por tokens. No sumar otro laboratorio ni prometer que una variante siempre gana. [DPO](https://arxiv.org/abs/2305.18290), [DAPO](https://arxiv.org/abs/2503.14476), [Dr. GRPO](https://arxiv.org/abs/2503.20783), [GSPO](https://arxiv.org/abs/2507.18071).
+PPO · Schulman et al.
 
-## 22 — Reconstruir GRPO y transferir lo aprendido
+Notas: 10 min. rho por token y estado del rollout. PPO actor-critic suele usar critic/GAE. Aquí solo se calcula el surrogate y su gradiente: no se entrena PPO. Distinguir reutilización limitada de un rollout de replay arbitrario off-policy.
 
-En pantalla: preguntas de salida: “¿Qué señal y optimizador usaste?”, “¿Qué hacen old y ref?”, “¿Qué pasa si el grupo recibe [1,1,1,1]?”, “¿Qué tokens excluirías en un agente con herramientas?”.
+Fuente/enlace: [PPO · Schulman et al.](https://arxiv.org/abs/1707.06347).
 
-Notas: aceptar consulta de IA, exigir evidencia y explicación individual. Conectar TP1 (proxy) y TP2 (evaluación fuera de datos). Extensión en Orin con transformer pequeño pendiente de implementación y medición; la placa está desconectada y el ensayo queda para después.
+## 11 — Clipping: predecir cuatro casos (slide 21)
+
+ε = 0,2. ¿Cuándo queda activo el tramo plano?
+
+| Ratio ρ | Ventaja A | ¿Tramo plano? |
+| --- | --- | --- |
+| 1,5 | +1 | Predecir |
+| 0,5 | +1 | Predecir |
+| 1,5 | −1 | Predecir |
+| 0,5 | −1 | Predecir |
+
+PPO · objetivo clipped
+
+Notas: 5 min, calcular antes de revelar. Se maximiza min(rho*A, clip(rho,.8,1.2)*A). Respuestas por fila: 1.2, .5, -1.5, -.8. Tramo plano sí/no/no/sí. Fuera del intervalo no siempre desaparece el gradiente. Clipping no es cota estricta de KL. Ejecutar celda correspondiente.
+
+Fuente/enlace: [PPO · objetivo clipped](https://arxiv.org/abs/1707.06347).
+
+## 12 — Tres políticas, tres funciones (slide 22)
+
+¿Qué denominador usa el ratio? ¿Qué política aparece en KL?
+
+| Política | Función | Cuándo cambia |
+| --- | --- | --- |
+| Actual πθ | Se optimiza | En cada update |
+| Vieja πold | Generó el rollout | Al renovar rollout |
+| Referencia πref | Ancla al punto inicial | Fija en esta corrida |
+
+Notas: 5 min. Al principio pueden coincidir; después de actualizar divergen. Vieja se renueva por rollout y queda fija durante sus updates. Referencia queda fija durante toda esta corrida. Pausa de 15 min al terminar esta slide.
+
+## 13 — La recompensa y el algoritmo son dos ejes (slide 23)
+
+REINFORCE, RLOO, PPO y GRPO pueden usar distintas señales.
+
+| Señal | Cómo obtenemos el score |
+| --- | --- |
+| Preferencias humanas | Personas → pares → reward model |
+| Verificador | Criterio ejecutable → score |
+| Etiquetas simuladas | Reglas → pares → RM de ensayo |
+
+¿Qué falta en la frase «GRPO es RLHF sin reward model»?
+
+Notas: 10 min. RLHF: personas generan comparaciones, se aprende RM y luego RL. RLVR: verificador ejecutable. Simulado: reglas etiquetan pares para probar pipeline; no describirlo como preferencias humanas. GRPO no define origen de reward. DPO se verá luego como objetivo directo sobre pares.
+
+## 14 — Etiquetar preferencias exige un criterio (slide 24)
+
+Prompt: «¿Qué significa explorar en RL?»
+
+A: «Probar acciones para obtener información.»
+
+B: «Elegir a veces algo distinto de lo que hoy parece mejor.»
+
+Opciones: A, B, empate u omitir.
+
+¿Para quién resulta más útil cada respuesta?
+
+Notas: 10 min. Ambas respuestas pueden ser razonables. Registrar criterio y desacuerdos; no asignar una preferencia universal. Preparar 24 pares sin nombres, separar pares para RM del juicio ciego de nuevas generaciones. Los seis pares reservados en demo comparten contextos/frases y no son test semántico fuerte.
+
+## 15 — RLOO: comparar sin incluirme (slide 25)
+
+Generar G respuestas al mismo prompt, con G ≥ 2.
+
+Comparar cada recompensa con la media de las otras.
+
+[0, 0, 1, 1] → [−2/3, −2/3, +2/3, +2/3]
+
+Aᵢ = Rᵢ − promedio de las otras recompensas
+
+RLOO · Ahmadian et al.
+
+Notas: 10 min. Baseline leave-one-out excluye muestra propia. No mezclar preguntas distintas. En laboratorio se hace un update on-policy por batch, sin critic. Para la ruta regularizada usar el retorno correspondiente. Distinguir este estimador de normalizar por std en GRPO.
+
+Fuente/enlace: [RLOO · Ahmadian et al.](https://arxiv.org/abs/2402.14740).
+
+## 16 — GRPO: una ventaja relativa al grupo (slide 26)
+
+Comparar respuestas al mismo prompt.
+
+Centrar y normalizar recompensas, sin critic aprendido.
+
+[0, 0, 1, 1] → [−1, −1, +1, +1]
+
+Aᵢ = (rᵢ − media(r)) / (std(r) + ε)
+
+GRPO · DeepSeekMath
+
+Notas: 10 min. Usamos std poblacional en demo, epsilon numérico. La ventaja de resultado es la misma para todos los tokens de esa respuesta. Eliminar critic requiere generar grupos; no vuelve gratuito el entrenamiento. GRPO combina estas ventajas con el mecanismo de actualización siguiente.
+
+Fuente/enlace: [GRPO · DeepSeekMath](https://arxiv.org/abs/2402.03300).
+
+## 17 — GRPO: juntar las piezas (slide 27)
+
+Ventaja de grupo + ratio por token + clipping + KL.
+
+Promediar tokens de cada respuesta y luego el batch.
+
+Rewards iguales → ventaja de tarea cero; KL aún puede actuar.
+
+max  mediaᵢ mediaₜ [min(ρᵢₜ Aᵢ, clip(ρᵢₜ) Aᵢ) − β k3ᵢₜ]
+
+GRPO · objetivo simplificado de DeepSeekMath
+
+Notas: 10 min. Objetivo original simplificado para recompensa final; no DAPO ni Dr. GRPO. Loss implementada: media_i media_t[-min(rho_it*A_i,clip(rho_it,1-eps,1+eps)*A_i)+beta*k3_it]. Tokens válidos incluyen EOS y excluyen prompt/PAD. k3=exp(logpref-logp)-(logpref-logp)-1; muestreo viejo no hace exacta la KL actual. Ratio con old; k3 con ref. GRPO loss diferenciable, old/ref congeladas.
+
+Fuente/enlace: [GRPO · objetivo simplificado de DeepSeekMath](https://arxiv.org/abs/2402.03300).
+
+## 18 — Los detalles del código también enseñan (slide 28)
+
+Desplazar entradas y targets un token.
+
+Excluir prompt y PAD; incluir EOS.
+
+Guardar logprobs viejas y congelar la referencia.
+
+Muestrear y puntuar con la misma distribución.
+
+¿Los tokens que devuelve una herramienta son acciones de la política?
+
+Notas: Inicio del laboratorio, 5 min dentro de los 45 min totales. Mostrar máscaras y teacher forcing. k1 puede dar negativo en muestra finita; k3 es no negativo por acción. No agregar top-k o temperatura sin adaptar evaluación de probabilidades. Ver asserts del notebook; gradientes solo por política actual.
+
+## 19 — Laboratorio: misma base, distintos updates (slide 29)
+
+GRU de 13.923 parámetros; vocabulario cerrado.
+
+Ejercicio validado en CPU. Ensayo en Orin pendiente.
+
+Preferencias simuladas por defecto; humanas como alternativa.
+
+SFT + RM  →  Tres copias  →  REINFORCE / RLOO / GRPO
+
+Abrir notebook de gradientes de política
+
+Notas: 40 min restantes del laboratorio. SFT y RM preparados. Abrir notebook, no entrenar ambos laboratorios completos. El generador es GRU, no transformer preentrenado. REINFORCE/RLOO/GRPO usan 1440 respuestas de train; GRPO 180 updates, otros 60. No ranking de superioridad. Jetson recuperó acceso el 31/10; falta validar rendimiento. Notebook alternativo mini_rlhf profundiza RM/etiquetado.
+
+Fuente/enlace: [Abrir notebook de gradientes de política](https://drive.google.com/file/d/1mDcF4XrwXj0jOBde3d2nWq-z_6kbAOnx/view).
+
+## 20 — Más recompensa: ¿mejores respuestas? (slide 30)
+
+Contrato: prefijo, longitud, EOS y no repetición.
+
+«claro vete» puede cumplirlo sin ser buena asistencia.
+
+Comparar reward, KL, diversidad y juicio humano ciego.
+
+¿Qué contraejemplo buscarías aunque la curva de reward suba?
+
+Notas: 15 min. Evaluar antes/después con nuevos textos, criterio explícito, ocultar identidad de política y revelar al final. Comparar contrato y RM aun si optimizamos solo uno. No llamar RLVR de razonamiento a verificación de formato. Para comparar algoritmos igualar presupuestos, ajustar en validación y repetir semillas.
+
+## 21 — DPO y variantes: qué cambia (slide 31)
+
+DPO optimiza directamente pares y referencia.
+
+No entrena explícitamente un RM seguido de RL on-policy.
+
+En variantes de GRPO cambian normalización, ratios o agregación.
+
+DPO · Rafailov et al.
+
+Notas: 10 min. DPO fuente Rafailov et al. Para variantes elegir una pregunta, sin otro laboratorio. DAPO https://arxiv.org/abs/2503.14476; Dr. GRPO https://arxiv.org/abs/2503.20783; GSPO https://arxiv.org/abs/2507.18071. Lecturas optativas ya documentadas. No presentar una variante como universalmente superior ni usar defaults sin inspección.
+
+Fuente/enlace: [DPO · Rafailov et al.](https://arxiv.org/abs/2305.18290).
+
+## 22 — Reconstruir GRPO y llevarlo a agentes (slide 32)
+
+¿De dónde vino la recompensa?
+
+¿Qué hacen la política vieja y la referencia?
+
+Si el grupo recibe [1, 1, 1, 1], ¿qué puede actualizarse?
+
+¿Qué tokens excluirías al usar herramientas?
+
+Notas: Cierre, 10 min. Respuesta: ventaja de tarea cero, KL puede actualizar si difiere de referencia. IA permitida; pedir evidencia del notebook y explicación individual. No anunciar TP: se presenta en encuentro 4. Puente a agentes: observaciones externas, permisos y condición de parada. Extensión transformer en Orin pendiente, sin promesa de tiempos. Lectura orientadora: https://cameronrwolfe.substack.com/p/llm-rl.

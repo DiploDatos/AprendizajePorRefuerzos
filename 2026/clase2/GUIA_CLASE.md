@@ -1,6 +1,6 @@
 # Clase 2 — de gradientes de política a GRPO
 
-Revisión del 12/10/2026 según la orientación indicada por Juan. “Clase 2” es el bloque de diapositivas de deep RL. Juan confirmó su desarrollo en el encuentro 3, segundo fin de semana. La distribución detallada de las cuatro horas sigue como propuesta.
+Revisión del 31/10/2026 según la orientación indicada por Juan. “Clase 2” es el bloque de diapositivas de deep RL. Juan confirmó su desarrollo en el encuentro 3, segundo fin de semana. La distribución detallada de las cuatro horas sigue como propuesta.
 
 La [guía de Cameron R. Wolfe](https://cameronrwolfe.substack.com/p/llm-rl) sirve como hilo de lectura: fundamentos de RL para generación, gradientes de política, algoritmos y problemas de implementación. Juan aclaró que el propósito es mejorar el camino hacia GRPO. Los temas se presentan como respuestas a problemas sucesivos y convergen en ese algoritmo. Las ecuaciones y decisiones de implementación se contrastan con los artículos originales; las variantes recientes quedan como lecturas optativas.
 
@@ -38,10 +38,10 @@ Las preferencias pueden etiquetarse en una actividad previa y el SFT/RM preparar
 
 ## Material para proyectar
 
-- [Storyboard listo para trasladar a slides](SLIDES_LLM_RL.md): contenido y notas docentes de 22 diapositivas; correspondencia con el deck histórico en [plan de edición](../docentes/SLIDES_2026.md).
+- [Slides aplicadas](SLIDES_LLM_RL.md): 22 nuevas dentro de un recorrido principal de 32; [guía de presentación y números actuales](GUIA_PRESENTACION.md). El PDF del encuentro 3 excluye todo el apéndice y el TP.
 - [Notebook principal](llm_policy_gradients.ipynb): REINFORCE, RLOO y GRPO ejecutables; ejemplo numérico de PPO, sin entrenamiento PPO. Implementación propia en [llm_policy_gradients.py](llm_policy_gradients.py).
 - [Notebook de preferencias](mini_rlhf.ipynb) y [guía detallada de 65 minutos](MINI_RLHF_GUIA.md): alternativa si se decide profundizar exclusivamente en anotación, RM y REINFORCE. No sumar ambos laboratorios completos dentro del mismo encuentro.
-- [Preparación Orin](JETSON.md) y [extensión con LLM preentrenado](ORIN_LLM_PLAN.md). Equipo desconectado: validación remota aplazada a pedido de Juan. No es un prerrequisito para revisar/usar el material CPU.
+- [Preparación Orin](JETSON.md) y [extensión con LLM preentrenado](ORIN_LLM_PLAN.md). Acceso a la placa recuperado según Juan el 31/10; validación remota del entrenamiento todavía pendiente. No es un prerrequisito para revisar/usar el material CPU.
 
 ## Ideas que deben quedar claras
 

@@ -1,6 +1,6 @@
 # Cambios propuestos para las diapositivas
 
-Revisión 18/10/2026. Clase 1 editada y revisada (87 slides); plan de Clase 2 pendiente. Las [copias editables 2026 en Drive](../DRIVE_2026.md) ya están creadas. IDs verificados por outline nativo el 12/10/2026. Editar las copias 2026; actualizar el año dentro de las slides y los enlaces. No suponer que deck “Clase 2” es encuentro 2.
+Revisión 31/10/2026. Clase 1 editada (87 slides); Clase 2 actualizada (32 principales y 123 omitidas). Las [copias editables 2026 en Drive](../DRIVE_2026.md) ya están creadas. IDs verificados por outline nativo el 12/10/2026. Editar las copias 2026; actualizar el año dentro de las slides y los enlaces. No suponer que deck “Clase 2” es encuentro 2.
 
 ## Clase 1 — cambios aplicados
 
@@ -25,33 +25,23 @@ El bloque 80–86 reemplaza las seis slides anteriores de ética y conserva el d
 
 El TP se presenta recién en el encuentro 4. No se agrega su anuncio al primer fin de semana ni al encuentro 3. Los archivos se mantienen en el índice docente para preparación y se publican a estudiantes cuando corresponda.
 
-## Clase 2
+## Clase 2 — cambios aplicados el 31/10/2026
 
-| Slide / ID | Cambio | Motivo |
-|---|---|---|
-| 50 / `ge90cb544c9_0_20` | Mantener PPO; aclarar diferencias con REINFORCE docente | No atribuir PPO al notebook |
-| 53 / `g36fb9856750_1_83` | Presentar SFT → preferencias → RM → RL + KL | Define las etapas que se ejecutan |
-| 54 / `g1e842fd07c2_2_0` | Sustituir “RM: otro LLM” por “modelo que asigna score; puede compartir arquitectura o ser mucho más pequeño” | La demo usa MLP, válido para enseñar preferencias |
-| 55 / `g36fb9856750_1_76` | Insertar enlace a `llm_policy_gradients.ipynb`; ejecutar comparación REINFORCE/RLOO/GRPO | Convertir diagrama en experiencia observable |
-| 56 / `g3a0d1898e12_0_10` | Separar RLHF y RLVR según origen de recompensa | No todo refuerzo de razonamiento usa feedback humano |
-| 57–62 / `g385e773c5af_0_0` a `g36fb9856750_1_91` | DPO como comparación breve; objetivo directo, referencia y pares | Evitar otro bloque de implementación largo |
-| 70 / `g39ef4f1d585_0_6` | Cambiar “genera acciones que logran ese return” por “condiciona acciones en el return deseado; no garantiza alcanzarlo” | Distinguir deseo y resultado |
-| 71 / `g39ef4f1d585_0_12` | Añadir límites de extrapolar fuera de returns del dataset | Evitar prometer rendimiento fuera de distribución |
-| 112 / `gf9badb265c_0_401` | Renombrar como único TP: Decision Transformer, con evaluación revisada | El ranking de IDs actual no mide satisfacción |
+Se editaron las copias 2026 conservando el tema Tropic, placeholders y medios útiles. Las diez slides originales de RLHF/DPO se reemplazaron por 22 páginas nuevas. El origen 2025 sigue en el archivo. [Guía y mapa actual](../clase2/GUIA_PRESENTACION.md), [contenido y notas](../clase2/SLIDES_LLM_RL.md), [validación](../validacion/clase2_revision.json).
 
-### Nuevo hilo del bloque deep RL
+| Páginas actuales | Función |
+|---|---|
+| 1–14 | Apertura, puente de Q-learning a redes, DQN, dos aplicaciones y generación como trayectoria |
+| 15–19 | Recompensa, RM/critic/ventaja, objetivo/KL, REINFORCE y baseline |
+| 20–22 | PPO: rollout, clipping, política actual/vieja/referencia |
+| 23–27 | Fuente de recompensa, preferencias, RLOO y GRPO |
+| 28–30 | Código, notebook enlazado y evaluación ciega |
+| 31–32 | DPO/variantes como comparación breve y reconstrucción de GRPO |
+| 33–144 | Consulta histórica de algoritmos y aplicaciones; omitida |
+| 145–155 | Offline RL/Decision Transformer y único TP, encuentro 4; omitido |
 
-Juan pidió mejorar el camino hacia GRPO, usando la guía de RL para LLMs como referencia. Usar [storyboard de 22 slides](../clase2/SLIDES_LLM_RL.md) y [guion](../clase2/GUIA_CLASE.md): generación como MDP, objetivo y KL, REINFORCE/baseline, PPO, fuentes de recompensa, RLOO/GRPO, implementación y evaluación. Reemplazar la secuencia breve de RLHF por ese desarrollo, reduciendo aplicaciones para dar lugar a la práctica.
+Los IDs nuevos son `rl26_c2_01` a `rl26_c2_22`; el registro incluye su número actual. Las 32 principales están contiguas al inicio. En presentación normal se omite el resto. El PDF preparado contiene sólo esas 32; compartirlo con estudiantes, no el deck completo, antes del encuentro 4.
 
-1. Antes de PPO (slide 50), introducir MDP de tokens, ventaja, baseline y REINFORCE.
-2. En PPO, usar cuatro casos numéricos y distinguir actual/vieja/referencia. Notebook muestra loss; no entrena PPO.
-3. En slides 53–56, conservar preferencias/RM y separar fuente RLHF/RLVR de algoritmo.
-4. Añadir RLOO/GRPO antes del laboratorio; insertar enlace a `llm_policy_gradients.ipynb` en lugar de poner la demo REINFORCE como única práctica.
-5. Después del notebook, evaluar a ciegas y discutir diversidad, grupos sin señal y presupuestos.
-6. DPO y variantes quedan como comparación final/lecturas; DT mantiene su bloque aparte en el encuentro 4, donde recién se presenta el único TP.
+El notebook enseña REINFORCE/RLOO/GRPO sobre una GRU de 13.923 parámetros, con preferencias simuladas o etiquetas humanas explícitas; PPO se ilustra sin entrenarlo. Acceso a Orin recuperado según Juan, pero extensión con transformer y rendimiento todavía pendientes. Se corrigió el texto de DT que prometía alcanzar returns solicitados; no implica que el bloque completo del encuentro 4 ni su evaluador hayan sido revisados.
 
-Modelo ejecutado: GRU de 13.923 parámetros; no LLM preentrenado. La extensión Orin queda pendiente para cuando Juan conecte el equipo. Material nuevo ejecutado localmente, deck Drive sin editar.
-
-## Criterio de reducción
-
-La segunda presentación tiene 143 slides, con aplicaciones detalladas en apéndice. Para habilitar la práctica, mantener una aplicación de juegos, una de recomendación/control y el caso de preferencias. El resto queda como lectura. Preservar los enlaces a fuentes, revisando los que se usen en vivo durante el ensayo final.
+La consulta histórica conserva afirmaciones y fórmulas que pueden requerir revisión antes de volver a usarse en vivo. No se revalidaron todos sus enlaces ni se repararon todos los problemas previos de maquetación. El ensayo oral y el ajuste final del tiempo siguen pendientes.

@@ -9,4 +9,4 @@ Material de la materia optativa de la Diplomatura en Ciencias de Datos, Aprendiz
 - [Único trabajo práctico: Decision Transformer para recomendaciones](2026/tp/README.md), continuación del anterior TP2.
 - [Archivo de la edición 2025](archive/2025/EDICION.md) y [agentes históricos](archive/agents/).
 
-Los guiones de diapositivas 2026 son archivos Markdown para revisión docente. Los decks compartidos de 2025 y sus copias PDF archivadas conservan su contenido histórico. Las instrucciones de ejecución y la evidencia disponible están en el índice 2026; el ensayo en Orin Nano queda aplazado a pedido de Juan.
+Las copias editables 2026 de ambas clases ya están actualizadas. Clase 2 incluye 32 slides principales para el encuentro 3 y material omitido de consulta/encuentro 4; su PDF contiene sólo las 32 principales. Los decks de 2025 y sus copias PDF archivadas conservan su contenido histórico. Las instrucciones de ejecución y la evidencia están en el índice 2026. Juan recuperó acceso a la Orin Nano; todavía falta validar el entrenamiento en la placa.

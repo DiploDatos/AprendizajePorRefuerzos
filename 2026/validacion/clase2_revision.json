@@ -1,0 +1,255 @@
+{
+  "date": "2026-10-31",
+  "presentation_id": "19hKgrRzdaDW6sAlVUABjZJeOeElbK6Z1q1QkRfttv4w",
+  "url": null,
+  "source_revision": "JhtHjmSAjzL-OQ",
+  "revision": "JmHD9RRePWSzsw",
+  "source_slides": 143,
+  "final_slides": 155,
+  "main_slides": 32,
+  "reference_slides": 112,
+  "encounter4_slides": 11,
+  "new_slides": 22,
+  "replaced_slides": [
+    "g36fb9856750_1_83",
+    "g1e842fd07c2_2_0",
+    "g36fb9856750_1_76",
+    "g3a0d1898e12_0_10",
+    "g385e773c5af_0_0",
+    "g36fb9856750_1_108",
+    "g3a0d1898e12_0_17",
+    "g36fb9856750_1_114",
+    "g36fb9856750_1_70",
+    "g36fb9856750_1_91"
+  ],
+  "main_ids": [
+    "ge83ef4c23e_0_124",
+    "ge83ef4c23e_0_57",
+    "rl26_c2_01",
+    "ge83ef4c23e_0_62",
+    "geb89aa2ed5_0_15",
+    "geb89aa2ed5_0_20",
+    "gfd48c4675b_0_60",
+    "gf6ffd234b1_0_5",
+    "geb89aa2ed5_0_25",
+    "gf9badb265c_0_0",
+    "gf9badb265c_0_61",
+    "rl26_c2_02",
+    "rl26_c2_03",
+    "rl26_c2_04",
+    "rl26_c2_05",
+    "rl26_c2_06",
+    "rl26_c2_07",
+    "rl26_c2_08",
+    "rl26_c2_09",
+    "rl26_c2_10",
+    "rl26_c2_11",
+    "rl26_c2_12",
+    "rl26_c2_13",
+    "rl26_c2_14",
+    "rl26_c2_15",
+    "rl26_c2_16",
+    "rl26_c2_17",
+    "rl26_c2_18",
+    "rl26_c2_19",
+    "rl26_c2_20",
+    "rl26_c2_21",
+    "rl26_c2_22"
+  ],
+  "encounter4_range": [
+    145,
+    155
+  ],
+  "new_slide_map": [
+    {
+      "id": "rl26_c2_01",
+      "number": 3,
+      "title": "¿Cómo cambia una respuesta mediante RL?",
+      "role": "text",
+      "exemplar": "ge90cb544c9_0_20"
+    },
+    {
+      "id": "rl26_c2_02",
+      "number": 12,
+      "title": "De una tabla a una política neuronal",
+      "role": "compare",
+      "exemplar": "ge90cb544c9_0_20"
+    },
+    {
+      "id": "rl26_c2_03",
+      "number": 13,
+      "title": "Una respuesta es una trayectoria",
+      "role": "flow",
+      "exemplar": "ge90cb544c9_0_20"
+    },
+    {
+      "id": "rl26_c2_04",
+      "number": 14,
+      "title": "Dos formas de mirar la misma respuesta",
+      "role": "text",
+      "exemplar": "ge90cb544c9_0_20"
+    },
+    {
+      "id": "rl26_c2_05",
+      "number": 15,
+      "title": "¿Cuándo llega la recompensa?",
+      "role": "text",
+      "exemplar": "ge90cb544c9_0_20"
+    },
+    {
+      "id": "rl26_c2_06",
+      "number": 16,
+      "title": "Reward model, critic y ventaja",
+      "role": "table",
+      "exemplar": "ge90cb544c9_0_20"
+    },
+    {
+      "id": "rl26_c2_07",
+      "number": 17,
+      "title": "Optimizar sin alejarse demasiado",
+      "role": "text",
+      "exemplar": "ge90cb544c9_0_20"
+    },
+    {
+      "id": "rl26_c2_08",
+      "number": 18,
+      "title": "REINFORCE: cambiar probabilidades",
+      "role": "text",
+      "exemplar": "ge90cb544c9_0_20"
+    },
+    {
+      "id": "rl26_c2_09",
+      "number": 19,
+      "title": "Baseline: ¿mejor que qué?",
+      "role": "text",
+      "exemplar": "ge90cb544c9_0_20"
+    },
+    {
+      "id": "rl26_c2_10",
+      "number": 20,
+      "title": "PPO: reutilizar un rollout",
+      "role": "text",
+      "exemplar": "ge90cb544c9_0_20"
+    },
+    {
+      "id": "rl26_c2_11",
+      "number": 21,
+      "title": "Clipping: predecir cuatro casos",
+      "role": "table",
+      "exemplar": "ge90cb544c9_0_20"
+    },
+    {
+      "id": "rl26_c2_12",
+      "number": 22,
+      "title": "Tres políticas, tres funciones",
+      "role": "table",
+      "exemplar": "ge90cb544c9_0_20"
+    },
+    {
+      "id": "rl26_c2_13",
+      "number": 23,
+      "title": "La recompensa y el algoritmo son dos ejes",
+      "role": "table",
+      "exemplar": "ge90cb544c9_0_20"
+    },
+    {
+      "id": "rl26_c2_14",
+      "number": 24,
+      "title": "Etiquetar preferencias exige un criterio",
+      "role": "text",
+      "exemplar": "ge90cb544c9_0_20"
+    },
+    {
+      "id": "rl26_c2_15",
+      "number": 25,
+      "title": "RLOO: comparar sin incluirme",
+      "role": "text",
+      "exemplar": "ge90cb544c9_0_20"
+    },
+    {
+      "id": "rl26_c2_16",
+      "number": 26,
+      "title": "GRPO: una ventaja relativa al grupo",
+      "role": "text",
+      "exemplar": "ge90cb544c9_0_20"
+    },
+    {
+      "id": "rl26_c2_17",
+      "number": 27,
+      "title": "GRPO: juntar las piezas",
+      "role": "text",
+      "exemplar": "ge90cb544c9_0_20"
+    },
+    {
+      "id": "rl26_c2_18",
+      "number": 28,
+      "title": "Los detalles del código también enseñan",
+      "role": "text",
+      "exemplar": "ge90cb544c9_0_20"
+    },
+    {
+      "id": "rl26_c2_19",
+      "number": 29,
+      "title": "Laboratorio: misma base, distintos updates",
+      "role": "flow",
+      "exemplar": "ge90cb544c9_0_20"
+    },
+    {
+      "id": "rl26_c2_20",
+      "number": 30,
+      "title": "Más recompensa: ¿mejores respuestas?",
+      "role": "text",
+      "exemplar": "ge90cb544c9_0_20"
+    },
+    {
+      "id": "rl26_c2_21",
+      "number": 31,
+      "title": "DPO y variantes: qué cambia",
+      "role": "text",
+      "exemplar": "ge90cb544c9_0_20"
+    },
+    {
+      "id": "rl26_c2_22",
+      "number": 32,
+      "title": "Reconstruir GRPO y llevarlo a agentes",
+      "role": "text",
+      "exemplar": "ge90cb544c9_0_20"
+    }
+  ],
+  "checks": {
+    "order": true,
+    "skip_flags": true,
+    "no_tp_in_main": true,
+    "notes_matched": 22,
+    "native_tables": 4,
+    "archive_hashes": 57,
+    "pdf_pages_pixel_identical": 32,
+    "checker_issues_before_repair": 0,
+    "markdown_links": 98
+  },
+  "visual_review": {
+    "source_pages": 143,
+    "output_pages": 155,
+    "consolidated_repair_passes": 1,
+    "repairs": [
+      "Removed obsolete formula images overlapping DQN text",
+      "Replaced unsupported subscript glyph in RLOO",
+      "Shortened tool-token question",
+      "Dated Spotify case and linked original research"
+    ],
+    "main_review": "All 32 main slides checked; all 155 pages inspected in contact sheets",
+    "historical_appendix": "Preserved historical material; existing layout/content limitations remain outside main route. Links and current claims not comprehensively revalidated."
+  },
+  "pdf": {
+    "path": "clase2/Clase_2_2026.pdf",
+    "pages": 32,
+    "bytes": 295167,
+    "sha256": "7c68442b89c98a1f8a3da871f1c18cdf796edeea28bb241fb60ab3ea0ec80c42"
+  },
+  "limitations": [
+    "Four-hour schedule requires oral rehearsal",
+    "Jetson access restored per Juan; no training or hardware measurements in this turn",
+    "Demo remains TinyLM GRU, no pretrained transformer fine-tune",
+    "Encounter4 block and TP evaluator require further review"
+  ]
+}

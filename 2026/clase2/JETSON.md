@@ -1,12 +1,12 @@
 # Jetson Orin Nano 8 GB — preparación y conexión
 
-Actualizado el 12/10/2026. **Equipo confirmado por Juan: Orin Nano de 8 GB.** La demo pertenece al **bloque de diapositivas de deep RL (Clase 2)**, no al segundo encuentro.
+Actualizado el 31/10/2026. **Equipo confirmado por Juan: Orin Nano de 8 GB.** La demo pertenece al **bloque de diapositivas de deep RL (Clase 2)**, no al segundo encuentro.
 
 ## Información localizada
 
 La documentación local de `home_management` identifica el alias SSH **`jetson`**, y la configuración SSH de esta computadora coincide con ese inventario. El archivo `devices/jetson-orin-nano/README.md` registra JetPack 6, L4T R36.5.2 y CUDA 12.6; son datos documentados, pendientes de contrastar en vivo. No hace falta volver a pedir usuario ni dirección mientras ese inventario siga vigente.
 
-Se intentó SSH con la clave ya configurada. La conexión agotó el tiempo de espera. También agotaron el tiempo las conexiones a los servicios de Ollama y WebUI documentados. La ruta de esta computadora apunta directamente a la misma subred por `en0`; hay una entrada ARP para el equipo. Eso no confirma que esté encendido ni que conserve su dirección. **No se logró abrir una sesión remota, entrenar ni medir rendimiento en la placa.** Juan confirmó que el equipo está desconectado y pidió dejar la prueba para después; no seguir intentando hasta que lo conecte.
+Se intentó SSH con la clave ya configurada. La conexión agotó el tiempo de espera. También agotaron el tiempo las conexiones a los servicios de Ollama y WebUI documentados. La ruta de esta computadora apunta directamente a la misma subred por `en0`; hay una entrada ARP para el equipo. Eso no confirma que esté encendido ni que conserve su dirección. **No se logró abrir una sesión remota, entrenar ni medir rendimiento en la placa.** Juan confirmó entonces que el equipo estaba desconectado y pidió aplazar. El 31/10 informó que se recuperó el acceso; podemos retomar la validación cuando volvamos a la demo. En esta edición de slides no se hicieron conexiones ni mediciones nuevas.
 
 ## Elección del experimento
 

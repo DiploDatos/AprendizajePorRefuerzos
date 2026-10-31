@@ -1,6 +1,6 @@
 # Extensión: ajustar un LLM pequeño en la Orin Nano de 8 GB
 
-Propuesta preparada tras confirmar el hardware. **Todavía no implementada ni medida en la placa:** Juan confirmó que el equipo está desconectado y aplazó el ensayo. Mantener el notebook de gradientes de política con GRU como ejercicio del pipeline y fallback; no describir esta extensión como entrenamiento ya logrado.
+Propuesta preparada tras confirmar el hardware. **Todavía no implementada ni medida en la placa:** el ensayo se había aplazado mientras el equipo estaba desconectado. Juan informó el 31/10 que recuperó acceso; la compatibilidad y el entrenamiento siguen sin medirse. Mantener el notebook de gradientes de política con GRU como ejercicio del pipeline y fallback; no describir esta extensión como entrenamiento ya logrado.
 
 ## Candidato inicial
 

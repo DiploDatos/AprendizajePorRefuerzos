@@ -1,6 +1,6 @@
 # Plan de curso 2026
 
-Revisión 18/10/2026. Propuesta de cuatro encuentros de cuatro horas, basada en Organización 2025. Juan ubicó el desarrollo de RL para LLMs en el encuentro 3 (segundo fin de semana). Hay un único TP: Decision Transformer, que se presenta recién en el encuentro 4. No anunciarlo ni mostrar la consigna en los encuentros 1–3. Fechas, duración detallada y reparto docente pendientes de acordar; no reutilizar fechas de 2025.
+Revisión 31/10/2026. Propuesta de cuatro encuentros de cuatro horas, basada en Organización 2025. Juan ubicó el desarrollo de RL para LLMs en el encuentro 3 (segundo fin de semana). Hay un único TP: Decision Transformer, que se presenta recién en el encuentro 4. No anunciarlo ni mostrar la consigna en los encuentros 1–3. Fechas, duración detallada y reparto docente pendientes de acordar; no reutilizar fechas de 2025.
 
 | Encuentro | Minutos | Contenido y actividad | Resultado |
 |---|---:|---|---|
@@ -37,7 +37,7 @@ La sección 2026 del Programa abarca más contenidos que los que caben con profu
 
 **Deck Clase 2 / bloque deep RL:** Juan pidió que el hilo conductor siga la [guía de RL para LLMs de Wolfe](https://cameronrwolfe.substack.com/p/llm-rl). El desarrollo se ubica en el tercer encuentro; se propone usar el bloque completo para mejorar la progresión hacia GRPO: gradiente de política, baseline/ventaja, PPO y comparación por grupos. Se reservan 45 minutos de notebook; preferencias y SFT/RM pueden prepararse antes. [Guion y alternativa de 90 minutos](clase2/GUIA_CLASE.md).
 
-El laboratorio principal es [llm_policy_gradients.ipynb](clase2/llm_policy_gradients.ipynb). La demo de mini RLHF de 65 minutos queda como alternativa de profundidad en preferencias, no una segunda práctica obligatoria. El equipo Orin está desconectado; su ensayo se aplaza a pedido de Juan.
+Las [slides de Clase 2](clase2/GUIA_PRESENTACION.md) ya tienen 32 páginas principales para el encuentro 3; el material del encuentro 4 está omitido al final. El laboratorio principal es [llm_policy_gradients.ipynb](clase2/llm_policy_gradients.ipynb). La demo de mini RLHF de 65 minutos queda como alternativa de profundidad en preferencias, no una segunda práctica obligatoria. Juan informó que recuperó acceso a la Orin el 31/10. Su diagnóstico y entrenamiento siguen pendientes; esta revisión trabaja sobre las slides.
 
 ## Continuidad entre actividades
 
