@@ -216,7 +216,7 @@ def compare(model, reference, rm, center, scale, device, steps=60, group_size=8,
 def save(result, policies, reference, rm, center, scale, output):
     output = Path(output)
     output.mkdir(parents=True, exist_ok=True)
-    (output / "metrics.json").write_text(json.dumps(result, ensure_ascii=False, indent=2))
+    (output / "metrics.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     def cpu_state(model):
         return {k: v.detach().cpu() for k, v in model.state_dict().items()}
     torch.save({"policies": {k: cpu_state(v) for k, v in policies.items()},

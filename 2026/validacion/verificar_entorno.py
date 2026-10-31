@@ -63,7 +63,7 @@ def main():
     for name, num_items in (("netflix", 752), ("goodreads", 472)):
         # Sólo leer los archivos de datos proporcionados en este repositorio.
         train = pd.read_pickle(data_root / "train" / (name + "8_train.df"))
-        test = json.loads((data_root / "test_users" / (name + "8_test.json")).read_text())
+        test = json.loads((data_root / "test_users" / (name + "8_test.json")).read_text(encoding="utf-8"))
         assert isinstance(train, pd.DataFrame) and not train.empty and test
         groups = {}
         for kind in ("mu", "sigma", "num"):
@@ -112,7 +112,7 @@ def main():
               "scope": "Compatibilidad del entorno; no valida el protocolo ni entrena el TP completo"}
     if args.report:
         args.report.parent.mkdir(parents=True, exist_ok=True)
-        args.report.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
+        args.report.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, ensure_ascii=False, indent=2))
 
 

@@ -134,7 +134,7 @@ def simulated_pairs():
 def load_preferences(path=None):
     if path is None:
         return simulated_pairs(), "SIMULATED"
-    pairs = json.loads(Path(path).read_text())
+    pairs = json.loads(Path(path).read_text(encoding="utf-8"))
     expected = {p["id"]: p for p in make_pairs()}
     if len(pairs) != len(expected) or len(set(p["id"] for p in pairs)) != len(expected):
         raise ValueError("Etiquetar exactamente los 24 pares exportados; sin IDs repetidos")
@@ -289,7 +289,7 @@ def save_artifacts(result, model, reference, rm, center, scale, output):
                 "reward_model": {k: v.detach().cpu() for k, v in rm.state_dict().items()},
                 "reward_center": center.cpu(), "reward_scale": scale.cpu(),
                 "config": result["config"]}, str(output / "mini_rlhf.pt"))
-    (output / "metrics.json").write_text(json.dumps(result, ensure_ascii=False, indent=2))
+    (output / "metrics.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     blind, key = [], {}
     rng = random.Random(result["config"]["seed"] + 17)
     before, after = result["before"], result["after"]
@@ -300,8 +300,8 @@ def save_artifacts(result, model, reference, rm, center, scale, output):
                       "a": b["text"] if flip else a["text"], "b": a["text"] if flip else b["text"],
                       "choice": None, "reason": ""})
         key[str(i)] = {"a": "after" if flip else "before", "b": "before" if flip else "after"}
-    (output / "evaluacion_ciega.json").write_text(json.dumps(blind, ensure_ascii=False, indent=2))
-    (output / "clave_evaluacion_docente.json").write_text(json.dumps(key, indent=2))
+    (output / "evaluacion_ciega.json").write_text(json.dumps(blind, ensure_ascii=False, indent=2), encoding="utf-8")
+    (output / "clave_evaluacion_docente.json").write_text(json.dumps(key, indent=2), encoding="utf-8")
 
 
 def run_demo(output, preference_path=None, device_name="cpu", sft_steps=250,
@@ -361,19 +361,19 @@ def main():
     parser.add_argument("--seed", type=int, default=2026)
     args = parser.parse_args()
     if args.export_pairs:
-        Path(args.export_pairs).write_text(json.dumps(make_pairs(), ensure_ascii=False, indent=2))
+        Path(args.export_pairs).write_text(json.dumps(make_pairs(), ensure_ascii=False, indent=2), encoding="utf-8")
         print("Plantilla exportada:", args.export_pairs)
         return
     if args.label_pairs:
         path = Path(args.label_pairs)
-        pairs = json.loads(path.read_text()) if path.exists() else make_pairs()
+        pairs = json.loads(path.read_text(encoding="utf-8")) if path.exists() else make_pairs()
         for p in pairs:
             print("\n", p["prompt"], "\nA:", p["a"], "\nB:", p["b"])
             choice = ""
             while choice not in ("a", "b", "tie", "skip"):
                 choice = input("Preferís a / b / tie / skip: ").strip().lower()
             p["choice"], p["source"] = choice, "human"
-        path.write_text(json.dumps(pairs, ensure_ascii=False, indent=2))
+        path.write_text(json.dumps(pairs, ensure_ascii=False, indent=2), encoding="utf-8")
         print("Etiquetas guardadas:", path)
         return
     if min(args.sft_steps, args.reward_steps, args.rl_steps) < 1 or args.beta < 0:

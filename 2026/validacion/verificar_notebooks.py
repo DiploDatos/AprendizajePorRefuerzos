@@ -39,7 +39,7 @@ def main():
         kernel.mkdir(parents=True)
         (kernel / "kernel.json").write_text(json.dumps({
             "argv": [sys.executable, "-m", "ipykernel_launcher", "-f", "{connection_file}"],
-            "display_name": "RL 2026 verification", "language": "python"}))
+            "display_name": "RL 2026 verification", "language": "python"}), encoding="utf-8")
         for relative in NOTEBOOKS:
             print("Ejecutando:", relative, flush=True)
             notebook = nbformat.read(workspace / relative, as_version=4)
@@ -62,7 +62,7 @@ def main():
             nbformat.write(notebook, args.output / Path(relative).name)
             results.append({"path": relative, "status": "ok",
                             "code_cells": sum(c.cell_type == "code" for c in notebook.cells)})
-    (args.output / "summary.json").write_text(json.dumps(results, ensure_ascii=False, indent=2) + "\n")
+    (args.output / "summary.json").write_text(json.dumps(results, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("OK: notebooks ejecutados sin cambiar los originales ni sus outputs locales.")
 
 

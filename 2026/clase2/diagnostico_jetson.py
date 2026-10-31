@@ -9,7 +9,7 @@ for label, path in [("model", "/proc/device-tree/model"), ("l4t", "/etc/nv_tegra
                     ("memory", "/proc/meminfo")]:
     p = Path(path)
     if p.exists():
-        s = p.read_text().replace("\x00", "")
+        s = p.read_text(encoding="utf-8").replace("\x00", "")
         result[label] = s if label != "memory" else "\n".join(
             line for line in s.splitlines() if line.startswith(("MemTotal", "MemAvailable", "SwapTotal")))
 try:

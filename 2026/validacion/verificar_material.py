@@ -35,7 +35,7 @@ def main():
     assert sum(p["choice"] == "a" for p in pairs) == sum(p["choice"] == "b" for p in pairs)
     with tempfile.TemporaryDirectory() as tmp:
         path = Path(tmp) / "prefs.json"
-        path.write_text(json.dumps(pairs))
+        path.write_text(json.dumps(pairs), encoding="utf-8")
         try:
             demo.load_preferences(path)
         except ValueError:
@@ -44,10 +44,10 @@ def main():
             raise AssertionError("Aceptó datos simulados como humanos")
         for p in pairs:
             p["source"] = "human"  # Solo verifica formato, no constituye anotación humana real.
-        path.write_text(json.dumps(pairs))
+        path.write_text(json.dumps(pairs), encoding="utf-8")
         assert demo.load_preferences(path)[1] == "HUMAN"
         pairs[0]["a"] = "texto modificado"
-        path.write_text(json.dumps(pairs))
+        path.write_text(json.dumps(pairs), encoding="utf-8")
         try:
             demo.load_preferences(path)
         except ValueError:
@@ -103,7 +103,7 @@ def main():
         reference_pg, rm_pg = demo.TinyLM(), demo.RewardModel()
         reference_pg.load_state_dict(artifact_pg["reference"])
         rm_pg.load_state_dict(artifact_pg["reward_model"])
-        metrics_pg = json.loads((pgout / "metrics.json").read_text())
+        metrics_pg = json.loads((pgout / "metrics.json").read_text(encoding="utf-8"))
         for method in ("reinforce", "rloo", "grpo"):
             policy_pg = demo.TinyLM()
             policy_pg.load_state_dict(artifact_pg["policies"][method])
@@ -120,17 +120,17 @@ def main():
         reference.load_state_dict(artifact["reference"])
         rm.load_state_dict(artifact["reward_model"])
         score = demo.evaluate(policy, reference, rm, artifact["reward_center"], artifact["reward_scale"], torch.device("cpu"))
-        saved = json.loads((out / "metrics.json").read_text())
+        saved = json.loads((out / "metrics.json").read_text(encoding="utf-8"))
         assert abs(score["reward_proxy"] - saved["after"]["reward_proxy"]) < 1e-5
         assert score["samples"] == saved["after"]["samples"]
     for path in ROOT.rglob("*.ipynb"):
-        notebook = json.loads(path.read_text())
+        notebook = json.loads(path.read_text(encoding="utf-8"))
         assert notebook["nbformat"] == 4
         for cell in notebook["cells"]:
             if cell["cell_type"] == "code":
                 compile("".join(cell["source"]), str(path), "exec")
     for name in ("mini_rlhf.py", "diagnostico_jetson.py", "llm_policy_gradients.py"):
-        ast.parse((ROOT / "clase2" / name).read_text(), feature_version=(3, 6))
+        ast.parse((ROOT / "clase2" / name).read_text(encoding="utf-8"), feature_version=(3, 6))
     print("OK: Bellman, presupuesto, evaluación inmutable, splits, etiquetas, EOS, KL, RLOO, clipping direccional, verificador, checkpoints y notebooks.")
 
 

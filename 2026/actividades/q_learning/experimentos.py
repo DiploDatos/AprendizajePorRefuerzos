@@ -113,7 +113,7 @@ def run_suite(update, steps=100000, seeds=(11, 22, 33, 44, 55), episodes=100,
                                      "training_bonus": bonus, "runs": runs, "summary": summary}
         print(name, json.dumps(summary, ensure_ascii=False))
     if output:
-        (Path(output) / "resultados.json").write_text(json.dumps(result, indent=2))
+        (Path(output) / "resultados.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
     return result
 
 
