@@ -1,35 +1,24 @@
-# Comunicación de Slack — borradores
+# Comunicación de Slack — estudiantes
 
-Estado: pendiente de confirmar destinatarios, canal, enlace del aula y calendario. No enviado. Preparar el texto no autoriza su envío.
+Estado al 31/10/2026: audiencia confirmada por Juan: estudiantes. Borrador preparado, no enviado. Canal de destino pendiente. El texto evita anunciar el TP o afirmar que el calendario está publicado. Preparar este texto no autoriza su envío.
 
-## Para estudiantes: apertura del aula
+## Texto propuesto
 
-Usar este texto sólo cuando el aula esté publicada y revisada. Reemplazar los campos entre corchetes antes de enviar. No anunciar el TP en esta comunicación inicial.
+¡Hola! Les compartimos el aula de **Aprendizaje por Refuerzos 2026**:
+https://famaf.aulavirtual.unc.edu.ar/course/view.php?id=779
 
-¡Hola! Ya está disponible el aula de **Aprendizaje por Refuerzos 2026**: [ENLACE DEL AULA].
+En **Material de Clases** ya encuentran las diapositivas y actividades organizadas por encuentro. Antes de comenzar, revisen las **instrucciones para preparar el entorno** y los **ejercicios introductorios en papel**.
 
-Ahí encontrarán el calendario, las instrucciones para preparar el entorno y los materiales de cada encuentro. Antes de la primera clase, revisen la instalación y el material introductorio.
+Vamos a recorrer fundamentos de RL, deep RL y aplicaciones, incluyendo el ajuste de modelos de lenguaje y el aprendizaje a partir de trayectorias registradas. El uso de IA es opcional: nos interesa experimentar, explicar nuestras decisiones y comprobar los resultados.
 
-Vamos a recorrer fundamentos de RL, deep RL, aplicaciones, modelos de lenguaje y aprendizaje a partir de trayectorias registradas. El uso de IA es opcional; trabajaremos con experimentos y explicaciones de las decisiones que tomemos.
+¡Nos vemos en clase!
 
-Nos encontramos el [FECHA Y HORARIO CONFIRMADOS]. Las consultas del curso las centralizamos en [CANAL CONFIRMADO].
+## Antes del envío
 
-## Para el equipo docente: coordinación
+- [x] Audiencia estudiantil y enlace directo del curso confirmados.
+- [x] Mensaje alineado con los materiales publicados, sin anuncio del TP.
+- [ ] Completar revisión de accesos externos, calendario y programa del aula.
+- [ ] Confirmar canal de Slack de destino.
+- [ ] Revisar el texto final con Juan y contar con instrucción explícita de envío.
 
-Hola, les comparto el estado de la preparación de **Aprendizaje por Refuerzos 2026**.
-
-La [rama 2026](https://github.com/DiploDatos/AprendizajePorRefuerzos/tree/2026) ya incluye el material actualizado y el entorno reproducible. Las pruebas de instalación y notebooks pasaron en Linux, macOS y Windows. El [PR #69](https://github.com/DiploDatos/AprendizajePorRefuerzos/pull/69) está en borrador para revisión.
-
-Clase 2 conserva su recorrido general, incluyendo Decision Transformer; GRPO amplía el bloque de modelos de lenguaje. Tenemos un único TP, que se presenta recién en el encuentro 4. Q-learning y la demo de RL para lenguaje son actividades formativas.
-
-Nos quedan por cerrar el aula virtual y su calendario, el protocolo de evaluación del TP y el ensayo de la demo en Jetson. También necesitamos ajustar el reparto de tiempos de clase.
-
-El aula de trabajo es [ENLACE DEL AULA]. Propongo revisar esos puntos antes de comunicar la apertura a estudiantes.
-
-## Cierre de la comunicación
-
-- [ ] Confirmar audiencia y canal de destino.
-- [ ] Elegir el borrador y ajustar el tono.
-- [ ] Completar aula, fechas y canal; comprobar los enlaces con los permisos de sus destinatarios.
-- [ ] Comprobar que el texto describe el estado real del aula.
-- [ ] Revisar el texto final con Juan y obtener una instrucción explícita de envío.
+No se presupone fecha ni horario: si se desea incluirlos, usar únicamente información 2026 confirmada. No enlazar la página de participantes como entrada al curso.

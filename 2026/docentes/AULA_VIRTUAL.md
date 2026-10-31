@@ -1,6 +1,18 @@
 # Aula virtual 2026 — preparación docente
 
-Estado: pendiente de identificar el aula y comprobar acceso de edición. Esta guía prepara el montaje; no acredita que se hayan publicado recursos en el campus. El enlace, calendario y modalidad deben confirmarse con Juan.
+Estado al 31/10/2026: montaje inicial publicado en el [aula 2026](https://famaf.aulavirtual.unc.edu.ar/course/view.php?id=779). Acceso docente confirmado y recorrido revisado con la simulación de rol Student de Moodle. Faltan calendario confirmado, revisión del programa heredado y cierre de la evaluación.
+
+## Cambios aplicados en Moodle
+
+- Agregada bienvenida 2026 conservando docentes, carga horaria y programa existente.
+- Actualizada «Material de Clases» con apartados para los cuatro encuentros, instrucciones del entorno, PDF 2026, warm-up, Q-learning y demo de gradientes de política para lenguaje. Son apartados dentro de la pestaña existente.
+- Retirados de esa portada los enlaces al material 2025 y al práctico histórico. Decision Transformer se conserva como contenido teórico de Clase 2.
+- Ocultada la pestaña Evaluación completa: contenía dos entregas y fechas de noviembre de 2025. Las actividades se conservan para revisión docente; todavía no se adaptaron fechas, grupos, restricciones o calificaciones. No habilitar la pestaña completa sin resolver esos puntos y retirar el TP1 histórico de la oferta 2026.
+- Comprobado con rol Student: se ve el material nuevo; Evaluación aparece atenuada y no permite abrirse. Esta simulación no sustituye una prueba con una cuenta estudiantil real.
+- Los PDF enlazan a GitHub: la consulta de permisos de Drive mostró sólo usuarios docentes, por lo que no se usaron esos enlaces restringidos ni se modificaron permisos.
+- No se crearon entregas ni notas para Q-learning o la demo. No se anunciaron el TP ni fechas sin confirmar.
+
+Quedan por revisar Bibliografía, los dos foros «Avisos» heredados y la pestaña vacía «Topic 4». No se alteraron matrículas ni calificaciones. El curso se dejó en el rol docente habitual y sin modo de edición.
 
 ## Estructura propuesta
 
@@ -38,15 +50,15 @@ El calendario y el canal de consultas deben completarse con la información conf
 
 ## Montaje y revisión
 
-- [ ] Confirmar URL del aula, permisos de edición y edición 2026.
-- [ ] Revisar qué recursos existentes son de 2025 antes de modificar o copiar.
+- [x] Confirmar URL del aula, permisos de edición y edición 2026.
+- [x] Revisar materiales y evaluación existentes de 2025 antes de modificar.
 - [ ] Cargar bienvenida, calendario confirmado e instrucciones del entorno.
-- [ ] Crear secciones por encuentro y cargar los materiales seleccionados.
-- [ ] Mantener el TP oculto/sin publicar hasta el encuentro 4; no anunciarlo en encuentros 1–3.
+- [x] Organizar por encuentro y enlazar los materiales seleccionados.
+- [x] Mantener el TP oculto/sin publicar hasta el encuentro 4; no anunciarlo en encuentros 1–3.
 - [ ] Cerrar protocolo, consigna, rúbrica, fecha, grupos y modalidad antes de habilitar su entrega.
 - [ ] Probar accesos, descargas y rutas de los notebooks con vista estudiante.
 - [ ] Confirmar que las actividades formativas no generan entregas ni calificaciones obligatorias.
 - [ ] Verificar que no queden fechas antiguas ni enlaces a borradores como recursos definitivos.
-- [ ] Completar el mensaje de Slack con el enlace real y el calendario confirmado.
+- [x] Completar el borrador de Slack para estudiantes con el enlace real; omitir calendario aún no confirmado.
 
 Criterio de cierre: el aula está navegable desde una cuenta/vista estudiantil, sus recursos actuales se abren y la disponibilidad de actividades coincide con las decisiones del curso.
