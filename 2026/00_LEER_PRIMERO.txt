@@ -22,6 +22,12 @@ PAQUETE PARA DESCARGAR
 Incluye material del repositorio, PDFs y datos del TP; conserva las rutas de carpetas.
 https://drive.google.com/file/d/1HAMbSvxXowYMy3V_ClRfO4ugHe-aZIZ9/view?usp=drivesdk
 
+ENTORNO REPRODUCIBLE
+GitHub: https://github.com/DiploDatos/AprendizajePorRefuerzos/tree/2026
+Instalación: https://github.com/DiploDatos/AprendizajePorRefuerzos/blob/2026/ENTORNO.md
+Desde la raíz del paquete: uv sync --locked; uv run --locked jupyter lab
+Python 3.12 recomendado, uv 0.9.2, dependencias en uv.lock.
+
 REFERENCIA HISTÓRICA 2025
 https://drive.google.com/drive/folders/1AJsqjbOJPt5otLEI8l2olWsi3rbIUydO
 
@@ -30,4 +36,4 @@ Clase 1 ya está actualizada y revisada (87 slides), con cuatro casos de ética 
 Hay un único TP: Decision Transformer, que se presenta recién en el encuentro 4. No distribuir su consigna antes. Q-learning y los notebooks de RL para generación son actividades formativas.
 Los originales de 2025 se conservaron. Juan informó el 31/10 que recuperó acceso a la Orin Nano; falta validar el entrenamiento.
 
-Copiado el 17/10/2026; revisión de materiales el 18/10/2026.
+Copiado el 17/10/2026; revisión de materiales y entorno el 31/10/2026.

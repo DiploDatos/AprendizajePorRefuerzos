@@ -613,13 +613,31 @@
       "id": "142agnUQ5xwJ2QIjNo6NMoSA7WmMbEYrx",
       "url": "https://drive.google.com/file/d/142agnUQ5xwJ2QIjNo6NMoSA7WmMbEYrx/view?usp=drivesdk",
       "parent_id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz"
+    },
+    {
+      "path": "validacion/verificar_entorno.py",
+      "id": "18DDYzgl6IJH-OBubbGRfp5cve1Ky199b",
+      "url": "https://drive.google.com/file/d/18DDYzgl6IJH-OBubbGRfp5cve1Ky199b/view?usp=drivesdk",
+      "parent_id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz"
+    },
+    {
+      "path": "validacion/verificar_notebooks.py",
+      "id": "141H3wVfc689iqvCSW0YokMvd29mpjk13",
+      "url": "https://drive.google.com/file/d/141H3wVfc689iqvCSW0YokMvd29mpjk13/view?usp=drivesdk",
+      "parent_id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz"
+    },
+    {
+      "path": "validacion/entorno_local.json",
+      "id": "1lwA9kvl8G5kFP3OpU5L-QcOJzkWz3DPV",
+      "url": "https://drive.google.com/file/d/1lwA9kvl8G5kFP3OpU5L-QcOJzkWz3DPV/view?usp=drivesdk",
+      "parent_id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz"
     }
   ],
   "package": {
     "id": "1HAMbSvxXowYMy3V_ClRfO4ugHe-aZIZ9",
     "title": "AprendizajePorRefuerzos-2026.zip",
     "mime_type": "application/zip",
-    "size": "78354702",
+    "size": "78349525",
     "url": "https://drive.google.com/file/d/1HAMbSvxXowYMy3V_ClRfO4ugHe-aZIZ9/view?usp=drivesdk",
     "display_url": "https://drive.google.com/file/d/1HAMbSvxXowYMy3V_ClRfO4ugHe-aZIZ9/view?usp=drivesdk",
     "file_or_folder": "file",
@@ -634,10 +652,10 @@
     "shared": null,
     "permissions": null,
     "source_visibility_status": "access_not_verified",
-    "local_sha256": "064f283783f2c46f7b29184247a650761c6160a50608d821dbdc89b9f4832079",
-    "local_bytes": 78354702,
-    "files": 132,
-    "snapshot_note": "Clase 2 con flujo general restaurado: DT y aplicaciones en el recorrido; GRPO como subbloque; PDF de 154 páginas sin el lanzamiento del TP. Configuración raíz de dependencias tomada de HEAD para preservar cambios ajenos. El manifiesto interno es la instantánea previa a la subida y se actualiza después de construir el ZIP."
+    "local_sha256": "110fe97c766275344eb52877745f24c838d6ba29d48d3514dc316f0cceac937c",
+    "local_bytes": 78349525,
+    "files": 138,
+    "snapshot_note": "Incluye el entorno 2026 validado: pyproject.toml y uv.lock coinciden con los hashes del reporte, .python-version y ENTORNO.md presentes. Poetry sólo en archive/2025. Código UTF-8 verificado en cinco jobs de CI. El manifiesto interno es la instantánea previa a la subida."
   },
   "verification": [
     {
@@ -2139,5 +2157,174 @@
       }
     ],
     "verification": "14 updated files: metadata sizes and destination parents verified; native order/visibility and complete PDF verified separately."
-  }
+  },
+  "environment_material_sync": {
+    "date": "2026-10-31",
+    "repository": "https://github.com/DiploDatos/AprendizajePorRefuerzos/tree/2026",
+    "pull_request": "https://github.com/DiploDatos/AprendizajePorRefuerzos/pull/69",
+    "ci": "https://github.com/DiploDatos/AprendizajePorRefuerzos/actions/runs/41167526035",
+    "verification": "20 sizes and parents read back; all five CI jobs passed",
+    "files": [
+      {
+        "path": "2026/README.md",
+        "id": "1uLc8G61hHkWYuAjiPEqOPPIm123ZuvEa",
+        "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx",
+        "bytes": 4940,
+        "sha256": "f8263c1f8719eaf17a2fd1b4da54c85af4e0c11e7512fb54d0eb1b5b156b6833"
+      },
+      {
+        "path": "2026/02_NEXT_STEPS.md",
+        "id": "1OISknC35C9UYmomKknZdL4SaPZ-IMEv_",
+        "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx",
+        "bytes": 3647,
+        "sha256": "b3152079cbf83e008ec10d252ac4c212d1ec1c47123763477b618764fd8c06f6"
+      },
+      {
+        "path": "2026/CAMBIOS_2026.md",
+        "id": "193RpxINlxNa0U_0IghMG-Yj7E0OLzIXG",
+        "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx",
+        "bytes": 6051,
+        "sha256": "b07734c70250a5f879e0869a9af0de73b767dc352101802f7614619037de6301"
+      },
+      {
+        "path": "2026/tp/README.md",
+        "id": "16HABDcKBrSxW9hlf1k0YYFYMWCqLa1Pe",
+        "parent_id": "1bFOC583csVcXMu8NLIPJKH1KWD31N37A",
+        "bytes": 1818,
+        "sha256": "1a23d12e220e21fa5e1d24bec2de1f502a6ec1e42f266ea2998ab2d19ce7e1d8"
+      },
+      {
+        "path": "2026/validacion/RESULTADOS.md",
+        "id": "1H_gEyBHCG3C8rnqOfytnYCrsTioeMfo2",
+        "parent_id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz",
+        "bytes": 16755,
+        "sha256": "356422ddd7cee786ec4a942e9d82da8d7e921b852e1ae78727a29f93440c3ce7"
+      },
+      {
+        "path": "2026/actividades/q_learning/experimentos.py",
+        "id": "1-FIuSLHjg6x0EpF9GF6ymK5EZycprdpq",
+        "parent_id": "1IdN9gETob8N4zLeHKndPW5Kmf_el6hGC",
+        "bytes": 7133,
+        "sha256": "39327007c506faba70ceb2743198e3df0b34569e1c4b0d27e4c13d3c98d405b2"
+      },
+      {
+        "path": "2026/clase2/diagnostico_jetson.py",
+        "id": "1WkgPRMQa_4hXBWYmXQ5a8hVG1wjeOhcd",
+        "parent_id": "1bt9n1Qctd-StAFGZAOMW1fQdJK295D_w",
+        "bytes": 1192,
+        "sha256": "e38da4a428cdd6b794d1b2f7e37fca43a2aa27d3b6913073799d722be6ab0016"
+      },
+      {
+        "path": "2026/clase2/llm_policy_gradients.ipynb",
+        "id": "1mDcF4XrwXj0jOBde3d2nWq-z_6kbAOnx",
+        "parent_id": "1bt9n1Qctd-StAFGZAOMW1fQdJK295D_w",
+        "bytes": 150134,
+        "sha256": "bd4f5790c9feadc06c119b9068e0551f4a8dd664ffaa1440b87844be0ed4e350"
+      },
+      {
+        "path": "2026/clase2/llm_policy_gradients.py",
+        "id": "1BW1IHQzZvy_BBz-JVhDutyRTCm2ZzJjK",
+        "parent_id": "1bt9n1Qctd-StAFGZAOMW1fQdJK295D_w",
+        "bytes": 13453,
+        "sha256": "858498cbdda6f82db5283b72f700872bc00721111266daf6b7aba0bb5d84526e"
+      },
+      {
+        "path": "2026/clase2/mini_rlhf.ipynb",
+        "id": "18PbhJW79Y2iUgNre8yLQEB38TnFYRgYW",
+        "parent_id": "1bt9n1Qctd-StAFGZAOMW1fQdJK295D_w",
+        "bytes": 71686,
+        "sha256": "0021212e1532e22fc70df35746d37bf39c981e616965adae18474fbac93acebe"
+      },
+      {
+        "path": "2026/clase2/mini_rlhf.py",
+        "id": "1CSY9nLOkGR8sLgvB7xfdv16MbbwhxJjG",
+        "parent_id": "1bt9n1Qctd-StAFGZAOMW1fQdJK295D_w",
+        "bytes": 18820,
+        "sha256": "11a018cb387e82a7351b24d02c26ca2a8652cbde2b341c04d3f8bd98834ed1ee"
+      },
+      {
+        "path": "2026/validacion/verificar_material.py",
+        "id": "15vd2fv6mn9umfJMo6jMh6jRbXQHgRdIf",
+        "parent_id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz",
+        "bytes": 7541,
+        "sha256": "79be6c87556bef5a5ff8af649a74b636c0d22495eb57f701a5d72321ce6a7acb"
+      },
+      {
+        "path": "2026/validacion/verificar_entorno.py",
+        "id": "18DDYzgl6IJH-OBubbGRfp5cve1Ky199b",
+        "parent_id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz",
+        "bytes": 5960,
+        "sha256": "5c16f72e702f5a9eb34cbfce08601e60baf5ab8ed12d434802ff1c302716c150"
+      },
+      {
+        "path": "2026/validacion/verificar_notebooks.py",
+        "id": "141H3wVfc689iqvCSW0YokMvd29mpjk13",
+        "parent_id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz",
+        "bytes": 3183,
+        "sha256": "447e3ab2345285b1547a26cd8c2ec100c861ef5c719cc06525d374473c653742"
+      },
+      {
+        "path": "2026/validacion/entorno_local.json",
+        "id": "1lwA9kvl8G5kFP3OpU5L-QcOJzkWz3DPV",
+        "parent_id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz",
+        "bytes": 5315,
+        "sha256": "2ad12c47fd4940ada556908980da2b5d9a81a4e3183b27c687f517ad88a40929"
+      },
+      {
+        "path": "ENTORNO.md",
+        "id": "1Hz8cQRn489Z3e3u_tA9JQ2IYA5RkH-w-",
+        "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx",
+        "bytes": 4892,
+        "sha256": "e3c5913fcf99be3577868f24ca434dca28450d80ff17520e5b3d7715b5027d1c"
+      },
+      {
+        "path": "pyproject.toml",
+        "id": "1zFao8IEd_ezGDYd2B5UQSDJ3xlAX5g3y",
+        "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx",
+        "bytes": 1566,
+        "sha256": "47055a845c5ba56368e027997758ccca53ea0d1d2d2faf7a217f67aa5d002769"
+      },
+      {
+        "path": "uv.lock",
+        "id": "1elduF4H4kVw63QLr9j63ZuFidX-bM0r5",
+        "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx",
+        "bytes": 313359,
+        "sha256": "b9e35a8e3740453d7e7c2d28ad12bfa5a4dd29b44d33470487e279087d519645"
+      },
+      {
+        "path": "2026/00_LEER_PRIMERO.txt",
+        "id": "1-kCaNfZOAodHaTJ6D6WRvvaP79ZJLnnG",
+        "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx",
+        "bytes": 2481,
+        "sha256": "16db1e85557f52d9cc82fc6acdcd9cc3c089cb6c5366fcb4c6f09029092a98c8"
+      },
+      {
+        "path": "2026/DRIVE_2026.md",
+        "id": "1Qf7y3u1zB6lcFYQosE1G8debNIEr_Y_B",
+        "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx",
+        "bytes": 6521,
+        "sha256": "7bb0d9d2fb7617fcad1f5cad977a6e8b9d274141cf64b38b888512c0f61972a3"
+      }
+    ]
+  },
+  "repository_environment_files": [
+    {
+      "path": "ENTORNO.md",
+      "id": "1Hz8cQRn489Z3e3u_tA9JQ2IYA5RkH-w-",
+      "url": "https://drive.google.com/file/d/1Hz8cQRn489Z3e3u_tA9JQ2IYA5RkH-w-/view?usp=drivesdk",
+      "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx"
+    },
+    {
+      "path": "pyproject.toml",
+      "id": "1zFao8IEd_ezGDYd2B5UQSDJ3xlAX5g3y",
+      "url": "https://drive.google.com/file/d/1zFao8IEd_ezGDYd2B5UQSDJ3xlAX5g3y/view?usp=drivesdk",
+      "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx"
+    },
+    {
+      "path": "uv.lock",
+      "id": "1elduF4H4kVw63QLr9j63ZuFidX-bM0r5",
+      "url": "https://drive.google.com/file/d/1elduF4H4kVw63QLr9j63ZuFidX-bM0r5/view?usp=drivesdk",
+      "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx"
+    }
+  ]
 }

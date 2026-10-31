@@ -49,3 +49,5 @@ Juan señaló que el recorte de 32 slides rompía el flujo y relegaba DT y otros
 ## Entorno y publicación de la rama 2026
 
 Se completa la migración local a uv: un único pyproject.toml, Python 3.12 recomendado (3.11–3.13 admitido), versiones directas fijadas y uv.lock versionado. El Poetry raíz duplicado se retira; el archivo 2025 conserva sus originales. Las actividades vigentes se prueban desde un entorno nuevo. El extra tp-hf añade Transformers/Accelerate; el stack de Jetson se mantiene separado. Se añaden instrucciones y pruebas de Actions en Linux/macOS/Windows. Esto no corrige el protocolo del TP.
+
+La rama 2026 se publicó con el material acumulado y el entorno. [PR #69 en borrador](https://github.com/DiploDatos/AprendizajePorRefuerzos/pull/69), sin integrar en master. Las cinco plataformas de CI pasaron; se corrigió UTF-8 explícito a partir de un fallo real en Windows.

@@ -53,7 +53,7 @@ Se prueba reset/step/render RGB de tres entornos, entrenamiento corto de PPO, le
 
 El notebook estudiantil de Q-learning tiene un TODO intencional. Se comprueba su sintaxis; se usa la referencia docente para ejecución completa. El warm-up es introductorio y actualmente no tiene celdas de código.
 
-El workflow `.github/workflows/curso.yml` instala desde cero y ejecuta las comprobaciones en Linux (Python 3.11/3.12/3.13), macOS ARM y Windows (3.12). Consultar el resultado real de Actions; una matriz configurada no equivale a una ejecución aprobada.
+El workflow `.github/workflows/curso.yml` instala desde cero y ejecuta las comprobaciones en Linux (Python 3.11/3.12/3.13), macOS ARM y Windows (3.12). Las cinco configuraciones pasaron en la [ejecución de referencia](https://github.com/DiploDatos/AprendizajePorRefuerzos/actions/runs/41167526035); consultar Actions para ejecuciones posteriores.
 
 ## Conservar otro entorno local
 

@@ -48,3 +48,7 @@ La [guía de ética](https://drive.google.com/file/d/14Wcis0iHV_Ph5Ta7WSvpGVxLcB
 Se restaura el flujo general de la clase, incluyendo DQN, gradientes de política, actor-crítico/PPO, Offline RL, Decision Transformer y aplicaciones. Las 22 slides nuevas se distribuyen en 14 integradas al bloque LLM y ocho de profundización. Hay 115 visibles, 39 de consulta y una del TP omitida hasta el encuentro 4. La restricción del TP no posterga la teoría de DT.
 
 El PDF contiene 154 páginas: todo el material salvo el TP, reemplazando el recorte anterior de 32. Se conservan los mismos IDs de archivos en Drive. [PDF completo sin TP](https://drive.google.com/file/d/1ujcb8oLrp0CQ5PPjBQWwvBENuEct2B9k/view?usp=drivesdk), [guía](https://drive.google.com/file/d/1QEhCPEWgCbc62y8PgXzcMK0HxYfIdLnh/view?usp=drivesdk), [registro](https://drive.google.com/file/d/142agnUQ5xwJ2QIjNo6NMoSA7WmMbEYrx/view?usp=drivesdk).
+
+## Entorno reproducible y GitHub
+
+La [rama 2026](https://github.com/DiploDatos/AprendizajePorRefuerzos/tree/2026) ya contiene el material y el entorno uv bloqueado. [PR #69 en borrador](https://github.com/DiploDatos/AprendizajePorRefuerzos/pull/69), sin integrar en master. El ZIP incluye ENTORNO.md, pyproject.toml, uv.lock y .python-version en su raíz; instalar desde allí o desde un clon de la rama. [Guía en Drive](https://drive.google.com/file/d/1Hz8cQRn489Z3e3u_tA9JQ2IYA5RkH-w-/view?usp=drivesdk). Las cinco comprobaciones de CI pasaron; el entorno de Jetson y el protocolo del TP siguen pendientes.

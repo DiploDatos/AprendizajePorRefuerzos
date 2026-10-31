@@ -165,5 +165,39 @@
     }
   ],
   "installation": "fresh isolated .venv-2026; existing .venv preserved",
-  "ci": "Configured; GitHub result pending publication"
+  "ci": {
+    "conclusion": "success",
+    "headSha": "dbe86bbffd75b118927edea3a1828f026bd88163",
+    "jobs": [
+      {
+        "conclusion": "success",
+        "name": "windows-latest / Python 3.12",
+        "url": "https://github.com/DiploDatos/AprendizajePorRefuerzos/actions/runs/41167526035/job/124438210787"
+      },
+      {
+        "conclusion": "success",
+        "name": "ubuntu-latest / Python 3.12",
+        "url": "https://github.com/DiploDatos/AprendizajePorRefuerzos/actions/runs/41167526035/job/124438210954"
+      },
+      {
+        "conclusion": "success",
+        "name": "ubuntu-latest / Python 3.11",
+        "url": "https://github.com/DiploDatos/AprendizajePorRefuerzos/actions/runs/41167526035/job/124438210962"
+      },
+      {
+        "conclusion": "success",
+        "name": "macos-latest / Python 3.12",
+        "url": "https://github.com/DiploDatos/AprendizajePorRefuerzos/actions/runs/41167526035/job/124438211058"
+      },
+      {
+        "conclusion": "success",
+        "name": "ubuntu-latest / Python 3.13",
+        "url": "https://github.com/DiploDatos/AprendizajePorRefuerzos/actions/runs/41167526035/job/124438211071"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/DiploDatos/AprendizajePorRefuerzos/actions/runs/41167526035"
+  },
+  "pull_request": "https://github.com/DiploDatos/AprendizajePorRefuerzos/pull/69",
+  "windows_fix": "All active Path.read_text/write_text calls and notebook JSON exports use explicit UTF-8."
 }
