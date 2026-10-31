@@ -26,7 +26,7 @@ REFERENCIA HISTÓRICA 2025
 https://drive.google.com/drive/folders/1AJsqjbOJPt5otLEI8l2olWsi3rbIUydO
 
 ESTADO
-Clase 1 ya está actualizada y revisada (87 slides), con cuatro casos de ética y una actividad de preferencias. Clase 2 ya incorpora 32 slides principales del encuentro 3 y 123 omitidas de consulta/encuentro 4. Su PDF incluye sólo las 32 principales. Programa y Organización siguen como copias cuyo contenido interior requiere revisión.
+Clase 1 ya está actualizada y revisada (87 slides), con cuatro casos de ética y una actividad de preferencias. Clase 2 recupera el recorrido general: 115 slides principales de deep RL, RL en modelos de lenguaje, Offline RL/Decision Transformer y aplicaciones; 39 de profundización y una del TP omitidas. El PDF conserva todas las páginas salvo el TP. Programa y Organización siguen como copias cuyo contenido interior requiere revisión.
 Hay un único TP: Decision Transformer, que se presenta recién en el encuentro 4. No distribuir su consigna antes. Q-learning y los notebooks de RL para generación son actividades formativas.
 Los originales de 2025 se conservaron. Juan informó el 31/10 que recuperó acceso a la Orin Nano; falta validar el entrenamiento.
 

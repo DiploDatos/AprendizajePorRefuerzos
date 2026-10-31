@@ -1,6 +1,6 @@
 # Cambios propuestos para las diapositivas
 
-Revisión 31/10/2026. Clase 1 editada (87 slides); Clase 2 actualizada (32 principales y 123 omitidas). Las [copias editables 2026 en Drive](../DRIVE_2026.md) ya están creadas. IDs verificados por outline nativo el 12/10/2026. Editar las copias 2026; actualizar el año dentro de las slides y los enlaces. No suponer que deck “Clase 2” es encuentro 2.
+Revisión 31/10/2026. Clase 1 editada (87 slides); Clase 2 corregida para conservar el flujo general (115 principales, 39 de profundización y TP omitido). Las [copias editables 2026 en Drive](../DRIVE_2026.md) ya están creadas. IDs verificados por outline nativo el 12/10/2026. Editar las copias 2026; actualizar el año dentro de las slides y los enlaces. No suponer que deck “Clase 2” es encuentro 2.
 
 ## Clase 1 — cambios aplicados
 
@@ -25,23 +25,21 @@ El bloque 80–86 reemplaza las seis slides anteriores de ética y conserva el d
 
 El TP se presenta recién en el encuentro 4. No se agrega su anuncio al primer fin de semana ni al encuentro 3. Los archivos se mantienen en el índice docente para preparación y se publican a estudiantes cuando corresponda.
 
-## Clase 2 — cambios aplicados el 31/10/2026
+## Clase 2 — continuidad recuperada
 
-Se editaron las copias 2026 conservando el tema Tropic, placeholders y medios útiles. Las diez slides originales de RLHF/DPO se reemplazaron por 22 páginas nuevas. El origen 2025 sigue en el archivo. [Guía y mapa actual](../clase2/GUIA_PRESENTACION.md), [contenido y notas](../clase2/SLIDES_LLM_RL.md), [validación](../validacion/clase2_revision.json).
+La edición anterior reducía el recorrido principal a GRPO y omitía fundamentos, aplicaciones y DT. Juan indicó conservarlos. La corrección restaura el orden de la clase y usa 14 slides nuevas dentro del bloque LLM; los ocho repasos restantes van a profundización. Se conservan todas las páginas de DT que estaban presentes antes de la reorganización.
 
-| Páginas actuales | Función |
+| Slides actuales | Bloque |
 |---|---|
-| 1–14 | Apertura, puente de Q-learning a redes, DQN, dos aplicaciones y generación como trayectoria |
-| 15–19 | Recompensa, RM/critic/ventaja, objetivo/KL, REINFORCE y baseline |
-| 20–22 | PPO: rollout, clipping, política actual/vieja/referencia |
-| 23–27 | Fuente de recompensa, preferencias, RLOO y GRPO |
-| 28–30 | Código, notebook enlazado y evaluación ciega |
-| 31–32 | DPO/variantes como comparación breve y reconstrucción de GRPO |
-| 33–144 | Consulta histórica de algoritmos y aplicaciones; omitida |
-| 145–155 | Offline RL/Decision Transformer y único TP, encuentro 4; omitido |
+| 1–19 | Problemas tabulares y redes neuronales |
+| 20–34 | Valor y DQN |
+| 35–50 | Gradientes de política, actor-crítico, DDPG y PPO |
+| 51–66 | RL en modelos de lenguaje, RLHF/RLVR, RLOO/GRPO y demo |
+| 67–75 | Offline RL y Decision Transformer, dentro del recorrido visible |
+| 76–115 | Aplicaciones y conclusiones |
+| 116–154 | Profundización: ocho repasos LLM y aplicaciones detalladas; omitidas |
+| 155 | Único TP: presentar en encuentro 4; omitido |
 
-Los IDs nuevos son `rl26_c2_01` a `rl26_c2_22`; el registro incluye su número actual. Las 32 principales están contiguas al inicio. En presentación normal se omite el resto. El PDF preparado contiene sólo esas 32; compartirlo con estudiantes, no el deck completo, antes del encuentro 4.
+El PDF contiene 154 páginas, incluyendo profundización y DT, sin el anuncio del TP. Las slides 1–115 están visibles en presentación normal. Conservar la selección docente y el ritmo del material completo; no prometer que toda esa extensión más un laboratorio quepa en cuatro horas sin ensayo.
 
-El notebook enseña REINFORCE/RLOO/GRPO sobre una GRU de 13.923 parámetros, con preferencias simuladas o etiquetas humanas explícitas; PPO se ilustra sin entrenarlo. Acceso a Orin recuperado según Juan, pero extensión con transformer y rendimiento todavía pendientes. Se corrigió el texto de DT que prometía alcanzar returns solicitados; no implica que el bloque completo del encuentro 4 ni su evaluador hayan sido revisados.
-
-La consulta histórica conserva afirmaciones y fórmulas que pueden requerir revisión antes de volver a usarse en vivo. No se revalidaron todos sus enlaces ni se repararon todos los problemas previos de maquetación. El ensayo oral y el ajuste final del tiempo siguen pendientes.
+[Guía de presentación](../clase2/GUIA_PRESENTACION.md), [contenido y notas del bloque nuevo](../clase2/SLIDES_LLM_RL.md) y [registro de corrección](../validacion/clase2_revision.json). La demo sigue siendo una GRU validada en CPU, no un transformer preentrenado. La revisión integral del evaluador del TP continúa pendiente.

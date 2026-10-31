@@ -18,7 +18,7 @@ Creado el 17/10/2026; revisión de Clase 2 y materiales el 31/10/2026. Copias de
 
 Se copiaron los 12 elementos de la carpeta 2025, incluidas ambas presentaciones editables y los dos accesos directos. Los accesos directos siguen apuntando a sus destinos originales; no duplican los materiales externos enlazados.
 
-Los títulos de las copias de trabajo se actualizaron a 2026. Clase 1 ya incorpora la introducción a RL en LLMs, la agenda 2026 y el bloque de ética renovado, sin presentar el TP; quedó en 87 slides. Clase 2 ya incorpora el recorrido hacia GRPO (32 slides principales y 123 omitidas de consulta/encuentro 4). Programa y Organización todavía conservan contenido de origen y deben revisarse según los guiones. Los archivos originales de 2025 se conservan.
+Los títulos de las copias de trabajo se actualizaron a 2026. Clase 1 ya incorpora la introducción a RL en LLMs, la agenda 2026 y el bloque de ética renovado, sin presentar el TP; quedó en 87 slides. Clase 2 recupera el recorrido general: 115 slides principales de deep RL, RL en modelos de lenguaje, Offline RL/Decision Transformer y aplicaciones; 39 de profundización y una del TP omitidas. El PDF conserva todas las páginas salvo el TP. Programa y Organización todavía conservan contenido de origen y deben revisarse según los guiones. Los archivos originales de 2025 se conservan.
 
 El material local 2026 incluye las dos slides introductorias propuestas, el camino hacia GRPO, las actividades formativas y el único TP de Decision Transformer. Las soluciones y los resultados de ejecución están identificados en las carpetas docentes/ y validacion/. Las planillas y entregas históricas conservan la referencia 2025.
 
@@ -43,8 +43,8 @@ La [guía de ética](https://drive.google.com/file/d/14Wcis0iHV_Ph5Ta7WSvpGVxLcB
 
 Último ajuste de casos (18/10): Navier–Stokes incluye prioridades de investigación en lenguaje accesible; ciberseguridad usa el incidente OpenAI–Hugging Face de 2026, con tres fuentes primarias y notas sobre entrenamiento, evaluación y límites. El PDF, la guía y el paquete corresponden a esta revisión.
 
-## Revisión aplicada de Clase 2 — 31/10/2026
+## Clase 2 — corrección de continuidad
 
-Se editaron las slides nativas: 22 nuevas para construir GRPO, 32 páginas principales y 123 omitidas de consulta/encuentro 4. La copia conserva el tema Tropic. Las páginas 145–155 están reservadas al encuentro 4; el TP no se presenta en el encuentro 3. [Guía de presentación](clase2/GUIA_PRESENTACION.md) y [PDF del encuentro 3](clase2/Clase_2_2026.pdf). El PDF contiene sólo las primeras 32 páginas; no distribuir el deck docente completo como material estudiantil antes del encuentro 4.
+Se restaura el flujo general de la clase, incluyendo DQN, gradientes de política, actor-crítico/PPO, Offline RL, Decision Transformer y aplicaciones. Las 22 slides nuevas se distribuyen en 14 integradas al bloque LLM y ocho de profundización. Hay 115 visibles, 39 de consulta y una del TP omitida hasta el encuentro 4. La restricción del TP no posterga la teoría de DT.
 
-Accesos en Drive: [PDF del encuentro 3](https://drive.google.com/file/d/1ujcb8oLrp0CQ5PPjBQWwvBENuEct2B9k/view?usp=drivesdk), [guía de presentación](https://drive.google.com/file/d/1QEhCPEWgCbc62y8PgXzcMK0HxYfIdLnh/view?usp=drivesdk) y [registro de validación](https://drive.google.com/file/d/142agnUQ5xwJ2QIjNo6NMoSA7WmMbEYrx/view?usp=drivesdk).
+El PDF contiene 154 páginas: todo el material salvo el TP, reemplazando el recorte anterior de 32. Se conservan los mismos IDs de archivos en Drive. [PDF completo sin TP](https://drive.google.com/file/d/1ujcb8oLrp0CQ5PPjBQWwvBENuEct2B9k/view?usp=drivesdk), [guía](https://drive.google.com/file/d/1QEhCPEWgCbc62y8PgXzcMK0HxYfIdLnh/view?usp=drivesdk), [registro](https://drive.google.com/file/d/142agnUQ5xwJ2QIjNo6NMoSA7WmMbEYrx/view?usp=drivesdk).

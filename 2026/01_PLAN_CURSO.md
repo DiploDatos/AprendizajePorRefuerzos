@@ -16,14 +16,10 @@ Revisión 31/10/2026. Propuesta de cuatro encuentros de cuatro horas, basada en 
 | 2 | 125–170 | Actividad formativa FrozenLake/Taxi: predicción, implementación y discusión | Una actualización y una limitación explicadas |
 | 2 | 170–210 | Puesta en común con resultados docentes: recompensa y solución defectuosa | Un contraejemplo reproducible, sin entrega |
 | 2 | 210–240 | Ética en RL: cuatro casos, actividad de preferencias y cierre (28 min + 2 de margen) | Justificar un control y reconocer límites de la evidencia |
-| 3 | 0–20 | Puente Q-table/DQN → política neuronal | Distinguir valor y distribución de acciones |
-| 3 | 20–60 | Juan: generación como RL, retorno, ventaja y KL | Mapear prompt/prefijo/token/EOS |
-| 3 | 60–95 | REINFORCE, baseline y PPO | Explicar gradiente y clipping con números |
-| 3 | 95–110 | Recreo | |
-| 3 | 110–160 | Preferencias/verificador, RLOO y GRPO | Separar fuente de reward y algoritmo |
-| 3 | 160–205 | Notebook REINFORCE/RLOO/GRPO con generador pequeño | Ajuste desde mismo SFT; cambiar reward |
-| 3 | 205–240 | Evaluación ciega, DPO/variantes y puente a agentes | Reconocer proxy, presupuestos y máscaras |
-| 4 | 0–45 | Offline RL y DT | Entender condicionamiento por retorno |
+| 3 | Distribución a ensayar | Deep RL: redes, DQN, gradientes de política, actor-crítico y PPO | Conectar valor, política y aproximación |
+| 3 | Integrado al recorrido | RL en modelos de lenguaje: RLHF/RLVR, RLOO/GRPO y demo acotada | Entender la actualización sin desplazar los otros temas |
+| 3 | Mantener en el hilo | Offline RL, modelado de secuencias, Decision Transformer y aplicaciones | Distinguir aprendizaje on-policy y desde trayectorias registradas |
+| 4 | 0–45 | Profundización de DT y evaluación desde datos registrados | Retomar condicionamiento por retorno y preparar el TP |
 | 4 | 45–100 | Aplicaciones seleccionadas; robótica y transferencia | Analizar supuestos y límites |
 | 4 | 100–115 | Recreo | |
 | 4 | 115–180 | Único TP: Decision Transformer / clínica de evaluación | Objetivo y métricas coherentes |
@@ -35,13 +31,15 @@ La sección 2026 del Programa abarca más contenidos que los que caben con profu
 
 ## Ubicación de la demo confirmada por Juan
 
-**Deck Clase 2 / bloque deep RL:** Juan pidió que el hilo conductor siga la [guía de RL para LLMs de Wolfe](https://cameronrwolfe.substack.com/p/llm-rl). El desarrollo se ubica en el tercer encuentro; se propone usar el bloque completo para mejorar la progresión hacia GRPO: gradiente de política, baseline/ventaja, PPO y comparación por grupos. Se reservan 45 minutos de notebook; preferencias y SFT/RM pueden prepararse antes. [Guion y alternativa de 90 minutos](clase2/GUIA_CLASE.md).
+**Deck Clase 2 / bloque deep RL:** la guía de Wolfe orienta la ampliación sobre LLMs y la progresión hacia GRPO, no reemplaza el recorrido completo. Se conservan redes, DQN, gradientes de política, actor-crítico/PPO, Offline RL, Decision Transformer y aplicaciones. La explicación de DT forma parte de la clase; sólo la presentación del TP corresponde al encuentro 4.
 
-Las [slides de Clase 2](clase2/GUIA_PRESENTACION.md) ya tienen 32 páginas principales para el encuentro 3; el material del encuentro 4 está omitido al final. El laboratorio principal es [llm_policy_gradients.ipynb](clase2/llm_policy_gradients.ipynb). La demo de mini RLHF de 65 minutos queda como alternativa de profundidad en preferencias, no una segunda práctica obligatoria. Juan informó que recuperó acceso a la Orin el 31/10. Su diagnóstico y entrenamiento siguen pendientes; esta revisión trabaja sobre las slides.
+La [guía de presentación](clase2/GUIA_PRESENTACION.md) refleja el flujo corregido. Hay 115 páginas principales y 39 de profundización, más la slide del TP omitida. El PDF contiene las 154 páginas sin el TP. Esto es un banco de material con continuidad, no una promesa de cubrir 115 slides y un laboratorio de 45 minutos en cuatro horas. Ajustar selección, ritmo y distribución entre encuentros 3–4 con Jorge mediante ensayo; no relegar bloques completos para hacer lugar a GRPO.
+
+El laboratorio [llm_policy_gradients.ipynb](clase2/llm_policy_gradients.ipynb) puede usar SFT/RM y resultados preparados. Mini RLHF es una alternativa de profundidad, no otra práctica obligatoria. Juan informó que recuperó acceso a Orin; su diagnóstico y entrenamiento siguen pendientes.
 
 ## Continuidad entre actividades
 
-Actividad Q-learning: “¿El agente aprendió lo que digo que aprendió?”. Encuentro 3: “¿Cómo construimos y justificamos una actualización GRPO, y qué mide su recompensa?”. Único TP: “¿Mi evaluación mide decisiones útiles fuera de los datos observados?”. Los tres problemas comparten semillas, baselines, controles y reconocimiento de incertidumbre.
+Actividad Q-learning: “¿El agente aprendió lo que digo que aprendió?”. Clase 2: “¿Cómo aprendemos valores, políticas y acciones, con experiencia nueva o registrada?”. En su bloque LLM: “¿Cómo construimos GRPO y qué mide su recompensa?”. Único TP: “¿Mi evaluación mide decisiones útiles fuera de los datos observados?”. Los tres problemas comparten semillas, baselines, controles y reconocimiento de incertidumbre.
 
 ## Introducción renovada
 

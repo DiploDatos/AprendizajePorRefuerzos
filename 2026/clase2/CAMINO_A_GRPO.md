@@ -1,4 +1,6 @@
-# Camino hacia GRPO
+# Camino hacia GRPO dentro de la clase general
+
+Revisión de continuidad: este documento guía el subbloque de RL en modelos de lenguaje. No reemplaza redes, DQN, actor-crítico, Offline RL, Decision Transformer ni aplicaciones. La restricción de encuentro 4 se aplica al lanzamiento del TP, no a la teoría de DT.
 
 Criterio docente aclarado por Juan: mejorar la progresión del bloque deep RL para que GRPO sea una llegada comprensible. Conservar los fundamentos de la clase y justificar cada pieza antes de ensamblar el algoritmo. El ejemplo de generación de texto permite observar esas piezas; el origen humano o verificable del reward se trata por separado.
 

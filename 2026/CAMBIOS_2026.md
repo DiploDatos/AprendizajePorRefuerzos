@@ -41,3 +41,7 @@ Ciberseguridad reemplaza el caso Claude Code de 2025 por el incidente OpenAI–H
 Se aplica el camino hacia GRPO en el deck nativo 2026: 22 slides nuevas, tablas editables, ejemplos numéricos, notas y fuentes. El recorrido de encuentro 3 contiene 32 slides; 123 se omiten en presentación y se reservan a consulta/encuentro 4. Se reemplazan las diez slides antiguas de RLHF/DPO; el origen 2025 permanece archivado. Se corrigen las promesas de return deseado en DT y la descripción de replay de PPO. El TP queda sólo en el bloque final del encuentro 4. El PDF estudiantil incluye únicamente las 32 principales.
 
 La demo sigue siendo la GRU validada en CPU; no se atribuye ajuste de un LLM preentrenado ni rendimiento medido a la Orin. Juan informó que recuperó acceso a la placa; su ensayo es un siguiente paso. La duración de cuatro horas requiere ensayo oral.
+
+## Corrección de continuidad de Clase 2
+
+Juan señaló que el recorte de 32 slides rompía el flujo y relegaba DT y otros contenidos valiosos. Se recupera el orden general de la clase: redes, DQN, políticas, actor-crítico/PPO, LLMs, Offline RL/DT, aplicaciones y conclusiones. GRPO queda integrado al bloque LLM; ocho repasos nuevos pasan a consulta. Quedan 115 slides visibles, 39 de profundización y sólo el lanzamiento del TP reservado al encuentro 4. El PDF completo de 154 páginas excluye únicamente ese lanzamiento. El guion anterior de cuatro horas centrado en GRPO queda sin efecto.

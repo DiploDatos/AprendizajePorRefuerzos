@@ -1,6 +1,6 @@
-# Clase 2 — de gradientes de política a GRPO
+# Clase 2 — deep RL, modelos de lenguaje y Decision Transformer
 
-Revisión del 31/10/2026 según la orientación indicada por Juan. “Clase 2” es el bloque de diapositivas de deep RL. Juan confirmó su desarrollo en el encuentro 3, segundo fin de semana. La distribución detallada de las cuatro horas sigue como propuesta.
+Revisión del 31/10/2026 según la orientación indicada por Juan. “Clase 2” es el bloque de diapositivas de deep RL. Juan confirmó su desarrollo en el encuentro 3, segundo fin de semana. La clase mantiene el flujo general; el desarrollo de LLMs se integra a él. La distribución detallada entre los encuentros 3–4 debe ensayarse; sólo el TP se presenta recién en el 4.
 
 La [guía de Cameron R. Wolfe](https://cameronrwolfe.substack.com/p/llm-rl) sirve como hilo de lectura: fundamentos de RL para generación, gradientes de política, algoritmos y problemas de implementación. Juan aclaró que el propósito es mejorar el camino hacia GRPO. Los temas se presentan como respuestas a problemas sucesivos y convergen en ese algoritmo. Las ecuaciones y decisiones de implementación se contrastan con los artículos originales; las variantes recientes quedan como lecturas optativas.
 
@@ -8,37 +8,30 @@ La [guía de Cameron R. Wolfe](https://cameronrwolfe.substack.com/p/llm-rl) sirv
 
 Seguir el [camino hacia GRPO](CAMINO_A_GRPO.md): política parametrizada → REINFORCE → baseline/ventaja; desde allí, construir tanto el mecanismo de actualización PPO como la comparación entre respuestas del mismo prompt. GRPO reúne esas piezas. Mantener los fundamentos del bloque deep RL y usar generación de texto como ejemplo continuo.
 
-## Resultado que buscamos
+## Resultado que buscamos en el subbloque de LLM
 
 Al terminar, cada estudiante puede representar generación autoregresiva como RL, calcular una ventaja, explicar por qué necesitamos política actual/vieja/referencia y reconstruir GRPO y justificar por qué aparecen ventajas de grupo, ratios y clipping. También puede distinguir fuente de recompensa, actualización y evaluación: GRPO no define por sí mismo si un experimento es RLHF o RLVR.
 
 Prerrequisitos: MDP, retorno, políticas estocásticas, derivación elemental y log-probabilidad. No exigir experiencia con Transformers. Abrir con una transición de FrozenLake de la actividad Q-learning y trasladar estado/acción/recompensa a una respuesta de texto.
 
-## Guion principal: 240 minutos
+## Recorrido de la clase completa
 
-| Minutos | Contenido | Acción o pregunta |
-|---|---|---|
-| 0–20 | De Q-table a redes: DQN y política parametrizada | ¿Predecir valor y producir una distribución son lo mismo? DQN queda como puente, no como otro laboratorio |
-| 20–40 | Generación como MDP y como bandido contextual | Identificar prompt, prefijo, token, EOS y respuesta; ¿qué cambia con herramientas? |
-| 40–60 | Objetivo y REINFORCE | Derivar gradiente de logprob por retorno y predecir su signo |
-| 60–75 | Baseline, ventaja y actor-critic | ¿Cómo bajar varianza? Separar critic de RM y justificar el baseline |
-| 75–95 | PPO y reutilización de rollouts | Calcular cuatro casos de clipping; señalar política vieja versus referencia |
-| 95–110 | Recreo | |
-| 110–130 | Comparación de respuestas al mismo prompt | Construir un baseline sin critic; preparar grupos y aclarar origen del reward |
-| 130–140 | RLOO como puente | Calcular baseline excluyendo la propia respuesta y contrastar con media del grupo |
-| 140–160 | Ensamblar GRPO | Combinar ventaja normalizada y surrogate clipped; caso de rewards iguales |
-| 160–205 | Notebook de gradientes de política | Partir del SFT/RM preparados; seguir ventajas, old/ref, máscaras y actualización GRPO |
-| 205–220 | Evaluación antes/después | Juicio ciego y diversidad; reconocer presupuestos distintos y límites del proxy |
-| 220–230 | DPO y variantes de GRPO | Comparar objetivos; un problema concreto de longitud, normalización o clipping |
-| 230–240 | Cierre individual y puente a agentes | Explicar una máscara y clasificar un experimento; observaciones externas no son acciones de la política |
+| Bloque | Continuidad |
+|---|---|
+| Tablas → redes → DQN | Por qué aproximar valores y cómo usa experiencia DQN |
+| Gradientes de política | Aprender directamente una distribución y estimar su gradiente |
+| Actor-crítico y PPO | Baseline, función de valor y límites de la actualización |
+| RL en modelos de lenguaje | Reutilizar esos fundamentos para generación, RLHF/RLVR y RLOO/GRPO |
+| Offline RL y Decision Transformer | Cambiar de experiencia nueva a trayectorias registradas; predecir acciones condicionadas por return |
+| Aplicaciones y conclusiones | Retomar los conceptos en juegos, recomendación, control y robótica |
 
-Si no hay cuatro horas disponibles, usar una versión de 90 minutos: 15 generación/objetivo, 15 REINFORCE/baseline, 10 PPO, 15 RLOO/GRPO, 25 notebook con etiquetas/checkpoints preparados y 10 evaluación. Reducir DQN, DPO y variantes a lectura. La selección temporal debe acordarse con Jorge para conservar continuidad con el único TP de Decision Transformer.
+GRPO es una ampliación dentro del cuarto bloque. Los fundamentos originales ya presentan REINFORCE y PPO: los repasos nuevos redundantes quedan como consulta, no como un reinicio de la clase. Se conservan las aplicaciones en el recorrido. No imponer un guion de cuatro horas centrado exclusivamente en GRPO.
 
-Las preferencias pueden etiquetarse en una actividad previa y el SFT/RM prepararse antes de proyectar. Así el laboratorio dedica tiempo al camino de actualización y a GRPO; la anotación humana completa sigue disponible en la alternativa mini RLHF.
+La [guía de presentación](GUIA_PRESENTACION.md) contiene los números actuales. Ajustar tiempos y reparto con Jorge sin omitir bloques completos. La demo puede proyectar etapas/resultados preparados y profundizarse en una actividad posterior. El TP se presenta en el encuentro 4, pero su explicación teórica de DT no queda postergada por esa regla.
 
 ## Material para proyectar
 
-- [Slides aplicadas](SLIDES_LLM_RL.md): 22 nuevas dentro de un recorrido principal de 32; [guía de presentación y números actuales](GUIA_PRESENTACION.md). El PDF del encuentro 3 excluye todo el apéndice y el TP.
+- [Slides aplicadas](SLIDES_LLM_RL.md): 22 nuevas, de las cuales 14 se integran al recorrido general y ocho quedan como profundización; [guía de presentación y números actuales](GUIA_PRESENTACION.md). El PDF completo conserva teoría y apéndice, excluyendo sólo el TP.
 - [Notebook principal](llm_policy_gradients.ipynb): REINFORCE, RLOO y GRPO ejecutables; ejemplo numérico de PPO, sin entrenamiento PPO. Implementación propia en [llm_policy_gradients.py](llm_policy_gradients.py).
 - [Notebook de preferencias](mini_rlhf.ipynb) y [guía detallada de 65 minutos](MINI_RLHF_GUIA.md): alternativa si se decide profundizar exclusivamente en anotación, RM y REINFORCE. No sumar ambos laboratorios completos dentro del mismo encuentro.
 - [Preparación Orin](JETSON.md) y [extensión con LLM preentrenado](ORIN_LLM_PLAN.md). Acceso a la placa recuperado según Juan el 31/10; validación remota del entrenamiento todavía pendiente. No es un prerrequisito para revisar/usar el material CPU.

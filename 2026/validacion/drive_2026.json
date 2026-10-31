@@ -619,7 +619,7 @@
     "id": "1HAMbSvxXowYMy3V_ClRfO4ugHe-aZIZ9",
     "title": "AprendizajePorRefuerzos-2026.zip",
     "mime_type": "application/zip",
-    "size": "74375034",
+    "size": "78354702",
     "url": "https://drive.google.com/file/d/1HAMbSvxXowYMy3V_ClRfO4ugHe-aZIZ9/view?usp=drivesdk",
     "display_url": "https://drive.google.com/file/d/1HAMbSvxXowYMy3V_ClRfO4ugHe-aZIZ9/view?usp=drivesdk",
     "file_or_folder": "file",
@@ -634,10 +634,10 @@
     "shared": null,
     "permissions": null,
     "source_visibility_status": "access_not_verified",
-    "local_sha256": "05136a68092492fdf7ec673eec8f3bda4bd845923871acb9c1d3cbce0e40c6b1",
-    "local_bytes": 74375034,
+    "local_sha256": "064f283783f2c46f7b29184247a650761c6160a50608d821dbdc89b9f4832079",
+    "local_bytes": 78354702,
     "files": 132,
-    "snapshot_note": "Incluye Clase 2 actualizada y PDF de 32 páginas del encuentro 3. Configuración raíz de dependencias tomada de HEAD para preservar cambios ajenos de Juan. El manifiesto se actualiza después de construir el ZIP; su copia interna es la instantánea previa a la subida."
+    "snapshot_note": "Clase 2 con flujo general restaurado: DT y aplicaciones en el recorrido; GRPO como subbloque; PDF de 154 páginas sin el lanzamiento del TP. Configuración raíz de dependencias tomada de HEAD para preservar cambios ajenos. El manifiesto interno es la instantánea previa a la subida y se actualiza después de construir el ZIP."
   },
   "verification": [
     {
@@ -1443,258 +1443,219 @@
   },
   "class2_revision": {
     "date": "2026-10-31",
+    "reason": "Restore general course flow after Juan rejected a GRPO-only main route; distinguish DT theory from TP launch",
     "presentation_id": "19hKgrRzdaDW6sAlVUABjZJeOeElbK6Z1q1QkRfttv4w",
     "url": null,
-    "source_revision": "JhtHjmSAjzL-OQ",
-    "revision": "JmHD9RRePWSzsw",
-    "source_slides": 143,
+    "source_revision": "JmHD9RRePWSzsw",
+    "revision": "rC_8YWxw-yEecA",
     "final_slides": 155,
-    "main_slides": 32,
-    "reference_slides": 112,
-    "encounter4_slides": 11,
-    "new_slides": 22,
-    "replaced_slides": [
-      "g36fb9856750_1_83",
-      "g1e842fd07c2_2_0",
-      "g36fb9856750_1_76",
-      "g3a0d1898e12_0_10",
-      "g385e773c5af_0_0",
-      "g36fb9856750_1_108",
-      "g3a0d1898e12_0_17",
-      "g36fb9856750_1_114",
-      "g36fb9856750_1_70",
-      "g36fb9856750_1_91"
+    "main_slides": 115,
+    "appendix_slides": 39,
+    "tp_slides": 1,
+    "tp_number": 155,
+    "dt_range": [
+      67,
+      75
     ],
-    "main_ids": [
+    "llm_range": [
+      51,
+      66
+    ],
+    "main_llm_new": 14,
+    "optional_llm_new": 8,
+    "order": [
       "ge83ef4c23e_0_124",
       "ge83ef4c23e_0_57",
-      "rl26_c2_01",
+      "g100388fc5eb_1_29",
       "ge83ef4c23e_0_62",
+      "gf890516059_0_43",
+      "gf890516059_0_49",
+      "geb87aff20e_0_1",
+      "ge83ef4c23e_0_186",
+      "geb89aa2ed5_0_61",
       "geb89aa2ed5_0_15",
       "geb89aa2ed5_0_20",
+      "gfd48c4675b_0_0",
+      "gfd29060822_0_0",
+      "gfd48c4675b_0_9",
+      "gfd48c4675b_0_20",
+      "gfd48c4675b_0_15",
       "gfd48c4675b_0_60",
+      "gfd48c4675b_0_38",
+      "gfd48c4675b_0_45",
+      "gfd48c4675b_0_4",
+      "ge90cb544c9_0_5",
+      "g100388fc5eb_1_33",
+      "gf174191e81_0_1",
+      "ge88125d821_0_22",
       "gf6ffd234b1_0_5",
+      "ge90cb544c9_0_15",
+      "gf6ffd234b1_0_11",
+      "ge88125d821_0_1",
+      "gf6ffd234b1_0_0",
       "geb89aa2ed5_0_25",
-      "gf9badb265c_0_0",
-      "gf9badb265c_0_61",
-      "rl26_c2_02",
+      "ge88125d821_0_6",
+      "gf890516059_0_87",
+      "g13f65cb0c8f_0_0",
+      "g311e865e483_0_0",
+      "g100388fc5eb_1_39",
+      "geb89aa2ed5_0_30",
+      "g100388fc5eb_1_24",
+      "geb86021b6b_0_0",
+      "ge90cb544c9_0_26",
+      "g100388fc5eb_1_16",
+      "ge90cb544c9_0_31",
+      "ge90cb544c9_0_36",
+      "g100388fc5eb_1_45",
+      "geb89aa2ed5_0_35",
+      "g100388fc5eb_1_56",
+      "g100388fc5eb_1_62",
+      "g100388fc5eb_1_69",
+      "gf890516059_0_71",
+      "g13f62eac958_1_0",
+      "ge90cb544c9_0_20",
+      "g38b2e10666a_0_0",
+      "g38b2e10666a_0_4",
       "rl26_c2_03",
       "rl26_c2_04",
-      "rl26_c2_05",
+      "rl26_c2_13",
       "rl26_c2_06",
       "rl26_c2_07",
-      "rl26_c2_08",
-      "rl26_c2_09",
-      "rl26_c2_10",
       "rl26_c2_11",
       "rl26_c2_12",
-      "rl26_c2_13",
-      "rl26_c2_14",
       "rl26_c2_15",
       "rl26_c2_16",
       "rl26_c2_17",
-      "rl26_c2_18",
       "rl26_c2_19",
       "rl26_c2_20",
       "rl26_c2_21",
-      "rl26_c2_22"
-    ],
-    "encounter4_range": [
-      145,
-      155
-    ],
-    "new_slide_map": [
-      {
-        "id": "rl26_c2_01",
-        "number": 3,
-        "title": "¿Cómo cambia una respuesta mediante RL?",
-        "role": "text",
-        "exemplar": "ge90cb544c9_0_20"
-      },
-      {
-        "id": "rl26_c2_02",
-        "number": 12,
-        "title": "De una tabla a una política neuronal",
-        "role": "compare",
-        "exemplar": "ge90cb544c9_0_20"
-      },
-      {
-        "id": "rl26_c2_03",
-        "number": 13,
-        "title": "Una respuesta es una trayectoria",
-        "role": "flow",
-        "exemplar": "ge90cb544c9_0_20"
-      },
-      {
-        "id": "rl26_c2_04",
-        "number": 14,
-        "title": "Dos formas de mirar la misma respuesta",
-        "role": "text",
-        "exemplar": "ge90cb544c9_0_20"
-      },
-      {
-        "id": "rl26_c2_05",
-        "number": 15,
-        "title": "¿Cuándo llega la recompensa?",
-        "role": "text",
-        "exemplar": "ge90cb544c9_0_20"
-      },
-      {
-        "id": "rl26_c2_06",
-        "number": 16,
-        "title": "Reward model, critic y ventaja",
-        "role": "table",
-        "exemplar": "ge90cb544c9_0_20"
-      },
-      {
-        "id": "rl26_c2_07",
-        "number": 17,
-        "title": "Optimizar sin alejarse demasiado",
-        "role": "text",
-        "exemplar": "ge90cb544c9_0_20"
-      },
-      {
-        "id": "rl26_c2_08",
-        "number": 18,
-        "title": "REINFORCE: cambiar probabilidades",
-        "role": "text",
-        "exemplar": "ge90cb544c9_0_20"
-      },
-      {
-        "id": "rl26_c2_09",
-        "number": 19,
-        "title": "Baseline: ¿mejor que qué?",
-        "role": "text",
-        "exemplar": "ge90cb544c9_0_20"
-      },
-      {
-        "id": "rl26_c2_10",
-        "number": 20,
-        "title": "PPO: reutilizar un rollout",
-        "role": "text",
-        "exemplar": "ge90cb544c9_0_20"
-      },
-      {
-        "id": "rl26_c2_11",
-        "number": 21,
-        "title": "Clipping: predecir cuatro casos",
-        "role": "table",
-        "exemplar": "ge90cb544c9_0_20"
-      },
-      {
-        "id": "rl26_c2_12",
-        "number": 22,
-        "title": "Tres políticas, tres funciones",
-        "role": "table",
-        "exemplar": "ge90cb544c9_0_20"
-      },
-      {
-        "id": "rl26_c2_13",
-        "number": 23,
-        "title": "La recompensa y el algoritmo son dos ejes",
-        "role": "table",
-        "exemplar": "ge90cb544c9_0_20"
-      },
-      {
-        "id": "rl26_c2_14",
-        "number": 24,
-        "title": "Etiquetar preferencias exige un criterio",
-        "role": "text",
-        "exemplar": "ge90cb544c9_0_20"
-      },
-      {
-        "id": "rl26_c2_15",
-        "number": 25,
-        "title": "RLOO: comparar sin incluirme",
-        "role": "text",
-        "exemplar": "ge90cb544c9_0_20"
-      },
-      {
-        "id": "rl26_c2_16",
-        "number": 26,
-        "title": "GRPO: una ventaja relativa al grupo",
-        "role": "text",
-        "exemplar": "ge90cb544c9_0_20"
-      },
-      {
-        "id": "rl26_c2_17",
-        "number": 27,
-        "title": "GRPO: juntar las piezas",
-        "role": "text",
-        "exemplar": "ge90cb544c9_0_20"
-      },
-      {
-        "id": "rl26_c2_18",
-        "number": 28,
-        "title": "Los detalles del código también enseñan",
-        "role": "text",
-        "exemplar": "ge90cb544c9_0_20"
-      },
-      {
-        "id": "rl26_c2_19",
-        "number": 29,
-        "title": "Laboratorio: misma base, distintos updates",
-        "role": "flow",
-        "exemplar": "ge90cb544c9_0_20"
-      },
-      {
-        "id": "rl26_c2_20",
-        "number": 30,
-        "title": "Más recompensa: ¿mejores respuestas?",
-        "role": "text",
-        "exemplar": "ge90cb544c9_0_20"
-      },
-      {
-        "id": "rl26_c2_21",
-        "number": 31,
-        "title": "DPO y variantes: qué cambia",
-        "role": "text",
-        "exemplar": "ge90cb544c9_0_20"
-      },
-      {
-        "id": "rl26_c2_22",
-        "number": 32,
-        "title": "Reconstruir GRPO y llevarlo a agentes",
-        "role": "text",
-        "exemplar": "ge90cb544c9_0_20"
-      }
+      "rl26_c2_22",
+      "g38b2e10666a_0_80",
+      "g39e4dae134e_0_2",
+      "g39e4dae134e_0_12",
+      "g39e4dae134e_0_26",
+      "g39e4dae134e_0_33",
+      "g39e4dae134e_0_40",
+      "g38b2e10666a_0_91",
+      "g39ef4f1d585_0_6",
+      "g39ef4f1d585_0_12",
+      "ge90cb544c9_0_46",
+      "gf9badb265c_0_277",
+      "gf9badb265c_0_0",
+      "gf9badb265c_0_6",
+      "gf9badb265c_0_11",
+      "gf890516059_0_16",
+      "gf9badb265c_0_56",
+      "gf9badb265c_0_61",
+      "gf9badb265c_0_67",
+      "g284d6b8d335_0_0",
+      "gf9badb265c_0_126",
+      "g13eff26a376_0_18",
+      "g13f65cb0c8f_0_7",
+      "g13f65cb0c8f_0_13",
+      "g13f65cb0c8f_0_18",
+      "g2d5640c7ab2_0_11",
+      "gf9badb265c_0_136",
+      "gf9badb265c_0_141",
+      "gf9badb265c_0_146",
+      "gf890516059_0_76",
+      "gf9badb265c_0_152",
+      "gf9badb265c_0_158",
+      "gf9badb265c_0_164",
+      "gf9badb265c_0_170",
+      "gf9badb265c_0_176",
+      "gf9badb265c_0_182",
+      "gf9badb265c_0_188",
+      "gf9badb265c_0_193",
+      "g3134f423d77_0_0",
+      "g3134f423d77_0_12",
+      "g3134f423d77_0_21",
+      "g3134f423d77_0_28",
+      "g3134f423d77_0_50",
+      "g3134f423d77_0_56",
+      "g3134f423d77_0_43",
+      "g100388fc5eb_1_6",
+      "gf9badb265c_0_463",
+      "gf9badb265c_0_468",
+      "g100388fc5eb_1_1",
+      "g311e865e483_0_7",
+      "g13eff26a376_0_0",
+      "rl26_c2_01",
+      "rl26_c2_02",
+      "rl26_c2_05",
+      "rl26_c2_08",
+      "rl26_c2_09",
+      "rl26_c2_10",
+      "rl26_c2_14",
+      "rl26_c2_18",
+      "g2d5640c7ab2_0_0",
+      "gfd48c4675b_0_55",
+      "gf890516059_0_32",
+      "gf890516059_0_100",
+      "gf9badb265c_0_22",
+      "gf9badb265c_0_28",
+      "gf890516059_0_5",
+      "gf9badb265c_0_33",
+      "gf9badb265c_0_39",
+      "gf890516059_0_95",
+      "gf9badb265c_0_45",
+      "gf9badb265c_0_51",
+      "gf890516059_0_66",
+      "gf890516059_0_61",
+      "gf890516059_0_105",
+      "gf9badb265c_0_214",
+      "g38b2e10666a_0_10",
+      "g38b2e10666a_0_16",
+      "g38b2e10666a_0_21",
+      "g38b2e10666a_0_26",
+      "g38b2e10666a_0_31",
+      "g38b2e10666a_0_37",
+      "g38b2e10666a_0_42",
+      "g38b2e10666a_0_47",
+      "g38b2e10666a_0_52",
+      "g38b2e10666a_0_58",
+      "g38b2e10666a_0_63",
+      "g38b2e10666a_0_69",
+      "g38b2e10666a_0_74",
+      "g13f65cb0c8f_0_31",
+      "gf9badb265c_0_401"
     ],
     "checks": {
-      "order": true,
-      "skip_flags": true,
-      "no_tp_in_main": true,
-      "notes_matched": 22,
-      "native_tables": 4,
-      "archive_hashes": 57,
-      "pdf_pages_pixel_identical": 32,
-      "checker_issues_before_repair": 0,
-      "markdown_links": 98
-    },
-    "visual_review": {
-      "source_pages": 143,
-      "output_pages": 155,
-      "consolidated_repair_passes": 1,
-      "repairs": [
-        "Removed obsolete formula images overlapping DQN text",
-        "Replaced unsupported subscript glyph in RLOO",
-        "Shortened tool-token question",
-        "Dated Spotify case and linked original research"
+      "original_first_52_order_restored": true,
+      "original_applications_order_restored": true,
+      "dt_all_9_visible": true,
+      "tp_only_launch_deferred": true,
+      "all_existing_155_pages_kept": true,
+      "unchanged_slide_local_content": 151,
+      "changed_content_pages": [
+        "ge83ef4c23e_0_57",
+        "g38b2e10666a_0_0",
+        "rl26_c2_22",
+        "g13eff26a376_0_0"
       ],
-      "main_review": "All 32 main slides checked; all 155 pages inspected in contact sheets",
-      "historical_appendix": "Preserved historical material; existing layout/content limitations remain outside main route. Links and current claims not comprehensively revalidated."
+      "checker_issues": 0,
+      "all_155_pages_visually_inspected": true,
+      "pdf_154_pages_pixel_identical": 154,
+      "archive_hashes": 57,
+      "markdown_links": 97
     },
     "pdf": {
       "path": "clase2/Clase_2_2026.pdf",
-      "pages": 32,
-      "bytes": 295167,
-      "sha256": "7c68442b89c98a1f8a3da871f1c18cdf796edeea28bb241fb60ab3ea0ec80c42"
+      "pages": 154,
+      "bytes": 4900313,
+      "sha256": "911fd889f41729126d3d079df8da91523a982a1e74c37be7ebcc9a7077e1087c"
     },
     "limitations": [
-      "Four-hour schedule requires oral rehearsal",
-      "Jetson access restored per Juan; no training or hardware measurements in this turn",
-      "Demo remains TinyLM GRU, no pretrained transformer fine-tune",
-      "Encounter4 block and TP evaluator require further review"
+      "Timing across encounters 3–4 requires rehearsal; prior GRPO-only 240-minute route superseded",
+      "Historical content/media retained; not all sources or old layout limitations comprehensively revised",
+      "No Jetson training or new hardware measurements",
+      "TP evaluator still pending"
     ],
+    "supersedes": {
+      "revision": "JmHD9RRePWSzsw",
+      "main_slides": 32,
+      "pdf_pages": 32
+    },
     "drive_pdf_id": "1ujcb8oLrp0CQ5PPjBQWwvBENuEct2B9k"
   },
   "class2_material_sync": {
@@ -1815,5 +1776,368 @@
     ],
     "root_first_read_id": "1wzjJ_M1ikFPX5CtPy0w5KwTZjhY4bsqs",
     "verification": "16 raw files: sizes and destination parents verified by metadata readback; native revision and PDF checked separately."
+  },
+  "class2_revision_history": [
+    {
+      "date": "2026-10-31",
+      "presentation_id": "19hKgrRzdaDW6sAlVUABjZJeOeElbK6Z1q1QkRfttv4w",
+      "url": null,
+      "source_revision": "JhtHjmSAjzL-OQ",
+      "revision": "JmHD9RRePWSzsw",
+      "source_slides": 143,
+      "final_slides": 155,
+      "main_slides": 32,
+      "reference_slides": 112,
+      "encounter4_slides": 11,
+      "new_slides": 22,
+      "replaced_slides": [
+        "g36fb9856750_1_83",
+        "g1e842fd07c2_2_0",
+        "g36fb9856750_1_76",
+        "g3a0d1898e12_0_10",
+        "g385e773c5af_0_0",
+        "g36fb9856750_1_108",
+        "g3a0d1898e12_0_17",
+        "g36fb9856750_1_114",
+        "g36fb9856750_1_70",
+        "g36fb9856750_1_91"
+      ],
+      "main_ids": [
+        "ge83ef4c23e_0_124",
+        "ge83ef4c23e_0_57",
+        "rl26_c2_01",
+        "ge83ef4c23e_0_62",
+        "geb89aa2ed5_0_15",
+        "geb89aa2ed5_0_20",
+        "gfd48c4675b_0_60",
+        "gf6ffd234b1_0_5",
+        "geb89aa2ed5_0_25",
+        "gf9badb265c_0_0",
+        "gf9badb265c_0_61",
+        "rl26_c2_02",
+        "rl26_c2_03",
+        "rl26_c2_04",
+        "rl26_c2_05",
+        "rl26_c2_06",
+        "rl26_c2_07",
+        "rl26_c2_08",
+        "rl26_c2_09",
+        "rl26_c2_10",
+        "rl26_c2_11",
+        "rl26_c2_12",
+        "rl26_c2_13",
+        "rl26_c2_14",
+        "rl26_c2_15",
+        "rl26_c2_16",
+        "rl26_c2_17",
+        "rl26_c2_18",
+        "rl26_c2_19",
+        "rl26_c2_20",
+        "rl26_c2_21",
+        "rl26_c2_22"
+      ],
+      "encounter4_range": [
+        145,
+        155
+      ],
+      "new_slide_map": [
+        {
+          "id": "rl26_c2_01",
+          "number": 3,
+          "title": "¿Cómo cambia una respuesta mediante RL?",
+          "role": "text",
+          "exemplar": "ge90cb544c9_0_20"
+        },
+        {
+          "id": "rl26_c2_02",
+          "number": 12,
+          "title": "De una tabla a una política neuronal",
+          "role": "compare",
+          "exemplar": "ge90cb544c9_0_20"
+        },
+        {
+          "id": "rl26_c2_03",
+          "number": 13,
+          "title": "Una respuesta es una trayectoria",
+          "role": "flow",
+          "exemplar": "ge90cb544c9_0_20"
+        },
+        {
+          "id": "rl26_c2_04",
+          "number": 14,
+          "title": "Dos formas de mirar la misma respuesta",
+          "role": "text",
+          "exemplar": "ge90cb544c9_0_20"
+        },
+        {
+          "id": "rl26_c2_05",
+          "number": 15,
+          "title": "¿Cuándo llega la recompensa?",
+          "role": "text",
+          "exemplar": "ge90cb544c9_0_20"
+        },
+        {
+          "id": "rl26_c2_06",
+          "number": 16,
+          "title": "Reward model, critic y ventaja",
+          "role": "table",
+          "exemplar": "ge90cb544c9_0_20"
+        },
+        {
+          "id": "rl26_c2_07",
+          "number": 17,
+          "title": "Optimizar sin alejarse demasiado",
+          "role": "text",
+          "exemplar": "ge90cb544c9_0_20"
+        },
+        {
+          "id": "rl26_c2_08",
+          "number": 18,
+          "title": "REINFORCE: cambiar probabilidades",
+          "role": "text",
+          "exemplar": "ge90cb544c9_0_20"
+        },
+        {
+          "id": "rl26_c2_09",
+          "number": 19,
+          "title": "Baseline: ¿mejor que qué?",
+          "role": "text",
+          "exemplar": "ge90cb544c9_0_20"
+        },
+        {
+          "id": "rl26_c2_10",
+          "number": 20,
+          "title": "PPO: reutilizar un rollout",
+          "role": "text",
+          "exemplar": "ge90cb544c9_0_20"
+        },
+        {
+          "id": "rl26_c2_11",
+          "number": 21,
+          "title": "Clipping: predecir cuatro casos",
+          "role": "table",
+          "exemplar": "ge90cb544c9_0_20"
+        },
+        {
+          "id": "rl26_c2_12",
+          "number": 22,
+          "title": "Tres políticas, tres funciones",
+          "role": "table",
+          "exemplar": "ge90cb544c9_0_20"
+        },
+        {
+          "id": "rl26_c2_13",
+          "number": 23,
+          "title": "La recompensa y el algoritmo son dos ejes",
+          "role": "table",
+          "exemplar": "ge90cb544c9_0_20"
+        },
+        {
+          "id": "rl26_c2_14",
+          "number": 24,
+          "title": "Etiquetar preferencias exige un criterio",
+          "role": "text",
+          "exemplar": "ge90cb544c9_0_20"
+        },
+        {
+          "id": "rl26_c2_15",
+          "number": 25,
+          "title": "RLOO: comparar sin incluirme",
+          "role": "text",
+          "exemplar": "ge90cb544c9_0_20"
+        },
+        {
+          "id": "rl26_c2_16",
+          "number": 26,
+          "title": "GRPO: una ventaja relativa al grupo",
+          "role": "text",
+          "exemplar": "ge90cb544c9_0_20"
+        },
+        {
+          "id": "rl26_c2_17",
+          "number": 27,
+          "title": "GRPO: juntar las piezas",
+          "role": "text",
+          "exemplar": "ge90cb544c9_0_20"
+        },
+        {
+          "id": "rl26_c2_18",
+          "number": 28,
+          "title": "Los detalles del código también enseñan",
+          "role": "text",
+          "exemplar": "ge90cb544c9_0_20"
+        },
+        {
+          "id": "rl26_c2_19",
+          "number": 29,
+          "title": "Laboratorio: misma base, distintos updates",
+          "role": "flow",
+          "exemplar": "ge90cb544c9_0_20"
+        },
+        {
+          "id": "rl26_c2_20",
+          "number": 30,
+          "title": "Más recompensa: ¿mejores respuestas?",
+          "role": "text",
+          "exemplar": "ge90cb544c9_0_20"
+        },
+        {
+          "id": "rl26_c2_21",
+          "number": 31,
+          "title": "DPO y variantes: qué cambia",
+          "role": "text",
+          "exemplar": "ge90cb544c9_0_20"
+        },
+        {
+          "id": "rl26_c2_22",
+          "number": 32,
+          "title": "Reconstruir GRPO y llevarlo a agentes",
+          "role": "text",
+          "exemplar": "ge90cb544c9_0_20"
+        }
+      ],
+      "checks": {
+        "order": true,
+        "skip_flags": true,
+        "no_tp_in_main": true,
+        "notes_matched": 22,
+        "native_tables": 4,
+        "archive_hashes": 57,
+        "pdf_pages_pixel_identical": 32,
+        "checker_issues_before_repair": 0,
+        "markdown_links": 98
+      },
+      "visual_review": {
+        "source_pages": 143,
+        "output_pages": 155,
+        "consolidated_repair_passes": 1,
+        "repairs": [
+          "Removed obsolete formula images overlapping DQN text",
+          "Replaced unsupported subscript glyph in RLOO",
+          "Shortened tool-token question",
+          "Dated Spotify case and linked original research"
+        ],
+        "main_review": "All 32 main slides checked; all 155 pages inspected in contact sheets",
+        "historical_appendix": "Preserved historical material; existing layout/content limitations remain outside main route. Links and current claims not comprehensively revalidated."
+      },
+      "pdf": {
+        "path": "clase2/Clase_2_2026.pdf",
+        "pages": 32,
+        "bytes": 295167,
+        "sha256": "7c68442b89c98a1f8a3da871f1c18cdf796edeea28bb241fb60ab3ea0ec80c42"
+      },
+      "limitations": [
+        "Four-hour schedule requires oral rehearsal",
+        "Jetson access restored per Juan; no training or hardware measurements in this turn",
+        "Demo remains TinyLM GRU, no pretrained transformer fine-tune",
+        "Encounter4 block and TP evaluator require further review"
+      ],
+      "drive_pdf_id": "1ujcb8oLrp0CQ5PPjBQWwvBENuEct2B9k"
+    }
+  ],
+  "class2_flow_sync": {
+    "date": "2026-10-31",
+    "reason": "Restore original general flow and DT theory; only TP launch deferred",
+    "files": [
+      {
+        "path": "00_LEER_PRIMERO.txt",
+        "id": "1-kCaNfZOAodHaTJ6D6WRvvaP79ZJLnnG",
+        "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx",
+        "bytes": 2154,
+        "sha256": "6ebdd72dc66212c2a0d80c957749e76535bd306ce060e3b43f4d2df424a9820a"
+      },
+      {
+        "path": "01_PLAN_CURSO.md",
+        "id": "1QsR3Ll_l2CqA08JRdZjnjaaPhafFbBJ4",
+        "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx",
+        "bytes": 6205,
+        "sha256": "e9ce839efbb9bdf6a58a8f45dfb43001d0ebd14fe4d15cab8cedb5cb59a23b09"
+      },
+      {
+        "path": "02_NEXT_STEPS.md",
+        "id": "1OISknC35C9UYmomKknZdL4SaPZ-IMEv_",
+        "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx",
+        "bytes": 3290,
+        "sha256": "dd339d6d90870084177944fcec49cad5356e9c366a283b42a912ecc1284e4c09"
+      },
+      {
+        "path": "CAMBIOS_2026.md",
+        "id": "193RpxINlxNa0U_0IghMG-Yj7E0OLzIXG",
+        "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx",
+        "bytes": 5233,
+        "sha256": "100c67552acb3097c0b7e301ddc19eb452fbffb09e28aaf0e74cb06c5410f591"
+      },
+      {
+        "path": "DRIVE_2026.md",
+        "id": "1Qf7y3u1zB6lcFYQosE1G8debNIEr_Y_B",
+        "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx",
+        "bytes": 5910,
+        "sha256": "37fd48c9832f7a93c792c3d77c6057fe5901d085275c49f7adc966f0590a5130"
+      },
+      {
+        "path": "README.md",
+        "id": "1uLc8G61hHkWYuAjiPEqOPPIm123ZuvEa",
+        "parent_id": "1d-5oCD5_PX0Tg2aMQKsCB3-E_bo3_wZx",
+        "bytes": 4549,
+        "sha256": "eb719e535a9091df4fb94ad0ec855f6410f55d013ed09106c6ae2c8aa7ff6e4a"
+      },
+      {
+        "path": "clase2/CAMINO_A_GRPO.md",
+        "id": "1NC-7BMGGBQZhC0jEMC9FxfMXDxfGj70R",
+        "parent_id": "1bt9n1Qctd-StAFGZAOMW1fQdJK295D_w",
+        "bytes": 7699,
+        "sha256": "1864fb05b71aba3abf59264fbf1d7d3e6ea244257e4ecabe9d629e8cfd0d6478"
+      },
+      {
+        "path": "clase2/Clase_2_2026.pdf",
+        "id": "1ujcb8oLrp0CQ5PPjBQWwvBENuEct2B9k",
+        "parent_id": "1bt9n1Qctd-StAFGZAOMW1fQdJK295D_w",
+        "bytes": 4900313,
+        "sha256": "911fd889f41729126d3d079df8da91523a982a1e74c37be7ebcc9a7077e1087c"
+      },
+      {
+        "path": "clase2/GUIA_CLASE.md",
+        "id": "1J-SzSriZ3cAwhu4MOUtiSHet_CwqrLZR",
+        "parent_id": "1bt9n1Qctd-StAFGZAOMW1fQdJK295D_w",
+        "bytes": 10539,
+        "sha256": "c3ee27d44a0ed17f18add5b56e9271b295b3f41c27e953901b0820f7f0ddf562"
+      },
+      {
+        "path": "clase2/GUIA_PRESENTACION.md",
+        "id": "1QEhCPEWgCbc62y8PgXzcMK0HxYfIdLnh",
+        "parent_id": "1bt9n1Qctd-StAFGZAOMW1fQdJK295D_w",
+        "bytes": 4117,
+        "sha256": "5356c1c8495016aa9563841207dedfb349a01321ea7e432732ab121e903bf873"
+      },
+      {
+        "path": "clase2/SLIDES_LLM_RL.md",
+        "id": "1fPMMtknkQwszIUwqWtSAXeR06v0SirAb",
+        "parent_id": "1bt9n1Qctd-StAFGZAOMW1fQdJK295D_w",
+        "bytes": 16139,
+        "sha256": "7dbbd335f1629696331b8993ed16e1170f1df8a35e945081b2b851e2fd72cd08"
+      },
+      {
+        "path": "docentes/SLIDES_2026.md",
+        "id": "1kQy5EG-g3CKL2AM88DYCH1Cp6pl78cmX",
+        "parent_id": "1NpY51jy-sQcFfzG3RytUQTSKCtmdsE0s",
+        "bytes": 3949,
+        "sha256": "7bbdb69b84a4ba237a35563c520d1437352ac3536407f29b8f38321003ed5785"
+      },
+      {
+        "path": "validacion/RESULTADOS.md",
+        "id": "1H_gEyBHCG3C8rnqOfytnYCrsTioeMfo2",
+        "parent_id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz",
+        "bytes": 15551,
+        "sha256": "3b9c346056d362539de40220181f249f36612c7ac58f46a953fe5f9740cdc2fc"
+      },
+      {
+        "path": "validacion/clase2_revision.json",
+        "id": "142agnUQ5xwJ2QIjNo6NMoSA7WmMbEYrx",
+        "parent_id": "1XjlytepoMrUmb1dvTba8oHAR_WOq4TCz",
+        "bytes": 5347,
+        "sha256": "df186fc7855f22a9c3f6726c19314bec80f3939552fa36285de92ec918f7ee8c"
+      }
+    ],
+    "verification": "14 updated files: metadata sizes and destination parents verified; native order/visibility and complete PDF verified separately."
   }
 }
