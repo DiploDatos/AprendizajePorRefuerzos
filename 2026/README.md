@@ -8,7 +8,7 @@ Revisión: 31/10/2026. Material en preparación, rama `2026`, con [copias de tra
 2. [Warm-up](actividades/lab_0_warmup_rl.ipynb), [actividad Q-learning](actividades/q_learning/CONSIGNA.md), [notebook inicial](actividades/q_learning/lab_1_q_learning_auditoria.ipynb) y [hoja de trabajo opcional](actividades/q_learning/INFORME_TEMPLATE.md). Son actividades formativas, sin nota ni entrega obligatoria.
 3. Encuentro 3, bloque deep RL: [slides actualizadas](https://docs.google.com/presentation/d/19hKgrRzdaDW6sAlVUABjZJeOeElbK6Z1q1QkRfttv4w/edit), [PDF completo sin el TP](clase2/Clase_2_2026.pdf), [guía de presentación](clase2/GUIA_PRESENTACION.md), [camino hacia GRPO](clase2/CAMINO_A_GRPO.md), [guion](clase2/GUIA_CLASE.md), [storyboard](clase2/SLIDES_LLM_RL.md) y [notebook REINFORCE/RLOO/GRPO](clase2/llm_policy_gradients.ipynb).
 4. Encuentro 4, preparación docente: [único TP, Decision Transformer para recomendaciones](tp/README.md), continuidad del anterior TP2. [Consigna 2026 en revisión](tp/CONSIGNA.md).
-5. Docentes: [guía formativa de Q-learning](docentes/Q_LEARNING_GUIA.md), [plan de edición de slides](docentes/SLIDES_2026.md), [auditoría](00_AUDITORIA.md), [validación](validacion/RESULTADOS.md) y [próximos pasos](02_NEXT_STEPS.md).
+5. Docentes: [guía formativa de Q-learning](docentes/Q_LEARNING_GUIA.md), [plan de edición de slides](docentes/SLIDES_2026.md), [auditoría](00_AUDITORIA.md), [validación](validacion/RESULTADOS.md), [próximos pasos](02_NEXT_STEPS.md), [preparación del aula virtual](docentes/AULA_VIRTUAL.md) y [borradores de Slack](docentes/COMUNICACION_SLACK.md).
 6. [Archivo 2025](../archive/2025/EDICION.md) y [registro de esta reorganización](CAMBIOS_2026.md).
 
 ## Decisiones vigentes

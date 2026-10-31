@@ -13,6 +13,8 @@ Revisión 31/10/2026: rama local `2026`, material 2025 archivado y un único TP.
 | P1 | Ensayar actividad Q-learning de 45 min en otra máquina | Docentes | Modo corto funcional, sin pedir informe ni corrida completa |
 | P1 | Etiquetar preferencias humanas y evaluar salidas nuevas | Docentes | Feedback humano separado del modo simulado |
 | P1 | Publicar materiales seleccionados en Campus | Docentes | Índice por encuentro, TP recién en el 4 y actividades diferenciadas; sin soluciones docentes |
+| P0 | Dejar lista el aula virtual 2026 | Juan + asistencia | Estructura por encuentro, calendario confirmado, enlaces y actividades probados con vista estudiante; [preparación](docentes/AULA_VIRTUAL.md) |
+| P0 | Dejar listo el mensaje de comunicación de Slack | Juan + asistencia | Destinatarios/canal y enlaces confirmados; texto final coherente con el estado real del aula; [borradores](docentes/COMUNICACION_SLACK.md) |
 | Implementado | Entorno uv, lock, instrucciones y CI | Asistencia | Instalación limpia local, notebooks y pruebas de compatibilidad; ver ENTORNO.md y Actions |
 | P1 | Diagnóstico y ensayo con LLM preentrenado en Orin Nano 8 GB | Juan + asistencia | Acceso recuperado según Juan; faltan compatibilidad, memoria y entrenamiento medidos |
 
@@ -22,6 +24,7 @@ Revisión 31/10/2026: rama local `2026`, material 2025 archivado y un único TP.
 2. Ensayar las dos slides introductorias (6–8 min) y el nuevo bloque de ética (28 min), con puente hacia el encuentro 3.
 3. Ensayar las slides de Clase 2 ya actualizadas y validar la demo en Orin antes de reemplazar resultados CPU.
 4. Probar el paquete estudiantil, fijar calendario y publicar.
+5. Montar y revisar el aula virtual; preparar su comunicación en Slack. Confirmar aula, destinatarios y canal antes de publicar.
 
 ## Estado operativo
 
