@@ -1,0 +1,169 @@
+{
+  "python": "3.12.12",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "versions": {
+    "gymnasium": "1.2.1",
+    "numpy": "2.3.4",
+    "matplotlib": "3.10.7",
+    "torch": "2.9.0",
+    "stable-baselines3": "2.7.0",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "ipykernel": "7.1.0",
+    "jupyterlab": "4.4.10",
+    "transformers": "4.57.1",
+    "accelerate": "1.11.0"
+  },
+  "checks": [
+    "FrozenLake-v1: reset, step y render RGB",
+    "Taxi-v3: reset, step y render RGB",
+    "CartPole-v1: reset, step y render RGB",
+    "PPO/SB3: entrenamiento CPU y cambio de pesos",
+    "Datos del TP: pickle, JSON y CSV de Netflix/Goodreads",
+    "Transformers: DT causal + backward y GPT2 local, sin descargas",
+    "Invariantes de Q-learning, REINFORCE/RLOO/GRPO y notebooks"
+  ],
+  "datasets": {
+    "netflix": {
+      "train_shape": [
+        16000,
+        4
+      ],
+      "test_users": 1600,
+      "groups": {
+        "mu": [
+          8,
+          752
+        ],
+        "sigma": [
+          8,
+          752
+        ],
+        "num": [
+          8,
+          752
+        ]
+      }
+    },
+    "goodreads": {
+      "train_shape": [
+        16000,
+        4
+      ],
+      "test_users": 1600,
+      "groups": {
+        "mu": [
+          8,
+          472
+        ],
+        "sigma": [
+          8,
+          472
+        ],
+        "num": [
+          8,
+          472
+        ]
+      }
+    }
+  },
+  "scope": "Compatibilidad del entorno; no valida el protocolo ni entrena el TP completo",
+  "date": "2026-10-31",
+  "uv": "0.9.2",
+  "lock_sha256": "b9e35a8e3740453d7e7c2d28ad12bfa5a4dd29b44d33470487e279087d519645",
+  "manifest_sha256": "47055a845c5ba56368e027997758ccca53ea0d1d2d2faf7a217f67aa5d002769",
+  "base_without_hf": {
+    "python": "3.12.12",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "versions": {
+      "gymnasium": "1.2.1",
+      "numpy": "2.3.4",
+      "matplotlib": "3.10.7",
+      "torch": "2.9.0",
+      "stable-baselines3": "2.7.0",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "ipykernel": "7.1.0",
+      "jupyterlab": "4.4.10"
+    },
+    "checks": [
+      "FrozenLake-v1: reset, step y render RGB",
+      "Taxi-v3: reset, step y render RGB",
+      "CartPole-v1: reset, step y render RGB",
+      "PPO/SB3: entrenamiento CPU y cambio de pesos",
+      "Datos del TP: pickle, JSON y CSV de Netflix/Goodreads",
+      "Invariantes de Q-learning, REINFORCE/RLOO/GRPO y notebooks"
+    ],
+    "datasets": {
+      "netflix": {
+        "train_shape": [
+          16000,
+          4
+        ],
+        "test_users": 1600,
+        "groups": {
+          "mu": [
+            8,
+            752
+          ],
+          "sigma": [
+            8,
+            752
+          ],
+          "num": [
+            8,
+            752
+          ]
+        }
+      },
+      "goodreads": {
+        "train_shape": [
+          16000,
+          4
+        ],
+        "test_users": 1600,
+        "groups": {
+          "mu": [
+            8,
+            472
+          ],
+          "sigma": [
+            8,
+            472
+          ],
+          "num": [
+            8,
+            472
+          ]
+        }
+      }
+    },
+    "scope": "Compatibilidad del entorno; no valida el protocolo ni entrena el TP completo"
+  },
+  "notebooks": [
+    {
+      "path": "2026/actividades/lab_0_warmup_rl.ipynb",
+      "status": "ok",
+      "code_cells": 0
+    },
+    {
+      "path": "2026/docentes/q_learning_referencia_ejecutada.ipynb",
+      "status": "ok",
+      "code_cells": 7
+    },
+    {
+      "path": "2026/clase2/mini_rlhf.ipynb",
+      "status": "ok",
+      "code_cells": 8
+    },
+    {
+      "path": "2026/clase2/llm_policy_gradients.ipynb",
+      "status": "ok",
+      "code_cells": 9
+    }
+  ],
+  "installation": "fresh isolated .venv-2026; existing .venv preserved",
+  "ci": "Configured; GitHub result pending publication"
+}

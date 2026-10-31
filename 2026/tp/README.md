@@ -5,6 +5,7 @@ Continúa el trabajo que en 2025 se llamaba TP2. En 2026 se denomina **Trabajo P
 - [Consigna 2026 en revisión docente](CONSIGNA.md).
 - [Criterios de evaluación propuestos](RUBRICA.md).
 - [Configuración y ubicación de los datos](config_dataset.py).
+- [Entorno reproducible y extra de Hugging Face](../../ENTORNO.md).
 - [Enunciado y guías históricos](../../archive/2025/tp_decision_transformer/01_README_TRABAJO_PRACTICO.md), como referencia de la edición anterior.
 
 Se conservan Netflix/Goodreads, preparación de trayectorias, modelo condicionado por retorno, comparación con baselines, experimentos de return conditioning y reporte. No se exige entrenar un LLM ni desplegar en la Orin.

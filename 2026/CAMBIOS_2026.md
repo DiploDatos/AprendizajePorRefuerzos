@@ -45,3 +45,7 @@ La demo sigue siendo la GRU validada en CPU; no se atribuye ajuste de un LLM pre
 ## Corrección de continuidad de Clase 2
 
 Juan señaló que el recorte de 32 slides rompía el flujo y relegaba DT y otros contenidos valiosos. Se recupera el orden general de la clase: redes, DQN, políticas, actor-crítico/PPO, LLMs, Offline RL/DT, aplicaciones y conclusiones. GRPO queda integrado al bloque LLM; ocho repasos nuevos pasan a consulta. Quedan 115 slides visibles, 39 de profundización y sólo el lanzamiento del TP reservado al encuentro 4. El PDF completo de 154 páginas excluye únicamente ese lanzamiento. El guion anterior de cuatro horas centrado en GRPO queda sin efecto.
+
+## Entorno y publicación de la rama 2026
+
+Se completa la migración local a uv: un único pyproject.toml, Python 3.12 recomendado (3.11–3.13 admitido), versiones directas fijadas y uv.lock versionado. El Poetry raíz duplicado se retira; el archivo 2025 conserva sus originales. Las actividades vigentes se prueban desde un entorno nuevo. El extra tp-hf añade Transformers/Accelerate; el stack de Jetson se mantiene separado. Se añaden instrucciones y pruebas de Actions en Linux/macOS/Windows. Esto no corrige el protocolo del TP.

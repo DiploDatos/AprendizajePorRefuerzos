@@ -1,0 +1,60 @@
+name: Entorno y actividades 2026
+
+on:
+  push:
+    branches: ["2026"]
+    paths:
+      - "pyproject.toml"
+      - "uv.lock"
+      - ".python-version"
+      - ".github/workflows/curso.yml"
+      - "2026/**/*.py"
+      - "2026/**/*.ipynb"
+      - "2026/**/requirements.txt"
+      - "archive/2025/tp_decision_transformer/data/**"
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: curso-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  actividades:
+    name: ${{ matrix.os }} / Python ${{ matrix.python }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {os: ubuntu-latest, python: "3.11"}
+          - {os: ubuntu-latest, python: "3.12"}
+          - {os: ubuntu-latest, python: "3.13"}
+          - {os: macos-latest, python: "3.12"}
+          - {os: windows-latest, python: "3.12"}
+    env:
+      MPLBACKEND: Agg
+      HF_HUB_OFFLINE: "1"
+      PYGAME_HIDE_SUPPORT_PROMPT: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.9.2"
+          python-version: ${{ matrix.python }}
+          enable-cache: true
+      - name: Instalar desde el lock, incluido extra Hugging Face
+        run: uv sync --locked --extra tp-hf --python ${{ matrix.python }}
+      - name: Validar entorno y operaciones de entrenamiento
+        run: uv run --locked --extra tp-hf --python ${{ matrix.python }} python 2026/validacion/verificar_entorno.py --hf --report outputs/environment.json
+      - name: Ejecutar notebooks desde kernels nuevos
+        run: uv run --locked --extra tp-hf --python ${{ matrix.python }} python 2026/validacion/verificar_notebooks.py --output outputs/notebooks
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verificacion-${{ matrix.os }}-${{ matrix.python }}
+          path: outputs/

@@ -2,6 +2,20 @@
 
 Material de la materia optativa de la Diplomatura en Ciencias de Datos, Aprendizaje Automático y sus Aplicaciones. La edición en preparación está en la rama `2026`.
 
+## Ejecutar el material
+
+Con [uv 0.9.2](https://docs.astral.sh/uv/getting-started/installation/#installing-a-specific-version), desde un clon de la rama `2026`:
+
+```bash
+uv python install 3.12
+uv sync --locked
+uv run --locked jupyter lab
+```
+
+[Instalación, plataformas, extra de Hugging Face y pruebas](ENTORNO.md). Python 3.12 es la ruta recomendada; las dependencias completas están fijadas en `uv.lock`. La configuración de Jetson se maneja por separado.
+
+## Material
+
 - [Material y recorrido 2026](2026/README.md).
 - [Clase 1 actualizada en Drive](https://docs.google.com/presentation/d/1cBZzjKvEYI1Cok3yE6IBRSureGgnzkK5SrfsgF7YsL8/edit), [PDF](2026/clase1/Clase_1_2026.pdf) y [guion de ensayo](2026/clase1/GUIA_PRESENTACION.md).
 - [Actividad de Q-learning](2026/actividades/q_learning/CONSIGNA.md): práctica formativa de clase, sin entrega obligatoria.

@@ -22,6 +22,8 @@ Revisión: 31/10/2026. Material en preparación, rama `2026`, con [copias de tra
 
 ## Ejecutar las actividades
 
+La instalación recomendada es el [entorno uv del repositorio](../ENTORNO.md): `uv sync --locked` y `uv run --locked jupyter lab`, desde la raíz. Cubre ambas actividades y las dependencias de datos/PyTorch para DT. El extra `tp-hf` añade Transformers/Accelerate. Las instrucciones siguientes describen también la opción tabular ligera y las dependencias mínimas para entornos propios.
+
 Q-learning: Python 3.11–3.13 en un entorno separado, instalar [requirements.txt](actividades/q_learning/requirements.txt) y abrir el notebook desde la raíz o desde su carpeta. El modo `demo` sirve para la clase; `completo` amplía el experimento a cinco semillas sin crear una entrega adicional.
 
 Deep RL: PyTorch funcional y Matplotlib. Desde la raíz, en el entorno local existente:

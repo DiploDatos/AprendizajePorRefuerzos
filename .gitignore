@@ -73,7 +73,7 @@ target/
 .ipynb_checkpoints
 
 # pyenv
-.python-version
+# .python-version se versiona para seleccionar el Python del curso.
 
 # celery beat schedule file
 celerybeat-schedule
@@ -113,3 +113,6 @@ rl-baselines3-zoo/
 
 tensorboard/
 .DS_Store
+
+.idea/
+.venv*/

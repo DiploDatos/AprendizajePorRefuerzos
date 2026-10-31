@@ -13,7 +13,7 @@ Revisión 31/10/2026: rama local `2026`, material 2025 archivado y un único TP.
 | P1 | Ensayar actividad Q-learning de 45 min en otra máquina | Docentes | Modo corto funcional, sin pedir informe ni corrida completa |
 | P1 | Etiquetar preferencias humanas y evaluar salidas nuevas | Docentes | Feedback humano separado del modo simulado |
 | P1 | Publicar materiales seleccionados en Campus | Docentes | Índice por encuentro, TP recién en el 4 y actividades diferenciadas; sin soluciones docentes |
-| P2 | Unificar entorno y metadatos de dependencias | Mantenedor | Un camino de instalación validado |
+| Implementado | Entorno uv, lock, instrucciones y CI | Asistencia | Instalación limpia local, notebooks y pruebas de compatibilidad; ver ENTORNO.md y Actions |
 | P1 | Diagnóstico y ensayo con LLM preentrenado en Orin Nano 8 GB | Juan + asistencia | Acceso recuperado según Juan; faltan compatibilidad, memoria y entrenamiento medidos |
 
 ## Orden de trabajo sugerido
@@ -25,6 +25,6 @@ Revisión 31/10/2026: rama local `2026`, material 2025 archivado y un único TP.
 
 ## Estado operativo
 
-La rama `2026` está creada localmente y la organización está aplicada en los archivos de trabajo, con la revisión de Clase 1 aplicada. Consultar el historial de Git para el registro local; no se publicó la rama remota. La rama `2025` mantiene su referencia anterior. El archivo registra hashes y preserva el notebook anterior con los cambios locales de Juan. Los entornos, `pyproject.toml`, `uv.lock` y archivos del editor se conservaron.
+La rama `2026` está creada localmente y la organización está aplicada en los archivos de trabajo, con la revisión de Clase 1 aplicada. Consultar el historial de Git para el registro local; el estado remoto está en [GitHub, rama 2026](https://github.com/DiploDatos/AprendizajePorRefuerzos/tree/2026). La rama `2025` mantiene su referencia anterior. El archivo registra hashes y preserva el notebook anterior con los cambios locales de Juan. Los entornos, `pyproject.toml`, `uv.lock` y archivos del editor se conservaron.
 
 Se creó la carpeta 2026 en Drive con copias del material, incluidas las presentaciones editables. Clase 1 incorpora los cuatro casos de ética y la actividad de preferencias; el TP queda fuera de su agenda y cierre. Está actualizada y revisada visualmente; Clase 2 conserva su recorrido general, incluyendo DT, con GRPO integrado. Sólo el lanzamiento del TP está reservado al encuentro 4. Los originales no se modificaron. No se publicó en Campus, no se creó un PR y no se enviaron mensajes a colegas. Los notebooks de RL para generación ya se ejecutaron completos en CPU; ver [validación](validacion/RESULTADOS.md). Juan recuperó acceso a la Orin; falta la validación del entrenamiento.
