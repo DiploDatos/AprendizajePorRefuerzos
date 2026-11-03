@@ -70,6 +70,6 @@ No mezclar instalaciones con `pip install` ni usar `--upgrade` durante la clase.
 
 ## Archivo y Jetson
 
-El material 2025 conserva su `pyproject.toml` y `poetry.lock` originales en `archive/2025/`. No se promete ejecutar todos los agentes históricos con el entorno 2026. RL Zoo, Atari, MuJoCo, Box2D y simuladores externos quedan fuera de la instalación básica: no son necesarios para las actividades vigentes.
+El material 2025 se conserva como referencia, sin el manifiesto ni el lock de Poetry obsoletos. No se promete ejecutar todos los agentes históricos con el entorno 2026. RL Zoo, Atari, MuJoCo, Box2D y simuladores externos quedan fuera de la instalación básica.
 
 La Orin Nano usa un entorno propio compatible con JetPack/PyTorch de NVIDIA. Seguir [JETSON.md](2026/clase2/JETSON.md) antes de instalar allí. Esta configuración no demuestra compatibilidad ni tiempos de entrenamiento en la placa.

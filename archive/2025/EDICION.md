@@ -11,4 +11,4 @@ Aquí están las dos presentaciones PDF, los laboratorios anteriores, sus imáge
 
 El traslado conserva los bytes de los archivos locales, incluido el cambio previo de Juan en `lab_1_intro_rl.ipynb`. Por eso ese notebook no es una copia idéntica del commit de origen. El manifiesto registra la diferencia. Los PDFs de Git LFS se conservaron materializados; la comparación con un puntero LFS no implica modificación del documento.
 
-`README.md`, `pyproject.toml` y `poetry.lock` de esta carpeta son copias del commit de origen. La configuración y los entornos de trabajo de la raíz se conservaron; no se migraron ni se reinstalaron dependencias. El archivo no se ofrece como entorno validado de 2026. Los problemas técnicos identificados en el TP anterior siguen documentados en la [auditoría](../../2026/00_AUDITORIA.md).
+`README.md` conserva el texto histórico. Se retiraron `pyproject.toml` y `poetry.lock` de 2025 porque sus dependencias están obsoletas y no forman parte del entorno vigente. El archivo no se ofrece como entorno instalable. Los problemas técnicos identificados en el TP anterior siguen documentados en la [auditoría](../../2026/00_AUDITORIA.md).
