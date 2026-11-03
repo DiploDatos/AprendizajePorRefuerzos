@@ -11,6 +11,7 @@ sys.path.insert(0, str(ROOT / "clase2"))
 sys.path.insert(0, str(ROOT / "docentes"))
 import torch
 import numpy as np
+from IPython.core.inputtransformer2 import TransformerManager
 import mini_rlhf as demo
 import llm_policy_gradients as pg
 from referencia_q_learning import q_update
@@ -123,12 +124,14 @@ def main():
         saved = json.loads((out / "metrics.json").read_text(encoding="utf-8"))
         assert abs(score["reward_proxy"] - saved["after"]["reward_proxy"]) < 1e-5
         assert score["samples"] == saved["after"]["samples"]
+    transformer = TransformerManager()
     for path in ROOT.rglob("*.ipynb"):
         notebook = json.loads(path.read_text(encoding="utf-8"))
         assert notebook["nbformat"] == 4
         for cell in notebook["cells"]:
             if cell["cell_type"] == "code":
-                compile("".join(cell["source"]), str(path), "exec")
+                source = transformer.transform_cell("".join(cell["source"]))
+                compile(source, str(path), "exec")
     for name in ("mini_rlhf.py", "diagnostico_jetson.py", "llm_policy_gradients.py"):
         ast.parse((ROOT / "clase2" / name).read_text(encoding="utf-8"), feature_version=(3, 6))
     print("OK: Bellman, presupuesto, evaluación inmutable, splits, etiquetas, EOS, KL, RLOO, clipping direccional, verificador, checkpoints y notebooks.")
