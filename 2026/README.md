@@ -15,7 +15,7 @@ Revisión: 31/10/2026. Material en preparación, rama `2026`, con [copias de tra
 
 - La introducción reemplaza el bloque de crisis de reproducibilidad de 2016/HARKing por dos slides: de preferencias a RLHF y de comparación de respuestas a GRPO. Anticipan el encuentro 3 sin derivar algoritmos.
 - Hay **un único TP obligatorio**, sobre Decision Transformer. Se presenta recién en el encuentro 4; hasta entonces distribuir únicamente los materiales seleccionados para cada clase. Se abandona la numeración TP1/TP2 en el material vigente. Q-learning y RL para generación quedan como actividades de clase.
-- Q-learning parte del [hands-on de Hugging Face](https://huggingface.co/learn/deep-rl-course/unit2/hands-on); conserva contraejemplos, semillas y análisis de recompensa. Su versión extensa es optativa.
+- La actividad formativa del encuentro 1 es el [hands-on de Hugging Face](actividades/huggingface/unidad_2.ipynb). Las [cuatro actividades adaptadas](actividades/huggingface/README.md) tienen pruebas en Colab; la [guía de la unidad 2](actividades/q_learning/COLAB_HUGGINGFACE.md) resume las correcciones; el laboratorio local de auditoría es una ampliación optativa.
 - El notebook de deep RL ajusta un modelo de lenguaje GRU diminuto de 13.923 parámetros. Compara REINFORCE, RLOO y GRPO; ilustra PPO sin entrenarlo. No es un LLM preentrenado.
 - Las preferencias iniciales son **simuladas**. Para realizar RLHF con feedback humano hay que etiquetar pares y seleccionar ese archivo. El verificador de formato constituye otra fuente de recompensa.
 - Usar IA es opcional. El TP evalúa decisiones, experimentos y comprensión; no exige cuentas pagas ni publicación de modelos.
