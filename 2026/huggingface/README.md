@@ -2,6 +2,8 @@
 
 Estas cuatro actividades parten de los [notebooks oficiales](https://github.com/huggingface/deep-rl-class/tree/main/notebooks). Cada archivo conserva un enlace a su versión de origen. Se retiraron las salidas, las celdas incompletas que impiden ejecutar todo y las secciones de publicación o carga de modelos del Hub. Las copias de validación se ejecutaron en Google Colab desde Brave.
 
+En Colab, las celdas de solución se muestran con el código oculto por defecto. Para leerlo o editarlo, usar **Mostrar código** en la celda. Pueden ejecutarse sin desplegarse. Esto solo cambia la presentación: el código sigue incluido en el archivo y puede verse en la vista de código de GitHub.
+
 | Unidad | Tema | Validación en Colab |
 | --- | --- | --- |
 | [1](unidad_1.ipynb) | PPO y LunarLander-v3 | Prueba corta en Colab: instalación, 2048 pasos, guardado y evaluación ejecutados. El archivo del curso configura un millón de pasos, no ejecutados completos. |
