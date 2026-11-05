@@ -1,13 +1,13 @@
 # Actividades basadas en Hugging Face Deep RL
 
-Estas cuatro actividades parten de los [notebooks oficiales](https://github.com/huggingface/deep-rl-class/tree/main/notebooks). Cada archivo conserva un enlace a su versión de origen. Se retiraron las salidas, las celdas incompletas que impiden ejecutar todo y las secciones de publicación o carga de modelos del Hub. Las copias de validación se ejecutaron en Google Colab desde Brave.
+Estas cuatro actividades parten de los [notebooks oficiales](https://github.com/huggingface/deep-rl-class/tree/main/notebooks). Cada archivo conserva un enlace a su versión de origen. El texto se tradujo al español con asistencia de IA y cada notebook lo aclara al comienzo. Se retiraron las salidas, las celdas incompletas que impiden ejecutar todo y las secciones de publicación o carga de modelos del Hub. Las copias de validación se ejecutaron en Google Colab desde Brave.
 
 En Colab, las celdas de solución se muestran con el código oculto por defecto. Para leerlo o editarlo, usar **Mostrar código** en la celda. Pueden ejecutarse sin desplegarse. Esto solo cambia la presentación: el código sigue incluido en el archivo y puede verse en la vista de código de GitHub.
 
 | Unidad | Tema | Validación en Colab |
 | --- | --- | --- |
 | [1](unidad_1.ipynb) | PPO y LunarLander-v3 | Prueba corta en Colab: instalación, 2048 pasos, guardado y evaluación ejecutados. El archivo del curso configura un millón de pasos, no ejecutados completos. |
-| [2](unidad_2.ipynb) | Q-learning, FrozenLake y Taxi-v4 | [Copia de validación](https://colab.research.google.com/drive/1UKQmi0aBdxTb-kjVqE5iGQeblG2Pr1Ds): ambos agentes entrenados; Taxi obtuvo recompensa media 7,50 ± 2,76 en 100 episodios. |
+| [2](unidad_2.ipynb) | Q-learning, FrozenLake y Taxi-v4; curvas de recompensa y pasos, y valores Q | [Copia de validación](https://colab.research.google.com/drive/1UKQmi0aBdxTb-kjVqE5iGQeblG2Pr1Ds): ambos agentes entrenados; Taxi obtuvo recompensa media 7,50 ± 2,76 en 100 episodios. |
 | [3](unidad_3.ipynb) | DQN, Space Invaders y RL Zoo | Prueba corta en Colab: ALE cargó el entorno y RL Zoo entrenó 500 pasos, guardó el modelo y lo cargó para evaluar 50 pasos. El archivo del curso configura un millón de pasos. |
 | [4](unidad_4.ipynb) | REINFORCE y CartPole-v1 | [Copia de validación](https://colab.research.google.com/drive/1Gn-X8RCJTNW4F8QcRAPfopjf9t0t8tOJ): 1000 episodios de entrenamiento y recompensa media 500 ± 0 en 10 episodios de evaluación. |
 
