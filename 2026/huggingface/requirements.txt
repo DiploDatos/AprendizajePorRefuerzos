@@ -10,4 +10,5 @@ pygame>=2.5,<3
 imageio>=2.34,<3
 imageio-ffmpeg>=0.5,<1
 tqdm>=4.66,<5
+ipywidgets>=8,<9
 ipykernel>=6.29,<8
