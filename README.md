@@ -5,44 +5,17 @@ Automático y sus Aplicaciones.
 
 ## Instalación y ejecución
 
-### Instalación desde local
+### Instalación local para las actividades de 2026
 
-#### Con pip
+Con Python 3.12, desde la raíz del repositorio:
 
-Pasos para instalar los paquetes específicos de RL con pip (asumiendo entorno virtual de conda con instalaciones existentes de librerías comunes como numpy, matplotlib, etc):
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r 2026/huggingface/requirements.txt
+```
 
-        pip install gymnasium
-        pip install stable-baselines3[extra]  # instala las dependencias necesarias para correr el lab 2
-        pip install rl_zoo3  # (Opcional) instala las dependencias para usar rl-baselines-zoo
-
-#### Con poetry
-
-Pasos para instalar todos los paquetes requeridos con poetry:
-
-Instalar [poetry](https://python-poetry.org/docs/#installation):
-
-* [Instalar pipx](https://github.com/pypa/pipx)
-
-* Instalar poetry con pipx:
-
-        pipx install poetry
-
-
-Comprobar que se instaló correctamente:
-
-        poetry --version
-
-Instalamos las dependencias (parados desde la carpeta raíz del repo):
-
-        poetry install  # instala las dependencias necesarias
-        poetry install -E zoo  # (Opcional) instala las dependencias para usar rl-baselines-zoo
-        poetry install -E dev_tools  # (Opcional) instala las dependencias para usar jupyter notebooks y otras las herramientas de desarrollo
-
-Activamos el entorno virtual:
-
-        poetry shell
-
-Listo! Ya podemos ejecutar los notebooks.
+El archivo de dependencias cubre las cuatro unidades de Hugging Face y el laboratorio introductorio. Los notebooks también incluyen instrucciones para ejecutarlos en Google Colab.
 
 ### Ejecución
 
