@@ -15,7 +15,7 @@ source .venv/bin/activate
 python -m pip install -r 2026/huggingface/requirements.txt
 ```
 
-El archivo de dependencias cubre las cuatro unidades de Hugging Face y el [notebook introductorio de referencia](2026/notebooks/notebook_1_intro_rl.ipynb). Los notebooks también incluyen instrucciones para ejecutarlos en Google Colab.
+El archivo de dependencias cubre las cuatro unidades de Hugging Face y el [notebook introductorio de referencia](2026/notebooks/notebook_1_intro_rl.ipynb), con ejercicios de The Cliff y entrenamiento en CartPole y MountainCar. Los notebooks también incluyen instrucciones para ejecutarlos en Google Colab.
 
 ### Ejecución
 
