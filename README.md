@@ -25,7 +25,6 @@ El archivo de dependencias cubre las cuatro unidades de Hugging Face y los noteb
 * [Notebook 0: introducción en papel](2026/notebooks/notebook_0_warmup_rl.ipynb)
 * [Notebook 1: introducción a RL](2026/notebooks/notebook_1_intro_rl.ipynb), con ejercicios de The Cliff y entrenamiento en CartPole y MountainCar
 * [Notebook 2: Stable Baselines](2026/notebooks/notebook_2_stable_baselines.ipynb), con una actividad formativa
-* [Notebook 3: Decision Transformer](2026/notebooks/notebook_3_decision_transformer.ipynb)
 
 Los notebooks incluyen instrucciones para ejecutarlos en Google Colab.
 
