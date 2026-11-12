@@ -1,6 +1,6 @@
-# Rúbrica propuesta — único TP 2026
+# Rúbrica de evaluación — TP 2026
 
-Para revisión docente antes de publicar. Conserva los componentes del trabajo anterior, agrega IQL y la calidad de los logs, y añade trazabilidad de las decisiones. Se usa una sola calificación de TP; las actividades de clase no generan otra entrega.
+El trabajo práctico se evalúa sobre un total de **100 puntos**, según los siguientes criterios.
 
 | Componente | Puntos | Evidencia |
 |---|---:|---|
@@ -12,6 +12,8 @@ Para revisión docente antes de publicar. Conserva los componentes del trabajo a
 | Calidad de los logs | 10 | Ambos modelos con logs originales y `mixto`; interpretación del cambio en modelos y líneas base |
 | Reporte y comprensión | 10 | Comparación razonada DT/IQL, explicaciones sustentadas, bitácora de decisiones y contribuciones |
 
-No exigir superar un score universal. Dar crédito a resultados negativos bien verificados. No confundir una curva de loss descendente con calidad de recomendación: en IQL, las pérdidas de Q y π pueden subir mientras la política mejora. Valorar el diagnóstico y corrección de errores.
+No se exige superar un puntaje universal ni obtener mejoras sobre todas las líneas base. Los resultados negativos bien verificados también son válidos: se evalúan el diseño experimental, la interpretación de la evidencia y el diagnóstico y corrección de errores.
 
-IA opcional y mismos criterios para todos. No usar detectores de texto generado ni puntuar la cantidad de prompts. La modalidad de explicación individual y las reglas institucionales de aprobación se definen y comunican antes de la entrega.
+Una pérdida de entrenamiento descendente no demuestra calidad de recomendación. En IQL, las pérdidas de Q y π pueden subir mientras la política mejora; las conclusiones deben apoyarse en la evaluación con el protocolo común.
+
+El uso de IA es opcional y se aplican los mismos criterios a todos los grupos. Si se utiliza, se debe indicar su uso y qué se verificó. Se evalúan la comprensión y la justificación de las decisiones, no la cantidad de prompts.
