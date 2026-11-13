@@ -2,7 +2,7 @@
 Configuración de Dataset para el Trabajo Práctico
 ==================================================
 
-Versión 2026: único TP; datos en tp_decision_transformer/data.
+Versión 2026: datos en la carpeta data junto a este archivo.
 Este archivo facilita el cambio entre los datasets disponibles (Netflix o Goodreads).
 Modifica la variable DATASET abajo y el resto de tu código se ajustará automáticamente.
 
@@ -21,7 +21,7 @@ Uso:
 
 from pathlib import Path
 
-DATA_ROOT = Path(__file__).resolve().parents[2] / 'tp_decision_transformer' / 'data'
+DATA_ROOT = Path(__file__).resolve().parent / 'data'
 
 DATASET = 'netflix'    # Opciones: 'netflix' o 'goodreads'
 

@@ -22,7 +22,7 @@ source .venv/bin/activate
 python -m pip install -r 2026/tp/requirements.txt
 ```
 
-Los datos se encuentran en `tp_decision_transformer/data/`, en la raíz del repositorio. `config_dataset.py` resuelve sus rutas.
+Los datos se encuentran en [`data/`](data/), dentro de esta carpeta del TP. `config_dataset.py` resuelve sus rutas independientemente del directorio desde el que se ejecute Python.
 
 ## Primeros pasos
 
