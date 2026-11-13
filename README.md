@@ -8,6 +8,10 @@ Automático y sus Aplicaciones.
 * [Clase 1](https://docs.google.com/presentation/d/1cBZzjKvEYI1Cok3yE6IBRSureGgnzkK5SrfsgF7YsL8/edit?slide=id.gfb93927b18_0_25#slide=id.gfb93927b18_0_25)
 * [Clase 2](https://docs.google.com/presentation/d/19hKgrRzdaDW6sAlVUABjZJeOeElbK6Z1q1QkRfttv4w/edit?slide=id.h20e1766478350ab1_0_103#slide=id.h20e1766478350ab1_0_103)
 
+## Trabajo práctico 2026
+
+El [TP de Decision Transformer e IQL](2026/tp/README.md) reúne la consigna, la guía de implementación, la rúbrica, el protocolo de evaluación y los datos.
+
 ## Instalación y ejecución
 
 ### Instalación local para las actividades de 2026
