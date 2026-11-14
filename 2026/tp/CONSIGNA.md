@@ -1,6 +1,6 @@
 # Trabajo Práctico — Decision Transformer e IQL para recomendaciones
 
-DiploDatos 2026. **Único TP obligatorio del curso**, continuación del anterior TP2. Borrador para revisión docente; fecha, grupos y condiciones finales de aprobación se publicarán en Campus.
+DiploDatos 2026. **Trabajo práctico obligatorio del curso.** Las fechas, la organización de los grupos y las condiciones de aprobación se publican en Campus.
 
 ## Objetivo y alcance
 
@@ -11,7 +11,7 @@ Implementar y comparar dos enfoques de aprendizaje por refuerzo offline para rec
 
 Ambos se comparan con líneas base bajo el mismo protocolo. Además se estudia qué cambia al pedirle al DT distintos retornos y qué cambia en los dos modelos cuando los logs vienen de una política mejor que el azar.
 
-La [guía](GUIA.md) explica cada parte y da esqueletos de código. Se mantiene la estructura del trabajo anterior: exploración/preparación, implementación/entrenamiento, baselines/evaluación, return conditioning y reporte. La actividad Q-learning y el notebook GRPO no forman parte de las entregas de este TP.
+La [guía](GUIA.md) explica cada parte y da esqueletos de código. El trabajo comprende exploración y preparación de datos, implementación y entrenamiento, comparación con líneas base, evaluación, experimentos de condicionamiento por retorno y reporte. La actividad Q-learning y el notebook GRPO no forman parte de las entregas de este TP.
 
 ## 1. Datos y construcción del problema
 
@@ -73,4 +73,4 @@ Explicar qué aprende cada modelo en cada caso, si supera a la política que gen
 - Reporte de 4–6 páginas o Markdown equivalente: problema, protocolo, decisiones, evidencia y límites. Incluir una comparación razonada entre DT e IQL.
 - Bitácora breve de contribuciones y decisiones verificadas. IA opcional: indicar si se utilizó y qué se comprobó; no entregar conversaciones completas.
 
-La explicación individual se centra en una decisión de modelado y un resultado de evaluación; su modalidad se comunicará antes de la entrega. Tener acceso a modelos pagos no otorga puntos. Consultar la [rúbrica propuesta](RUBRICA.md).
+La explicación individual se centra en una decisión de modelado y un resultado de evaluación; su modalidad se comunicará antes de la entrega. Tener acceso a modelos pagos no otorga puntos. Consultar la [rúbrica de evaluación](RUBRICA.md).
